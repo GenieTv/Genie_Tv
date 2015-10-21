@@ -1,0 +1,21 @@
+<colors>
+	<color name="white">FFffffff</color> THIS HIGHLIGHTS THE TEXT YOU HAVE SELECTED red
+	<color name="white2">FFffffff</color> TEXT WHILE MUSIC IS PLAYING , red
+	<color name="grey">AAffffff</color> SUBMENU AND TITLE MENU COLOURS - red
+	<color name="grey2">FFffffff</color> white
+	<color name="grey3">FFffffff</color> MAIN BAR - white
+	<color name="black">FFffffff</color> white
+	<color name="blue">FFffffff</color> white
+	<color name="selected">FFffffff</color> INSTALL TEXT - white
+	<color name="invalid">FFffffff</color> - white
+	<color name="themecolor">FFffffff</color> POP OUT SIDE SIDE MENU TITLE TEXT white
+	<color name="themecolor_transparent">88ffffff</color> MAIN MENU 2 white
+	<color name="ICS_Blue_Text">ffffffff</color>
+	<color name="ICS_Blue_Textures">ffffffff</color>
+	<color name="dialogheader">FFffffff</color> white
+	<color name="labelheader">FFffffff</color> SILVER (IN SETTINGS APPERENCE UNDER SETTINGS LABEL)
+	<color name="shadow">AA000000</color>
+</colors>
+
+STILL FULL GUIDE IN WIP / HOPE THIS HELPS OUT.
+EDITZ

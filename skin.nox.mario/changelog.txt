@@ -1,0 +1,17 @@
+RELEASE V1
+
+FIXED 
+button-nofocus
+
+CHANGED 
+Error images
+Overlay image
+Removed shadow from the main bar
+
+----------------------
+
+BETA 1 OF MARIO
+
+----------------------
+
+ANY QUESTIONS PLEASE CONTACT ME AT XEDITZ

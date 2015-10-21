@@ -1,0 +1,22 @@
+<colors>
+	<color name="white">FFd40000</color> THIS HIGHLIGHTS THE TEXT YOU HAVE SELECTED ,DARK red
+	<color name="white2">FFd40000</color> TEXT WHILE MUSIC IS PLAYING ,
+	<color name="grey">AAc7c7c7</color> SUBMENU AND TITLE MENU COLOURS ,NOT MAIN BAR , dark grey
+	<color name="grey2">FFd1d0d0</color> SILVER
+	<color name="grey3">ffc7c7c7</color> MAIN BAR 
+	<color name="grey4">FFd1d0d0</color> SILVER	
+	<color name="black">FFd1d0d0</color> SILVER
+	<color name="blue">FFd1d0d0</color> SILVER
+	<color name="selected">FFd40000</color> INSTALL TEXT
+	<color name="invalid">FFd40000</color>
+	<color name="themecolor">FFd40000</color> POP OUT SIDE SIDE MENU TITLE TEXT
+	<color name="themecolor_transparent">88d1d0d0</color> MAIN MENU 2
+	<color name="ICS_Blue_Text">ff33B5E5</color>
+	<color name="ICS_Blue_Textures">ff0099CC</color>
+	<color name="dialogheader">FF606060</color>
+	<color name="labelheader">FFd1d0d0</color> SILVER (IN SETTINGS APPERENCE UNDER SETTINGS LABEL)
+	<color name="shadow">AA000000</color>
+</colors>
+
+STILL FULL GUIDE IN WIP / HOPE THIS HELPS OUT.
+EDITZ
