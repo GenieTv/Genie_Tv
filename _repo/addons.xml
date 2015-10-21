@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addons>
+<addon id="plugin.video.GenieTv" name="[COLORgreen]GenieTv[/COLOR]" version="1.0.2" provider-name="JayBox">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.addon.common" />
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+        <provides>video executable</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">GenieTv Kodi's largest support tool. [CR]  Brought to you by the Architects@Work</summary>
+    <description lang="en">GenieTv provides an easy way to setup, maintain and create using your Kodi media center</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
+    <addon id="repository.GenieTv" name="GenieTv Repo" version="0.1.0" provider-name="JayBox">
+        <requires>
+            <import addon="xbmc.addon" version="12.0.0"/>
+        </requires>
+        <extension point="xbmc.addon.repository" name="GenieTv Repo">
+            <info compressed="false">http://raw.github.com/GenieTv/Genie_Tv/master//_repo/addons.xml</info>
+            <checksum>http://raw.github.com/GenieTv/Genie_Tv/master//_repo/addons.xml.md5</checksum>
+            <datadir zip="true">http://raw.github.com/GenieTv/Genie_Tv/master//_repo/</datadir>
+            <hashes>false</hashes>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+            <summary>GeniTv Media Solutions</summary>
+            <description>The home of GenieTv, Kodi's largest support tool. [CR]  Brought to you by the Architects@Work</description>
+            <platform>all</platform>
+    </extension>
+</addon>
+</addons>
