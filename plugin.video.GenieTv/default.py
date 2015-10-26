@@ -7,6 +7,7 @@ import re
 import extract
 import downloader
 import plugintools
+import zipfile
 import time
 import ntpath
 from addon.common.addon import Addon
@@ -55,7 +56,6 @@ def INDEX():
     addDir('[COLORgreen]BUILDERS TOOLBOX[/COLOR]',BASEURL,32,ART+'builderstoolbox.png',FANART,'')
     addDir('[COLORgreen]MAINTENANCE[/COLOR]',BASEURL,3,ART+'MAIN6.png',FANART,'')
     addDir('[COLORgreen]ADVANCED SETTINGS XML[/COLOR]',BASEURL,4,ART+'XML.png',FANART,'')
-    addDir('[COLORgreen]CUSTOM FTV GUIDE[/COLOR]','URL',15,ART+'FTV1.png',FANART,'')
     setView('movies', 'MAIN')
 
 def MAINTENANCE():
@@ -305,6 +305,9 @@ def LOCALZIP(name,url,description):
     dialog = xbmcgui.Dialog()
     dialog.ok("GenieTv", "Please Disconnect The Power From Your Device. DO NOT EXIT CLEANLY VIA SHUTDOWN","[COLOR yellow]Brought To You By Architects@Work[/COLOR]")
         
+def ZIPIT():
+    
+		
 def killxbmc():
     choice = xbmcgui.Dialog().yesno('Force Close Kodi', 'You are about to close Kodi', 'Would you like to continue?', nolabel='No, Cancel',yeslabel='Yes, Close')
     if choice == 0:
