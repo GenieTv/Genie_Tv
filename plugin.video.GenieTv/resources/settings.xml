@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
 	<category label="General Settings">
-		<setting id="User" type="text" label="GenieTv User" default="MERLIN" visible="true"/>
+		<setting id="User" type="text" label="GenieTv User =" default="MERLIN" visible="true"/>
+    </category>	
+	<category label="Restore Build">
+		<setting label="Local Zip" type="file" id="Local" value="path_to_files"/>
+		<setting id="Build" type="text" label="Backup Url =" default="Enter Url Here" visible="true"/>
     </category>	
 	<category label="Auto-View">
 		<setting id="auto-view" type="bool" label="Enable Auto View" default="true"/>

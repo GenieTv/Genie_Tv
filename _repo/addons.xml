@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.GenieTv" name="[COLORgreen]GenieTv[/COLOR]" version="1.0.3" provider-name="JayBox">
+<addon id="plugin.video.GenieTv" name="[COLORgreen]GenieTv[/COLOR]" version="1.0.4" provider-name="JayBox">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
 	<import addon="script.module.addon.common" />

@@ -24,13 +24,15 @@ AddonID='plugin.video.GenieTv'
 dp =  xbmcgui.DialogProgress()
 AddonTitle="[COLORgreen]GenieTv[/COLOR]" 
 net = Net()
+MyBuild = ADDON.getSetting('Build')
+MyLocal = ADDON.getSetting('Local')
 U = ADDON.getSetting('User')
 dialog = xbmcgui.Dialog()
 HOME = xbmc.translatePath('special://home/')
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 ICON = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png'))
 ART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/art/'))
-VERSION = "1.0.3"
+VERSION = "1.0.10"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
 PATH = "GenieTv"            
@@ -40,7 +42,7 @@ GVID = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.Genie
 GVID2 = "http://architects.x10host.com/vids/intro.wmv"
 
 def INDEX():
-    addDir('[COLORgreen]UPDATE MY GENIE[/COLOR]',BASEURL,48,ART+'umg.png',FANART,'')
+    addDir('[COLORgreen]MY BUILD[/COLOR]',BASEURL,49,ART+'MB.png',FANART,'')
     addDir('[COLORgreen]WISHES PC[/COLOR]',BASEURL,1,ART+'WISHESPC.png',FANART,'')
     addDir('[COLORgreen]WISHES ANDROID[/COLOR]',BASEURL,44,ART+'WISHESAN.png',FANART,'')
     addDir('[COLORgreen]TUTORIALS[/COLOR]',BASEURL,45,ART+'TUTS.png',FANART,'')
@@ -57,12 +59,12 @@ def INDEX():
     setView('movies', 'MAIN')
 
 def MAINTENANCE():
-    addDir('DELETE CACHE','url',14,ART+'MAIN5.png',FANART,'')
-    addDir('DELETE PACKAGES','url',6,ART+'MAIN4.png',FANART,'')
-    addDir('FORCE REFRESH','url',10,ART+'MAIN3.png',FANART,'Force Refresh All Repos')
+    addDir2('DELETE CACHE','url',14,ART+'MAIN5.png',FANART,'')
+    addDir2('DELETE PACKAGES','url',6,ART+'MAIN4.png',FANART,'')
+    addDir2('FORCE REFRESH','url',10,ART+'MAIN3.png',FANART,'Force Refresh All Repos')
 #    addDir('LAST RESORT FIX EMPTY REPOS','url',9,ART+'1.jpg',FANART,'Fix Corrupt Database')
-    addDir('CHECK MY IP','url',12,ART+'MAIN2.png',FANART,'')
-    addDir('ANDROID ONLY DELETE TEXTURE13.DB&THUBMNAIL FOLDER','url',13,ART+'MAIN1.png',FANART,'Only Works On Android On Windows It Deletes Your Thumnails Folder But Does Not Delete The Textures13.db')
+    addDir2('CHECK MY IP','url',12,ART+'MAIN2.png',FANART,'')
+    addDir2('ANDROID ONLY DELETE TEXTURE13.DB&THUBMNAIL FOLDER','url',13,ART+'MAIN1.png',FANART,'Only Works On Android On Windows It Deletes Your Thumnails Folder But Does Not Delete The Textures13.db')
     setView('movies', 'MAIN')
 
 
@@ -80,21 +82,25 @@ def ADDONS():
 
 
 def ADVANCEDXML():
-    addDir('CHECK ADVANCED XML',BASEURL,8,ART+'XML.png',FANART,'')
-    addDir('MUCKYS XML',BASEURL+'/wizard/muckys.xml',7,ART+'XML.png',FANART,'')
-    addDir('0CACHE XML',BASEURL+'/wizard/0cache.xml',7,ART+'XML.png',FANART,'')
-    addDir('MIKEY1234 XML',BASEURL+'/wizard/mikey.xml',7,ART+'XML.png',FANART,'')
-    addDir('TUXENS XML',BASEURL+'/wizard/tuxens.xml',7,ART+'XML.png',FANART,'')
-    addDir('P2P RECOMMENDED XML1',BASEURL+'/wizard/p2p1.xml',7,ART+'XML.png',FANART,'')
-    addDir('P2P RECOMMENDED XML2',BASEURL+'/wizard/p2p2.xml',7,ART+'XML.png',FANART,'')
-    addDir('DELETE XML',BASEURL,11,ART+'XML.png',FANART,'')
+    addDir2('CHECK ADVANCED XML',BASEURL,8,ART+'XML.png',FANART,'')
+    addDir2('MUCKYS XML',BASEURL+'/wizard/muckys.xml',7,ART+'XML.png',FANART,'')
+    addDir2('0CACHE XML',BASEURL+'/wizard/0cache.xml',7,ART+'XML.png',FANART,'')
+    addDir2('MIKEY1234 XML',BASEURL+'/wizard/mikey.xml',7,ART+'XML.png',FANART,'')
+    addDir2('TUXENS XML',BASEURL+'/wizard/tuxens.xml',7,ART+'XML.png',FANART,'')
+    addDir2('P2P RECOMMENDED XML1',BASEURL+'/wizard/p2p1.xml',7,ART+'XML.png',FANART,'')
+    addDir2('P2P RECOMMENDED XML2',BASEURL+'/wizard/p2p2.xml',7,ART+'XML.png',FANART,'')
+    addDir2('DELETE XML',BASEURL,11,ART+'XML.png',FANART,'')
     setView('movies', 'MAIN')
+	
+def RES():
+    addDir2('[COLORgreen]My Local Zip[/COLOR]',MyLocal,48,ART+'MB.png',FANART,'')
+    addDir2('[COLORgreen]My Online Zip[/COLOR]',MyBuild,43,ART+'MB.png',FANART,'')
 
 def CUSTOMFTV():
-    addDir('INSTALL FTV GUIDE AND OTHER ADDONS REQUIRED',BASEURL+'/wizard/customftv/ftvguide-addons.zip',5,ART+'FTV4.png',FANART,'')
-    addDir('FTV GUIDE FIRST RUN SETTINGS',BASEURL+'/wizard/customftv/settings.xml',17,ART+'FTV3.png',FANART,'')
-    addDir('FTV GUIDE ADDONS2.INI UPDATE DAILY','http://ren.byethost12.com/addons2.ini',16,ART+'FTV1.png',FANART,'')
-    addDir('RESET FTV DATABASE','url',18,ART+'FTV2.png',FANART,'')
+    addDir2('INSTALL FTV GUIDE AND OTHER ADDONS REQUIRED',BASEURL+'/wizard/customftv/ftvguide-addons.zip',5,ART+'FTV4.png',FANART,'')
+    addDir2('FTV GUIDE FIRST RUN SETTINGS',BASEURL+'/wizard/customftv/settings.xml',17,ART+'FTV3.png',FANART,'')
+    addDir2('FTV GUIDE ADDONS2.INI UPDATE DAILY','http://ren.byethost12.com/addons2.ini',16,ART+'FTV1.png',FANART,'')
+    addDir2('RESET FTV DATABASE','url',18,ART+'FTV2.png',FANART,'')
     
 
 
@@ -157,13 +163,6 @@ def APK(url):
     match = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(link)
     for name,url,iconimage,fanart,description in match:
             addDir(name,url,19,iconimage,fanart,description)
-    setView('movies', 'MAIN')
-    
-def UPDATE(url):
-    link = OPEN_URL(BASEURL+UMGD).replace('\n','').replace('\r','')
-    match = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(link)
-    for name,url,iconimage,fanart,description in match:
-            addDir(name,url,49,iconimage,fanart,description)
     setView('movies', 'MAIN')
     
 def APKTOOL(name,url,description):
@@ -255,7 +254,7 @@ def WIZARD(name,url,description):
     path = xbmc.translatePath(os.path.join('special://home/addons','packages'))
     dp = xbmcgui.DialogProgress()
     dp.create("GenieTv","Downloading ",'', 'Please Wait')
-    lib=os.path.join(path, name+'.zip')
+    lib=os.path.join(path, 'plugin.program.GenieTv.install'+'.zip')
     try:
        os.remove(lib)
     except:
@@ -276,7 +275,7 @@ def WIZARDAN(name,url,description):
     path = xbmc.translatePath(os.path.join('special://home/addons','packages'))
     dp = xbmcgui.DialogProgress()
     dp.create("GenieTv","Downloading ",'', 'Please Wait')
-    lib=os.path.join(path, name+'.zip')
+    lib=os.path.join(path, 'plugin.program.GenieTv.install'+'.zip')
     try:
        os.remove(lib)
     except:
@@ -292,27 +291,19 @@ def WIZARDAN(name,url,description):
     dialog = xbmcgui.Dialog()
     dialog.ok("GenieTv", "Please Disconnect The Power From Your Device. DO NOT EXIT CLEANLY VIA SHUTDOWN","[COLOR yellow]Brought To You By Architects@Work[/COLOR]")
         
-def BOOM(name,url,description):
-    path = xbmc.translatePath(os.path.join('special://home/addons','packages'))
+
+def LOCALZIP(name,url,description):
+    addonfolder = xbmc.translatePath(os.path.join('special://','home'))
     dp = xbmcgui.DialogProgress()
-    dp.create("GenieTv","Downloading ",'', 'Please Wait')
-    lib=os.path.join(path, name+'.zip')
-    try:
-       os.remove(lib)
-    except:
-       pass
-    downloader.download(url, lib, dp)
-    addonfolder = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id))
+    lib=os.path.join(MyLocal)
     time.sleep(2)
-    dp.update(0,"", "Extracting Zip Please Wait")
+    dp.create("GenieTv","Restoring",'', 'Please Wait')
     print '======================================='
     print addonfolder
     print '======================================='
     extract.all(lib,addonfolder,dp)
     dialog = xbmcgui.Dialog()
-    dialog.ok("GenieTv", "Please Disconnect The Power From Your Device. On Pc use Autokill DO NOT EXIT CLEANLY VIA SHUTDOWN","[COLOR yellow]Brought To You By Architects@Work[/COLOR]")
-    killxbmc() 
-      
+    dialog.ok("GenieTv", "Please Disconnect The Power From Your Device. DO NOT EXIT CLEANLY VIA SHUTDOWN","[COLOR yellow]Brought To You By Architects@Work[/COLOR]")
         
 def killxbmc():
     choice = xbmcgui.Dialog().yesno('Force Close Kodi', 'You are about to close Kodi', 'Would you like to continue?', nolabel='No, Cancel',yeslabel='Yes, Close')
@@ -1509,6 +1500,12 @@ elif mode==46:
 elif mode==47:
         GEVID()
 
+elif mode==48:
+        LOCALZIP(name,url,description)
+
+elif mode==49:
+        RES()
+
 elif mode==50:
         GEVID2()
 
@@ -1520,11 +1517,5 @@ elif mode==52:
 
 elif mode==53:
         GEVID5()
-
-elif mode==48:
-        UPDATE(url)
-
-elif mode==49:
-        BOOM(name,url,description)
         
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
