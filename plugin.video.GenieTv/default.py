@@ -305,9 +305,7 @@ def LOCALZIP(name,url,description):
     dialog = xbmcgui.Dialog()
     dialog.ok("GenieTv", "Please Disconnect The Power From Your Device. DO NOT EXIT CLEANLY VIA SHUTDOWN","[COLOR yellow]Brought To You By Architects@Work[/COLOR]")
         
-def ZIPIT():
-    
-		
+
 def killxbmc():
     choice = xbmcgui.Dialog().yesno('Force Close Kodi', 'You are about to close Kodi', 'Would you like to continue?', nolabel='No, Cancel',yeslabel='Yes, Close')
     if choice == 0:
