@@ -1,4 +1,7 @@
 import xbmc, xbmcaddon, xbmcgui, xbmcplugin,os,base64,sys,xbmcvfs
+import urlresolver
+import requests
+import urlparse
 import shutil
 import binascii
 import subprocess
@@ -10,11 +13,15 @@ import plugintools
 import zipfile
 import time
 import ntpath
+import cookielib
+from urllib2 import urlopen
+from cookielib import CookieJar
 from addon.common.addon import Addon
 from addon.common.net import Net
  
 
-###THANK YOU TO THE PEOPLE THAT ORIGINALY WROTE SOME OF THIS CODE "STUART DENTON, MIKEY1234, WHUFCLEE" TO NAME A FEW, WITHOUT YOU I STILL PROBABLY WOULDNT HAVE A CLUE WHERE TO START###
+###THANK YOU TO THE PEOPLE THAT ORIGINALY WROTE SOME OF THIS CODE "STUART DENTON, PIPCAN, MIKEY1234, WHUFCLEE" TO NAME A FEW, WITHOUT YOU I STILL PROBABLY WOULDNT HAVE A CLUE WHERE TO START###
+
 
 USER_AGENT = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3'
 addon_id = 'plugin.video.GenieTv'
@@ -31,22 +38,27 @@ U = ADDON.getSetting('User')
 dialog = xbmcgui.Dialog()
 HOME = xbmc.translatePath('special://home/')
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
-ICON = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png'))
+ICON = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png',FANART,''))
 ART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/art/'))
-VERSION = "1.0.10"
+VERSION = "2.0.3"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
 PATH = "GenieTv"            
 BASEURL = "http://architects.x10host.com"
 H = 'http://'
-GVID = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.GenieTv/genie.mp4'))  
-GVID2 = "http://architects.x10host.com/vids/intro.wmv"
+localizedString = ADDON.getLocalizedString
+cookieJar = CookieJar()
+urlOpener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookieJar))
+urlOpener.addheaders = [('User-Agent', 'Mozilla/5.0')]
 
 def INDEX():
     addDir('[COLORgreen]MY BUILD[/COLOR]',BASEURL,49,ART+'MB.png',FANART,'')
     addDir('[COLORgreen]WISHES PC[/COLOR]',BASEURL,1,ART+'WISHESPC.png',FANART,'')
     addDir('[COLORgreen]WISHES ANDROID[/COLOR]',BASEURL,44,ART+'WISHESAN.png',FANART,'')
-    addDir('[COLORgreen]TUTORIALS[/COLOR]',BASEURL,45,ART+'TUTS.png',FANART,'')
+    addDir('[COLORgreen]GenieTv STREAMS[/COLOR]',BASEURL,1008,ART+'streams.png',FANART,'')
+    addDir('[COLORgreen]GenieTv ANIME --PLEASE USE PLAYER 3 WHILE WE ATTEMPT TO CORRECT THE ISSUE--[/COLOR]',BASEURL,1001,ART+'anime.png',FANART,'PLEASE USE PLAYER 3 WHILE WE ATTEMPT TO CORRECT THE ISSUE')
+    addDir('[COLORgreen]GenieTv VOD[/COLOR]',BASEURL,1005,ART+'VOD.png',FANART,'')
+    addDir2('[COLORgreen]SOURCE LIST[/COLOR]',BASEURL,46,ART+'TUTS.png',FANART,'')
     addDir('[COLORgreen]WIPE GENIE[/COLOR]',BASEURL,41,ART+'wipegenie.png',FANART,'')
     addDir('[COLORgreen]GenieTv RSS Feed[/COLOR]',BASEURL,39,ART+'RSS.png',FANART,'')
     addDir('[COLORgreen]APK TOOL[/COLOR]',BASEURL,2,ART+'APK.png',FANART,'')
@@ -402,7 +414,388 @@ def Fix_Paths(url):
                  f.close()
     killxbmc()
 #---------------------------------------------------------------------------------------------------
+def M3UCATS():
+    html=OPEN_CAT(URL2)
+    match = re.compile('<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>').findall(html)
+    for url,image,name in match:
+        addDir3(name,url,1009,image)
+		
+def M3UPLAY(url):
+    html=OPEN_CAT(url)
+    match = re.compile('#EXTINF:-1,(.+?) (.+?) ').findall(html)
+    for name,url in match:
+        addDir4(name,url,222,ART+'streams.png')
+#---------------------------------------------------------------------------------------------------
+def TESTCATS2():
+    html=OPEN_CAT(URL1)
+    match = re.compile('<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>').findall(html)
+    for url,image,name in match:
+        addDir3(name,url,1007,image)
+def TESTCATS3(url):
+    html=OPEN_CAT(url)
+    match = re.compile('<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>').findall(html)
+    for url,image,name in match:
+        addDir3(name,url,1006,image)
 
+def AddTVSHOWDir(name, url, mode, iconimage, description="", isFolder=True, background=None):
+	u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)+"&iconimage="+urllib.quote_plus(iconimage)+"&description="+urllib.quote_plus(description)
+
+	liz = xbmcgui.ListItem(name, iconImage=iconimage, thumbnailImage=iconimage)
+	liz.setInfo(type="Video", infoLabels={ "Title": name, "Plot": description})
+	if background:
+		liz.setProperty('fanart_image', background)
+	if mode == 1 or mode == 2:
+		liz.addContextMenuItems(items = [('{0}'.format(localizedString(10008).encode('utf-8')), 'XBMC.RunPlugin({0}?url={1}&mode=22)'.format(sys.argv[0], urllib.quote_plus(url)))])
+	elif mode == 404:
+		liz.setProperty('IsPlayable', 'true')
+		liz.addContextMenuItems(items = [('{0}'.format(localizedString(10009).encode('utf-8')), 'XBMC.RunPlugin({0}?url={1}&mode=31&iconimage={2}&name={3})'.format(sys.argv[0], urllib.quote_plus(url), iconimage, name))])
+	elif mode == 556:
+		liz.setProperty('IsPlayable', 'true')
+		liz.addContextMenuItems(items = [('{0}'.format(localizedString(10010).encode('utf-8')), 'XBMC.RunPlugin({0}?url={1}&mode=33&iconimage={2}&name={3})'.format(sys.argv[0], urllib.quote_plus(url), iconimage, name))])
+		
+	xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]), url=u, listitem=liz, isFolder=isFolder)
+
+def Add_Directory_Item(handle, url, listitem, isFolder):
+
+    xbmcplugin.addDirectoryItem(handle, url, listitem, isFolder) 
+
+def ParseURL(url): 
+    response = urlOpener.open(url).read()
+        
+    try:
+        Titles = re.findall(r'<a .*?>(.*?)</a>',response)
+        Links = re.findall(r'<a.*?href="(.*?)">',response)
+            
+        for link in Links:
+            if '.gif' in link:
+                pass
+            elif '..' in link:
+                pass
+            elif '.txt' in link:
+                pass
+            elif '.png' in link:
+                pass
+            elif '?C=N;O=D' in link:
+                pass
+            elif '?C=M;O=A' in link:
+                pass
+            elif '?C=S;O=A' in link:
+                pass
+            elif '?C=D;O=A' in link:
+                pass
+            elif 'Torrent' in link:
+                pass
+            elif 'exe' in link:
+                pass
+            elif 'public' in link:
+                pass
+            elif '?C=D;O=A' in link:
+                pass
+            elif 'pub' in link:
+                pass
+            elif 'install' in link:
+                pass
+            elif '?C=D;O=A' in link:
+                pass
+            elif '?C=D;O=A' in link:
+                pass
+            elif '?C=D;O=A' in link:
+                pass
+            elif 'mpeg' in link:
+                pass
+            else:
+                name = link
+                if 'txt' in name:
+                    pass
+                if 'HDTV' in name:
+                    name = name.replace ('HDTV', '')
+                if 'XviD-LOL' in name:
+                    name = name.replace ('XviD-LOL', '')
+                if 'x264-LOL' in name:
+                    name = name.replace ('x264-LOL', '')
+                if 'X264-DIMENSION' in name:
+                    name = name.replace ('X264-DIMENSION', '')
+                if 'Farsimovie' in name:
+                    name = name.replace ('Farsimovie', '')
+                if 'avi' in name:
+                    name = name.replace ('avi', '')
+                if 'mp4' in name:
+                    name = name.replace ('mp4', '')
+                if 'mkv' in name:
+                    name = name.replace ('mkv', '')
+                if '%20' in name:
+                    name = name.replace ('%20', ' ')
+                if '%5bVTV%5d' in name:
+                    name = name.replace ('%5bVTV%5d', ' ')
+                if 'DeeJayAhmed' in name:
+                    name = name.replace ('DeeJayAhmed', '')
+                if '-' in name:
+                    name = name.replace ('-', '')
+                if '1Ch' in name:
+                    name = name.replace ('1Ch', '')
+                if 'BluRay' in name:
+                    name = name.replace ('BluRay', '')
+                if 'ReEnc' in name:
+                    name = name.replace ('ReEnc', '')
+                if '/' in name:
+                    name = name.replace('/', ' ')
+                if 'Film2Movie_ORG' in name:
+                    name = name.replace('Film2Movie_ORG', ' ')
+                if 'Film2Movie_INFO' in name:
+                    name = name.replace('Film2Movie_INFO', ' ')
+                if 'x265' in name:
+                    name = name.replace('x265', ' ')
+                if 'HEVC' in name:
+                    name = name.replace('HEVC', ' ')
+                if '&amp;' in name:
+                    name = name.replace('&amp;', ' ')
+                if '%5b2007%5d' in name:
+                    name = name.replace('%5b2007%5d', ' ')
+                if '%5b2006%5d%5b' in name:
+                    name = name.replace('%5b2006%5d%5b', ' ')
+                if '%5b' in name:
+                    name = name.replace('%5b', ' ')
+                if '%5d' in name:
+                    name = name.replace('%5d', ' ')
+                if 'x264' in name:
+                    name = name.replace('x264', ' ')
+                if 'CHD' in name:
+                    name = name.replace('CHD', ' ')
+                if 'sample' in name:
+                    name = name.replace('sample', ' ')
+                if 'DVDSCR' in name:
+                    name = name.replace('DVDSCR', ' ')
+                if 'DVDRip' in name:
+                    name = name.replace('DVDRip', ' ')
+                if '%d0' in name:
+                    name = name.replace('%d0', ' ')
+                if '%92' in name:
+                    name = name.replace('%92', ' ')
+                if '%b3' in name:
+                    name = name.replace('%b3', ' ')
+                if '%d1' in name:
+                    name = name.replace('%d1', ' ')
+                if '%be' in name:
+                    name = name.replace('%be', ' ')
+                if '%81' in name:
+                    name = name.replace('%81', ' ')
+                if '%82' in name:
+                    name = name.replace('%82', ' ')
+                if '%8f' in name:
+                    name = name.replace('%8f', ' ')
+                if '%94' in name:
+                    name = name.replace('%94', ' ')
+                if '%83' in name:
+                    name = name.replace('%83', ' ')
+                if '%85' in name:
+                    name = name.replace('%85', ' ')
+                if '%93' in name:
+                    name = name.replace('%93', ' ')
+                if '%80' in name:
+                    name = name.replace('%80', ' ')
+                if '%b4' in name:
+                    name = name.replace('%b4', ' ')
+                if '%bd' in name:
+                    name = name.replace('%bd', ' ')
+                if '%b0' in name:
+                    name = name.replace('%b0', ' ')
+                if '%9e' in name:
+                    name = name.replace('%9e', ' ')
+                if '%8b' in name:
+                    name = name.replace('%8b', ' ')
+                if '%84' in name:
+                    name = name.replace('%84', ' ')
+                if '%b8' in name:
+                    name = name.replace('%b8', ' ')
+                if '%bb' in name:
+                    name = name.replace('%bb', ' ')
+                if '%86' in name:
+                    name = name.replace('%86', ' ')
+                if '%8c' in name:
+                    name = name.replace('%8c', ' ')
+                if '%b9' in name:
+                    name = name.replace('%b9', ' ')
+                if '%ba' in name:
+                    name = name.replace('%ba', ' ')
+                if '%9a' in name:
+                    name = name.replace('%9a', ' ')
+                if '%9d' in name:
+                    name = name.replace('%9d', ' ')
+                if '.' in name:
+                    name = name.replace('.', ' ')
+                if '2012' in name:
+                    name = name.replace('2012', ' ')
+                if 'mp3' in name:
+                    name = name.replace('mp3', ' ')
+                if '(' in name:
+                    name = name.replace('(', ' ')
+                if ')' in name:
+                    name = name.replace(')', ' ')
+                if 'DivX' in name:
+                    name = name.replace('DivX', ' ')
+                if 'Filmiha' in name:
+                    name = name.replace('Filmiha', ' ')
+                if 'com' in name:
+                    name = name.replace('com', ' ')
+                if 'filmiha' in name:
+                    name = name.replace('filmiha', ' ')
+                if 'XViD' in name:
+                    name = name.replace('XViD', ' ')
+                if 'WEB' in name:
+                    name = name.replace('WEB', ' ')
+                if 'AC3MAJESTIC' in name:
+                    name = name.replace('AC3MAJESTIC', ' ')
+                if 'anoXmous_' in name:
+                    name = name.replace('anoXmous', ' ')
+                if 'juggs' in name:
+                    name = name.replace('juggs', ' ')
+                if 'GECKOS' in name:
+                    name = name.replace('GECKOS', ' ')
+                if 'AMIABLE' in name:
+                    name = name.replace('AMIABLE', ' ')
+                if 'tuvideo' in name:
+                    name = name.replace('tuvideo', ' ')
+                if 'matiasmx' in name:
+                    name = name.replace('matiasmx', ' ')
+                if 'REMUX' in name:
+                    name = name.replace('REMUX', ' ')
+                if 'DTSHD' in name:
+                    name = name.replace('DTSHD', ' ')
+                if 'MA' in name:
+                    name = name.replace('MA', ' ')
+                if '1PublicHD' in name:
+                    name = name.replace('1PublicHD', ' ')
+                if 'AC3EVE' in name:
+                    name = name.replace('AC3EVE', ' ')
+                if 'LTRG' in name:
+                    name = name.replace('LTRG', ' ')
+                if 'FarsiMovie' in name:
+                    name = name.replace('FarsiMovie', ' ')
+                if 'Net' in name:
+                    name = name.replace('Net', ' ')
+                if '%' in name:
+                    name = name.replace('%', ' ')
+                if 'png' in name:
+                    name = name.replace('png', ' ')
+                if 'wmv' in name:
+                    name = name.replace('wmv', ' ')
+
+                if '.mkv' in link or '.mp3' in link or '.mp4' in link or '.avi' in link or '.flv' in link or '.mpeg' in link or '.3gp' in link or '.divx' in link:
+                    AddTVSHOWDir(name, url+link, 404, ART+'VOD.png', 'GenieTv does not host or distribute any of the content displayed by this addon. GenieTV does not have any affiliation with the content provider.', isFolder=False)
+					
+                else:
+					AddTVSHOWDir(name, url+link, 1006, '', '', isFolder=True)
+                    
+
+                
+
+    except Exception, e:
+                print str(e)        
+
+
+
+def TestPlayUrl(name, url, iconimage=None):
+	print '--- Playing "{0}". {1}'.format(name, url)
+	listitem = xbmcgui.ListItem(path=url, thumbnailImage=iconimage)
+	listitem.setInfo(type="Video", infoLabels={ "Title": name })
+	xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, listitem)
+		
+
+#################################
+#######  GenieTv Streams ########
+#################################
+    
+def TESTCATS():
+    html=OPEN_CAT(URL3)
+    match = re.compile('<td><a href="(.+?)">(.+)</a></td>').findall(html)
+    for url,name in match:
+        addDir3(name,url,1002,ART+'VOD.png')
+
+def LISTS(url):
+    html=OPEN_CAT(url)
+    match = re.compile('&nbsp;<a href="(.+?)">(.+?)</a>').findall(html)
+    for url,name in match:
+        addDir3(name,url,1003,ART+'VOD.png')
+		
+def LISTS2(url):
+    html=OPEN_CAT(url)
+    match = re.compile('"playlist">(.+?)</span></div><div><iframe src="(.+?)"').findall(html)
+    for name,url in match:
+        addDir3(name,url,1004,ART+'VOD.png')
+		
+def LISTS3(url):
+    html=OPEN_CAT(url)
+    match = re.compile("url: '(.+?)',").findall(html)
+    for url in match:
+        addDir4('STREAM',url,222,ART+'VOD.png')
+		
+        
+def OPEN_CAT(url):
+        req = urllib2.Request(url)
+        req.add_header('User-Agent' , "Mozilla/5.0 (Windows NT 6.2; WOW64; rv:21.0) Gecko/20100101 Firefox/21.0")
+        response = urllib2.urlopen(req)
+        link=response.read()
+        response.close()
+        return link
+
+def Live_VOD(url):
+        xbmcplugin.addSortMethod( handle=int( sys.argv[ 1 ] ), sortMethod=xbmcplugin.SORT_METHOD_TITLE )
+        vidlocation=('%s%s'%(BASE,url))
+        link = OPEN_CAT(url)
+        match=re.compile('"playlist">(.+?)</span></div><div><iframe src="(.+?)"').findall(link)
+        for name,url in match:
+                addDir4('%s'%(name).replace('GenieTv','[COLOR green]GenieTV[/COLOR]').replace('.',' ').replace('mp4','').replace('mkv','').replace('_',' '),'%s'%(url),222,ART+'VOD.png')
+def RESOLVE(url): 
+    play=xbmc.Player(GetPlayerCore())
+    import urlresolver
+    try: play.play(url)
+    except: pass
+    from urlresolver import common
+    dp = xbmcgui.DialogProgress()
+    dp.create('[COLORlime]Architects@Work[/COLOR]','Opening %s Now'%(name))
+    if dp.iscanceled(): 
+        print "[COLORred]STREAM CANCELLED[/COLOR]" # need to get this part working    
+        dp.update(100)
+        dp.close()
+        dialog = xbmcgui.Dialog()
+        if dialog.yesno("[B]CANCELLED[/B]", '[B]Was There A Problem[/B]','', "",'Yes','No'):
+            dialog.ok("Message Send", "Your Message Has Been Sent")
+        else:
+	         return
+    else:
+        try: play.play(url)
+        except: pass
+        try: ADDON.resolve_url(url) 
+        except: pass 
+
+       
+def GetPlayerCore(): 
+    try: 
+        PlayerMethod=getSet("core-player") 
+        if   (PlayerMethod=='DVDPLAYER'): PlayerMeth=xbmc.PLAYER_CORE_DVDPLAYER 
+        elif (PlayerMethod=='MPLAYER'): PlayerMeth=xbmc.PLAYER_CORE_MPLAYER 
+        elif (PlayerMethod=='PAPLAYER'): PlayerMeth=xbmc.PLAYER_CORE_PAPLAYER 
+        else: PlayerMeth=xbmc.PLAYER_CORE_AUTO 
+    except: PlayerMeth=xbmc.PLAYER_CORE_AUTO 
+    return PlayerMeth 
+    return True 
+	  
+def addDir3(name,url,mode,iconimage):
+        u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)
+        ok=True
+        liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
+        liz.setInfo( type="Video", infoLabels={ "Title": name } )
+        ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
+        return ok
+def addDir4(name,url,mode,iconimage):
+        u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)
+        ok=True
+        liz=xbmcgui.ListItem(name, iconImage="DefaultFolder.png", thumbnailImage=iconimage)
+        liz.setInfo( type="Video", infoLabels={ "Title": name } )
+        ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=False)
+        return ok
+        
+              
 
 #################################
 ####### POPUP TEXT BOXES ########
@@ -426,129 +819,8 @@ def TextBoxes(heading,announce):
       return
   TextBox()
 
-def TEXTS():
-    addDir2('[COLORgreen]SOURCE LIST[/COLOR]',BASEURL,46,ART+'TUTS.png',FANART,'')
-    addDir2('[COLORgreen]Add GenieTv Repo[/COLOR]',BASEURL,50,ART+'TUTS.png',FANART,'')
-    addDir2('[COLORgreen]Add A Repo From The Genie[/COLOR]',BASEURL,47,ART+'TUTS.png',FANART,'')
-    addDir2('[COLORgreen]Add An Addon  From The Genie[/COLOR]',BASEURL,51,ART+'TUTS.png',FANART,'')
-    addDir2('[COLORgreen]Adding Images To Your Build[/COLOR]',BASEURL,52,ART+'TUTS.png',FANART,'')
-    addDir2('[COLORgreen]Adding A Menu Item And Submenus[/COLOR]',BASEURL,53,ART+'TUTS.png',FANART,'')
-    setView('movies', 'MAIN')
-
 def SOURCES():
     TextBoxes('These are the main Sources you should get into you XBMC', '[COLORwhite]http://architects.x10host.com[/COLOR]--- [CR]  [COLORred]http://repo.sharktech.co.uk[/COLOR]--- [CR]   [COLORwhite]http://fusion.tvaddons.ag[/COLOR]--- [CR]  [COLORred]http://i.totalxbmc.tv[/COLOR]--- [CR]   [COLORwhite]http://www.xunitytalk.com/xfinity[/COLOR]--- [CR]  [COLORred]http://srp.nu[/COLOR]--- [CR]   [COLORwhite]http://solved.no-issue.ca[/COLOR]--- [CR]  [COLORred]http://xbmc.aminhacasadigital.com[/COLOR]--- [CR]   [COLORwhite]http://xbmc.movieshd.co[/COLOR]--- [CR]  [COLORred]http://install.kaosbox.tv[/COLOR]--- [CR]   [COLORwhite]http://kodi-repo.com/mxr[/COLOR]--- [CR]  [COLORred]http://kodi.metalkettle.co[/COLOR]--- [CR]   [COLORwhite]http://prozone.getxbmc.com[/COLOR]--- [CR]  [COLORred]http://transform.mega-tron.tv[/COLOR]--- [CR]   [COLORwhite]http://muckys.kodimediaportal.ml[/COLOR]--- [CR]  [COLORred]http://jas0npc.pcriot.com[/COLOR]--- [CR]  [COLORwhite]Sports devil source[/COLOR]--- [CR]  [COLORred]http://iwillfolo.com/iwf[/COLOR]')
-
-def GEVID():            
-    if ADDON.getSetting('vid') == "true":
-        xbmcPlayer=xbmc.Player()
-        xbmcPlayer.play(GVID1)
-        xbmc.sleep(250)
-        ADDON.setSetting('vid','false')
-    else:
-        pass
-        if ADDON.getSetting('text') == "true":
-            #xbmc.sleep(250)
-            vid=xbmcgui.Dialog()
-            msg = vid.ok("GenieTv", "[COLOR orange]WE HOPE THIS TUTORIAL HELPED",
-                            "FOR MORE TUTORIALS PLEASE VISIT",
-                            "http://architects.x10host.com[/COLOR]"
-                            )
-            if msg == True:
-                ADDON.setSetting('vid','true')
-            else:
-                pass
-        else:
-            pass      
- 
-def GEVID2():            
-    if ADDON.getSetting('vid') == "true":
-        xbmcPlayer=xbmc.Player()
-        xbmcPlayer.play(GVID2)
-        xbmc.sleep(250)
-        ADDON.setSetting('vid','false')
-    else:
-        pass
-        if ADDON.getSetting('text') == "true":
-            #xbmc.sleep(250)
-            vid=xbmcgui.Dialog()
-            msg = vid.ok("GenieTv", "[COLOR orange]WE HOPE THIS TUTORIAL HELPED",
-                            "FOR MORE TUTORIALS PLEASE VISIT",
-                            "http://architects.x10host.com[/COLOR]"
-                            )
-            if msg == True:
-                ADDON.setSetting('vid','true')
-            else:
-                pass
-        else:
-            pass      
- 
-def GEVID3():            
-    if ADDON.getSetting('vid') == "true":
-        xbmcPlayer=xbmc.Player()
-        xbmcPlayer.play(GVID3)
-        xbmc.sleep(250)
-        ADDON.setSetting('vid','false')
-    else:
-        pass
-        if ADDON.getSetting('text') == "true":
-            #xbmc.sleep(250)
-            vid=xbmcgui.Dialog()
-            msg = vid.ok("GenieTv", "[COLOR orange]WE HOPE THIS TUTORIAL HELPED",
-                            "FOR MORE TUTORIALS PLEASE VISIT",
-                            "http://architects.x10host.com[/COLOR]"
-                            )
-            if msg == True:
-                ADDON.setSetting('vid','true')
-            else:
-                pass
-        else:
-            pass      
- 
-def GEVID4():            
-    if ADDON.getSetting('vid') == "true":
-        xbmcPlayer=xbmc.Player()
-        xbmcPlayer.play(GVID4)
-        xbmc.sleep(250)
-        ADDON.setSetting('vid','false')
-    else:
-        pass
-        if ADDON.getSetting('text') == "true":
-            #xbmc.sleep(250)
-            vid=xbmcgui.Dialog()
-            msg = vid.ok("GenieTv", "[COLOR orange]WE HOPE THIS TUTORIAL HELPED",
-                            "FOR MORE TUTORIALS PLEASE VISIT",
-                            "http://architects.x10host.com[/COLOR]"
-                            )
-            if msg == True:
-                ADDON.setSetting('vid','true')
-            else:
-                pass
-        else:
-            pass      
- 
-def GEVID5():            
-    if ADDON.getSetting('vid') == "true":
-        xbmcPlayer=xbmc.Player()
-        xbmcPlayer.play(GVID5)
-        xbmc.sleep(250)
-        ADDON.setSetting('vid','false')
-    else:
-        pass
-        if ADDON.getSetting('text') == "true":
-            #xbmc.sleep(250)
-            vid=xbmcgui.Dialog()
-            msg = vid.ok("GenieTv", "[COLOR orange]WE HOPE THIS TUTORIAL HELPED",
-                            "FOR MORE TUTORIALS PLEASE VISIT",
-                            "http://architects.x10host.com[/COLOR]"
-                            )
-            if msg == True:
-                ADDON.setSetting('vid','true')
-            else:
-                pass
-        else:
-            pass      
- 
-
 
 ################################
 ###    FIX REPOS&ADDONS      ###
@@ -1265,6 +1537,10 @@ B = base64.decodestring('LmFyY2hpdGVjdHMueDEwaG9zdC5jb20vdGVzdC93aC50eHQ=')
 F = base64.decodestring('aHR0cDovL2ZpeGVzLmFyY2hpdGVjdHMueDEwaG9zdC5jb20vZml4ZXMudHh0')
 C = base64.decodestring('aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vYXBwcy9hcHBzLnhtbA==')
 D = base64.decodestring('L2FkZG9ucy9uZXcudHh0')
+NVOD = base64.decodestring('aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vdm9kL3ZvZC5waHA=')
+URL1 = base64.decodestring('aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vdm9kL3VybHMvdXJsLnBocA==')
+URL2 = base64.decodestring('aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vdm9kL3VybHMvbTN1LnBocA==')
+URL3 = base64.decodestring('aHR0cDovL3d3dy5hbmltZXRvb24ub3JnL2NhcnRvb24=')
 E = base64.decodestring('L2FkZG9ucy9pcHR2LnR4dA==')
 G = base64.decodestring('L2FkZG9ucy92aWRlby50eHQ=')
 I = base64.decodestring('L2FkZG9ucy9zcG9ydHMudHh0')
@@ -1280,12 +1556,7 @@ V = base64.decodestring('L2FkZG9ucy9Ta2luc2dvdGhhbS50eHQ=')
 W = base64.decodestring('L2FkZG9ucy9Ta2luc2hlbGl4LnR4dA==')
 X = base64.decodestring('L2FkZG9ucy9Ta2luc2lzZW5nYXJkLnR4dA==')
 Y = base64.decodestring('L2FkZG9ucy9SU1MudHh0')
-GVID1 = base64.decodestring('aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vdHV0cy9Hcm91cC5tcDQ=')
-GVID2 = base64.decodestring('aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vdHV0cy9yZXBvLm1wNA==')
-GVID3 = base64.decodestring('aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vdHV0cy9hZGRvbi5tcDQ=')
-GVID4 = base64.decodestring('aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vdHV0cy9pbWFnZXMubXA0')
-GVID5 = base64.decodestring('aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vdHV0cy9HZW5lc2lzLm1wNA==')
-UMGD = base64.decodestring('L3VwZGF0ZS9VTUcudHh0')
+BASE = base64.decodestring('Q1VOVA==')
 def addDir(name,url,mode,iconimage,fanart,description):
         u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)+"&iconimage="+urllib.quote_plus(iconimage)+"&fanart="+urllib.quote_plus(fanart)+"&description="+urllib.quote_plus(description)
         ok=True
@@ -1506,17 +1777,42 @@ elif mode==48:
 
 elif mode==49:
         RES()
+       
+elif mode==222:
+        RESOLVE(url)
 
-elif mode==50:
-        GEVID2()
+elif mode==333:
+        Live_VOD(url)
 
-elif mode==51:
-        GEVID3()
 
-elif mode==52:
-        GEVID4()
+elif mode==1001:
+        TESTCATS()
 
-elif mode==53:
-        GEVID5()
+elif mode==1005:
+        TESTCATS2()
+
+elif mode==1007:
+        TESTCATS3(url)
+
+elif mode==1006:
+        ParseURL(url)
+
+elif mode==1002:
+        LISTS(url)
+
+elif mode==1003:
+        LISTS2(url)
         
+elif mode==1004:
+        LISTS3(url)
+        
+elif mode==1008:
+        M3UCATS()
+        
+elif mode==1009:
+        M3UPLAY(url)
+        
+elif mode == 404: 
+        TestPlayUrl(name,url,iconimage)
+
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
