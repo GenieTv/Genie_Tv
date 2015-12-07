@@ -7,6 +7,10 @@
 		<setting label="Local Zip" type="file" id="Local" value="path_to_files"/>
 		<setting id="Build" type="text" label="Backup Url =" default="Enter Url Here" visible="true"/>
     </category>	
+	<category label="Playlist Loader">
+		<setting label="Local M3u" type="file" id="LocalM3u" value="path_to_files"/>
+		<setting id="Remote" type="text" label="M3u Url =" default="Enter Url Here" visible="true"/>
+    </category>	
 	<category label="Auto-View">
 		<setting id="auto-view" type="bool" label="Enable Auto View" default="true"/>
 		<setting id="MAIN" type="number" label="MAIN" default="500" enable="!eq(-1,false)"/>
