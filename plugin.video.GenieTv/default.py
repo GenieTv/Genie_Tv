@@ -44,7 +44,7 @@ HOME = xbmc.translatePath('special://home/')
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 ICON = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png',FANART,''))
 ART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/art/'))
-VERSION = "2.0.5"
+VERSION = "2.0.6"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
 PATH = "GenieTv"            
@@ -478,7 +478,7 @@ def cnfTVPlay(url):
     html=OPEN_URL(url)
     match = re.compile('<li>.+?<a href="(.+?)" target="_blank">.+?<span class="datex">(.+?)</span>.+?<span class="datix"><b class="icon-chevron-right"></b>\n(.+?)</span>.+?<i><b class="icon-query-builder"></b>.+?</i>.+?</a>.+?</li>',re.DOTALL).findall(html)
     for url,episode,name in match:
-        addDir3(episode + ('  ') + name,url,7012,ART+'icon.png')
+        addDir4(episode + ('  ') + name,url,7004,ART+'icon.png')
 
 def cnfTVPlay1(url):
 

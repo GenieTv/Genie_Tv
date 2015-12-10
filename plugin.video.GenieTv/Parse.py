@@ -500,6 +500,8 @@ def apkParseURL(url):
         for link in Links:
             if '.rar' in link:
                 pass
+            if '.zip' in link:
+                pass
             if '.gif' in link:
                 pass
             if '.srt' in link:
@@ -534,6 +536,20 @@ def apkParseURL(url):
                 pass
             elif '?C=D&O=A' in link:
                 pass
+            elif '?C=N;O=A' in link:
+                pass
+            elif '?C=M;O=D' in link:
+                pass
+            elif '?C=S;O=D' in link:
+                pass
+            elif '?C=N;O=D' in link:
+                pass
+            elif '?C=M;O=A' in link:
+                pass
+            elif '?C=S;O=A' in link:
+                pass
+            elif '?C=D;O=A' in link:
+                pass
             elif 'Torrent' in link:
                 pass
             elif 'exe' in link:
@@ -550,9 +566,11 @@ def apkParseURL(url):
                 pass
             elif '?C=D&O=A' in link:
                 pass
-            elif '.m3u' in link:
+            elif '?C=D;O=A' in link:
                 pass
-            elif '?C=D&O=A' in link:
+            elif '?C=D;O=A' in link:
+                pass
+            elif '.m3u' in link:
                 pass
             elif 'mpeg' in link:
                 pass
@@ -580,6 +598,12 @@ def apkParseURL(url):
                     name = name.replace ('Meli', '')
                 if 'apk' in name:
                     name = name.replace ('apk', '')
+                if 'android' in name:
+                    name = name.replace ('android', '')
+                if '%20' in name:
+                    name = name.replace ('%20', '')
+                if '%' in name:
+                    name = name.replace ('%', '')
                 if 'android' in name:
                     name = name.replace ('android', '')
                 if 'rar' in name:
