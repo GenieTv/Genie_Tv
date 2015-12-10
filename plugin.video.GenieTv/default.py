@@ -44,7 +44,7 @@ HOME = xbmc.translatePath('special://home/')
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 ICON = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png',FANART,''))
 ART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/art/'))
-VERSION = "2.0.6"
+VERSION = "2.0.7"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
 PATH = "GenieTv"            
@@ -75,6 +75,7 @@ def MenWish():
     addDir('[COLORgreen]WISHES ANDROID[/COLOR]',BASEURL,44,ART+'WISHESAN.png',FANART,'')
     setView('movies', 'MAIN')
 def MenStream():
+    addDir('[COLORgreen]GenieTv SCRAPED LIVE TV[/COLOR]',BASEURL,7020,ART+'livetv.png',FANART,'')
     addDir('[COLORgreen]GenieTv SCRAPED TV VOD[/COLOR]',BASEURL,7001,ART+'VOD.png',FANART,'')
     addDir('[COLORgreen]GenieTv SCRAPED MOVIES VOD[/COLOR]',BASEURL,7002,ART+'VOD.png',FANART,'')
     addDir('[COLORgreen]GenieTv VOD[/COLOR]',BASEURL,1005,ART+'VOD.png',FANART,'')
@@ -452,6 +453,14 @@ def EPG2(url):
     match = re.compile('<table border="0".+?url((.+?));background-repeat: no-repeat;">.+?<tr>.+?<span class="season">(.+?)</span><br>.+?<a href="(.+?)"+?>(.+?)</span><br>.+?<span class="programmetext">(.+?)</span></a><br>',re.DOTALL).findall(html)
     for img,time,url,name,disc in match:
 			    addDir('%s %s'%('[COLORgreen]'+name+'[/COLOR]',time),url,1015,img,disc)
+#------------------------------SCRAPE LIVE TV-------------------------------------------------------------
+def LiveTVFull():
+    html=OPEN_URL(Decode('aHR0cDovL3VrdHZub3cuZGVzaXN0cmVhbXMudHYvRGVzaVN0cmVhbXMvaW5kZXgyMDIucGhwP3RhZz1nZXRfYWxsX2NoYW5uZWwmdXNlcm5hbWU9YnlwYXNz'))
+    match = re.compile('"id":".+?","name":"(.+?)","img":"(.+?)","stream_url3":"(.+?)","cat_id":".+?","stream_url2":"(.+?)","stream_url":"(.+?)"}',re.DOTALL).findall(html)
+    for name,img,url,url2,url3 in match:
+        addDir4('[COLORgreen]'+name+'[/COLOR] [COLORgold]LINK1[/COLOR]',(url).replace('\\',''),222,'http://uktvnow.desistreams.tv/' + (img).replace('\\',''))
+        addDir4('[COLORgreen]'+name+'[/COLOR] [COLORgold]LINK2[/COLOR]',(url2).replace('\\',''),222,'http://uktvnow.desistreams.tv/' + (img).replace('\\',''))
+        addDir4('[COLORgreen]'+name+'[/COLOR] [COLORgold]LINK3[/COLOR]',(url3).replace('\\',''),222,'http://uktvnow.desistreams.tv/' + (img).replace('\\',''))
 #------------------------------SCRAPE---------------------------------------------------------------------
 def cnfTV():
     html=OPEN_URL('http://tvshows.cnfstudio.com/')
@@ -1825,6 +1834,9 @@ elif mode==3000:
        
 elif mode == 404: 
         TestPlayUrl(name,url,iconimage)
+
+elif mode == 7020:
+        LiveTVFull()
 
 elif mode == 7002:
         cnfHome()
