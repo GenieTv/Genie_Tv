@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.GenieTv" name="[COLORgreen]GenieTv[/COLOR]" version="2.0.7" provider-name="JayBox">
+<addon id="plugin.video.GenieTv" name="[COLORgreen]GenieTv[/COLOR]" version="2.0.8" provider-name="JayBox">
   <requires>
+  	<import addon="script.module.beautifulsoup" version="3.2.1"/>
+	<import addon="script.module.beautifulsoup4" />
     <import addon="xbmc.python" version="2.1.0"/>
+	<import addon="script.module.beautifulsoup4" />
 	<import addon="script.module.urlresolver"  version="2.1.2"/>
     <import addon="script.module.requests"/>
 	<import addon="script.module.addon.common" />

@@ -5,7 +5,7 @@ import urlparse
 import shutil
 import binascii
 import subprocess
-import urllib2,urllib, glob
+import urllib2,urllib, glob, traceback
 import re
 import extract
 import downloader
@@ -14,12 +14,14 @@ import zipfile
 import time
 import ntpath
 import cookielib
-import Parse
+import Parse, CNF_Studio_Indexer
 from urllib2 import urlopen
+from bs4 import BeautifulSoup
+from BeautifulSoup import BeautifulStoneSoup, BeautifulSOAP
 from cookielib import CookieJar
 from addon.common.addon import Addon
 from addon.common.net import Net
- 
+
 
 ###THANK YOU TO THE PEOPLE THAT ORIGINALY WROTE SOME OF THIS CODE "STUART DENTON, PIPCAN, MIKEY1234, WHUFCLEE" TO NAME A FEW, WITHOUT YOU I STILL PROBABLY WOULDNT HAVE A CLUE WHERE TO START###
 
@@ -44,7 +46,7 @@ HOME = xbmc.translatePath('special://home/')
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 ICON = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png',FANART,''))
 ART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/art/'))
-VERSION = "2.0.7"
+VERSION = "2.0.8"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
 PATH = "GenieTv"            
@@ -54,11 +56,13 @@ localizedString = ADDON.getLocalizedString
 cookieJar = CookieJar()
 urlOpener = urllib2.build_opener(urllib2.HTTPCookieProcessor(cookieJar))
 urlOpener.addheaders = [('User-Agent', 'Mozilla/5.0')]
+addon_handle = int(sys.argv[1])
 
 def INDEX():
+    addDir('[COLORgreen]WIZARD[/COLOR]',BASEURL,4001,ART+'MB.png',FANART,'')
     addDir('[COLORgreen]STREAMS[/COLOR]',BASEURL,4002,ART+'streams.png',FANART,'')
     addDir('[COLORgreen]MUSIC[/COLOR]',BASEURL,4003,ART+'MUSIC.png',FANART,'')
-    addDir('[COLORgreen]WIZARD[/COLOR]',BASEURL,4001,ART+'MB.png',FANART,'')
+    addDir('[COLORgreen]KODI FX SKINS[/COLOR]',BASEURL,8030,ART+'FX.png',FANART,'')
     addDir('[COLORgreen]BUILDERS TOOLBOX[/COLOR]',BASEURL,32,ART+'builderstoolbox.png',FANART,'')
     addDir('[COLORgreen]SOURCE LIST[/COLOR]',BASEURL,46,ART+'sources.png',FANART,'')
     addDir('[COLORgreen]MAINTENANCE[/COLOR]',BASEURL,3,ART+'MAIN6.png',FANART,'')
@@ -75,9 +79,11 @@ def MenWish():
     addDir('[COLORgreen]WISHES ANDROID[/COLOR]',BASEURL,44,ART+'WISHESAN.png',FANART,'')
     setView('movies', 'MAIN')
 def MenStream():
-    addDir('[COLORgreen]GenieTv SCRAPED LIVE TV[/COLOR]',BASEURL,7020,ART+'livetv.png',FANART,'')
-    addDir('[COLORgreen]GenieTv SCRAPED TV VOD[/COLOR]',BASEURL,7001,ART+'VOD.png',FANART,'')
-    addDir('[COLORgreen]GenieTv SCRAPED MOVIES VOD[/COLOR]',BASEURL,7002,ART+'VOD.png',FANART,'')
+#    addDir('[COLORgreen]DOCUMENTARIES[/COLOR]',BASEURL,8040,ART+'soaps.png',FANART,'')
+    addDir('[COLORgreen]Soaps Catch Up[/COLOR]',BASEURL,8000,ART+'soaps.png',FANART,'')
+    addDir('[COLORgreen]GenieTv SCRAPED LIVE TV[/COLOR]',BASEURL,7030,ART+'origin.png',FANART,'')
+#    addDir('[COLORgreen]GenieTv SCRAPED TV VOD[/COLOR]',BASEURL,7001,ART+'VOD.png',FANART,'')
+    addDir('[COLORgreen]SCRAPED MOVIES VOD[/COLOR]',BASEURL,7018,ART+'MOVIESv.png',FANART,'')
     addDir('[COLORgreen]GenieTv VOD[/COLOR]',BASEURL,1005,ART+'VOD.png',FANART,'')
     addDir('[COLORgreen]GenieTv STREAMS[/COLOR]',BASEURL,1008,ART+'streams.png',FANART,'')
     addDir('[COLORgreen]THE REAPER[/COLOR]',BASEURL,1016,ART+'reap.png',FANART,'')
@@ -175,6 +181,13 @@ def HSKIN(url):
     
 def ISKIN(url):
     link = OPEN_URL(BASEURL+X).replace('\n','').replace('\r','')
+    match = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(link)
+    for name,url,iconimage,fanart,description in match:
+            addDir(name,url,42,iconimage,fanart,description)
+    setView('movies', 'MAIN')
+      
+def FXSKIN(url):
+    link = OPEN_URL(Decode('aHR0cDovL2RsLmRyb3Bib3h1c2VyY29udGVudC5jb20vcy9kejYwd2FqMGhmcnV2aDgvQlVJTERTLnR4dD9kbD0w')).replace('\n','').replace('\r','')
     match = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(link)
     for name,url,iconimage,fanart,description in match:
             addDir(name,url,42,iconimage,fanart,description)
@@ -442,25 +455,185 @@ def RADIO():
     match = re.compile('<tr>.+?<td><a href=".+?"><b>(.+?)</b>.+?<td><a href="(.+?)">',re.DOTALL).findall(html)
     for name,url in match:
 			    addDir4(name,url,222,ART+'radio.png')
+#------------------------------DOCUMENTARIES---------------------------------------------------------------------#------------------------------RADIO-----------------------------------------------------------------------
+def DOC1():
+    html=OPEN_CAT(Decode('aHR0cDovL3RvcGRvY3VtZW50YXJ5ZmlsbXMuY29tLw=='))
+    match = re.compile('<a href="(.+?)" >(.+?)</a></li><li>').findall(html)
+    for url,name in match:
+			    addDir3('[COLORgreen]'+name+'[/COLOR]',url,8041,ART+'radio.png')
+def DOC2(url):
+    html=OPEN_CAT(url)
+    match = re.compile('<h2><a href="(.+?)" title="(.+?)">.+?</a></h2>.+?src="(.+?)"',re.DOTALL).findall(html)
+    match2 = re.compile('class="inactive">.+?</a><a href="(.+?)">Next</a></div>',re.DOTALL).findall(html)
+    for url,name,img in match:
+			    addDir3('[COLORgreen]'+name+'[/COLOR]',url,8042,img)
+    for url in match2:
+			    addDir3('[COLORgreen]NEXT PAGE[/COLOR]',url,8041,ART+'radio.png')
+def DOC3(url):
+    html=OPEN_CAT(url)
+    match = re.compile('<meta itemprop="name" content="(.+?)".+?<meta itemprop="thumbnailUrl" content="(.+?)".+?<meta itemprop="embedUrl" content="(.+?)".+?<meta itemprop="description" content="(.+?)" />',re.DOTALL).findall(html)
+    for name,img,url,disc in match:
+			    addDir2('[COLORgreen]'+name+'[/COLOR]',url.replace('https://www.youtube.com/embed/','http://youtube.com/watch?v='),222,img,'',disc)
 #------------------------------EPG---------------------------------------------------------------------#------------------------------RADIO-----------------------------------------------------------------------
 def EPG():
     html=OPEN_CAT(Decode('aHR0cDovL3d3dy50dmd1aWRlLmNvLnVrLw=='))
     match = re.compile('<a href="(.+?)"  qt-title=".+?" qt-text=".+?<br> .+?" title="(.+?)".+?class=".+? src="(.+?)" alt=".+?" /></a>',re.DOTALL).findall(html)
     for url,name,img in match:
-			    addDir4('[COLORgreen]'+name+'[/COLOR]',url,1015,img)
+			    addDir4('[COLORgreen]'+name+'[/COLOR]',url,8002,img)
 def EPG2(url):
     html=OPEN_CAT(url)
     match = re.compile('<table border="0".+?url((.+?));background-repeat: no-repeat;">.+?<tr>.+?<span class="season">(.+?)</span><br>.+?<a href="(.+?)"+?>(.+?)</span><br>.+?<span class="programmetext">(.+?)</span></a><br>',re.DOTALL).findall(html)
     for img,time,url,name,disc in match:
 			    addDir('%s %s'%('[COLORgreen]'+name+'[/COLOR]',time),url,1015,img,disc)
+#------------------------------SOAPS------------------------------------------------------------------------
+def Soap_TV():
+
+    addDir3('Coronation Street','',8001,'')   
+    addDir3('Eastenders','',8002,'')
+    addDir3('Emmerdale','',8003,'')
+    addDir3('Hollyoaks','',8004,'')
+    addDir3('Im a Celebrity','',8005,'')
+
+
+
+    
+def Hollyoaks():
+    HTML = OPEN_URL('http://uksoapshare.blogspot.co.uk/')
+    match = re.compile('<a href="(.+?)".+?target=_blank>(.+?)</a>').findall(HTML)
+    for url,name in match:
+        if 'Holly' in name:
+            img = 'http://2.bp.blogspot.com/-9c7Sieh1RKs/UjD6TGAEEnI/AAAAAAAAAC8/84uwHfxcuYg/s1600/Hollyoaks.png'
+            if 'huge' in url:
+			    addDir4((name).replace('.HDTV.x264-SS.mp4','').replace('_HDTV.x264','').replace('-SS.mp4','').replace('_720p.HDTV.x264.',' ').replace('_720p',''),url.replace('\\/','/'),8006,img)
+            else:
+                pass
+
+    xbmcplugin.addSortMethod(addon_handle, xbmcplugin.SORT_METHOD_TITLE_IGNORE_THE);
+
+def Eastenders():
+    HTML = OPEN_URL('http://uksoapshare.blogspot.co.uk/')
+    match = re.compile('<a href="(.+?)".+?target=_blank>(.+?)</a>').findall(HTML)
+    for url,name in match:
+        if 'East' in name:
+            img = 'http://3.bp.blogspot.com/-KWHcNbNJU8Y/Vi1ousRl7fI/AAAAAAAAAT8/ksNE12LH0nE/s1600/eastenders.jpg'
+            if 'huge' in url:
+    			addDir4((name).replace('.HDTV.x264-SS.mp4','').replace('_HDTV.x264','').replace('-SS.mp4','').replace('_720p.HDTV.x264.',' ').replace('_720p',''),url.replace('\\/','/'),8006,img)
+            else:
+                pass
+
+    xbmcplugin.addSortMethod(addon_handle, xbmcplugin.SORT_METHOD_TITLE);
+
+def Emmerdale():
+    HTML = OPEN_URL('http://uksoapshare.blogspot.co.uk/')
+    match = re.compile('<a href="(.+?)".+?target=_blank>(.+?)</a>').findall(HTML)
+    for url,name in match:
+        if 'Emmer' in name:
+            img = 'http://2.bp.blogspot.com/-UfDcxisVV5c/UjH9vUicZ3I/AAAAAAAAADc/8Ozuiz1ojxw/s1600/Emmerdale.jpg'
+            if 'huge' in url:
+                addDir4((name).replace('.HDTV.x264-SS.mp4','').replace('_HDTV.x264','').replace('-SS.mp4','').replace('_720p.HDTV.x264.',' ').replace('_720p',''),url.replace('\\/','/'),8006,img)
+            else:
+                pass
+
+    xbmcplugin.addSortMethod(addon_handle, xbmcplugin.SORT_METHOD_TITLE);
+
+def CoronationStreet():
+    HTML = OPEN_URL('http://uksoapshare.blogspot.co.uk/')
+    match = re.compile('<a href="(.+?)".+?target=_blank>(.+?)</a>').findall(HTML)
+    for url,name in match:
+        if 'Coro' in name:
+            img = 'http://3.bp.blogspot.com/-hofvfBQVexs/UjErIfNdS4I/AAAAAAAAADQ/Q-vVGu3apYU/s1600/corrie.jpg'
+            if 'huge' in url:
+    			addDir4((name).replace('.HDTV.x264-SS.mp4','').replace('_HDTV.x264','').replace('-SS.mp4','').replace('_720p.HDTV.x264.',' ').replace('_720p',''),url.replace('\\/','/'),8006,img)
+            else:
+                pass
+
+    xbmcplugin.addSortMethod(addon_handle, xbmcplugin.SORT_METHOD_TITLE);
+
+def ImACeleb():
+    HTML = OPEN_URL('http://uksoapshare.blogspot.co.uk/')
+    match = re.compile('<a href="(.+?)" target="_blank">(.+?)</a>').findall(HTML)
+    for url,name in match:
+        if 'Celeb' in name:
+            img = 'http://3.bp.blogspot.com/-a_yDotWU_pY/VkotKWaG_gI/AAAAAAAAAUk/8Q5iNM6p37k/s1600/iacgoh.jpg'
+            if 'huge' in url:
+    			addDir4((name).replace('.HDTV.x264-SS.mp4','').replace('_HDTV.x264','').replace('-SS.mp4','').replace('_720p.HDTV.x264.',' ').replace('_720p',''),url.replace('\\/','/'),8006,img)
+            else:
+                pass
+				
+def SOAPPLAYER(name,url):
+        validate_URL = urlresolver.HostedMediaFile(url).valid_url()
+        if validate_URL:
+                resolved_URL = urlresolver.HostedMediaFile(url).resolve()
+        else:
+                html = open_url(url)
+                url=re.compile('src="(.+?)"></iframe>').findall(html)[0]
+                url=url.split('?autoplay')[0]
+                html = open_url(url)
+                resurl = re.compile('mp4","url":"(.+?)"').findall(html)[-1]
+                resolved_URL=resurl.replace('\\/','/')
+        liz = xbmcgui.ListItem(name,'','')
+        liz.setPath(resolved_URL)
+        xbmcplugin.setResolvedUrl(int(sys.argv[1]), True, liz)
+
 #------------------------------SCRAPE LIVE TV-------------------------------------------------------------
-def LiveTVFull():
+
+
+def LiveTVFullCat():
+	
+	addDir3('All Channels','',7021,ART + 'livetv.png')
+	addDir3('Entertainment','',7021,ART + 'livetv.png')
+	addDir3('Movies','',7021,ART + 'livetv.png')
+	addDir3('Music','',7021,ART + 'livetv.png')
+	addDir3('News','',7021,ART + 'livetv.png')
+	addDir3('Sports','',7021,ART + 'livetv.png')
+	addDir3('Documentary','',7021,ART + 'livetv.png')
+	addDir3('Kids','',7021,ART + 'livetv.png')
+	addDir3('Food','',7021,ART + 'livetv.png')
+	addDir3('Religious','',7021,ART + 'livetv.png')
+	addDir3('USA Channels','',7021,ART + 'livetv.png')
+	addDir3('Other','',7021,ART + 'livetv.png')
+	
+		
+def List_LiveTVFull(Cat_Name):
+
+    Find_all = False
+    cat_id = '0'
+    if Cat_Name == 'All Channels' : Find_all = True
+    if Cat_Name == 'Entertainment' : cat_id = '1'
+    if Cat_Name == 'Movies' : cat_id = '2'
+    if Cat_Name == 'Music' : cat_id = '3'
+    if Cat_Name == 'News' : cat_id = '4'
+    if Cat_Name == 'Sports' : cat_id = '5'
+    if Cat_Name == 'Documentary' : cat_id = '6'
+    if Cat_Name == 'Kids' : cat_id = '7'
+    if Cat_Name == 'Food' : cat_id = '8'
+    if Cat_Name == 'Religious' : cat_id = '9'
+    if Cat_Name == 'USA Channels' : cat_id = '10'
+    if Cat_Name == 'Other' : cat_id = '11'
+	
     html=OPEN_URL(Decode('aHR0cDovL3VrdHZub3cuZGVzaXN0cmVhbXMudHYvRGVzaVN0cmVhbXMvaW5kZXgyMDIucGhwP3RhZz1nZXRfYWxsX2NoYW5uZWwmdXNlcm5hbWU9YnlwYXNz'))
-    match = re.compile('"id":".+?","name":"(.+?)","img":"(.+?)","stream_url3":"(.+?)","cat_id":".+?","stream_url2":"(.+?)","stream_url":"(.+?)"}',re.DOTALL).findall(html)
-    for name,img,url,url2,url3 in match:
-        addDir4('[COLORgreen]'+name+'[/COLOR] [COLORgold]LINK1[/COLOR]',(url).replace('\\',''),222,'http://uktvnow.desistreams.tv/' + (img).replace('\\',''))
-        addDir4('[COLORgreen]'+name+'[/COLOR] [COLORgold]LINK2[/COLOR]',(url2).replace('\\',''),222,'http://uktvnow.desistreams.tv/' + (img).replace('\\',''))
-        addDir4('[COLORgreen]'+name+'[/COLOR] [COLORgold]LINK3[/COLOR]',(url3).replace('\\',''),222,'http://uktvnow.desistreams.tv/' + (img).replace('\\',''))
+    match = re.compile('"id":".+?","name":"(.+?)","img":"(.+?)","stream_url3":".+?","cat_id":"(.+?)","stream_url2":".+?","stream_url":".+?"}',re.DOTALL).findall(html)
+    print 'Len Match: >>>' + str(len(match))
+    for name,img,CatNO in match:
+        Image = Decode ('aHR0cDovL3VrdHZub3cuZGVzaXN0cmVhbXMudHYv') + (img).replace('\\','')
+        if CatNO == cat_id:
+			addDir3(name,'',7022,Image)
+        elif Find_all == True:
+            addDir3(name,'',7022,Image)
+        else: pass	
+		
+	xbmcplugin.addSortMethod(addon_handle, xbmcplugin.SORT_METHOD_TITLE);
+
+def LiveTVFull(Search_Name):
+    html=OPEN_URL(Decode('aHR0cDovL3VrdHZub3cuZGVzaXN0cmVhbXMudHYvRGVzaVN0cmVhbXMvaW5kZXgyMDIucGhwP3RhZz1nZXRfYWxsX2NoYW5uZWwmdXNlcm5hbWU9YnlwYXNz'))
+    match = re.compile('"id":".+?","name":"'+Search_Name+'","img":"(.+?)","stream_url3":"(.+?)","cat_id":".+?","stream_url2":"(.+?)","stream_url":"(.+?)"}',re.DOTALL).findall(html)
+    match = re.compile('"id":".+?","name":"'+Search_Name+'","img":"(.+?)","stream_url3":"(.+?)","cat_id":".+?","stream_url2":"(.+?)","stream_url":"(.+?)"}',re.DOTALL).findall(html)
+    for img,url,url2,url3 in match:
+		Image = Decode ('aHR0cDovL3VrdHZub3cuZGVzaXN0cmVhbXMudHYv') + (img).replace('\\','')
+		addDir4(Search_Name + ': Link 1',(url).replace('\\',''),222,Image)
+		addDir4(Search_Name + ': Link 2',(url2).replace('\\',''),222,Image)
+		addDir4(Search_Name + ': Link 3',(url3).replace('\\',''),222,Image)
+		
 #------------------------------SCRAPE---------------------------------------------------------------------
 def cnfTV():
     html=OPEN_URL('http://tvshows.cnfstudio.com/')
@@ -471,7 +644,7 @@ def cnfTV():
 
 def cnfTVCat(url):
     html=OPEN_URL(url)
-    match = re.compile('<div class="movie">.+?<img src="(.+?)" alt=".+?"/>.+?<a href="(.+?)">.+?<h2>(.+?)</h2>',re.DOTALL).findall(html)
+    match = re.compile('<div class="movie">.+?<img src="(.+?)" alt=".+?" />.+?<a href="(.+?)"><span class="player"></span></a>.+?<h2>(.+?)</h2>',re.DOTALL).findall(html)
     prev = re.compile("<link rel='prev' href='(.+?)'/>").findall(html)
     next = re.compile("<link rel='next' href='(.+?)'/>").findall(html)
     for img,url,name in match:
@@ -485,48 +658,87 @@ def cnfTVCat(url):
 
 def cnfTVPlay(url):
     html=OPEN_URL(url)
-    match = re.compile('<li>.+?<a href="(.+?)" target="_blank">.+?<span class="datex">(.+?)</span>.+?<span class="datix"><b class="icon-chevron-right"></b>\n(.+?)</span>.+?<i><b class="icon-query-builder"></b>.+?</i>.+?</a>.+?</li>',re.DOTALL).findall(html)
+    match = re.compile('<li>.+?<a href="(.+?)" target="_blank">.+?<span class="datex">(.+?)</span>.+?</b>(.+?)</span>.+?</li>',re.DOTALL).findall(html)
     for url,episode,name in match:
-        addDir4(episode + ('  ') + name,url,7004,ART+'icon.png')
+        addDir4(('Season') + episode + ('  ') + name,url,7004,ART+'icon.png')
 
 def cnfTVPlay1(url):
 
     html=OPEN_URL(url)
     match = re.compile('<div id="play-1".+?src="(.+?)" scrolling="no".+?<li><a href="#play-1">(.+?)</a></li>',re.DOTALL).findall(html)
     for url,name in match:
-        addDir3(name,(url + '&fv=&sou=').replace('player','watch'),7013,ART+'icon.png')
+        addDir3(name,(url + '&fv=&sou=').replace('player','watch'),7000,ART+'icon.png')
 
+def Get_Page(name, url, img):
+    HTML = OPEN_URL(url)
+    Page_Link = re.compile('<iframe class="playerframe" src="(.+?)" scrolling=".+?" marginwidth=".+?" marginheight=".+?" vspace=".+?" hspace=".+?" allowfullscreen=".+?" webkitallowfullscreen=".+?" mozallowfullscreen=".+?" width=".+?" height=".+?" frameborder=".+?"></iframe>',re.DOTALL).findall(HTML)
+    No_PageLinks = len(Page_Link)
+    
+    
+    if No_PageLinks == 1:
+        for PageLink in Page_Link:
+            PageLink = PageLink.replace('player','watch')
+            Resolve_Link = PageLink + '&fv=&sou='
+            Resolve_Page = OPEN_URL(Resolve_Link)
+            Resolved = re.compile('<source src="(.+?)" type=".+?">',re.DOTALL).findall(Resolve_Page)
+            for Link in Resolved:
+                isFolder=False
+                Resolve(Link)
+    
+    elif No_PageLinks > 1:
+        
+        for PageLink in Page_Link:
+            Get_NextURL = OPEN_URL(PageLink)
+            NextURL = re.compile('<iframe width=".*?" height=".*?" frameborder=".*?" src="(.*?)" scrolling=".*?" marginwidth=".*?" marginheight=".*?" vspace=".*?" hspace=".*?" allowfullscreen=".*?" webkitallowfullscreen=".*?" mozallowfullscreen=".*?"></iframe>',re.DOTALL).findall(Get_NextURL)
+            RT_Link = NextURL
+            RT_Link = (str(RT_Link)).replace('[\'', '').replace('\']', '');
+            print 'Stripped url : ' + RT_Link
+            addDir4('DOUBLE LINK',RT_Link,424,'')
+			
+            for url in NextURL:
+					addDir3('DOUBLE LINK',url,424,'')
+					try:
+						url2 = Google.resolve(url)
+					except:
+						pass
+					try:
+						find_Links = re.findall(r"{'url': u'(.*?)', 'quality': 'HD'}, {'url': u'(.*?)', 'quality': 'SD'}", str(url2))
+						for HD, SD in find_Links:
+							
+							HD_URLS.append(HD)
+							SD_URLS.append(SD)
+					except:
+						pass
+    else:
+        pass
 
+def MOVIES_TWO():
+#    addDir3('Top 20 Most Viewed','http://cnfstudio.com',7014,ART+'Movies.png')
+#    addDir3('Box Office','http://cnfstudio.com/category/box-office/',7024,ART+'Movies.png')
+    addDir3('Genres','http://cnfstudio.com/movies/',7002,ART+'Movies.png')
+#    addDir3('By Year','http://cnfstudio.com',7015,ART+'Movies.png')
+    addDir3('Search Movies','',7017,ART+'Movies.png')
+    xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
-def cnfTVPlay2(url):
-
-    html=OPEN_URL(url)
-    match = re.compile('<video id=".+?<source src="(.+?)" type="video/mp4">',re.DOTALL).findall(html)
-    for url in match:
-        addDir4('PLAY NOW',url,222,ART+'icon.png')
-
-
-
+		
 def cnfHome():      
     html=OPEN_URL('http://cnfstudio.com/')
     match = re.compile('<a href="http://cnfstudio.com/genre/(.+?)">(.+?)</a>').findall(html)
     for url,name in match:
         addDir3(name,'http://cnfstudio.com/genre/' + url,7003,ART+'icon.png')
 		
+dialog = xbmcgui.Dialog()
+		
 		
 def cnfCat(url):
     html=OPEN_URL(url)
-    match = re.compile('<div class="movie">.+?<img src="(.+?)" alt=".+?"/>.+?<a href="(.+?)">.+?<h2>(.+?)</h2>',re.DOTALL).findall(html)
-    prev = re.compile("<link rel='prev' href='(.+?)'/>").findall(html)
-    next = re.compile("<link rel='next' href='(.+?)'/>").findall(html)
+    match = re.compile('<div class="movie">.+?<img src="(.+?)" alt=".+?" />.+?<a href="(.+?)"><span class="player"></span></a>.+?<h2>(.+?)</h2>',re.DOTALL).findall(html)
+    prev = re.compile("<link rel='next' href='(.+?)'/>").findall(html)
     for img,url,name in match:
-        addDir4((name).replace('&#038;','').replace('&#8216;','').replace('&#8217;','').replace('&#8211;',''),url,7004,img)
+		addDir4((name).replace('&#038;','').replace('&#8216;','').replace('&#8217;','').replace('&#8211;',''),url,7004,img)
     prev=prev
     for url in prev:
-        addDir3('Prev',url,7003,'')
-    next=next
-    for url in next:
-        addDir3('Next',url,7003,'')
+		addDir3('Next Page',url,7003,'')
 
 def cnfMovie(url):
 
@@ -544,21 +756,8 @@ def cnfPlay1(url):
     html=OPEN_URL(url)
     match = re.compile('<video id=".+?<source src="(.+?)" type="video/mp4">',re.DOTALL).findall(html)
     for url in match:
-        RESOLVE(url,name)
-	
+        RESOLVE(url,'')
 
-#------------------------------STREAMS---------------------------------------------------------------------
-def M3UCATS():
-    html=OPEN_CAT(Decode('aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vdm9kL3VybHMvbTN1LnBocA=='))
-    match = re.compile('<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>').findall(html)
-    for url,image,name in match:
-        addDir3(name,url,1009,ART+'streams.png')
-		
-def M3UPLAY(url):
-    html=OPEN_CAT(url)
-    match = re.compile('^#EXTINF:-?[0-9]*(.*?),(.*?)\n(.*?)$',re.I+re.M+re.U+re.S).findall(html)
-    for var,name,url in match:
-        addDir4(name,url,222,ART+'streams.png')
 #------------------------------PLAYLIST LOADER----------------------------------------------------------------
 def LOADER():
     addDir('[COLORgreen]Local M3u[/COLOR]',LocalM3u,2001,ART+'loader.png',FANART,'')
@@ -747,6 +946,7 @@ def addDir3(name,url,mode,iconimage):
         liz.setInfo( type="Video", infoLabels={ "Title": name } )
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
         return ok
+		
 def addDir4(name,url,mode,iconimage):
         u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)
         ok=True
@@ -1585,7 +1785,7 @@ def setView(content, viewType):
         xbmc.executebuiltin("Container.SetViewMode(%s)" % ADDON.getSetting(viewType) )
         
         
-if mode==None or url==None or len(url)<1:
+if mode==None:
         INDEX()
 
 elif mode==1:
@@ -1835,9 +2035,18 @@ elif mode==3000:
 elif mode == 404: 
         TestPlayUrl(name,url,iconimage)
 
-elif mode == 7020:
-        LiveTVFull()
+elif mode == 7030:
+        LiveTVFullCat()
 
+elif mode == 7021:
+        List_LiveTVFull(name)
+
+elif mode == 7022:
+        LiveTVFull(name)
+
+elif mode == 7000:
+		Get_Page(name, url, img)
+		
 elif mode == 7002:
         cnfHome()
 
@@ -1864,5 +2073,45 @@ elif mode == 7012:
 
 elif mode == 7013:
         cnfTVPlay2(url)
+elif mode == 7014: 
+		CNF_Studio_Indexer.MV_Movies(url)
+elif mode == 7015:
+		CNF_Studio_Indexer.Movie_ByYear(url)
+elif mode == 7016:
+		CNF_Studio_Indexer.Resolve_CNF_Link(name, url, iconimage)
+elif mode == 7017:
+		CNF_Studio_Indexer.Search_Movie()
+elif mode == 7018:
+		MOVIES_TWO()
+elif mode == 7019: 
+		CNF_Studio_Indexer.List_Movies(url)
+elif mode == 7020: 
+		CNF_Studio_Indexer.Get_Movie_Page(url)
+elif mode == 7024: 
+		CNF_Studio_Indexer.Box_Office(url)
+
+elif mode == 8000:
+		Soap_TV()
+elif mode == 8001:
+		CoronationStreet()
+elif mode == 8002:
+		Eastenders()
+elif mode == 8003: 
+		Emmerdale()
+elif mode == 8004: 
+		Hollyoaks()
+elif mode == 8005: 
+		ImACeleb()
+elif mode == 8006:
+		SOAPPLAYER(name,url)
+elif mode == 8030:
+		FXSKIN(url)
+elif mode == 8040:
+		DOC1()
+elif mode == 8041:
+		DOC2(url)
+elif mode == 8042:
+		DOC3(url)
+
 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
