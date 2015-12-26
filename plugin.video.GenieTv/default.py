@@ -1,5 +1,6 @@
 import xbmc, xbmcaddon, xbmcgui, xbmcplugin,os,base64,sys,xbmcvfs
 import urlresolver
+import yt
 import requests
 import urlparse
 import shutil
@@ -46,7 +47,7 @@ HOME = xbmc.translatePath('special://home/')
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 ICON = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png',FANART,''))
 ART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/art/'))
-VERSION = "2.0.8"
+VERSION = "2.0.9"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
 PATH = "GenieTv"            
@@ -79,18 +80,19 @@ def MenWish():
     addDir('[COLORgreen]WISHES ANDROID[/COLOR]',BASEURL,44,ART+'WISHESAN.png',FANART,'')
     setView('movies', 'MAIN')
 def MenStream():
-#    addDir('[COLORgreen]DOCUMENTARIES[/COLOR]',BASEURL,8040,ART+'soaps.png',FANART,'')
-    addDir('[COLORgreen]Soaps Catch Up[/COLOR]',BASEURL,8000,ART+'soaps.png',FANART,'')
-    addDir('[COLORgreen]GenieTv SCRAPED LIVE TV[/COLOR]',BASEURL,7030,ART+'origin.png',FANART,'')
-#    addDir('[COLORgreen]GenieTv SCRAPED TV VOD[/COLOR]',BASEURL,7001,ART+'VOD.png',FANART,'')
+#    addDir('[COLORgreen]EPG[/COLOR]',BASEURL,1014,ART+'VOD.png',FANART,'')
+#    addDir('[COLORgreen]CARTOONS[/COLOR]',BASEURL,8050,ART+'VOD.png',FANART,'')
+#    addDir('[COLORgreen]SCRAPED TV VOD[/COLOR]',BASEURL,7001,ART+'VOD.png',FANART,'')
+    addDir('[COLORgreen]SCRAPED LIVE TV[/COLOR]',BASEURL,7030,ART+'origin.png',FANART,'')
     addDir('[COLORgreen]SCRAPED MOVIES VOD[/COLOR]',BASEURL,7018,ART+'MOVIESv.png',FANART,'')
-    addDir('[COLORgreen]GenieTv VOD[/COLOR]',BASEURL,1005,ART+'VOD.png',FANART,'')
-    addDir('[COLORgreen]GenieTv STREAMS[/COLOR]',BASEURL,1008,ART+'streams.png',FANART,'')
+    addDir('[COLORgreen]SOAPS CATCH UP[/COLOR]',BASEURL,8000,ART+'soaps.png',FANART,'')
+    addDir('[COLORgreen]DOCUMENTARIES[/COLOR]',BASEURL,8040,ART+'documentary.png',FANART,'')
+    addDir('[COLORgreen]VOD[/COLOR]',BASEURL,1005,ART+'VOD.png',FANART,'')
+    addDir('[COLORgreen]STREAMS[/COLOR]',BASEURL,1008,ART+'streams.png',FANART,'')
     addDir('[COLORgreen]THE REAPER[/COLOR]',BASEURL,1016,ART+'reap.png',FANART,'')
     addDir('[COLORgreen]SCOOBY STREAMS[/COLOR]',BASEURL,1026,ART+'scoob.png',FANART,'')
-    addDir('[COLORgreen]GenieTv ANIME --PLEASE USE PLAYER 3 WHILE WE ATTEMPT TO CORRECT THE ISSUE--[/COLOR]',BASEURL,1001,ART+'anime.png',FANART,'PLEASE USE PLAYER 3 WHILE WE ATTEMPT TO CORRECT THE ISSUE')
+    addDir('[COLORgreen]ANIME --PLEASE USE PLAYER 3 WHILE WE ATTEMPT TO CORRECT THE ISSUE--[/COLOR]',BASEURL,1001,ART+'anime.png',FANART,'PLEASE USE PLAYER 3 WHILE WE ATTEMPT TO CORRECT THE ISSUE')
     addDir('[COLORgreen]PLAYLIST LOADER[/COLOR]',BASEURL,3000,ART+'loader.png',FANART,'')
-#    addDir('[COLORgreen]GenieTv EPG[/COLOR]',BASEURL,1014,ART+'VOD.png',FANART,'')
     setView('movies', 'MAIN')
 
 def MenMusic():
@@ -455,26 +457,56 @@ def RADIO():
     match = re.compile('<tr>.+?<td><a href=".+?"><b>(.+?)</b>.+?<td><a href="(.+?)">',re.DOTALL).findall(html)
     for name,url in match:
 			    addDir4(name,url,222,ART+'radio.png')
-#------------------------------DOCUMENTARIES---------------------------------------------------------------------#------------------------------RADIO-----------------------------------------------------------------------
+#------------------------------CARTOONS---------------------------------------------------------------------
+def TOON1():
+    html=OPEN_CAT(Decode('aHR0cDovL2tpc3NjYXJ0b29uLm1lL0NhcnRvb25MaXN0Lw=='))
+    match = re.compile('<img.+?src="(.+?)" style="float: left; padding-right: 10px" />.+?<a class=".+?" href="(.+?)">(.+?)</a>.+?<p>(.+?)</p>',re.DOTALL).findall(html)
+    match2 = re.compile('href="(.+?)".+?Next </a>').findall(html)
+    for img,url,name,disc in match:
+			    addDir('[COLORgreen]'+name+'[/COLOR]','http://kisscartoon.me'+url,8051,img,'',disc)
+    for url in match:
+			    addDir3('[COLORgreen]Next Page[/COLOR]','http://kisscartoon.me'+url,8050,ART+'radio.png')
+def TOON2(url):
+    html=OPEN_CAT(url)
+    match = re.compile('<a href="(.+?)" title="Watch cartoon(.+?)</a>',re.DOTALL).findall(html)
+    for url,name in match:
+			    addDir3('[COLORgreen]'+name+'[/COLOR]','http://kisscartoon.me'+url,8052,ART+'radio.png')
+def TOON3(url):
+    html=OPEN_CAT(url)
+    match = re.compile('<option value="(.+?)">.+?</option>',re.DOTALL).findall(html)
+    for name,img,url,disc in match:
+			    addDir2('[COLORgreen]PLAY[/COLOR]',(Decode(url)),222,ART+'radio.png')
+#------------------------------DOCUMENTARIES---------------------------------------------------------------------
 def DOC1():
     html=OPEN_CAT(Decode('aHR0cDovL3RvcGRvY3VtZW50YXJ5ZmlsbXMuY29tLw=='))
     match = re.compile('<a href="(.+?)" >(.+?)</a></li><li>').findall(html)
     for url,name in match:
-			    addDir3('[COLORgreen]'+name+'[/COLOR]',url,8041,ART+'radio.png')
+                addDir3(name,url,8041,ART+'documentary.png')
 def DOC2(url):
     html=OPEN_CAT(url)
     match = re.compile('<h2><a href="(.+?)" title="(.+?)">.+?</a></h2>.+?src="(.+?)"',re.DOTALL).findall(html)
     match2 = re.compile('class="inactive">.+?</a><a href="(.+?)">Next</a></div>',re.DOTALL).findall(html)
     for url,name,img in match:
-			    addDir3('[COLORgreen]'+name+'[/COLOR]',url,8042,img)
+        addDir3((name).replace('&#039;s',''),url,8042,img)                
     for url in match2:
-			    addDir3('[COLORgreen]NEXT PAGE[/COLOR]',url,8041,ART+'radio.png')
+        addDir3('NEXT PAGE',url,8041,ART+'documentary.png')
+
+	
 def DOC3(url):
     html=OPEN_CAT(url)
     match = re.compile('<meta itemprop="name" content="(.+?)".+?<meta itemprop="thumbnailUrl" content="(.+?)".+?<meta itemprop="embedUrl" content="(.+?)".+?<meta itemprop="description" content="(.+?)" />',re.DOTALL).findall(html)
+    match2 = re.compile('<div class="video new-video"><iframe width="766" height="431" src="(.+?)&amp;iv_load_policy=3&amp;showinfo=0&amp;autohide=1"',re.DOTALL).findall(html)
     for name,img,url,disc in match:
-			    addDir2('[COLORgreen]'+name+'[/COLOR]',url.replace('https://www.youtube.com/embed/','http://youtube.com/watch?v='),222,img,'',disc)
-#------------------------------EPG---------------------------------------------------------------------#------------------------------RADIO-----------------------------------------------------------------------
+        addDir4((name).replace('&#039;s',''),url.replace('https://www.youtube.com/embed/',''),8043,img)
+    for url in match2:
+        DOCLIST((url).replace('//','http://'))
+
+def DOCLIST(url):
+    html=OPEN_CAT(url)
+    match = re.compile('<link rel="canonical" href="(.+?)">  <link rel="stylesheet"').findall(html)
+    for url in match:
+        addDir4('PLAY',(url).replace('http://www.youtube.com/watch?v=',''),8043,ART+'documentary.png')
+#------------------------------EPG---------------------------------------------------------------------
 def EPG():
     html=OPEN_CAT(Decode('aHR0cDovL3d3dy50dmd1aWRlLmNvLnVrLw=='))
     match = re.compile('<a href="(.+?)"  qt-title=".+?" qt-text=".+?<br> .+?" title="(.+?)".+?class=".+? src="(.+?)" alt=".+?" /></a>',re.DOTALL).findall(html)
@@ -770,7 +802,7 @@ def LocalM3UPLAY(url):
 
 #------------------------------SCOOBY STREAMS---------------------------------------------------------------------
 def SCOOBY():
-    html=OPEN_CAT(Decode('aHR0cDovL3Njb29ieXN0cmVhbXMueDEwaG9zdC5jb20vc2Nvb2J5L3R2Y2F0cy5waHA='))
+    html=OPEN_CAT(Decode('aHR0cDovL3Njb29ieXN0cmVhbXMueDEwLm14L3Njb29ieS90dmNhdHMucGhw'))
     match = re.compile('<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>').findall(html)
     for url,image,name in match:
         addDir3(name,url,1027,image)
@@ -2112,6 +2144,16 @@ elif mode == 8041:
 		DOC2(url)
 elif mode == 8042:
 		DOC3(url)
+elif mode == 8043:
+		yt.PlayVideo(url)
+elif mode == 8044:
+		DOCLIST(url)
+elif mode == 8050:
+		TOON1()
+elif mode == 8051:
+		TOON2(url)
+elif mode == 8052:
+		TOON3(url)
 
 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
