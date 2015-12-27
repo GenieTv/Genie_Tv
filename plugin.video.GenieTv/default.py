@@ -47,7 +47,7 @@ HOME = xbmc.translatePath('special://home/')
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 ICON = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png',FANART,''))
 ART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/art/'))
-VERSION = "2.0.9"
+VERSION = "2.1"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
 PATH = "GenieTv"            
@@ -84,6 +84,7 @@ def MenStream():
 #    addDir('[COLORgreen]CARTOONS[/COLOR]',BASEURL,8050,ART+'VOD.png',FANART,'')
 #    addDir('[COLORgreen]SCRAPED TV VOD[/COLOR]',BASEURL,7001,ART+'VOD.png',FANART,'')
     addDir('[COLORgreen]SCRAPED LIVE TV[/COLOR]',BASEURL,7030,ART+'origin.png',FANART,'')
+    addDir('[COLORgreen]SCRAPED FREEVIEW[/COLOR]',BASEURL,8060,ART+'origin.png',FANART,'')
     addDir('[COLORgreen]SCRAPED MOVIES VOD[/COLOR]',BASEURL,7018,ART+'MOVIESv.png',FANART,'')
     addDir('[COLORgreen]SOAPS CATCH UP[/COLOR]',BASEURL,8000,ART+'soaps.png',FANART,'')
     addDir('[COLORgreen]DOCUMENTARIES[/COLOR]',BASEURL,8040,ART+'documentary.png',FANART,'')
@@ -506,6 +507,17 @@ def DOCLIST(url):
     match = re.compile('<link rel="canonical" href="(.+?)">  <link rel="stylesheet"').findall(html)
     for url in match:
         addDir4('PLAY',(url).replace('http://www.youtube.com/watch?v=',''),8043,ART+'documentary.png')
+#------------------------------FREEVIEW---------------------------------------------------------------------
+def FREEVIEW():
+    html=OPEN_CAT(Decode('aHR0cDovL3d3dy53YXRjaGFsbGNoYW5uZWxzLmNvbS9icml0aXNoLXR2Lmh0bWwv'))
+    match = re.compile('href="(.+?)">(.+?)</a></li>').findall(html)
+    for url,name in match:
+			    addDir3('[COLORgreen]'+name+'[/COLOR]',url,8061,ART+'documentary.png')
+def FREEVIEW2(url):
+    html=OPEN_CAT(url)
+    match = re.compile('<p><iframe src="(.+?)"').findall(html)
+    for url in match:
+			    addDir4('[COLORgreen]LINK 1[/COLOR]',url,222,ART+'documentary.png')
 #------------------------------EPG---------------------------------------------------------------------
 def EPG():
     html=OPEN_CAT(Decode('aHR0cDovL3d3dy50dmd1aWRlLmNvLnVrLw=='))
@@ -802,7 +814,7 @@ def LocalM3UPLAY(url):
 
 #------------------------------SCOOBY STREAMS---------------------------------------------------------------------
 def SCOOBY():
-    html=OPEN_CAT(Decode('aHR0cDovL3Njb29ieXN0cmVhbXMueDEwLm14L3Njb29ieS90dmNhdHMucGhw'))
+    html=OPEN_CAT(Decode('aHR0cDovL3Njb29ieXN0cmVhbS54MTBob3N0LmNvbS9zY29vYnkvdHZjYXRzLnBocA=='))
     match = re.compile('<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>').findall(html)
     for url,image,name in match:
         addDir3(name,url,1027,image)
@@ -2148,6 +2160,10 @@ elif mode == 8043:
 		yt.PlayVideo(url)
 elif mode == 8044:
 		DOCLIST(url)
+elif mode == 8060:
+		FREEVIEW()
+elif mode == 8061:
+		FREEVIEW2(url)
 elif mode == 8050:
 		TOON1()
 elif mode == 8051:
