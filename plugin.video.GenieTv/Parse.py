@@ -143,6 +143,8 @@ def ParseURL(url):
                     name = name.replace ('farvardin', 'LIST 1')
                 if 'khordad' in name:
                     name = name.replace ('khordad', 'LIST 2')
+                if 'Max-Movie.In' in name:
+                    name = name.replace ('Max-Movie.In', '')
                 if 'ordibehesht' in name:
                     name = name.replace ('ordibehesht', 'LIST 3')
                 if 'flv' in name:
@@ -393,7 +395,7 @@ def ParseURL(url):
                     name = name.replace('wmv', ' ')
 
                 if '.mkv' in link or '.m4v' in link or '.mp3' in link or '.mp4' in link or '.avi' in link or '.flv' in link or '.mpeg' in link or '.3gp' in link or '.divx' in link or '.strm' in link:
-                    AddTVSHOWDir(name, url+link, 404, ART+'VOD.png', 'GenieTv does not host or distribute any of the content displayed by this addon. GenieTV does not have any affiliation with the content provider.', isFolder=False)
+                    AddTVSHOWDir(name, url+link, 222, ART+'VOD.png', 'GenieTv does not host or distribute any of the content displayed by this addon. GenieTV does not have any affiliation with the content provider.', isFolder=False)
 					
                 else:
 					AddTVSHOWDir(name, url+link, 1006, ART+'VOD.png', '', isFolder=True)
