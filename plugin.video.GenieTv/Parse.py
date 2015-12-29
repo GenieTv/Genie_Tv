@@ -365,6 +365,10 @@ def ParseURL(url):
                     name = name.replace('tuvideo', ' ')
                 if 'matiasmx' in name:
                     name = name.replace('matiasmx', ' ')
+                if 'farsimovie' in name:
+                    name = name.replace('farsimovie', ' ')
+                if 'info' in name:
+                    name = name.replace('info', ' ')
                 if 'REMUX' in name:
                     name = name.replace('REMUX', ' ')
                 if 'DTSHD' in name:
@@ -388,7 +392,7 @@ def ParseURL(url):
                 if 'wmv' in name:
                     name = name.replace('wmv', ' ')
 
-                if '.mkv' in link or '.mp3' in link or '.mp4' in link or '.avi' in link or '.flv' in link or '.mpeg' in link or '.3gp' in link or '.divx' in link or '.strm' in link:
+                if '.mkv' in link or '.m4v' in link or '.mp3' in link or '.mp4' in link or '.avi' in link or '.flv' in link or '.mpeg' in link or '.3gp' in link or '.divx' in link or '.strm' in link:
                     AddTVSHOWDir(name, url+link, 404, ART+'VOD.png', 'GenieTv does not host or distribute any of the content displayed by this addon. GenieTV does not have any affiliation with the content provider.', isFolder=False)
 					
                 else:

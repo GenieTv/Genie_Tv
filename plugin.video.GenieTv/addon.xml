@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.GenieTv" name="[COLORgreen]GenieTv[/COLOR]" version="2.1.1" provider-name="JayBox">
+<addon id="plugin.video.GenieTv" name="[COLORgreen]GenieTv[/COLOR]" version="2.2.0" provider-name="JayBox">
   <requires>
   	<import addon="script.module.beautifulsoup" version="3.2.1"/>
 	<import addon="script.module.beautifulsoup4" />
@@ -14,7 +14,7 @@
   </extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="en">GenieTv Kodi's largest support tool. [CR]  Brought to you by the Architects@Work</summary>
-    <description lang="en">GenieTv provides an easy way to setup, maintain and create using your Kodi media center</description>
+    <description lang="en">GenieTv The Ultimate Kodi Utility, /n This All In One Addon Has Been Created To Service All Kodi Needs /n And In The Hopefully To Brings Devs And Streamers Alike A Platform And Home T host Their Content.</description>
 	<disclaimer lang="en">The author neither hosts or stores any content, the author has no affiliation with content hosts</disclaimer>
     <platform>all</platform>
   </extension>

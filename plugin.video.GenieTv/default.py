@@ -36,6 +36,7 @@ AddonID='plugin.video.GenieTv'
 dp =  xbmcgui.DialogProgress()
 AddonTitle="[COLORgreen]GenieTv[/COLOR]" 
 net = Net()
+Dialog = xbmcgui.Dialog()
 Decode = base64.decodestring
 MyBuild = ADDON.getSetting('Build')
 MyLocal = ADDON.getSetting('Local')
@@ -47,7 +48,7 @@ HOME = xbmc.translatePath('special://home/')
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 ICON = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png',FANART,''))
 ART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/art/'))
-VERSION = "2.1.1"
+VERSION = "2.2.0"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
 PATH = "GenieTv"            
@@ -82,6 +83,7 @@ def MenWish():
 def MenStream():
 #    addDir('[COLORgreen]EPG[/COLOR]',BASEURL,1014,ART+'VOD.png',FANART,'')
 #    addDir('[COLORgreen]SCRAPED TV VOD[/COLOR]',BASEURL,7001,ART+'VOD.png',FANART,'')
+    addDir('[COLORgreen]SEARCH[/COLOR]',BASEURL,9000,ART+'search.png',FANART,'')
     addDir('[COLORgreen]LIVE TV[/COLOR]',BASEURL,7030,ART+'origin.png',FANART,'')
     addDir('[COLORgreen]M3U STREAMS[/COLOR]',BASEURL,8070,ART+'streams.png',FANART,'')
     addDir('[COLORgreen]GenieTv VOD[/COLOR]',BASEURL,1005,ART+'VOD.png',FANART,'')
@@ -96,6 +98,11 @@ def MenStream():
     addDir('[COLORgreen]ANIME --PLEASE USE PLAYER 3 WHILE WE ATTEMPT TO CORRECT THE ISSUE--[/COLOR]',BASEURL,1001,ART+'anime.png',FANART,'PLEASE USE PLAYER 3 WHILE WE ATTEMPT TO CORRECT THE ISSUE')
     addDir('[COLORgreen]PLAYLIST LOADER[/COLOR]',BASEURL,3000,ART+'loader.png',FANART,'')
     setView('movies', 'MAIN')
+
+def Search_Lists():
+    addDir('[COLORgreen]SEARCH MOVIES[/COLOR]',BASEURL,9001,ART+'MOVIESv.png',FANART,'')
+    addDir('[COLORgreen]SEARCH SERIES[/COLOR]',BASEURL,9002,ART+'TVSHOWSv.png',FANART,'')
+    addDir('[COLORgreen]SEARCH LiveTv[/COLOR]',BASEURL,9003,ART+'livetv.png',FANART,'')
 
 def MenMusic():
     addDir('[COLORgreen]GenieTv RADIO[/COLOR]',BASEURL,1013,ART+'radio.png',FANART,'')
@@ -191,7 +198,7 @@ def ISKIN(url):
     setView('movies', 'MAIN')
       
 def FXSKIN(url):
-    link = OPEN_URL(Decode('aHR0cDovL2RsLmRyb3Bib3h1c2VyY29udGVudC5jb20vcy9kejYwd2FqMGhmcnV2aDgvQlVJTERTLnR4dD9kbD0w')).replace('\n','').replace('\r','')
+    link = OPEN_URL(Decode('aHR0cHM6Ly9kbC5kcm9wYm94dXNlcmNvbnRlbnQuY29tL3MvN2ZrMjhndDlwb3QxMjJhL0JVSUxEUy50eHQ/ZGw9MA==')).replace('\n','').replace('\r','')
     match = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(link)
     for name,url,iconimage,fanart,description in match:
             addDir(name,url,42,iconimage,fanart,description)
@@ -517,10 +524,10 @@ def DOCLIST(url):
         addDir4('PLAY',(url).replace('http://www.youtube.com/watch?v=',''),8043,ART+'documentary.png')
 #------------------------------FREEVIEW---------------------------------------------------------------------
 def FREEVIEW():
-    html=OPEN_CAT(Decode('aHR0cDovL3d3dy53YXRjaGFsbGNoYW5uZWxzLmNvbS9icml0aXNoLXR2Lmh0bWwv'))
-    match = re.compile('href="(.+?)">(.+?)</a></li>').findall(html)
-    for url,name in match:
-			    addDir3('[COLORgreen]'+name+'[/COLOR]',url,8061,ART+'documentary.png')
+    html=OPEN_CAT(Decode('aHR0cDovL2JyYXR1LW1hcmlhbi5yby8='))
+    match = re.compile('<tr><td ><img src="(.+?)" alt="" /> </td>.+?<td >(.+?)</td>.+?<td >.+?</td>.+?<td >.+?</td>.+?<td >(.+?)</td>.+?<td > <a href="(.+?)">Watch Online</a></td>',re.DOTALL).findall(html)
+    for img,time,name,url in match:
+			    addDir3((date+'[COLORgreen]'+name+'[/COLOR]'),url,8061,img)
 def FREEVIEW2(url):
     html=OPEN_CAT(url)
     match = re.compile('<p><iframe src="(.+?)"').findall(html)
@@ -530,17 +537,106 @@ def FREEVIEW2(url):
 def Get_m3u_links():
     HTML = OPEN_URL(Decode('aHR0cDovL2JyYXR1LW1hcmlhbi5yby9pcHR2Lw=='))
     match = re.compile('itemprop="image" class="entry-thumb" src="(.+?)".+?"/></a></div>.+?<a itemprop="url" href="(.+?)" rel="bookmark" title=".+?">(.+?)</a></h3>.+?<time  itemprop="dateCreated" class="entry-date updated td-module-date" datetime=".+?" >(.+?)</time>',re.DOTALL).findall(HTML)
-    match2 = re.compile('</div>.+?class="current">.+?</span><a href="(.+?)".+?</div>',re.DOTALL).findall(HTML)
+    match2 = re.compile('href="(.+?)" class="page" title="(.+?)">.+?</a><a').findall(HTML)
     for img,url,name,date in match:
         addDir3((date + '-' + name).replace('&#038;',''),url,8071,img)
-    for url in match2:
-        addDir3('[COLORgreen]NEXT PAGE[/COLOR]',url,8070,img)
+    for url,name in match2:
+        addDir3('[COLORgreen]PAGE [/COLOR]'+name,url,8070,img)
    	
 def Get_m3u_playlinks(url):
     HTML = OPEN_CAT(url)
     match = re.compile('#EXTINF:-1,(.+?)<br />\n(.+?)<br />').findall(HTML)
     for name,url in match:
 		addDir4(name,url,222,ART + 'streams.png')
+#------------------------------SEARCH---------------------------------------------------------------------
+def Search_Films_Lists():
+  
+    Search_Name = Dialog.input('Search', type=xbmcgui.INPUT_ALPHANUM) 
+    Search_Title = Search_Name.lower()
+    url = (Decode('aHR0cDovL2RsLmZpbG1paGEuY29tL01vdmllcy8yMDE1Lw=='))
+    url2 = (Decode('aHR0cDovL2RsLmZpbG1paGEuY29tL01vdmllcy8yMDE0Lw=='))
+    url3 = (Decode('aHR0cDovL2RsLmZpbG1paGEuY29tL01vdmllcy8yMDEzLw=='))
+    url4 = (Decode('aHR0cDovL2RsLmZpbG1paGEuY29tL01vdmllcy8yMDEyLw=='))
+	
+    HTML = OPEN_URL(url)
+    HTML2 = OPEN_URL(url2)
+    HTML3 = OPEN_URL(url3)
+    HTML4 = OPEN_URL(url4)	
+    match = re.compile('<td valign="top"><img src=".+?" alt=".+?"></td><td><a href="(.+?)">(.+?)</a></td>').findall(HTML)
+    match2 = re.compile('<td valign="top"><img src=".+?" alt=".+?"></td><td><a href="(.+?)">(.+?)</a></td>').findall(HTML2)
+    match3 = re.compile('<td valign="top"><img src=".+?" alt=".+?"></td><td><a href="(.+?)">(.+?)</a></td>').findall(HTML3)
+    match4 = re.compile('<td valign="top"><img src=".+?" alt=".+?"></td><td><a href="(.+?)">(.+?)</a></td>').findall(HTML4)
+    for urlList,name in match:
+        if Search_Name in name.lower():
+            addDir3((name).replace('..&gt;',''),(url+urlList),222,'')
+				
+            setView('tvshows', 'Media Info 3')			
+    for urlList,name in match2:
+        if Search_Name in name.lower():
+            addDir4((name).replace('..&gt;',''),(url2+urlList),222,'')
+				
+            setView('tvshows', 'Media Info 3')			
+    for urlList,name in match3:
+        if Search_Name in name.lower():
+            addDir4((name).replace('..&gt;',''),(url3+urlList),222,'')
+				
+            setView('tvshows', 'Media Info 3')			
+    for urlList,name in match4:
+        if Search_Name in name.lower():
+            addDir4((name).replace('..&gt;',''),(url4+urlList),222,'')
+				
+            setView('tvshows', 'Media Info 3')
+def Search_Tv_Lists():
+  
+    Search_Name = Dialog.input('Search', type=xbmcgui.INPUT_ALPHANUM) 
+    Search_Title = Search_Name.lower()
+    url = (Decode('aHR0cDovL2RsLmZhcnNpbW92aWUubmV0L1NlcmlhbC8='))
+    url2 = (Decode('aHR0cDovL2RsLmZhcnNpbW92aWUubmV0L1NlcmlhbC8='))
+    url3 = (Decode('aHR0cDovL2RsLmZhcnNpbW92aWUubmV0L1NlcmlhbC8='))
+    url4 = (Decode('aHR0cDovL2RsLmZhcnNpbW92aWUubmV0L1NlcmlhbC8='))
+	
+    HTML = OPEN_URL(url)
+    HTML2 = OPEN_URL(url2)
+    HTML3 = OPEN_URL(url3)
+    HTML4 = OPEN_URL(url4)	
+    match = re.compile('<a .*?>(.*?)</a>').findall(HTML)
+    match2 = re.compile('<a .*?>(.*?)</a>').findall(HTML2)
+    match3 = re.compile('<a .*?>(.*?)</a>').findall(HTML3)
+    match4 = re.compile('<a .*?>(.*?)</a>').findall(HTML4)
+    for name in match:
+        if Search_Name in name.lower():
+            addDir3((name).replace('..&gt;','').replace('/',''),(url+name),1006,'')
+				
+            setView('tvshows', 'Media Info 3')			
+    for name in match2:
+        if Search_Name in name.lower():
+            addDir3((name).replace('..&gt;','').replace('/',''),(url2+name),1006,'')
+				
+            setView('tvshows', 'Media Info 3')			
+    for name in match3:
+        if Search_Name in name.lower():
+            addDir3((name).replace('..&gt;','').replace('/',''),(url3+name),1006,'')
+				
+            setView('tvshows', 'Media Info 3')			
+#    for urlList,name in match4:
+#        if Search_Name in name.lower():
+#            addDir4((name).replace('..&gt;',''),(url4+urlList),222,'')
+				
+#            setView('tvshows', 'Media Info 3')
+
+def Search_LiveTV():
+    
+    Search_Name = Dialog.input('Search', type=xbmcgui.INPUT_ALPHANUM) 
+    Search_Title = Search_Name.lower()
+    url = (Decode('aHR0cDovL3VrdHZub3cuZGVzaXN0cmVhbXMudHYvRGVzaVN0cmVhbXMvaW5kZXgyMDIucGhwP3RhZz1nZXRfYWxsX2NoYW5uZWwmdXNlcm5hbWU9YnlwYXNz'))
+    HTML = OPEN_URL(url)
+    match = re.compile('"id":".+?","name":"(.+?)","img":"(.+?)","stream_url3":".+?","cat_id":"(.+?)","stream_url2":".+?","stream_url":".+?"}',re.DOTALL).findall(HTML)
+    for name,img,CatNO in match:
+        Image = Decode ('aHR0cDovL3VrdHZub3cuZGVzaXN0cmVhbXMudHYv') + (img).replace('\\','')
+        if Search_Name in name.lower():
+                addDir3(name,'',7022,Image)
+ 
+    xbmcplugin.addSortMethod(addon_handle, xbmcplugin.SORT_METHOD_TITLE);
 #------------------------------EPG---------------------------------------------------------------------
 def EPG():
     html=OPEN_CAT(Decode('aHR0cDovL3d3dy50dmd1aWRlLmNvLnVrLw=='))
@@ -2197,6 +2293,14 @@ elif mode == 8051:
 		TOON2(url)
 elif mode == 8052:
 		TOON3(url)
+elif mode == 9000:
+		Search_Lists()
+elif mode == 9001:
+		Search_Films_Lists()
+elif mode == 9002:
+		Search_Tv_Lists()
+elif mode == 9003:
+		Search_LiveTV()
 
 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
