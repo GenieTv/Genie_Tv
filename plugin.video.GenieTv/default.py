@@ -48,7 +48,7 @@ HOME = xbmc.translatePath('special://home/')
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 ICON = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png',FANART,''))
 ART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/art/'))
-VERSION = "2.2.2"
+VERSION = "2.2.3"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
 PATH = "GenieTv"            
@@ -576,27 +576,27 @@ def Search_Films_Lists():
 
     for urlList,name in match:
         if Search_Name in name.lower():
-            addDir3((name).replace('..&gt;',''),(url+urlList),222,'')
+            addDir4((name+'[COLORgreen] source 1[/COLOR]').replace('..&gt;','').replace('.',' '),(url+urlList),222,'')
 				
             setView('tvshows', 'Media Info 3')			
     for urlList,name in match2:	
         if Search_Name in name.lower():
-            addDir4((name).replace('..&gt;',''),(url2+urlList),222,'')
+            addDir4((name+'[COLORgreen] source 2[/COLOR]').replace('..&gt;','').replace('.',' '),(url2+urlList),222,'')
 				
             setView('tvshows', 'Media Info 3')			
     for urlList,name in match3:	
         if Search_Name in name.lower():
-            addDir4((name).replace('..&gt;',''),(url3+urlList),222,'')
+            addDir4((name+'[COLORgreen] source 3[/COLOR]').replace('..&gt;',''),(url3+urlList),222,'')
 				
             setView('tvshows', 'Media Info 3')			
     for urlList,name in match4:	
         if Search_Name in name.lower():
-            addDir4((name).replace('..&gt;',''),(url4+urlList),222,'')
+            addDir4((name+'[COLORgreen] source 4[/COLOR]').replace('..&gt;',''),(url4+urlList),222,'')
 				
             setView('tvshows', 'Media Info 3')
     for urlList,name in match5:	
         if Search_Name in name.lower():
-            addDir3((name).replace('..&gt;',''),(url5+urlList),1006,'')
+            addDir3((name+'[COLORgreen] source 5[/COLOR]').replace('..&gt;','').replace('Ganool','').replace('ShAaNiG','').replace('YIFY','').replace('[[ Max-Movie.In ]]','').replace('.mkv','').replace('.mp4','').replace('.',' '),(url5+urlList),1006,'')
 				
             setView('tvshows', 'Media Info 3')
     filenames = ['0-9/','A/', 'B/', 'C/', 'D/', 'E/', 'F/', 'G/', 'H/', 'I/', 'J/', 'K/', 'L/', 'M/', 'N/', 'O/', 'P/', 'R/', 'S/', 'T/', 'U/', 'V/', 'W/', 'X/', 'Y/', 'Z/']
@@ -605,10 +605,10 @@ def Search_Films_Lists():
     for file_Name in filenames:
         search_URL = Base_list + file_Name
         HTML6 = OPEN_CAT(search_URL)
-        match6 = re.compile('<li><a href="(.+?)">(.+?)</a></li>').findall(HTML6)
+        match6 = re.compile('<li><a href="(.+?)"> (.+?)</a></li>').findall(HTML6)
         for urlList,name in match6:		
             if Search_Name in name.lower():
-                addDir4((name).replace('[[ Max-Movie.In ]].mkv',''),(Base_list+file_Name+urlList),222,'')
+                addDir4((name+'[COLORgreen] source 5[/COLOR]').replace('Ganool','').replace('ShAaNiG','').replace('YIFY','').replace('[[ Max-Movie.In ]]','').replace('.mkv','').replace('.mp4','').replace('.',' '),(Base_list+file_Name+urlList),222,'')
 				
                 setView('tvshows', 'Media Info 3')			
 		
@@ -620,7 +620,7 @@ def Search_Tv_Lists():
     url = (Decode('aHR0cDovL2RsLmZhcnNpbW92aWUubmV0L1NlcmlhbC8='))
     url2 = (Decode('aHR0cDovL3N2Mi5kbC1wYXJzLmluLw=='))
     url3 = (Decode('aHR0cDovL3R2LmRsLXBhcnMuaW4v'))
-    url4 = (Decode('aHR0cDovL2RsLmZhcnNpbW92aWUubmV0L1NlcmlhbC8='))
+    url4 = (Decode('aHR0cDovL2RsLnZpcG1heC1tb3ZpZS5pbi9BbWVyaWNhbiUyMFNlcmlhbC8='))
 	
     HTML = OPEN_URL(url)
     HTML2 = OPEN_URL(url2)
@@ -629,27 +629,27 @@ def Search_Tv_Lists():
     match = re.compile('<a .*?>(.*?)</a>').findall(HTML)
     match2 = re.compile('<a .*?>(.*?)</a>').findall(HTML2)
     match3 = re.compile('<a .*?>(.*?)</a>').findall(HTML3)
-    match4 = re.compile('<a .*?>(.*?)</a>').findall(HTML4)
+    match4 = re.compile('<a .*?> (.*?)</a>').findall(HTML4)
     for name in match:
         if Search_Name in name.lower():
-            addDir3((name).replace('..&gt;','').replace('/',''),(url+name).replace(' ','%20'),1006,'')
+            addDir3((name+' source 1').replace('..&gt;','').replace('/',''),(url+name).replace(' ','%20'),1006,'')
 				
             setView('tvshows', 'Media Info 3')			
     for name in match2:
         if Search_Name in name.lower():
-            addDir3((name).replace('..&gt;','').replace('/',''),(url2+name).replace(' ','%20'),1006,'')
+            addDir3((name+' source 2').replace('..&gt;','').replace('/',''),(url2+name).replace(' ','%20'),1006,'')
 				
             setView('tvshows', 'Media Info 3')			
     for name in match3:
         if Search_Name in name.lower():
-            addDir3((name).replace('..&gt;','').replace('/',''),(url3+name).replace(' ','%20'),1006,'')
+            addDir3((name+' source 3').replace('..&gt;','').replace('/',''),(url3+name).replace(' ','%20'),1006,'')
 				
             setView('tvshows', 'Media Info 3')			
-#    for urlList,name in match4:
-#        if Search_Name in name.lower():
-#            addDir4((name).replace('..&gt;',''),(url4+urlList),222,'')
+    for name in match4:
+        if Search_Name in name.lower():
+            addDir3((name+' source 4').replace('..&gt;','').replace('/',''),(url4+name).replace(' ','%20'),1006,'')
 				
-#            setView('tvshows', 'Media Info 3')
+            setView('tvshows', 'Media Info 3')
 
 def Search_LiveTV():
     
