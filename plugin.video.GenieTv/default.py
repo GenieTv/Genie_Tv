@@ -48,7 +48,7 @@ HOME = xbmc.translatePath('special://home/')
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 ICON = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png',FANART,''))
 ART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/art/'))
-VERSION = "2.2.1"
+VERSION = "2.2.2"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
 PATH = "GenieTv"            
@@ -553,7 +553,7 @@ def Get_m3u_playlinks(url):
 		addDir4(name,url,222,ART + 'streams.png')
 #------------------------------SEARCH---------------------------------------------------------------------
 def Search_Films_Lists():
-  
+    Base_list = (Decode('aHR0cDovL2RsLnZpcG1heC1tb3ZpZS5pbi9Nb3ZpZS8='))
     Search_Name = Dialog.input('Search', type=xbmcgui.INPUT_ALPHANUM) 
     Search_Title = Search_Name.lower()
     url = (Decode('aHR0cDovL2RsLmZpbG1paGEuY29tL01vdmllcy8yMDE1Lw=='))
@@ -561,42 +561,58 @@ def Search_Films_Lists():
     url3 = (Decode('aHR0cDovL2RsLmZpbG1paGEuY29tL01vdmllcy8yMDEzLw=='))
     url4 = (Decode('aHR0cDovL2RsLmZpbG1paGEuY29tL01vdmllcy8yMDEyLw=='))
     url5 = (Decode('aHR0cDovL2RsLnZpcG1heC1tb3ZpZS5pbi9Nb3ZpZS8='))
-	
+
     HTML = OPEN_URL(url)
     HTML2 = OPEN_URL(url2)
     HTML3 = OPEN_URL(url3)
     HTML4 = OPEN_URL(url4)	
     HTML5 = OPEN_URL(url5)	
+   
     match = re.compile('<td valign="top"><img src=".+?" alt=".+?"></td><td><a href="(.+?)">(.+?)</a></td>').findall(HTML)
     match2 = re.compile('<td valign="top"><img src=".+?" alt=".+?"></td><td><a href="(.+?)">(.+?)</a></td>').findall(HTML2)
     match3 = re.compile('<td valign="top"><img src=".+?" alt=".+?"></td><td><a href="(.+?)">(.+?)</a></td>').findall(HTML3)
     match4 = re.compile('<td valign="top"><img src=".+?" alt=".+?"></td><td><a href="(.+?)">(.+?)</a></td>').findall(HTML4)
     match5 = re.compile('<td valign="top"><img src=".+?" alt=".+?"></td><td><a href="(.+?)">(.+?)</a></td>').findall(HTML5)
+
     for urlList,name in match:
         if Search_Name in name.lower():
             addDir3((name).replace('..&gt;',''),(url+urlList),222,'')
 				
             setView('tvshows', 'Media Info 3')			
-    for urlList,name in match2:
+    for urlList,name in match2:	
         if Search_Name in name.lower():
             addDir4((name).replace('..&gt;',''),(url2+urlList),222,'')
 				
             setView('tvshows', 'Media Info 3')			
-    for urlList,name in match3:
+    for urlList,name in match3:	
         if Search_Name in name.lower():
             addDir4((name).replace('..&gt;',''),(url3+urlList),222,'')
 				
             setView('tvshows', 'Media Info 3')			
-    for urlList,name in match4:
+    for urlList,name in match4:	
         if Search_Name in name.lower():
             addDir4((name).replace('..&gt;',''),(url4+urlList),222,'')
 				
             setView('tvshows', 'Media Info 3')
-    for urlList,name in match5:
+    for urlList,name in match5:	
         if Search_Name in name.lower():
             addDir3((name).replace('..&gt;',''),(url5+urlList),1006,'')
 				
             setView('tvshows', 'Media Info 3')
+    filenames = ['0-9/','A/', 'B/', 'C/', 'D/', 'E/', 'F/', 'G/', 'H/', 'I/', 'J/', 'K/', 'L/', 'M/', 'N/', 'O/', 'P/', 'R/', 'S/', 'T/', 'U/', 'V/', 'W/', 'X/', 'Y/', 'Z/']
+
+
+    for file_Name in filenames:
+        search_URL = Base_list + file_Name
+        HTML6 = OPEN_CAT(search_URL)
+        match6 = re.compile('<li><a href="(.+?)">(.+?)</a></li>').findall(HTML6)
+        for urlList,name in match6:		
+            if Search_Name in name.lower():
+                addDir4((name).replace('[[ Max-Movie.In ]].mkv',''),(Base_list+file_Name+urlList),222,'')
+				
+                setView('tvshows', 'Media Info 3')			
+		
+			
 def Search_Tv_Lists():
   
     Search_Name = Dialog.input('Search', type=xbmcgui.INPUT_ALPHANUM) 
