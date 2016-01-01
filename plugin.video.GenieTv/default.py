@@ -49,7 +49,7 @@ HOME = xbmc.translatePath('special://home/')
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 ICON = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png',FANART,''))
 ART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/art/'))
-VERSION = "2.2.4"
+VERSION = "2.2.5"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
 PATH = "GenieTv"            
@@ -86,7 +86,7 @@ def MenStream():
 #    addDir('[COLORgreen]SCRAPED TV VOD[/COLOR]',BASEURL,7001,ART+'VOD.png',FANART,'')
     addDir('[COLORgreen]SEARCH[/COLOR]',BASEURL,9000,ART+'search.png',FANART,'')
     addDir('[COLORgreen]LIVE TV[/COLOR]',BASEURL,7030,ART+'origin.png',FANART,'')
-#    addDir('[COLORgreen]RECENT EPISODES[/COLOR]',BASEURL,8081,ART+'recent.png',FANART,'')
+    addDir('[COLORgreen]RECENT EPISODES[/COLOR]',BASEURL,8081,ART+'recent.png',FANART,'')
     addDir('[COLORgreen]GenieTv VOD[/COLOR]',BASEURL,1005,ART+'VOD.png',FANART,'')
     addDir('[COLORgreen]SCOOBY STREAMS[/COLOR]',BASEURL,1026,ART+'scoob.png',FANART,'')
     addDir('[COLORgreen]THE REAPER[/COLOR]',BASEURL,1016,ART+'reap.png',FANART,'')
@@ -631,20 +631,20 @@ def Search_Tv_Lists():
     url2 = (Decode('aHR0cDovL3N2Mi5kbC1wYXJzLmluLw=='))
     url3 = (Decode('aHR0cDovL3R2LmRsLXBhcnMuaW4v'))
     url4 = (Decode('aHR0cDovL2RsLnZpcG1heC1tb3ZpZS5pbi9BbWVyaWNhbiUyMFNlcmlhbC8='))
-#    url6 = (Decode('aHR0cDovL2RpemlsYWIuY29tL2Fyc2l2P2xpbWl0PSZ0dXI9Jm9yZGVyYnk9JnVsa2U9Jm9yZGVyPSZ5aWw9JmRpemlfYWRpPQ==' )) + (Search_Name).replace(' ','+')
+    url6 = (Decode('aHR0cDovL2RpemlsYWIuY29tL2Fyc2l2P2xpbWl0PSZ0dXI9Jm9yZGVyYnk9JnVsa2U9Jm9yZGVyPSZ5aWw9JmRpemlfYWRpPQ==' )) + (Search_Name).replace(' ','+')
     url8 = (Decode('aHR0cDovL3Njb29ieXN0cmVhbS54MTBob3N0LmNvbS8vc2Nvb2J5L3Nob3dzL3R2YWxsLnBocA=='))
 	
     HTML = OPEN_URL(url)
     HTML2 = OPEN_URL(url2)
     HTML3 = OPEN_URL(url3)
     HTML4 = OPEN_URL(url4)	
-#    HTML6 = OPEN_URL(url6)
+    HTML6 = OPEN_URL(url6)
     HTML8 = OPEN_URL(url8)
     match = re.compile('<a .*?>(.*?)</a>').findall(HTML)
     match2 = re.compile('<a .*?>(.*?)</a>').findall(HTML2)
     match3 = re.compile('<a .*?>(.*?)</a>').findall(HTML3)
     match4 = re.compile('<a .*?> (.*?)</a>').findall(HTML4)
-#    match6 = re.compile('<a href="(.+?)" class="film-image">\n<img src="(.+?)" alt=""/>\n</a>\n<div class="tss-detail">\n<a class="title" style="" href=".+?">\n<span class="position">.+?</span>\n(.+?)</a>').findall(HTML6)
+    match6 = re.compile('<a href="(.+?)" class="film-image">\n<img src="(.+?)" alt=""/>\n</a>\n<div class="tss-detail">\n<a class="title" style="" href=".+?">\n<span class="position">.+?</span>\n(.+?)</a>').findall(HTML6)
     match8 = re.compile('<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>').findall(HTML8)
     for name in match:
         if Search_Name in name.lower():
@@ -671,9 +671,9 @@ def Search_Tv_Lists():
             addDir3((name+' source 4').replace('..&gt;','').replace('/',''),(url4+name).replace(' ','%20'),1006,'')
 				
             setView('tvshows', 'Media Info 3')
-#dizi    for url,img,name in match6:
-#        if Search_Name in name.lower():
-#            addDir3(name + ' - Source - Origin',url,8062,img)
+    for url,img,name in match6:
+        if Search_Name in name.lower():
+            addDir3(name + ' - Source - Origin',url,8062,img)
 def Search_LiveTV():
     
     Search_Name = Dialog.input('Search', type=xbmcgui.INPUT_ALPHANUM) 
