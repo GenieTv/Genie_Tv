@@ -1,3 +1,4 @@
+# -*- coding: cp1252 -*-
 import xbmc, xbmcaddon, xbmcgui, xbmcplugin,os,base64,sys,xbmcvfs
 import urlresolver
 import yt
@@ -48,7 +49,7 @@ HOME = xbmc.translatePath('special://home/')
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 ICON = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png',FANART,''))
 ART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/art/'))
-VERSION = "2.2.3"
+VERSION = "2.2.4"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
 PATH = "GenieTv"            
@@ -68,9 +69,9 @@ def INDEX():
     addDir('[COLORgreen]BUILDERS TOOLBOX[/COLOR]',BASEURL,32,ART+'builderstoolbox.png',FANART,'')
     addDir('[COLORgreen]SOURCE LIST[/COLOR]',BASEURL,46,ART+'sources.png',FANART,'')
     addDir('[COLORgreen]MAINTENANCE[/COLOR]',BASEURL,3,ART+'MAIN6.png',FANART,'')
-    addDir('[COLORgreen]GenieTv RSS Feed[/COLOR]',BASEURL,39,ART+'RSS.png',FANART,'')
-    addDir('[COLORgreen]APK TOOL[/COLOR]',BASEURL,2,ART+'APK.png',FANART,'')
     addDir('[COLORgreen]ADDONS[/COLOR]',(Decode('aHR0cDovL21pcnJvcnMua29kaS50di9hZGRvbnMv')),2030,ART+'ADDONS.png',FANART,'')
+    addDir('[COLORgreen]APK TOOL[/COLOR]',BASEURL,2,ART+'APK.png',FANART,'')
+    addDir('[COLORgreen]GenieTv RSS Feed[/COLOR]',BASEURL,39,ART+'RSS.png',FANART,'')
     addDir('[COLORgreen]ADDONS PACKS[/COLOR]',BASEURL,30,ART+'ADDONP.png',FANART,'')
     setView('movies', 'MAIN')
 
@@ -85,14 +86,15 @@ def MenStream():
 #    addDir('[COLORgreen]SCRAPED TV VOD[/COLOR]',BASEURL,7001,ART+'VOD.png',FANART,'')
     addDir('[COLORgreen]SEARCH[/COLOR]',BASEURL,9000,ART+'search.png',FANART,'')
     addDir('[COLORgreen]LIVE TV[/COLOR]',BASEURL,7030,ART+'origin.png',FANART,'')
+#    addDir('[COLORgreen]RECENT EPISODES[/COLOR]',BASEURL,8081,ART+'recent.png',FANART,'')
     addDir('[COLORgreen]GenieTv VOD[/COLOR]',BASEURL,1005,ART+'VOD.png',FANART,'')
     addDir('[COLORgreen]SCOOBY STREAMS[/COLOR]',BASEURL,1026,ART+'scoob.png',FANART,'')
     addDir('[COLORgreen]THE REAPER[/COLOR]',BASEURL,1016,ART+'reap.png',FANART,'')
     addDir('[COLORgreen]SCRAPED MOVIES VOD[/COLOR]',BASEURL,7018,ART+'MOVIESv.png',FANART,'')
     addDir('[COLORgreen]SOAPS CATCH UP[/COLOR]',BASEURL,8000,ART+'soaps.png',FANART,'')
-    addDir('[COLORgreen]M3U STREAMS[/COLOR]',BASEURL,8070,ART+'streams.png',FANART,'')
-    addDir('[COLORgreen]CLASSIC TOONS[/COLOR]',BASEURL,8050,ART+'classictoons.png',FANART,'')
     addDir('[COLORgreen]DOCUMENTARIES[/COLOR]',BASEURL,8040,ART+'documentary.png',FANART,'')
+    addDir('[COLORgreen]CLASSIC TOONS[/COLOR]',BASEURL,8050,ART+'classictoons.png',FANART,'')
+    addDir('[COLORgreen]M3U STREAMS[/COLOR]',BASEURL,8070,ART+'streams.png',FANART,'')
 #    addDir('[COLORgreen]FREEVIEW[/COLOR]',BASEURL,8060,ART+'origin.png',FANART,'')
 #    addDir('[COLORgreen]STREAMS[/COLOR]',BASEURL,1008,ART+'streams.png',FANART,'')
     addDir('[COLORgreen]ANIME --PLEASE USE PLAYER 3 WHILE WE ATTEMPT TO CORRECT THE ISSUE--[/COLOR]',BASEURL,1001,ART+'anime.png',FANART,'PLEASE USE PLAYER 3 WHILE WE ATTEMPT TO CORRECT THE ISSUE')
@@ -561,18 +563,21 @@ def Search_Films_Lists():
     url3 = (Decode('aHR0cDovL2RsLmZpbG1paGEuY29tL01vdmllcy8yMDEzLw=='))
     url4 = (Decode('aHR0cDovL2RsLmZpbG1paGEuY29tL01vdmllcy8yMDEyLw=='))
     url5 = (Decode('aHR0cDovL2RsLnZpcG1heC1tb3ZpZS5pbi9Nb3ZpZS8='))
+    url6 = (Decode('aHR0cDovL3Njb29ieXN0cmVhbS54MTBob3N0LmNvbS8vc2Nvb2J5L21vdi9hbGwucGhw'))
 
     HTML = OPEN_URL(url)
     HTML2 = OPEN_URL(url2)
     HTML3 = OPEN_URL(url3)
     HTML4 = OPEN_URL(url4)	
     HTML5 = OPEN_URL(url5)	
+    HTML6 = OPEN_URL(url6)	
    
     match = re.compile('<td valign="top"><img src=".+?" alt=".+?"></td><td><a href="(.+?)">(.+?)</a></td>').findall(HTML)
     match2 = re.compile('<td valign="top"><img src=".+?" alt=".+?"></td><td><a href="(.+?)">(.+?)</a></td>').findall(HTML2)
     match3 = re.compile('<td valign="top"><img src=".+?" alt=".+?"></td><td><a href="(.+?)">(.+?)</a></td>').findall(HTML3)
     match4 = re.compile('<td valign="top"><img src=".+?" alt=".+?"></td><td><a href="(.+?)">(.+?)</a></td>').findall(HTML4)
     match5 = re.compile('<td valign="top"><img src=".+?" alt=".+?"></td><td><a href="(.+?)">(.+?)</a></td>').findall(HTML5)
+    match6 = re.compile('<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>').findall(HTML6)
 
     for urlList,name in match:
         if Search_Name in name.lower():
@@ -592,6 +597,11 @@ def Search_Films_Lists():
     for urlList,name in match4:	
         if Search_Name in name.lower():
             addDir4((name+'[COLORgreen] source 4[/COLOR]').replace('..&gt;',''),(url4+urlList),222,'')
+				
+            setView('tvshows', 'Media Info 3')
+    for url,img,name in match6:	
+        if Search_Name in name.lower():
+            addDir4((name+'[COLORgreen] source Scooby[/COLOR]'),url,222,'img')
 				
             setView('tvshows', 'Media Info 3')
     for urlList,name in match5:	
@@ -621,15 +631,21 @@ def Search_Tv_Lists():
     url2 = (Decode('aHR0cDovL3N2Mi5kbC1wYXJzLmluLw=='))
     url3 = (Decode('aHR0cDovL3R2LmRsLXBhcnMuaW4v'))
     url4 = (Decode('aHR0cDovL2RsLnZpcG1heC1tb3ZpZS5pbi9BbWVyaWNhbiUyMFNlcmlhbC8='))
+#    url6 = (Decode('aHR0cDovL2RpemlsYWIuY29tL2Fyc2l2P2xpbWl0PSZ0dXI9Jm9yZGVyYnk9JnVsa2U9Jm9yZGVyPSZ5aWw9JmRpemlfYWRpPQ==' )) + (Search_Name).replace(' ','+')
+    url8 = (Decode('aHR0cDovL3Njb29ieXN0cmVhbS54MTBob3N0LmNvbS8vc2Nvb2J5L3Nob3dzL3R2YWxsLnBocA=='))
 	
     HTML = OPEN_URL(url)
     HTML2 = OPEN_URL(url2)
     HTML3 = OPEN_URL(url3)
     HTML4 = OPEN_URL(url4)	
+#    HTML6 = OPEN_URL(url6)
+    HTML8 = OPEN_URL(url8)
     match = re.compile('<a .*?>(.*?)</a>').findall(HTML)
     match2 = re.compile('<a .*?>(.*?)</a>').findall(HTML2)
     match3 = re.compile('<a .*?>(.*?)</a>').findall(HTML3)
     match4 = re.compile('<a .*?> (.*?)</a>').findall(HTML4)
+#    match6 = re.compile('<a href="(.+?)" class="film-image">\n<img src="(.+?)" alt=""/>\n</a>\n<div class="tss-detail">\n<a class="title" style="" href=".+?">\n<span class="position">.+?</span>\n(.+?)</a>').findall(HTML6)
+    match8 = re.compile('<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>').findall(HTML8)
     for name in match:
         if Search_Name in name.lower():
             addDir3((name+' source 1').replace('..&gt;','').replace('/',''),(url+name).replace(' ','%20'),1006,'')
@@ -645,12 +661,19 @@ def Search_Tv_Lists():
             addDir3((name+' source 3').replace('..&gt;','').replace('/',''),(url3+name).replace(' ','%20'),1006,'')
 				
             setView('tvshows', 'Media Info 3')			
+    for url,img,name in match8:
+        if Search_Name in name.lower():
+            addDir4((name+'[COLORgreen] source Scooby[/COLOR]'),url,222,'img')
+				
+            setView('tvshows', 'Media Info 3')			
     for name in match4:
         if Search_Name in name.lower():
             addDir3((name+' source 4').replace('..&gt;','').replace('/',''),(url4+name).replace(' ','%20'),1006,'')
 				
             setView('tvshows', 'Media Info 3')
-
+#dizi    for url,img,name in match6:
+#        if Search_Name in name.lower():
+#            addDir3(name + ' - Source - Origin',url,8062,img)
 def Search_LiveTV():
     
     Search_Name = Dialog.input('Search', type=xbmcgui.INPUT_ALPHANUM) 
@@ -664,7 +687,33 @@ def Search_LiveTV():
                 addDir3(name,'',7022,Image)
  
     xbmcplugin.addSortMethod(addon_handle, xbmcplugin.SORT_METHOD_TITLE);
-#------------------------------EPG---------------------------------------------------------------------
+
+#-------------------------episodes----------------------------------------------------------------
+def Get_Episode(url):
+    HTML = OPEN_CAT(url)
+    match = re.compile('<a class="season" href="(.+?)">\n(.+?)\n</a>\n</span>\n<span>\n<a class="episode" href=".+?">\n(.+?)\n</a>\n</span>\n<span>\n<a class="episode-name" href=".+?">\n(.+?)</a>').findall(HTML)
+    for url,season,episode,name in match:
+        addDir3((season).replace('Sezon',' Season ') + (episode).replace('Bölüm',' Episode ') + name,url,8063,'')
+
+
+			
+		
+def Play_link(url):
+    html=OPEN_CAT(url)
+    match = re.compile('file: "(.+?)",.+?label: "(.+?)",',re.DOTALL).findall(html)
+    for url,name in match:
+        addDir4(name,url,222,'')
+	
+	
+# recent episodes 
+
+def Recent_Scraped():
+
+    html=OPEN_CAT(Decode('aHR0cDovL2RpemlsYWIuY29t'))
+    match = re.compile('<li id=".+?">.+?<a href="(.+?)">.+?<img width="40" height="40" src="(.+?)" alt=""/>.+?<span class="title">\n(.+?)</span>.+?<span class="alt-title">\n(.+?)</span>.+?</a>.+?</li>',re.DOTALL).findall(html)
+    for url,img,name,episode in match:
+        addDir3(name + '  -  ' + (episode).replace('sezon','Season').replace('bölüm','Episode'),url,8063,img)
+#------------------------------EPG-----------------------------cool? yeah see what happens----------------------------------------
 def EPG():
     html=OPEN_CAT(Decode('aHR0cDovL3d3dy50dmd1aWRlLmNvLnVrLw=='))
     match = re.compile('<a href="(.+?)"  qt-title=".+?" qt-text=".+?<br> .+?" title="(.+?)".+?class=".+? src="(.+?)" alt=".+?" /></a>',re.DOTALL).findall(html)
@@ -1094,28 +1143,12 @@ def Live_VOD(url):
         match=re.compile('<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>').findall(link)
         for url,image,name in match:
                 addDir4('%s'%(name).replace('GenieTv','[COLOR green]GenieTV[/COLOR]').replace('.',' ').replace('mp4','').replace('mkv','').replace('_',' '),'%s'%(url),222,image)
-def RESOLVE(url,name): 
+ 
+def RESOLVE(url): 
     play=xbmc.Player(GetPlayerCore())
     import urlresolver
     try: play.play(url)
     except: pass
-    from urlresolver import common
-    dp = xbmcgui.DialogProgress()
-    dp.create('[COLORlime]Architects@Work[/COLOR]','Opening %s Now'%(name))
-    if dp.iscanceled(): 
-        print "[COLORred]STREAM CANCELLED[/COLOR]" # need to get this part working    
-        dp.update(100)
-        dp.close()
-        dialog = xbmcgui.Dialog()
-        if dialog.yesno("[B]CANCELLED[/B]", '[B]Was There A Problem[/B]','', "",'Yes','No'):
-            dialog.ok("Message Send", "Your Message Has Been Sent")
-        else:
-	         return
-    else:
-        try: play.play(url)
-        except: pass
-        try: ADDON.resolve_url(url) 
-        except: pass 
 
        
 def GetPlayerCore(): 
@@ -2126,7 +2159,7 @@ elif mode==49:
         RES()
        
 elif mode==222:
-        RESOLVE(url,name)
+        RESOLVE(url)
 
 elif mode==333:
         Live_VOD(url)
@@ -2314,6 +2347,12 @@ elif mode == 8070:
 		Get_m3u_links()
 elif mode == 8071:
 		Get_m3u_playlinks(url)
+elif mode == 8081:
+		Recent_Scraped()
+elif mode == 8062:
+		Get_Episode(url)
+elif mode == 8063:
+		Play_link(url)
 elif mode == 8050:
 		TOON1()
 elif mode == 8051:
