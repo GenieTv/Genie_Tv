@@ -49,7 +49,7 @@ HOME = xbmc.translatePath('special://home/')
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 ICON = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png',FANART,''))
 ART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/art/'))
-VERSION = "2.2.5"
+VERSION = "2.2.6"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
 PATH = "GenieTv"            
@@ -558,9 +558,9 @@ def Search_Films_Lists():
     Base_list = (Decode('aHR0cDovL2RsLnZpcG1heC1tb3ZpZS5pbi9Nb3ZpZS8='))
     Search_Name = Dialog.input('Search', type=xbmcgui.INPUT_ALPHANUM) 
     Search_Title = Search_Name.lower()
-    url = (Decode('aHR0cDovL2RsLmZpbG1paGEuY29tL01vdmllcy8yMDE1Lw=='))
-    url2 = (Decode('aHR0cDovL2RsLmZpbG1paGEuY29tL01vdmllcy8yMDE0Lw=='))
-    url3 = (Decode('aHR0cDovL2RsLmZpbG1paGEuY29tL01vdmllcy8yMDEzLw=='))
+    url = (Decode('aHR0cDovL2RsNC5tb3ZpZWZhcnNpLmNvbS9maWxtLzIwMTUtNy8='))
+    url2 = (Decode('aHR0cDovL2RsLmF2YWRsLmNvbS9OZXcvTW92aWUv'))
+    url3 = (Decode('aHR0cDovLzIxNy4yMTkuMTQzLjEwOC8xMzI3Lw=='))
     url4 = (Decode('aHR0cDovL2RsLmZpbG1paGEuY29tL01vdmllcy8yMDEyLw=='))
     url5 = (Decode('aHR0cDovL2RsLnZpcG1heC1tb3ZpZS5pbi9Nb3ZpZS8='))
     url6 = (Decode('aHR0cDovL3Njb29ieXN0cmVhbS54MTBob3N0LmNvbS8vc2Nvb2J5L21vdi9hbGwucGhw'))
@@ -850,7 +850,7 @@ def List_LiveTVFull(Cat_Name):
     if Cat_Name == 'USA Channels' : cat_id = '10'
     if Cat_Name == 'Other' : cat_id = '11'
 	
-    html=OPEN_URL(Decode('aHR0cDovL3VrdHZub3cuZGVzaXN0cmVhbXMudHYvRGVzaVN0cmVhbXMvaW5kZXgyMDIucGhwP3RhZz1nZXRfYWxsX2NoYW5uZWwmdXNlcm5hbWU9YnlwYXNz'))
+    html=OPEN_URL(Decode('http://uktvnow.desistreams.tv/DesiStreams/index202.php?tag=get_all_channel&username=bypass'))
     match = re.compile('"id":".+?","name":"(.+?)","img":"(.+?)","stream_url3":".+?","cat_id":"(.+?)","stream_url2":".+?","stream_url":".+?"}',re.DOTALL).findall(html)
     print 'Len Match: >>>' + str(len(match))
     for name,img,CatNO in match:
@@ -995,7 +995,7 @@ def cnfPlay1(url):
     html=OPEN_URL(url)
     match = re.compile('<video id=".+?<source src="(.+?)" type="video/mp4">',re.DOTALL).findall(html)
     for url in match:
-        RESOLVE(url,'')
+        RESOLVE(url)
 
 #------------------------------PLAYLIST LOADER----------------------------------------------------------------
 def LOADER():

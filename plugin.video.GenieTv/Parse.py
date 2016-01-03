@@ -95,7 +95,23 @@ def ParseURL(url):
                 pass
             elif '.jpg' in link:
                 pass
+            elif '1-Irani/' in link:
+                pass
+            elif 'index.php' in link:
+                pass
             elif '.png' in link:
+                pass
+            elif '?C=M&O=D' in link:
+                pass
+            elif '?C=M&O=A' in link:
+                pass
+            elif '?C=N&O=D' in link:
+                pass
+            elif '?C=N&O=A' in link:
+                pass
+            elif '?C=S&O=A' in link:
+                pass
+            elif '?C=S&O=D' in link:
                 pass
             elif '?C=N;O=D' in link:
                 pass
@@ -139,6 +155,16 @@ def ParseURL(url):
                     name = name.replace ('_ir', '')
                 if '%20%5b%5bWwW.Max-Movie.In%5d%5d' in name:
                     name = name.replace ('%20%5b%5bWwW.Max-Movie.In%5d%5d', '')
+                if '[' in name:
+                    name = name.replace ('[', '')
+                if ']' in name:
+                    name = name.replace (']', '')
+                if 'Ir' in name:
+                    name = name.replace ('Ir', '')
+                if 'Downloado' in name:
+                    name = name.replace ('Downloado', '')
+                if 'Nightsdl' in name:
+                    name = name.replace ('Nightsdl', '')
                 if 'farvardin' in name:
                     name = name.replace ('farvardin', 'LIST 1')
                 if 'khordad' in name:
@@ -333,8 +359,6 @@ def ParseURL(url):
                     name = name.replace('%9d', ' ')
                 if '.' in name:
                     name = name.replace('.', ' ')
-                if '2012' in name:
-                    name = name.replace('2012', ' ')
                 if 'mp3' in name:
                     name = name.replace('mp3', ' ')
                 if '(' in name:
