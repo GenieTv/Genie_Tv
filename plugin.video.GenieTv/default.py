@@ -49,7 +49,7 @@ HOME = xbmc.translatePath('special://home/')
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 ICON = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png',FANART,''))
 ART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/art/'))
-VERSION = "2.2.7"
+VERSION = "2.2.8"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
 PATH = "GenieTv"            
@@ -621,17 +621,17 @@ def Search_Films_Lists():
 		match2 = re.compile('<a href="(.+?)">(.+?)</a>').findall(HTML2)
 		for urlList,name in match2:
 				if Search_Name in name.lower():
-					addDir4((name+'[COLORgreen] source 2[/COLOR]').replace('..&gt;','').replace('.',' '),(url+urlList),222,'')
+					addDir4((name+'[COLORgreen] source 2[/COLOR]').replace('..&gt;','').replace('.',' '),(url2+urlList),222,'')
     if HTML3 != 'Failed':			
 		match3 = re.compile('<a href="(.+?)">(.+?)</a>').findall(HTML3)
 		for urlList,name in match3:
 				if Search_Name in name.lower():
-					addDir4((name+'[COLORgreen] source 3[/COLOR]').replace('..&gt;','').replace('.',' '),(url+urlList),222,'')
+					addDir4((name+'[COLORgreen] source 3[/COLOR]').replace('..&gt;','').replace('.',' '),(url3+urlList),222,'')
     if HTML4 != 'Failed':			
 		match4 = re.compile('<a href="(.+?)">(.+?)</a>').findall(HTML4)
 		for urlList,name in match4:
 				if Search_Name in name.lower():
-					addDir4((name+'[COLORgreen] source 4[/COLOR]').replace('..&gt;','').replace('.',' '),(url+urlList),222,'')
+					addDir4((name+'[COLORgreen] source 4[/COLOR]').replace('..&gt;','').replace('.',' '),(url4+urlList),222,'')
     if HTML5 != 'Failed':			
 		match5 = re.compile('<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>').findall(HTML5)
 		for urlList,img,name in match5:
