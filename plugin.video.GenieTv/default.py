@@ -49,7 +49,7 @@ HOME = xbmc.translatePath('special://home/')
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 ICON = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png',FANART,''))
 ART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/art/'))
-VERSION = "2.2.6"
+VERSION = "2.2.7"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
 PATH = "GenieTv"            
@@ -85,13 +85,13 @@ def MenStream():
 #    addDir('[COLORgreen]EPG[/COLOR]',BASEURL,1014,ART+'VOD.png',FANART,'')
 #    addDir('[COLORgreen]SCRAPED TV VOD[/COLOR]',BASEURL,7001,ART+'VOD.png',FANART,'')
     addDir('[COLORgreen]SEARCH[/COLOR]',BASEURL,9000,ART+'search.png',FANART,'')
-    addDir('[COLORgreen]LIVE TV[/COLOR]',BASEURL,7030,ART+'origin.png',FANART,'')
-    addDir('[COLORgreen]RECENT EPISODES[/COLOR]',BASEURL,8081,ART+'recent.png',FANART,'')
     addDir('[COLORgreen]GenieTv VOD[/COLOR]',BASEURL,1005,ART+'VOD.png',FANART,'')
+#    addDir('[COLORgreen]LIVE TV[/COLOR]',BASEURL,8085,ART+'origin.png',FANART,'')
+    addDir('[COLORgreen]RECENT EPISODES[/COLOR]',BASEURL,8081,ART+'recent.png',FANART,'')
+    addDir('[COLORgreen]SCRAPED MOVIES VOD[/COLOR]',BASEURL,7018,ART+'MOVIESv.png',FANART,'')
     addDir('[COLORgreen]SCOOBY STREAMS[/COLOR]',BASEURL,1026,ART+'scoob.png',FANART,'')
     addDir('[COLORgreen]THE REAPER[/COLOR]',BASEURL,1016,ART+'reap.png',FANART,'')
-    addDir('[COLORgreen]SCRAPED MOVIES VOD[/COLOR]',BASEURL,7018,ART+'MOVIESv.png',FANART,'')
-    addDir('[COLORgreen]SOAPS CATCH UP[/COLOR]',BASEURL,8000,ART+'soaps.png',FANART,'')
+#    addDir('[COLORgreen]SOAPS CATCH UP[/COLOR]',BASEURL,8000,ART+'soaps.png',FANART,'')
     addDir('[COLORgreen]DOCUMENTARIES[/COLOR]',BASEURL,8040,ART+'documentary.png',FANART,'')
     addDir('[COLORgreen]CLASSIC TOONS[/COLOR]',BASEURL,8050,ART+'classictoons.png',FANART,'')
     addDir('[COLORgreen]M3U STREAMS[/COLOR]',BASEURL,8070,ART+'streams.png',FANART,'')
@@ -527,6 +527,31 @@ def DOCLIST(url):
     match = re.compile('<link rel="canonical" href="(.+?)">  <link rel="stylesheet"').findall(html)
     for url in match:
         addDir4('PLAY',(url).replace('http://www.youtube.com/watch?v=',''),8043,ART+'documentary.png')
+#------------------------------WORLD TV---------------------------------------------------------------------
+def get_Country():
+    HTML = OPEN_CAT('http://www.stream2watch.co/live-tv')
+    match = re.compile('<a href="(.+?)">.+?<img src="(.+?)" alt=".+?"/>.+?<span class="country_name">(.+?)<br />(.+?)</span>',re.DOTALL).findall(HTML)
+    for url,img,name,name2 in match:
+        addDir3((name+'[COLORgreen]'+name2+'[/COLOR]'),url,8086,img)
+
+def get_Channel(url):
+    HTML = OPEN_CAT(url)
+    match = re.compile('<a class="front_channel_href" href="(.+?)" title=".+?">.+?<img class="front_channel_thumb" src="(.+?)" alt=".+?"/>.+?<span class="front_channel_name">(.+?)</span>',re.DOTALL).findall(HTML)
+    for url,img,name in match:
+        addDir3('[COLORgreen]'+name+'[/COLOR]',url,8087,img)
+
+def get_Part_1_Link(url):
+    HTML = OPEN_URL(url)
+    match = re.compile('a id="code_.+?data-f-href="(.+?)" data-code-embed="">(.+?)</a>',re.DOTALL).findall(HTML)
+    for url,name in match:
+        Get_Playlink(url,name)
+	
+def Get_Playlink(url,name):
+    HTML = OPEN_URL(url)
+    match = re.compile("playStream\('.+?', '(.+?)'\);",re.DOTALL).findall(HTML)
+    for url in match:
+        print url
+        addDir4('[COLORgreen]'+name+'[/COLOR]',url,222,'')
 #------------------------------FREEVIEW---------------------------------------------------------------------
 def FREEVIEW():
     html=OPEN_CAT(Decode('aHR0cDovL2JyYXR1LW1hcmlhbi5yby8='))
@@ -554,6 +579,22 @@ def Get_m3u_playlinks(url):
     for name,url in match:
 		addDir4(name,url,222,ART + 'streams.png')
 #------------------------------SEARCH---------------------------------------------------------------------
+def OPEN_Search(url):
+        req = urllib2.Request(url)
+        req.add_header('User-Agent', 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3')
+        response = ''
+        link = ''
+        try: 
+            response = urllib2.urlopen(req)
+            link=response.read()
+            response.close()
+        except: pass
+        if link != '':
+            return link
+        else:
+            link = 'Failed'
+            return link
+
 def Search_Films_Lists():
     Base_list = (Decode('aHR0cDovL2RsLnZpcG1heC1tb3ZpZS5pbi9Nb3ZpZS8='))
     Search_Name = Dialog.input('Search', type=xbmcgui.INPUT_ALPHANUM) 
@@ -561,66 +602,56 @@ def Search_Films_Lists():
     url = (Decode('aHR0cDovL2RsNC5tb3ZpZWZhcnNpLmNvbS9maWxtLzIwMTUtNy8='))
     url2 = (Decode('aHR0cDovL2RsLmF2YWRsLmNvbS9OZXcvTW92aWUv'))
     url3 = (Decode('aHR0cDovLzIxNy4yMTkuMTQzLjEwOC8xMzI3Lw=='))
-    url4 = (Decode('aHR0cDovL2RsLmZpbG1paGEuY29tL01vdmllcy8yMDEyLw=='))
-    url5 = (Decode('aHR0cDovL2RsLnZpcG1heC1tb3ZpZS5pbi9Nb3ZpZS8='))
-    url6 = (Decode('aHR0cDovL3Njb29ieXN0cmVhbS54MTBob3N0LmNvbS8vc2Nvb2J5L21vdi9hbGwucGhw'))
+    url4 = (Decode('aHR0cDovLzE3OC4xNjIuMjE0LjIzMi92b2QvbW92aWVzL2VuZ2xpc2gv'))
+    url5 = (Decode('aHR0cDovL3Njb29ieXN0cmVhbS54MTBob3N0LmNvbS8vc2Nvb2J5L21vdi9hbGwucGhw'))
+    url6 = (Decode('aHR0cDovL2RsLnZpcG1heC1tb3ZpZS5pbi9Nb3ZpZS8='))
 
-    HTML = OPEN_URL(url)
-    HTML2 = OPEN_URL(url2)
-    HTML3 = OPEN_URL(url3)
-    HTML4 = OPEN_URL(url4)	
-    HTML5 = OPEN_URL(url5)	
-    HTML6 = OPEN_URL(url6)	
+    HTML = OPEN_Search(url)
+    HTML2 = OPEN_Search(url2)
+    HTML3 = OPEN_Search(url3)
+    HTML4 = OPEN_Search(url4)	
+    HTML5 = OPEN_Search(url5)		
    
-    match = re.compile('<td valign="top"><img src=".+?" alt=".+?"></td><td><a href="(.+?)">(.+?)</a></td>').findall(HTML)
-    match2 = re.compile('<td valign="top"><img src=".+?" alt=".+?"></td><td><a href="(.+?)">(.+?)</a></td>').findall(HTML2)
-    match3 = re.compile('<td valign="top"><img src=".+?" alt=".+?"></td><td><a href="(.+?)">(.+?)</a></td>').findall(HTML3)
-    match4 = re.compile('<td valign="top"><img src=".+?" alt=".+?"></td><td><a href="(.+?)">(.+?)</a></td>').findall(HTML4)
-    match5 = re.compile('<td valign="top"><img src=".+?" alt=".+?"></td><td><a href="(.+?)">(.+?)</a></td>').findall(HTML5)
-    match6 = re.compile('<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>').findall(HTML6)
-
-    for urlList,name in match:
-        if Search_Name in name.lower():
-            addDir4((name+'[COLORgreen] source 1[/COLOR]').replace('..&gt;','').replace('.',' '),(url+urlList),222,'')
-				
-            setView('tvshows', 'Media Info 3')			
-    for urlList,name in match2:	
-        if Search_Name in name.lower():
-            addDir4((name+'[COLORgreen] source 2[/COLOR]').replace('..&gt;','').replace('.',' '),(url2+urlList),222,'')
-				
-            setView('tvshows', 'Media Info 3')			
-    for urlList,name in match3:	
-        if Search_Name in name.lower():
-            addDir4((name+'[COLORgreen] source 3[/COLOR]').replace('..&gt;',''),(url3+urlList),222,'')
-				
-            setView('tvshows', 'Media Info 3')			
-    for urlList,name in match4:	
-        if Search_Name in name.lower():
-            addDir4((name+'[COLORgreen] source 4[/COLOR]').replace('..&gt;',''),(url4+urlList),222,'')
-				
-            setView('tvshows', 'Media Info 3')
-    for url,img,name in match6:	
-        if Search_Name in name.lower():
-            addDir4((name+'[COLORgreen] source Scooby[/COLOR]'),url,222,'img')
-				
-            setView('tvshows', 'Media Info 3')
-    for urlList,name in match5:	
-        if Search_Name in name.lower():
-            addDir3((name+'[COLORgreen] source 5[/COLOR]').replace('..&gt;','').replace('Ganool','').replace('ShAaNiG','').replace('YIFY','').replace('[[ Max-Movie.In ]]','').replace('.mkv','').replace('.mp4','').replace('.',' '),(url5+urlList),1006,'')
-				
-            setView('tvshows', 'Media Info 3')
+    if HTML != 'Failed':			
+		match = re.compile('<a href="(.+?)">(.+?)</a>').findall(HTML)
+		for urlList,name in match:
+				if Search_Name in name.lower():
+					addDir4((name+'[COLORgreen] source 1[/COLOR]').replace('..&gt;','').replace('.',' '),(url+urlList),222,'')
+    if HTML2 != 'Failed':			
+		match2 = re.compile('<a href="(.+?)">(.+?)</a>').findall(HTML2)
+		for urlList,name in match2:
+				if Search_Name in name.lower():
+					addDir4((name+'[COLORgreen] source 2[/COLOR]').replace('..&gt;','').replace('.',' '),(url+urlList),222,'')
+    if HTML3 != 'Failed':			
+		match3 = re.compile('<a href="(.+?)">(.+?)</a>').findall(HTML3)
+		for urlList,name in match3:
+				if Search_Name in name.lower():
+					addDir4((name+'[COLORgreen] source 3[/COLOR]').replace('..&gt;','').replace('.',' '),(url+urlList),222,'')
+    if HTML4 != 'Failed':			
+		match4 = re.compile('<a href="(.+?)">(.+?)</a>').findall(HTML4)
+		for urlList,name in match4:
+				if Search_Name in name.lower():
+					addDir4((name+'[COLORgreen] source 4[/COLOR]').replace('..&gt;','').replace('.',' '),(url+urlList),222,'')
+    if HTML5 != 'Failed':			
+		match5 = re.compile('<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>').findall(HTML5)
+		for urlList,img,name in match5:
+				if Search_Name in name.lower():
+					addDir3((name+'[COLORgreen] source Scooby[/COLOR]').replace('..&gt;','').replace('Ganool','').replace('ShAaNiG','').replace('YIFY','').replace('[[ Max-Movie.In ]]','').replace('.mkv','').replace('.mp4','').replace('.',' '),(urlList),1006,'img')
+					
+					setView('tvshows', 'Media Info 3')
     filenames = ['0-9/','A/', 'B/', 'C/', 'D/', 'E/', 'F/', 'G/', 'H/', 'I/', 'J/', 'K/', 'L/', 'M/', 'N/', 'O/', 'P/', 'R/', 'S/', 'T/', 'U/', 'V/', 'W/', 'X/', 'Y/', 'Z/']
 
 
     for file_Name in filenames:
         search_URL = Base_list + file_Name
-        HTML6 = OPEN_CAT(search_URL)
-        match6 = re.compile('<li><a href="(.+?)"> (.+?)</a></li>').findall(HTML6)
-        for urlList,name in match6:		
-            if Search_Name in name.lower():
-                addDir4((name+'[COLORgreen] source 5[/COLOR]').replace('Ganool','').replace('ShAaNiG','').replace('YIFY','').replace('[[ Max-Movie.In ]]','').replace('.mkv','').replace('.mp4','').replace('.',' '),(Base_list+file_Name+urlList),222,'')
+        HTML6 = OPEN_Search(search_URL)
+        if HTML5 != 'Failed':
+            match6 = re.compile('<li><a href="(.+?)"> (.+?)</a></li>').findall(HTML6)
+            for urlList,name in match6:		
+                if Search_Name in name.lower():
+                    addDir4((name+'[COLORgreen] source 5[/COLOR]').replace('Ganool','').replace('ShAaNiG','').replace('YIFY','').replace('[[ Max-Movie.In ]]','').replace('.mkv','').replace('.mp4','').replace('.',' '),(Base_list+file_Name+urlList),222,'')
 				
-                setView('tvshows', 'Media Info 3')			
+                    setView('tvshows', 'Media Info 3')			
 		
 			
 def Search_Tv_Lists():
@@ -631,49 +662,57 @@ def Search_Tv_Lists():
     url2 = (Decode('aHR0cDovL3N2Mi5kbC1wYXJzLmluLw=='))
     url3 = (Decode('aHR0cDovL3R2LmRsLXBhcnMuaW4v'))
     url4 = (Decode('aHR0cDovL2RsLnZpcG1heC1tb3ZpZS5pbi9BbWVyaWNhbiUyMFNlcmlhbC8='))
-    url6 = (Decode('aHR0cDovL2RpemlsYWIuY29tL2Fyc2l2P2xpbWl0PSZ0dXI9Jm9yZGVyYnk9JnVsa2U9Jm9yZGVyPSZ5aWw9JmRpemlfYWRpPQ==' )) + (Search_Name).replace(' ','+')
-    url8 = (Decode('aHR0cDovL3Njb29ieXN0cmVhbS54MTBob3N0LmNvbS8vc2Nvb2J5L3Nob3dzL3R2YWxsLnBocA=='))
+    url5 = (Decode('aHR0cDovL2RpemlsYWIuY29tL2Fyc2l2P2xpbWl0PSZ0dXI9Jm9yZGVyYnk9JnVsa2U9Jm9yZGVyPSZ5aWw9JmRpemlfYWRpPQ==' )) + (Search_Name).replace(' ','+')
+    url6 = (Decode('aHR0cDovL3Njb29ieXN0cmVhbS54MTBob3N0LmNvbS8vc2Nvb2J5L3Nob3dzL3R2YWxsLnBocA=='))
 	
-    HTML = OPEN_URL(url)
-    HTML2 = OPEN_URL(url2)
-    HTML3 = OPEN_URL(url3)
-    HTML4 = OPEN_URL(url4)	
-    HTML6 = OPEN_URL(url6)
-    HTML8 = OPEN_URL(url8)
-    match = re.compile('<a .*?>(.*?)</a>').findall(HTML)
-    match2 = re.compile('<a .*?>(.*?)</a>').findall(HTML2)
-    match3 = re.compile('<a .*?>(.*?)</a>').findall(HTML3)
-    match4 = re.compile('<a .*?> (.*?)</a>').findall(HTML4)
-    match6 = re.compile('<a href="(.+?)" class="film-image">\n<img src="(.+?)" alt=""/>\n</a>\n<div class="tss-detail">\n<a class="title" style="" href=".+?">\n<span class="position">.+?</span>\n(.+?)</a>').findall(HTML6)
-    match8 = re.compile('<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>').findall(HTML8)
-    for name in match:
-        if Search_Name in name.lower():
-            addDir3((name+' source 1').replace('..&gt;','').replace('/',''),(url+name).replace(' ','%20'),1006,'')
-				
-            setView('tvshows', 'Media Info 3')			
-    for name in match2:
-        if Search_Name in name.lower():
-            addDir3((name+' source 2').replace('..&gt;','').replace('/',''),(url2+name).replace(' ','%20'),1006,'')
-				
-            setView('tvshows', 'Media Info 3')			
-    for name in match3:
-        if Search_Name in name.lower():
-            addDir3((name+' source 3').replace('..&gt;','').replace('/',''),(url3+name).replace(' ','%20'),1006,'')
-				
-            setView('tvshows', 'Media Info 3')			
-    for url,img,name in match8:
-        if Search_Name in name.lower():
-            addDir4((name+'[COLORgreen] source Scooby[/COLOR]'),url,222,'img')
-				
-            setView('tvshows', 'Media Info 3')			
-    for name in match4:
-        if Search_Name in name.lower():
-            addDir3((name+' source 4').replace('..&gt;','').replace('/',''),(url4+name).replace(' ','%20'),1006,'')
-				
-            setView('tvshows', 'Media Info 3')
-    for url,img,name in match6:
-        if Search_Name in name.lower():
-            addDir3(name + ' - Source - Origin',url,8062,img)
+    HTML = OPEN_Search(url)
+    HTML2 = OPEN_Search(url2)
+    HTML3 = OPEN_Search(url3)
+    HTML4 = OPEN_Search(url4)	
+    HTML5 = OPEN_Search(url5)
+    HTML6 = OPEN_Search(url6)
+    if HTML != 'Failed':			
+		match = re.compile('<a .*?>(.*?)</a>').findall(HTML)
+		for name in match:
+				if Search_Name in name.lower():
+					addDir3((name+' source 1').replace('..&gt;','').replace('/',''),(url+name).replace(' ','%20'),1006,'')
+					
+					setView('tvshows', 'Media Info 3')
+    if HTML2 != 'Failed':			
+		match2 = re.compile('<a .*?>(.*?)</a>').findall(HTML2)
+		for name in match2:
+				if Search_Name in name.lower():
+					addDir3((name+' source 2').replace('..&gt;','').replace('/',''),(url2+name).replace(' ','%20'),1006,'')
+					
+					setView('tvshows', 'Media Info 3')
+    if HTML3 != 'Failed':			
+		match3 = re.compile('<a .*?>(.*?)</a>').findall(HTML3)
+		for name in match2:
+				if Search_Name in name.lower():
+					addDir3((name+' source 3').replace('..&gt;','').replace('/',''),(url3+name).replace(' ','%20'),1006,'')
+					
+					setView('tvshows', 'Media Info 3')
+    if HTML4 != 'Failed':			
+		match4 = re.compile('<a .*?>(.*?)</a>').findall(HTML4)
+		for name in match2:
+				if Search_Name in name.lower():
+					addDir3((name+' source 4').replace('..&gt;','').replace('/',''),(url4+name).replace(' ','%20'),1006,'')
+					
+					setView('tvshows', 'Media Info 3')
+    if HTML5 != 'Failed':			
+		match5 = re.compile('<a href="(.+?)" class="film-image">\n<img src="(.+?)" alt=""/>\n</a>\n<div class="tss-detail">\n<a class="title" style="" href=".+?">\n<span class="position">.+?</span>\n(.+?)</a>').findall(HTML5)
+		for url,img,name in match5:
+				if Search_Name in name.lower():
+					addDir3(name + ' - Source - Origin',url,8062,img)
+					
+					setView('tvshows', 'Media Info 3')
+    if HTML6 != 'Failed':			
+		match6 = re.compile('<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>').findall(HTML6)
+		for url,img,name in match6:
+				if Search_Name in name.lower():
+					addDir4((name+'[COLORgreen] source Scooby[/COLOR]'),url,222,'img')
+					
+					setView('tvshows', 'Media Info 3')
 def Search_LiveTV():
     
     Search_Name = Dialog.input('Search', type=xbmcgui.INPUT_ALPHANUM) 
@@ -2359,6 +2398,14 @@ elif mode == 8051:
 		TOON2(url)
 elif mode == 8052:
 		TOON3(url)
+elif mode == 8085:
+		get_Country()
+elif mode == 8086:
+		get_Channel(url)
+elif mode == 8087:
+		get_Part_1_Link(url)
+elif mode == 8088:
+		Get_Playlink(url,name)
 elif mode == 9000:
 		Search_Lists()
 elif mode == 9001:
