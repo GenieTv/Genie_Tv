@@ -48,12 +48,12 @@ dialog = xbmcgui.Dialog()
 HOME = xbmc.translatePath('special://home/')
 FANART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id , 'fanart.jpg'))
 ICON = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id, 'icon.png',FANART,''))
-ART = xbmc.translatePath(os.path.join('special://home/addons/' + addon_id + '/resources/art/'))
-VERSION = "2.2.8"
+ART = (Decode('aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vR2VuaWVBcnQv'))
+VERSION = "2.2.9"
 DBPATH = xbmc.translatePath('special://database')
 TNPATH = xbmc.translatePath('special://thumbnails');
 PATH = "GenieTv"            
-BASEURL = "http://architects.x10host.com"
+BASEURL = (Decode('aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20='))
 H = 'http://'
 localizedString = ADDON.getLocalizedString
 cookieJar = CookieJar()
@@ -65,7 +65,7 @@ def INDEX():
     addDir('[COLORgreen]WIZARD[/COLOR]',BASEURL,4001,ART+'MB.png',FANART,'')
     addDir('[COLORgreen]STREAMS[/COLOR]',BASEURL,4002,ART+'streams.png',FANART,'')
     addDir('[COLORgreen]MUSIC[/COLOR]',BASEURL,4003,ART+'MUSIC.png',FANART,'')
-    addDir('[COLORgreen]KODI FX SKINS[/COLOR]',BASEURL,8030,ART+'FX.png',FANART,'')
+#    addDir('[COLORgreen]KODI FX SKINS[/COLOR]',BASEURL,8030,ART+'FX.png',FANART,'')
     addDir('[COLORgreen]BUILDERS TOOLBOX[/COLOR]',BASEURL,32,ART+'builderstoolbox.png',FANART,'')
     addDir('[COLORgreen]SOURCE LIST[/COLOR]',BASEURL,46,ART+'sources.png',FANART,'')
     addDir('[COLORgreen]MAINTENANCE[/COLOR]',BASEURL,3,ART+'MAIN6.png',FANART,'')
@@ -82,10 +82,10 @@ def MenWish():
     addDir('[COLORgreen]WISHES ANDROID[/COLOR]',BASEURL,44,ART+'WISHESAN.png',FANART,'')
     setView('movies', 'MAIN')
 def MenStream():
-#    addDir('[COLORgreen]EPG[/COLOR]',BASEURL,1014,ART+'VOD.png',FANART,'')
-#    addDir('[COLORgreen]SCRAPED TV VOD[/COLOR]',BASEURL,7001,ART+'VOD.png',FANART,'')
+#    addDir('[COLORgreen]EPG[/COLOR]',BASEURL,1014,ART+'vod.png',FANART,'')
+#    addDir('[COLORgreen]SCRAPED TV VOD[/COLOR]',BASEURL,7001,ART+'vod.png',FANART,'')
     addDir('[COLORgreen]SEARCH[/COLOR]',BASEURL,9000,ART+'search.png',FANART,'')
-    addDir('[COLORgreen]GenieTv VOD[/COLOR]',BASEURL,1005,ART+'VOD.png',FANART,'')
+    addDir('[COLORgreen]GenieTv VOD[/COLOR]',BASEURL,1005,ART+'vod.png',FANART,'')
 #    addDir('[COLORgreen]LIVE TV[/COLOR]',BASEURL,8085,ART+'origin.png',FANART,'')
     addDir('[COLORgreen]RECENT EPISODES[/COLOR]',BASEURL,8081,ART+'recent.png',FANART,'')
     addDir('[COLORgreen]SCRAPED MOVIES VOD[/COLOR]',BASEURL,7018,ART+'MOVIESv.png',FANART,'')
@@ -111,7 +111,7 @@ def Search_Lists():
 
 def MenMusic():
     addDir('[COLORgreen]GenieTv RADIO[/COLOR]',BASEURL,1013,ART+'radio.png',FANART,'')
-#    addDir('[COLORgreen]GenieTv MUSIC SCRAPE[/COLOR]',BASEURL,1010,ART+'VOD.png',FANART,'')
+#    addDir('[COLORgreen]GenieTv MUSIC SCRAPE[/COLOR]',BASEURL,1010,ART+'vod.png',FANART,'')
     setView('movies', 'MAIN')
 
 def MAINTENANCE():
@@ -224,7 +224,7 @@ def ADDONSP(url):
     setView('movies', 'MAIN')
     
 def APK():
-    html=OPEN_CAT(Decode('aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vYXBrL2Fway5waHA='))
+    html=OPEN_CAT(Decode('aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vYXBrdG9vbC9hcGsucGhw'))
     match = re.compile('<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>').findall(html)
     for url,image,name in match:
         addDir3(name,url,2031,ART+'APK.png')
@@ -489,7 +489,7 @@ def TOON2(url):
         elif '.png' in img:
             pass
         else:
-			    addDir3((img).replace('http://www.toonjet.com/images/icons/','').replace('images/icons/','').replace('.jpg','').replace('_icon','').replace('_',' '),'http://www.toonjet.com/'+url,8052,ART+'VOD.png')
+			    addDir3((img).replace('http://www.toonjet.com/images/icons/','').replace('images/icons/','').replace('.jpg','').replace('_icon','').replace('_',' '),'http://www.toonjet.com/'+url,8052,ART+'vod.png')
     for url in match2:
         addDir3('NEXT PAGE','http://www.toonjet.com/'+url,8051,ART+'documentary.png')
 def TOON3(url):
@@ -1137,25 +1137,25 @@ def TESTCATS():
     html=OPEN_CAT(Decode('aHR0cDovL3d3dy5hbmltZXRvb24ub3JnL2NhcnRvb24='))
     match = re.compile('<td><a href="(.+?)">(.+)</a></td>').findall(html)
     for url,name in match:
-        addDir3(name,url,1002,ART+'VOD.png')
+        addDir3(name,url,1002,ART+'vod.png')
 
 def LISTS(url):
     html=OPEN_CAT(url)
     match = re.compile('&nbsp;<a href="(.+?)">(.+?)</a>').findall(html)
     for url,name in match:
-        addDir3(name,url,1003,ART+'VOD.png')
+        addDir3(name,url,1003,ART+'vod.png')
 		
 def LISTS2(url):
     html=OPEN_CAT(url)
     match = re.compile('"playlist">(.+?)</span></div><div><iframe src="(.+?)"').findall(html)
     for name,url in match:
-        addDir3(name,url,1004,ART+'VOD.png')
+        addDir3(name,url,1004,ART+'vod.png')
 		
 def LISTS3(url):
     html=OPEN_CAT(url)
     match = re.compile("url: '(.+?)',").findall(html)
     for url in match:
-        addDir4('STREAM',url,222,ART+'VOD.png')
+        addDir4('STREAM',url,222,ART+'vod.png')
 		
         
 def OPEN_Movie(url):
@@ -1252,7 +1252,7 @@ def UPDATEREPO():
     xbmc.executebuiltin( 'UpdateLocalAddons' )
     xbmc.executebuiltin( 'UpdateAddonRepos' )
     dialog = xbmcgui.Dialog()
-    dialog.ok("GenieTv", '','                                 REFRESH SUCCESSFUL :)', "                          [COLOR gold]Brought To You By WIZARD HELPER[/COLOR]")
+    dialog.ok("GenieTv", '','                                 REFRESH SUCCESSFUL :)', "                          [COLOR gold]Brought To You By Kodi Support Group, GenieTv[/COLOR]")
     return
     
 #def FIXREPOSADDONS(url):
@@ -1345,7 +1345,7 @@ def RSS(url):
     link = OPEN_URL(BASEURL+Y).replace('\n','').replace('\r','')
     match = re.compile('name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"').findall(link)
     for name,url,iconimage,fanart,description in match:
-            addDir(name,url,42,iconimage,fanart,description)
+            addDir(name,url,5,iconimage,fanart,description)
     setView('movies', 'MAIN')
     
 ################################
@@ -1372,7 +1372,7 @@ def DELETETHUMBS():
         dialog.ok("Restart KODI", "Please restart KODI to rebuild thumbnail library")
     except: 
         dialog = xbmcgui.Dialog()
-        dialog.ok(AddonTitle, "Error Deleting Thumbnails please visit WIZARD HELPER on facebook")
+        dialog.ok(AddonTitle, "Error Deleting Thumbnails please visit Kodi Support Group, GenieTv on facebook")
     return
 
 ################################
@@ -1732,7 +1732,7 @@ def DELETEPACKAGES(url):
                 dialog.ok(AddonTitle, "       No Packages to DELETE")
     except: 
         dialog = xbmcgui.Dialog()
-        dialog.ok(AddonTitle, "Error Deleting Packages please visit WIZARD HELPER on facebook")
+        dialog.ok(AddonTitle, "Error Deleting Packages please visit Kodi Support Group, GenieTv on facebook")
     return
 
 ################################
