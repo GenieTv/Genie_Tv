@@ -419,7 +419,7 @@ def ParseURL(url):
                     name = name.replace('wmv', ' ')
 
                 if '.mkv' in link or '.m4v' in link or '.mp3' in link or '.mp4' in link or '.avi' in link or '.flv' in link or '.mpeg' in link or '.3gp' in link or '.divx' in link or '.strm' in link:
-                    AddTVSHOWDir(name, url+link, 222, ART+'VOD.png', 'GenieTv does not host or distribute any of the content displayed by this addon. GenieTV does not have any affiliation with the content provider.', isFolder=False)
+                    AddTVSHOWDir('[COLORgreen]'+name+'[/COLOR]', url+link, 222, ART+'VOD.png', 'GenieTv does not host or distribute any of the content displayed by this addon. GenieTV does not have any affiliation with the content provider.', isFolder=False)
 					
                 else:
 					AddTVSHOWDir(name, url+link, 1006, ART+'VOD.png', '', isFolder=True)
