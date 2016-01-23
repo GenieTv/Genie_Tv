@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.GenieTv" name="[COLORgreen]GenieTv[/COLOR]" version="2.3.0" provider-name="JayBox">
+<addon id="plugin.video.GenieTv" name="[COLORgreen]GenieTv[/COLOR]" version="2.3.1" provider-name="JayBox">
   <requires>
   	<import addon="script.module.beautifulsoup" version="3.2.1"/>
 	<import addon="script.module.beautifulsoup4" />
@@ -18,28 +18,6 @@
     <description lang="en">GenieTv The Ultimate Kodi Utility, This All In One Addon Has Been Created To Service All Kodi Needs And Hopefully In The To Brings Devs And Streamers Alike A Platform And Home To host Their Content.</description>
 	<disclaimer lang="en">The author neither hosts or stores any content, the author has no affiliation with content hosts</disclaimer>
     <platform>all</platform>
-  </extension>
-</addon>
-
-<addon id="plugin.video.livestreamer" name="livestreamer" version="1.12.2-blxd2" provider-name="blxd">
-  <requires>
-    <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.module.xbmcswift2" version="2.4.0"/>
-    <import addon="script.module.requests" version="2.6.0"/>
-    <import addon="script.module.futures" version="2.2.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="addon.py" />
-  <extension point="xbmc.service" library="service.py" start="startup"/>
-  <extension point="xbmc.python.module" library="resources/site-packages/livestreamer/src/livestreamer" />
-  <extension point="xbmc.addon.metadata">
-    <platform>all</platform>
-    <language></language>
-    <summary>livestreamer wrapper</summary>
-    <description>Plays videos from sites that are supported by livestreamer</description>
-    <platform>all</platform>
-    <license>Simplified BSD</license>
-    <source>https://github.com/chrippa/livestreamer.git</source>
-    <website>http://livestreamer.io</website>
   </extension>
 </addon>
 
