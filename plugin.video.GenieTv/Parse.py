@@ -155,6 +155,8 @@ def ParseURL(url):
                     name = name.replace ('_ir', '')
                 if '%20%5b%5bWwW.Max-Movie.In%5d%5d' in name:
                     name = name.replace ('%20%5b%5bWwW.Max-Movie.In%5d%5d', '')
+                if 'download' in name:
+                    name = name.replace ('download', '')
                 if '[' in name:
                     name = name.replace ('[', '')
                 if ']' in name:
@@ -418,7 +420,7 @@ def ParseURL(url):
                 if 'wmv' in name:
                     name = name.replace('wmv', ' ')
 
-                if '.mkv' in link or '.m4v' in link or '.mp3' in link or '.mp4' in link or '.avi' in link or '.flv' in link or '.mpeg' in link or '.3gp' in link or '.divx' in link or '.strm' in link:
+                if '.mkv' in link or '.m4B' in link or '.m4v' in link or '.mp3' in link or '.mp4' in link or '.avi' in link or '.flv' in link or '.mpeg' in link or '.3gp' in link or '.divx' in link or '.strm' in link:
                     AddTVSHOWDir('[COLORgreen]'+name+'[/COLOR]', url+link, 222, ART+'VOD.png', 'GenieTv does not host or distribute any of the content displayed by this addon. GenieTV does not have any affiliation with the content provider.', isFolder=False)
 					
                 else:
