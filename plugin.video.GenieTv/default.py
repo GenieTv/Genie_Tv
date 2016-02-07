@@ -69,7 +69,7 @@ i1iIIi1 = xbmc . translatePath ( 'special://home/' )
 ii11iIi1I = xbmc . translatePath ( os . path . join ( 'special://home/addons/' + o00 , 'fanart.jpg' ) )
 iI111I11I1I1 = xbmc . translatePath ( os . path . join ( 'special://home/addons/' + o00 , 'icon.png' , ii11iIi1I , '' ) )
 OOooO0OOoo = ( oOo0oooo00o ( 'aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vR2VuaWVBcnQv' ) )
-iIii1 = "2.3.3"
+iIii1 = "2.3.4"
 oOOoO0 = xbmc . translatePath ( 'special://database' )
 O0OoO000O0OO = xbmc . translatePath ( 'special://thumbnails' ) ;
 iiI1IiI = "GenieTv"
@@ -642,9 +642,9 @@ def I1i1i1 ( ) :
   OOO ( ( ooo0O ) . replace ( '-' , ' ' ) . replace ( '_' , ' ' ) , ( oOo0oooo00o ( 'aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vbTN1c3RyZWFtcy8=' ) ) + i1Ii , 8071 , OOooO0OOoo + 'streams.png' )
 def OoO0O00O0oo0O ( url ) :
  I1i111I = IiI111111IIII ( url )
- iiIii = re . compile ( '#EXTINF:.+?,(.+?)\n(.+?)' , re . DOTALL ) . findall ( I1i111I )
+ iiIii = re . compile ( 'EXTINF:.+?,(.+?)\n(.+?)\n#' , re . DOTALL ) . findall ( I1i111I )
  for ooo0O , url in iiIii :
-  O00Oo0 ( ooo0O , url , 222 , OOooO0OOoo + 'streams.png' )
+  O00Oo0 ( ooo0O , ( url ) . strip ( ) , 222 , OOooO0OOoo + 'streams.png' )
   if 36 - 36: OoOO0ooOOoo0O + O0 - o00O0oo - O0 % o0000oOoOoO0o . OoOO
 def oooiiI ( url ) :
  oOIIiIi = urllib2 . Request ( url )
