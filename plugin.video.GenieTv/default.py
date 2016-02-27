@@ -2172,22 +2172,12 @@ def i1iI1Iiii1I ( url ) :
   if 71 - 71: oO0o0ooO0 / Oo
 def OOOO0Oo ( url ) :
  Iiii1i1 = OO ( url )
- oOOOoo00 = re . compile ( '<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b><background>"(.+?)"</background>' ) . findall ( Iiii1i1 )
- for url , iiIi1IIi1I , oo00O00oO , oOOOO in oOOOoo00 :
-  print '<<<<<<<<<<<<<<<<<BACKGROUND>>>>>>>>>>>>>>>' + oOOOO
+ oOOo0 = re . compile ( '<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>' ) . findall ( Iiii1i1 )
+ for url , iiIi1IIi1I , oo00O00oO in oOOo0 :
   if '.php' in url :
-   O0iII1 ( oo00O00oO , url , 1016 , iiIi1IIi1I , oOOOO , '' )
+   o0OoOO000ooO0 ( oo00O00oO , url , 1016 , iiIi1IIi1I )
   else :
-   i11111I1I ( oo00O00oO , url , 222 , iiIi1IIi1I , oOOOO , '' )
- oOOo0 = re . compile ( 'a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>(.+?)<' , re . DOTALL ) . findall ( Iiii1i1 )
- for url , iiIi1IIi1I , oo00O00oO , i1iiIII111ii in oOOo0 :
-  if 'back' in i1iiIII111ii :
-   pass
-  else :
-   if '.php' in url :
-    o0OoOO000ooO0 ( oo00O00oO , url , 1016 , iiIi1IIi1I )
-   else :
-    iii1 ( oo00O00oO , url , 222 , iiIi1IIi1I )
+   iii1 ( oo00O00oO , url , 222 , iiIi1IIi1I )
  print 'RUNNING>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
  if 13 - 13: OoOoOO00
  if 57 - 57: o00O0oo - OoooooooOO
