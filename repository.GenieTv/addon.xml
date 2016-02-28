@@ -4,9 +4,9 @@
             <import addon="xbmc.addon" version="12.0.0"/>
         </requires>
         <extension point="xbmc.addon.repository" name="GenieTv Repo">
-            <info compressed="false">http://raw.github.com/GenieTv/Genie_Tv/master//_repo/addons.xml</info>
-            <checksum>http://raw.github.com/GenieTv/Genie_Tv/master//_repo/addons.xml.md5</checksum>
-            <datadir zip="true">http://raw.github.com/GenieTv/Genie_Tv/master//_repo/</datadir>
+            <info compressed="false">http://raw.github.com/GenieTv/GenieTv/master//_repo/addons.xml</info>
+            <checksum>http://raw.github.com/GenieTv/GenieTv/master//_repo/addons.xml.md5</checksum>
+            <datadir zip="true">http://raw.github.com/GenieTv/GenieTv/master//_repo/</datadir>
             <hashes>false</hashes>
         </extension>
         <extension point="xbmc.addon.metadata">

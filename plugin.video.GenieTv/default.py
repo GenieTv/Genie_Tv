@@ -72,7 +72,7 @@ iI111I11I1I1 = xbmc . translatePath ( os . path . join ( 'special://home/addons/
 OOooO0OOoo = xbmc . translatePath ( os . path . join ( 'special://home/addons/' + o00 , 'icon.png' , iI111I11I1I1 , '' ) )
 iIii1 = ( oOo0oooo00o ( 'aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vR2VuaWVBcnQv' ) )
 oOOoO0 = ( oOo0oooo00o ( 'aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vR2VuaWVBcnQvb3JpZ2luLnBuZw==' ) )
-O0OoO000O0OO = "2.3.9"
+O0OoO000O0OO = "2.4.2"
 iiI1IiI = xbmc . translatePath ( 'special://database' )
 II = xbmc . translatePath ( 'special://thumbnails' ) ;
 ooOoOoo0O = "GenieTv"
