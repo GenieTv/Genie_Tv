@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
-<<<<<<< HEAD
 	<category label="GtV Login">
-		<setting id="User" type="text" label="[COLORgreen]GenieTv User =[/COLOR]" default="" visible="true"/>
-		<setting id="Pass" type="text" label="[COLORgreen]GenieTv Pass =[/COLOR]" default="" visible="true"/>
-=======
-	<category label="General Settings">
-		<setting id="User" type="text" label="GenieTv User =" default="MERLIN" visible="true"/>
->>>>>>> origin/master
+		<setting id="User" type="text" label="[COLORgreen]GenieTv User =[/COLOR]" default="insert_username" visible="true"/>
+		<setting id="Pass" type="text" label="[COLORgreen]GenieTv Pass =[/COLOR]" default="insert_password" visible="true"/>
     </category>	
 	<category label="Restore Build">
 		<setting label="Local Zip" type="file" id="Local" value="path_to_files"/>
