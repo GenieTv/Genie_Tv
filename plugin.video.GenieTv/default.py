@@ -76,7 +76,7 @@ iI111I11I1I1 = xbmc . translatePath ( os . path . join ( 'special://home/addons/
 OOooO0OOoo = xbmc . translatePath ( os . path . join ( 'special://home/addons/' + o00 , 'icon.png' , iI111I11I1I1 , '' ) )
 iIii1 = ( oOo0oooo00o ( 'aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vR2VuaWVBcnQv' ) )
 oOOoO0 = ( oOo0oooo00o ( 'aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vR2VuaWVBcnQvb3JpZ2luLnBuZw==' ) )
-O0OoO000O0OO = "2.4.4"
+O0OoO000O0OO = "2.4.5"
 iiI1IiI = xbmc . translatePath ( 'special://database' )
 II = xbmc . translatePath ( 'special://home/userdata/addon_data/plugin.video.GenieTV' )
 ooOoOoo0O = xbmc . translatePath ( 'special://thumbnails' ) ;
@@ -128,6 +128,7 @@ def ii1I1i1I ( ) :
  IIIII ( '[COLORgreen]THE REAPER[/COLOR]' , ( oOo0oooo00o ( 'aHR0cDovL3RoZXJlYXBlci54MTBob3N0LmNvbS9UaGVfUmVhcGVycy9tYWluLnBocA==' ) ) , 1016 , iIii1 + 'reap.png' , iI111I11I1I1 , '' )
  IIIII ( '[COLORgreen]PANDORAS BOX[/COLOR]' , II11iiii1Ii , 10025 , iIii1 + 'PANDORASBOX.png' , iI111I11I1I1 , '' )
  IIIII ( '[COLORgreen]HEROVISION[/COLOR]' , 'http://herovision.x10host.com/vod/main.php' , 1016 , iIii1 + 'hero.png' , iI111I11I1I1 , '' )
+ IIIII ( '[COLORgreen]SILENT HUNTER[/COLOR]' , ( oOo0oooo00o ( 'aHR0cDovLzUuMTM1LjIwNy45Ni8=' ) ) , 1006 , iIii1 + 'SILENTHUNTER.png' , iI111I11I1I1 , '' )
  IIIII ( '[COLORgreen]STAND UP[/COLOR]' , '' , 10003 , iIii1 + 'ORIGINSTANDUP.png' , iI111I11I1I1 , '' )
  IIIII ( '[COLORgreen]FOOTBALL[/COLOR]' , '' , 10002 , iIii1 + 'ORIGINFOOTBALL.png' , iI111I11I1I1 , '' )
  IIIII ( '[COLORgreen]FITNESS[/COLOR]' , ( oOo0oooo00o ( 'aHR0cHM6Ly93d3cuZml0bmVzc2JsZW5kZXIuY29tL3ZpZGVvcw==' ) ) , 7085 , iIii1 + 'FITNESS.png' , iI111I11I1I1 , '' )
@@ -1615,12 +1616,12 @@ def iiII1IiIi1iI1 ( ) :
  OOoOoOo = OOoOoo ( oOo0oooo00o ( 'aHR0cDovL3d3dy54bnh4LmNvbS8=' ) )
  iiIi1IIiIi = re . compile ( '<a href="(.+?)">(.+?)</a><br>' ) . findall ( OOoOoOo )
  for iIiIIi1 , oOO00Oo in iiIi1IIiIi :
-  I1I11i ( ( '[COLORgreen]' + oOO00Oo + '[/COLOR]' ) , iIiIIi1 , 8091 , iIii1 + 'streams.png' )
+  I1I11i ( '[COLORgreen]' + oOO00Oo + '[/COLOR]' , iIiIIi1 , 8091 , iIii1 + 'streams.png' )
 def oOiiI1Ii11II1I ( url ) :
  OOoOoOo = OO ( url )
  iiIi1IIiIi = re . compile ( '<a href="(.+?)".+?src="(.+?)".+?title="(.+?)">' , re . DOTALL ) . findall ( OOoOoOo )
  for url , I11iIiI1I1i11 , oOO00Oo in iiIi1IIiIi :
-  i1II1 ( ( '[COLORgreen]' + oOO00Oo + '[/COLOR]' ) , url , 8092 , I11iIiI1I1i11 )
+  i1II1 ( '[COLORgreen]' + oOO00Oo + '[/COLOR]' , url , 8092 , I11iIiI1I1i11 )
 def I1Ii11II1I1 ( url ) :
  OOoOoOo = OO ( url )
  iiIi1IIiIi = re . compile ( 'src=&quot;(.+?)&quot;' ) . findall ( OOoOoOo )
