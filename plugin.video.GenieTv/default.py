@@ -77,7 +77,7 @@ OOooO0OOoo = xbmc . translatePath ( os . path . join ( 'special://home/addons/' 
 iIii1 = xbmc . translatePath ( os . path . join ( 'special://home/addons/' + o00 , 'icon.png' , OOooO0OOoo , '' ) )
 oOOoO0 = ( oOo0oooo00o ( 'aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vR2VuaWVBcnQv' ) )
 O0OoO000O0OO = ( oOo0oooo00o ( 'aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vR2VuaWVBcnQvb3JpZ2luLnBuZw==' ) )
-iiI1IiI = "2.4.7"
+iiI1IiI = "2.4.8"
 II = xbmc . translatePath ( 'special://database' )
 ooOoOoo0O = xbmc . translatePath ( 'special://home/userdata/addon_data/plugin.video.GenieTV' )
 OooO0 = xbmc . translatePath ( 'special://thumbnails' ) ;
@@ -121,6 +121,9 @@ def IIIII ( ) :
   ooooooO0oo ( '[COLORgreen]GenieTv RSS Feed[/COLOR]' , OO0o , 39 , oOOoO0 + 'RSS.png' , OOooO0OOoo , '' )
  if o0oOoO00o . getSetting ( 'Addons Packs' ) == 'true' :
   ooooooO0oo ( '[COLORgreen]ADDONS PACKS[/COLOR]' , OO0o , 30 , oOOoO0 + 'ADDONP.png' , OOooO0OOoo , '' )
+ else :
+  ii11iIi1I = xbmcgui . Dialog ( )
+  ii11iIi1I . ok ( "Mission Unlikely" , "Todays mission if you choose to accept it [COLOR yellow]Work out how to get into genie[/COLOR]" , "We promise it does work just thought we'd have a little fun with you" , "Update will come shortly to get things back to normal until then happy hunting" )
  I1i1I1II ( 'movies' , 'MAIN' )
  if 45 - 45: O0oO . I1IiI
 def oOii1i1I1i ( ) :
