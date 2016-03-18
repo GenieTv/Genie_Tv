@@ -10,39 +10,38 @@
 		<setting id="Build" type="text" label="Backup Url =" default="Enter Url Here" visible="true"/>
     </category>	
 	<category label="Main Menu">
-        <setting id="Tidy" type="bool" label="Turn Me Off" default="true"/>
-        <setting id="My Build" type="bool" label="My Build" default="false"/>
-    	<setting id="Streams" type="bool" label="Streams" default="false"/>
-    	<setting id="Music" type="bool" label="Music" default="false"/>
-    	<setting id="Builders Toolbox" type="bool" label="Builders Toolbox" default="false"/>
-    	<setting id="Source List" type="bool" label="Source List" default="false"/>
-    	<setting id="Maintainance" type="bool" label="Maintainance" default="false"/>
-    	<setting id="Addons" type="bool" label="Addons" default="false"/>
-    	<setting id="APK Tool" type="bool" label="APK Tool" default="false"/>
-    	<setting id="Rss Feed" type="bool" label="Rss Feed" default="false"/>
-    	<setting id="Addons Packs" type="bool" label="Addons Packs" default="false"/>
+        <setting id="My Build" type="bool" label="My Build" default="true"/>
+    	<setting id="Streams" type="bool" label="Streams" default="true"/>
+    	<setting id="Music" type="bool" label="Music" default="true"/>
+    	<setting id="Builders Toolbox" type="bool" label="Builders Toolbox" default="true"/>
+    	<setting id="Source List" type="bool" label="Source List" default="true"/>
+    	<setting id="Maintainance" type="bool" label="Maintainance" default="true"/>
+    	<setting id="Addons" type="bool" label="Addons" default="true"/>
+    	<setting id="APK Tool" type="bool" label="APK Tool" default="true"/>
+    	<setting id="Rss Feed" type="bool" label="Rss Feed" default="true"/>
+    	<setting id="Addons Packs" type="bool" label="Addons Packs" default="true"/>
     </category>	
 	<category label="Streams Menu">
-    	<setting id="Favourites" type="bool" label="Favourites" default="false"/>
-    	<setting id="Search" type="bool" label="Search" default="false"/>
-    	<setting id="G-tv" type="bool" label="G-tv" default="false"/>
-    	<setting id="Popcorn Box" type="bool" label="Popcorn Box" default="false"/>
-    	<setting id="Dizzy Tv" type="bool" label="Dizzy Tv" default="false"/>
-    	<setting id="Watch Series" type="bool" label="Watch Series" default="false"/>
-    	<setting id="Recent Episodes" type="bool" label="Recent Episodes" default="false"/>
-    	<setting id="Scooby Streams" type="bool" label="Scooby Streams" default="false"/>
-    	<setting id="The Reaper" type="bool" label="The Reaper" default="false"/>
-    	<setting id="Pandoras Box" type="bool" label="Pandoras Box" default="false"/>
-    	<setting id="HeroVision" type="bool" label="HeroVision" default="false"/>
-    	<setting id="Silent Hunter" type="bool" label="Silent Hunter" default="false"/>
-    	<setting id="Stand Up" type="bool" label="Stand Up" default="false"/>
-    	<setting id="Football" type="bool" label="Football" default="false"/>
-    	<setting id="Fitness" type="bool" label="Fitness" default="false"/>
-    	<setting id="Documentaries" type="bool" label="Documentaries" default="false"/>
-    	<setting id="Cartoons" type="bool" label="Cartoons" default="false"/>
-    	<setting id="Anime" type="bool" label="Anime" default="false"/>
-    	<setting id="M3u Streams" type="bool" label="M3u Streams" default="false"/>
-    	<setting id="Playlist Loader" type="bool" label="Playlist Loader" default="false"/>
+    	<setting id="Favourites" type="bool" label="Favourites" default="true"/>
+    	<setting id="Search" type="bool" label="Search" default="true"/>
+    	<setting id="G-tv" type="bool" label="G-tv" default="true"/>
+    	<setting id="Popcorn Box" type="bool" label="Popcorn Box" default="true"/>
+    	<setting id="Dizzy Tv" type="bool" label="Dizzy Tv" default="true"/>
+    	<setting id="Watch Series" type="bool" label="Watch Series" default="true"/>
+    	<setting id="Recent Episodes" type="bool" label="Recent Episodes" default="true"/>
+    	<setting id="Scooby Streams" type="bool" label="Scooby Streams" default="true"/>
+    	<setting id="The Reaper" type="bool" label="The Reaper" default="true"/>
+    	<setting id="Pandoras Box" type="bool" label="Pandoras Box" default="true"/>
+    	<setting id="HeroVision" type="bool" label="HeroVision" default="true"/>
+    	<setting id="Silent Hunter" type="bool" label="Silent Hunter" default="true"/>
+    	<setting id="Stand Up" type="bool" label="Stand Up" default="true"/>
+    	<setting id="Football" type="bool" label="Football" default="true"/>
+    	<setting id="Fitness" type="bool" label="Fitness" default="true"/>
+    	<setting id="Documentaries" type="bool" label="Documentaries" default="true"/>
+    	<setting id="Cartoons" type="bool" label="Cartoons" default="true"/>
+    	<setting id="Anime" type="bool" label="Anime" default="true"/>
+    	<setting id="M3u Streams" type="bool" label="M3u Streams" default="true"/>
+    	<setting id="Playlist Loader" type="bool" label="Playlist Loader" default="true"/>
     </category>	
     <category label="Playlist Loader">
 		<setting label="Local M3u" type="file" id="LocalM3u" value="path_to_files"/>

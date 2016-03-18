@@ -1,8 +1,8 @@
 # -*- coding: cp1252 -*-
 import xbmc , xbmcaddon , xbmcgui , xbmcplugin , os , base64 , sys , xbmcvfs , unicodedata
 import urlresolver
-import cloudflare , googleplus , client , cleantitle
-import yt
+from imports import cloudflare , googleplus , client , cleantitle
+from imports import yt
 import httplib
 import requests
 import urlparse
@@ -11,14 +11,14 @@ import binascii
 import subprocess
 import urllib2 , urllib , glob , traceback
 import re
-import extract
-import downloader
+from imports import extract
+from imports import downloader
 import plugintools
 import zipfile
 import time
 import ntpath
 import cookielib
-import Parse , CNF_Studio_Indexer
+from imports import Parse , CNF_Studio_Indexer
 try :
  import json
 except :
@@ -29,7 +29,6 @@ from BeautifulSoup import BeautifulStoneSoup , BeautifulSOAP
 from cookielib import CookieJar
 from addon . common . addon import Addon
 from addon . common . net import Net
-from threading import Thread
 if 64 - 64: i11iIiiIii
 if 65 - 65: O0 / iIii1I11I1II1 % OoooooooOO - i1IIi
 o0OO00 = ''
@@ -77,7 +76,7 @@ OOooO0OOoo = xbmc . translatePath ( os . path . join ( 'special://home/addons/' 
 iIii1 = xbmc . translatePath ( os . path . join ( 'special://home/addons/' + o00 , 'icon.png' , OOooO0OOoo , '' ) )
 oOOoO0 = ( oOo0oooo00o ( 'aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vR2VuaWVBcnQv' ) )
 O0OoO000O0OO = ( oOo0oooo00o ( 'aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vR2VuaWVBcnQvb3JpZ2luLnBuZw==' ) )
-iiI1IiI = "2.4.8"
+iiI1IiI = "2.4.9"
 II = xbmc . translatePath ( 'special://database' )
 ooOoOoo0O = xbmc . translatePath ( 'special://home/userdata/addon_data/plugin.video.GenieTV' )
 OooO0 = xbmc . translatePath ( 'special://thumbnails' ) ;
@@ -98,8 +97,6 @@ I11II1i = o0oOoO00o . getSetting ( 'debug' )
 if os . path . exists ( ooOoOoo0O ) == False :
  os . makedirs ( ooOoOoo0O )
 def IIIII ( ) :
- if o0oOoO00o . getSetting ( 'Tidy' ) == 'true' :
-  ooooooO0oo ( '[COLORgreen]It Was Just Too Big[/COLOR]' , OO0o , 0000 , oOOoO0 + 'icon.png' , OOooO0OOoo , '' )
  if o0oOoO00o . getSetting ( 'My Build' ) == 'true' :
   ooooooO0oo ( '[COLORgreen]WIZARD[/COLOR]' , OO0o , 4001 , oOOoO0 + 'MB.png' , OOooO0OOoo , '' )
  if o0oOoO00o . getSetting ( 'Streams' ) == 'true' :
@@ -121,9 +118,6 @@ def IIIII ( ) :
   ooooooO0oo ( '[COLORgreen]GenieTv RSS Feed[/COLOR]' , OO0o , 39 , oOOoO0 + 'RSS.png' , OOooO0OOoo , '' )
  if o0oOoO00o . getSetting ( 'Addons Packs' ) == 'true' :
   ooooooO0oo ( '[COLORgreen]ADDONS PACKS[/COLOR]' , OO0o , 30 , oOOoO0 + 'ADDONP.png' , OOooO0OOoo , '' )
- else :
-  ii11iIi1I = xbmcgui . Dialog ( )
-  ii11iIi1I . ok ( "Mission Unlikely" , "Todays mission if you choose to accept it [COLOR yellow]Work out how to get into genie[/COLOR]" , "We promise it does work just thought we'd have a little fun with you" , "Update will come shortly to get things back to normal until then happy hunting" )
  I1i1I1II ( 'movies' , 'MAIN' )
  if 45 - 45: O0oO . I1IiI
 def oOii1i1I1i ( ) :
@@ -4261,6 +4255,7 @@ elif Ii1iI111 == 10057 :
  iII1I1 ( "getFavorites" )
  iIIIII1iiiiII ( )
 elif Ii1iI111 == 10058 : oo000OO00Oo ( )
+elif Ii1iI111 == 10059 : Donators_Guide ( )
 elif Ii1iI111 == 20000 : II1i11I ( )
 elif Ii1iI111 == 20001 : IIii1111 ( )
 elif Ii1iI111 == 20002 : oo0o0000 ( I1Ii1iI1 )
