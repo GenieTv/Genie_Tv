@@ -38,6 +38,11 @@
     	<setting id="Football" type="bool" label="Football" default="true"/>
     	<setting id="Fitness" type="bool" label="Fitness" default="true"/>
     	<setting id="Documentaries" type="bool" label="Documentaries" default="true"/>
+    	<setting id="CLASSIC MOVIES" type="bool" label="CLASSIC MOVIES" default="true"/>
+    	<setting id="CLASSIC TV" type="bool" label="CLASSIC TV" default="true"/>
+    	<setting id="Disclose" type="bool" label="Disclose" default="true"/>
+    	<setting id="Go Fishing" type="bool" label="Go Fishing" default="true"/>
+    	<setting id="GenieTv Kitchen" type="bool" label="GenieTv Kitchen" default="true"/>
     	<setting id="Cartoons" type="bool" label="Cartoons" default="true"/>
     	<setting id="Anime" type="bool" label="Anime" default="true"/>
     	<setting id="M3u Streams" type="bool" label="M3u Streams" default="true"/>
