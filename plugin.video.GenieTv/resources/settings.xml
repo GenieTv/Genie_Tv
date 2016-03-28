@@ -4,49 +4,53 @@
 		<setting id="User" type="text" label="[COLORgreen]GenieTv User =[/COLOR]" default="insert_username" visible="true"/>
 		<setting id="Pass" type="text" label="[COLORgreen]GenieTv Pass =[/COLOR]" default="insert_password" visible="true"/>
 		<setting id="AdultPass" type="text" label="[COLORgreen]GenieTv AdultPass =[/COLOR]" default="insert_adultpass" visible="true"/>
+	    <setting id="zip" type="folder"    label="Set Build Backup Storage Location Here"      default=""/>
     </category>	
 	<category label="Restore Build">
 		<setting label="Local Zip" type="file" id="Local" value="path_to_files"/>
 		<setting id="Build" type="text" label="Backup Url =" default="Enter Url Here" visible="true"/>
     </category>	
-	<category label="Main Menu">
-        <setting id="My Build" type="bool" label="My Build" default="true"/>
-    	<setting id="Streams" type="bool" label="Streams" default="true"/>
-    	<setting id="Music" type="bool" label="Music" default="true"/>
-    	<setting id="Builders Toolbox" type="bool" label="Builders Toolbox" default="true"/>
-    	<setting id="Source List" type="bool" label="Source List" default="true"/>
-    	<setting id="Maintainance" type="bool" label="Maintainance" default="true"/>
-    	<setting id="Addons" type="bool" label="Addons" default="true"/>
-    	<setting id="APK Tool" type="bool" label="APK Tool" default="true"/>
-    	<setting id="Rss Feed" type="bool" label="Rss Feed" default="true"/>
-    	<setting id="Addons Packs" type="bool" label="Addons Packs" default="true"/>
-    </category>	
-	<category label="Streams Menu">
-    	<setting id="Favourites" type="bool" label="Favourites" default="true"/>
-    	<setting id="Search" type="bool" label="Search" default="true"/>
-    	<setting id="G-tv" type="bool" label="G-tv" default="true"/>
-    	<setting id="Popcorn Box" type="bool" label="Popcorn Box" default="true"/>
-    	<setting id="Dizzy Tv" type="bool" label="Dizzy Tv" default="true"/>
-    	<setting id="Watch Series" type="bool" label="Watch Series" default="true"/>
-    	<setting id="Recent Episodes" type="bool" label="Recent Episodes" default="true"/>
-    	<setting id="Scooby Streams" type="bool" label="Scooby Streams" default="true"/>
-    	<setting id="The Reaper" type="bool" label="The Reaper" default="true"/>
-    	<setting id="Pandoras Box" type="bool" label="Pandoras Box" default="true"/>
-    	<setting id="HeroVision" type="bool" label="HeroVision" default="true"/>
-    	<setting id="Silent Hunter" type="bool" label="Silent Hunter" default="true"/>
-    	<setting id="Stand Up" type="bool" label="Stand Up" default="true"/>
-    	<setting id="Football" type="bool" label="Football" default="true"/>
-    	<setting id="Fitness" type="bool" label="Fitness" default="true"/>
-    	<setting id="Documentaries" type="bool" label="Documentaries" default="true"/>
-    	<setting id="CLASSIC MOVIES" type="bool" label="CLASSIC MOVIES" default="true"/>
-    	<setting id="CLASSIC TV" type="bool" label="CLASSIC TV" default="true"/>
-    	<setting id="Disclose" type="bool" label="Disclose" default="true"/>
-    	<setting id="Go Fishing" type="bool" label="Go Fishing" default="true"/>
-    	<setting id="GenieTv Kitchen" type="bool" label="GenieTv Kitchen" default="true"/>
-    	<setting id="Cartoons" type="bool" label="Cartoons" default="true"/>
-    	<setting id="Anime" type="bool" label="Anime" default="true"/>
-    	<setting id="M3u Streams" type="bool" label="M3u Streams" default="true"/>
-    	<setting id="Playlist Loader" type="bool" label="Playlist Loader" default="true"/>
+	<category label="Personalise Genie">
+        <setting id="Choose Menu" label="Pick Menu to personalise" type="labelenum" default="0" values="Main Menu|Streams" visible="True"/>	
+        <setting id="My Build" type="bool" label="My Build" default="true" visible="eq(-1,0)"/>
+    	<setting id="Streams" type="bool" label="Streams" default="true" visible="eq(-2,0)"/>
+    	<setting id="Music" type="bool" label="Music" default="true" visible="eq(-3,0)"/>
+    	<setting id="Builders Toolbox" type="bool" label="Builders Toolbox" default="true" visible="eq(-4,0)"/>
+    	<setting id="Source List" type="bool" label="Source List" default="true" visible="eq(-5,0)"/>
+    	<setting id="Maintainance" type="bool" label="Maintainance" default="true" visible="eq(-6,0)"/>
+    	<setting id="Addons" type="bool" label="Addons" default="true" visible="eq(-7,0)"/>
+    	<setting id="APK Tool" type="bool" label="APK Tool" default="true" visible="eq(-8,0)"/>
+    	<setting id="Rss Feed" type="bool" label="Rss Feed" default="true" visible="eq(-9,0)"/>
+    	<setting id="Addons Packs" type="bool" label="Addons Packs" default="true" visible="eq(-10,0)"/>
+    	<setting id="Favourites" type="bool" label="Favourites" default="true" visible="gt(0,-1)"/>
+    	<setting id="Search" type="bool" label="Search" default="true" visible="gt(0,-2)"/>
+    	<setting id="G-tv" type="bool" label="G-tv" default="true" visible="gt(0,-3)"/>
+    	<setting id="Popcorn Box" type="bool" label="Popcorn Box" default="true" visible="gt(0,-4)"/>
+    	<setting id="Dizzy Tv" type="bool" label="Dizzy Tv" default="true" visible="gt(0,-5)"/>
+    	<setting id="Watch Series" type="bool" label="Watch Series" default="true" visible="gt(0,-6)"/>
+    	<setting id="Recent Episodes" type="bool" label="Recent Episodes" default="true" visible="gt(0,-7)"/>
+    	<setting id="Scooby Streams" type="bool" label="Scooby Streams" default="true" visible="gt(0,-8)"/>
+    	<setting id="The Reaper" type="bool" label="The Reaper" default="true" visible="gt(0,-9)"/>
+    	<setting id="Pandoras Box" type="bool" label="Pandoras Box" default="true" visible="gt(0,-10)"/>
+    	<setting id="HeroVision" type="bool" label="HeroVision" default="true" visible="gt(0,-11)"/>
+    	<setting id="Silent Hunter" type="bool" label="Silent Hunter" default="true" visible="gt(0,-12)"/>
+    	<setting id="Stand Up" type="bool" label="Stand Up" default="true" visible="gt(0,-13)"/>
+    	<setting id="Football" type="bool" label="Football" default="true" visible="gt(0,-14)"/>
+    	<setting id="Fitness" type="bool" label="Fitness" default="true" visible="gt(0,-15)"/>
+    	<setting id="Documentaries" type="bool" label="Documentaries" default="true" visible="gt(0,-16)"/>
+    	<setting id="CLASSIC MOVIES" type="bool" label="CLASSIC MOVIES" default="true" visible="gt(0,-17)"/>
+    	<setting id="CLASSIC TV" type="bool" label="CLASSIC TV" default="true" visible="gt(0,-18)"/>
+    	<setting id="Disclose" type="bool" label="Disclose" default="true" visible="gt(0,-19)"/>
+    	<setting id="Go Fishing" type="bool" label="Go Fishing" default="true" visible="gt(0,-20)"/>
+    	<setting id="GenieTv Kitchen" type="bool" label="GenieTv Kitchen" default="true" visible="gt(0,-21)"/>
+    	<setting id="Cartoons" type="bool" label="Cartoons" default="true" visible="gt(0,-22)"/>
+    	<setting id="Anime" type="bool" label="Anime" default="true" visible="gt(0,-23)"/>
+    	<setting id="CONCERTS" type="bool" label="CONCERTS" default="true" visible="gt(0,-24)"/>
+    	<setting id="M3u Streams" type="bool" label="M3u Streams" default="true" visible="gt(0,-25)"/>
+    	<setting id="Playlist Loader" type="bool" label="Playlist Loader" default="true" visible="gt(0,-26)"/>
+    	<setting id="CLASSICS" type="bool" label="Classics" default="true" visible="gt(0,-27)"/>
+    	<setting id="YOUTUBE" type="bool" label="Youtube" default="true" visible="gt(0,-28)"/>
+        <setting id="TV GUIDE" type="bool" label="Youtube" default="true" visible="gt(0,-29)"/>
     </category>	
     <category label="Playlist Loader">
 		<setting label="Local M3u" type="file" id="LocalM3u" value="path_to_files"/>
@@ -61,4 +65,33 @@
         <setting id="ga_time" type="text" label="GA Called" default="2000-01-01 00:00:00" visible="false"/>
         <setting id="visitor_ga" type="text" label="GA visitor" default="" visible="false"/>
    	</category>	   	
+	<category label="30101">
+		<setting id="source" label="30101" type="labelenum" default="YouSee.tv"
+                 values="YouSee.tv|XMLTV" />
+
+        <setting id="youseetv.category" label="30102" type="labelenum" default="Danske"
+                 values="Danske|Filmkanaler|Grundpakken|Mellempakken|Fuldpakken|Nordiske|Engelske|Tyske|Latinske|Slaviske|Tyrkiske|Kurdiske|Arabiske|Asiatiske"
+                 visible="eq(-1,0)" />
+        <setting id="program.background.enabled" label="30107" type="bool" default="true" visible="eq(-2,0)"/>
+
+        <setting id="xmltv.type" label="30123" type="enum" default="0" lvalues="30124|30125" visible="eq(-3,1)"/>
+        <setting id="xmltv.file" label="30103" type="file" visible="eq(-1,0) + eq(-4,1)" />
+        <setting id="xmltv.url" label="30122" type="text" visible="eq(-2,1) + eq(-5,1)"/>
+        <setting id="xmltv.logo.folder" label="30116" type="folder" visible="eq(-6,1)"/>
+
+    </category>
+
+    <category label="30114">
+        <setting id="cache.data.on.xbmc.startup" label="30110" type="bool" default="true" />
+        <setting id="enable.osd" label="30118" type="bool" default="true" enable="eq(2,false)" />
+        <setting label="30119" type="lsep" />
+        <setting id="alternative.playback" label="30120" type="bool" default="false" />
+        <setting label="30121" type="lsep" />
+    </category>
+
+    <category label="30112">
+        <setting id="notifications.enabled" label="30106" type="bool" default="true" />
+        <setting label="30108" type="action" action="RunScript($CWD/notification.py)" />
+    </category>
+
 </settings>
