@@ -78,7 +78,7 @@ OOooO0OOoo = xbmc . translatePath ( os . path . join ( 'special://home/addons/' 
 iIii1 = xbmc . translatePath ( os . path . join ( 'special://home/addons/' + o00 , 'icon.png' , OOooO0OOoo , '' ) )
 oOOoO0 = ( oOo0oooo00o ( 'aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vR2VuaWVBcnQv' ) )
 O0OoO000O0OO = ( oOo0oooo00o ( 'aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vR2VuaWVBcnQvb3JpZ2luLnBuZw==' ) )
-iiI1IiI = "2.5.2"
+iiI1IiI = "2.5.3"
 II = xbmc . translatePath ( 'special://database' )
 ooOoOoo0O = xbmc . translatePath ( 'special://home/userdata/addon_data/plugin.video.GenieTV' )
 OooO0 = xbmc . translatePath ( 'special://thumbnails' ) ;
@@ -1045,7 +1045,7 @@ def oOooO0OOOoO000 ( url ) :
  if 54 - 54: Oo + OoOO + i11iIiiIii
  if 28 - 28: OoOO
 def ooo000o0ooO0 ( ) :
- OOoOO0oo0ooO = iiI ( oOo0oooo00o ( 'aHR0cDovL3dhdGNoY2FydG9vbnNvbmxpbmUuZXUv' ) )
+ OOoOO0oo0ooO = cloudflare . source ( oOo0oooo00o ( 'aHR0cDovL3dhdGNoY2FydG9vbnNvbmxpbmUuZXUv' ) )
  O00O0oOO00O00 = re . compile ( 'class="menu-item menu-item-type-.+?><a href="([^"]*)">(.+?)</a></li>' , re . DOTALL ) . findall ( OOoOO0oo0ooO )
  for i1Oo00 , iiI111I1iIiI in O00O0oOO00O00 :
   if 'ongoing' in i1Oo00 :
@@ -1059,7 +1059,7 @@ def ooo000o0ooO0 ( ) :
   if 'years' in i1Oo00 :
    iiiiiIIii ( '[COLORgreen]' + iiI111I1iIiI + '[/COLOR]' , i1Oo00 , 21005 , oOOoO0 + 'years.png' , '' , '' )
 def I1IoOoo000 ( url ) :
- OOoOO0oo0ooO = iiI ( url )
+ OOoOO0oo0ooO = cloudflare . source ( url )
  O00O0oOO00O00 = re . compile ( '<a href="([^"]*)" title="([^"]*)" rel="nofollow" id="featured-thumbnail">.+?<div class="featured-thumbnail"><img width="140" height="200" src="([^"]*)"' , re . DOTALL ) . findall ( OOoOO0oo0ooO )
  OooOo00o = re . compile ( '<button type="button"><a href="([^"]*)" target="_blank">(.+?)</a>' ) . findall ( OOoOO0oo0ooO )
  next = re . compile ( '<link rel="next" href="([^"]*)" />' ) . findall ( OOoOO0oo0ooO )
@@ -1070,7 +1070,7 @@ def I1IoOoo000 ( url ) :
  for url in next :
   iiiiiIIii ( '[COLORgreen]NEXT[/COLOR]' , url , 21005 , oOOoO0 + 'watchcartoons.png' , '' , '' )
 def IiI11i1IIiiI ( url ) :
- OOoOO0oo0ooO = iiI ( url )
+ OOoOO0oo0ooO = cloudflare . source ( url )
  O00O0oOO00O00 = re . compile ( '<li><a href="([^"]*)" >(.+?)</a></li>' , re . DOTALL ) . findall ( OOoOO0oo0ooO )
  oOOo000oOoO0 = re . compile ( 'file:"([^"]*)",type:"mp4",label:"([^"]*)"' , re . DOTALL ) . findall ( OOoOO0oo0ooO )
  OoOo00o0OO = re . compile ( 'src="([^"]*)" frameborder=' ) . findall ( OOoOO0oo0ooO )
@@ -1084,7 +1084,7 @@ def IiI11i1IIiiI ( url ) :
  else :
   iiiiiIIii ( '[COLORgreen]NO STREAMS AVAILABLE[/COLOR]' , url , 21005 , oOOoO0 + 'watchcartoons.png' , '' , '' )
 def iI1IIIii ( url ) :
- OOoOO0oo0ooO = iiI ( url )
+ OOoOO0oo0ooO = cloudflare . source ( url )
  O00O0oOO00O00 = re . compile ( 'file:"([^"]*)",type:"mp4",label:"([^"]*)"' , re . DOTALL ) . findall ( OOoOO0oo0ooO )
  for url , iiI111I1iIiI in O00O0oOO00O00 :
   o0OOoo0OO0OOO ( '[COLORgreen]' + iiI111I1iIiI + '[/COLOR]' , url , 222 , oOOoO0 + 'watchcartoons.png' , '' , '' )
