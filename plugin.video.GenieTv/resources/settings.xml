@@ -29,6 +29,7 @@
     	<setting id="Dizzy Tv" type="bool" label="Dizzy Tv" default="true" visible="gt(0,-5)"/>
     	<setting id="Watch Series" type="bool" label="Watch Series" default="true" visible="gt(0,-6)"/>
     	<setting id="Recent Episodes" type="bool" label="Recent Episodes" default="true" visible="gt(0,-7)"/>
+    	<setting id="REQUESTS" type="bool" label="REQUESTS" default="true" visible="gt(0,-8)"/>
     	<setting id="Scooby Streams" type="bool" label="Scooby Streams" default="true" visible="gt(0,-8)"/>
     	<setting id="The Reaper" type="bool" label="The Reaper" default="true" visible="gt(0,-9)"/>
     	<setting id="Pandoras Box" type="bool" label="Pandoras Box" default="true" visible="gt(0,-10)"/>
