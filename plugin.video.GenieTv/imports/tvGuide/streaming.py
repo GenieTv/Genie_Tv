@@ -1,6 +1,10 @@
+# -*- coding: utf-8 -*-
 #
 #      Copyright (C) 2014 Tommy Winther
 #      http://tommy.winther.nu
+#
+#      Modified for GTV Guide (04/2016 onwards)
+#      by Thomas Geppert [bluezed] - bluezed.apps@gmail.com
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -25,8 +29,18 @@ import xbmcaddon
 
 
 class StreamsService(object):
-    def __init__(self):
-        path = os.path.join(xbmcaddon.Addon().getAddonInfo('path'), 'resources', 'addons.ini')
+    def __init__(self, addon):
+        if int(addon.getSetting('addons.ini.type')) == 0:
+            path = xbmc.translatePath(os.path.join('special://profile', 'addon_data', 'plugin.video.GenieTv', 'addons.ini'))
+            xbmc.log('[plugin.video.GenieTv] GTV addons.ini is used', xbmc.LOGDEBUG)
+        else:
+            customFile = str(addon.getSetting('addons.ini.file'))
+            if os.path.exists(customFile):
+                path = customFile
+            else:
+                path = xbmc.translatePath(os.path.join('special://profile', 'addon_data', 'plugin.video.GenieTv', customFile.split('/')[-1]))
+            xbmc.log('[plugin.video.GenieTv] Custom addons.ini is used: %s' % path, xbmc.LOGDEBUG)
+
         self.addonsParser = ConfigParser.ConfigParser(dict_type=OrderedDict)
         self.addonsParser.optionxform = lambda option: option
         try:
@@ -36,7 +50,7 @@ class StreamsService(object):
 
     def loadFavourites(self):
         entries = list()
-        path = xbmc.translatePath('special://userdata/favourites.xml')
+        path = xbmc.translatePath(os.path.join('special://profile', 'favourites.xml'))
         if os.path.exists(path):
             f = open(path)
             xml = f.read()
@@ -50,6 +64,10 @@ class StreamsService(object):
                         value = value[11:-2]
                     elif value[0:10] == 'PlayMedia(':
                         value = value[10:-1]
+                    elif value[0:22] == 'ActivateWindow(10025,"':
+                        value = value[22:-9]
+                    elif value[0:21] == 'ActivateWindow(10025,':
+                        value = value[22:-8]
                     else:
                         continue
 
@@ -87,6 +105,9 @@ class StreamsService(object):
                 continue # ignore addons that are not installed
 
             for (label, stream) in self.getAddonStreams(id):
+                if id == "plugin.video.meta":
+                    label = channel.title
+                    stream = str(stream.replace("<channel>", channel.title.replace(" ","%20")))
                 if label == channel.title:
                     matches.append((id, label, stream))
 

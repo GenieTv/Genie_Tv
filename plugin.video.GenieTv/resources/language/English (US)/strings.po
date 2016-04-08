@@ -1,7 +1,7 @@
 # XBMC Media Center language file
-# Addon Name: TV Guide
-# Addon id: script.tvguide
-# Addon Provider: twinther
+# Addon Name: FTV Guide
+# Addon id: script.ftvguide
+# Addon Provider: rayw1986, bluezed
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Addons\n"
@@ -177,16 +177,16 @@ msgid "It looks like your current skin has a special"
 msgstr "It looks like your current skin has a special"
 
 msgctxt "#30155"
-msgid "version of the TV Guide skin that is not up-to-date."
-msgstr "version of the TV Guide skin that is not up-to-date."
+msgid "version of the FTV Guide skin that is not up-to-date."
+msgstr "version of the FTV Guide skin that is not up-to-date."
 
 msgctxt "#30156"
 msgid "Please try with a different skin..."
 msgstr "Please try with a different skin..."
 
 msgctxt "#30157"
-msgid "It looks like the TV Guide database is broken."
-msgstr "It looks like the TV Guide database is broken."
+msgid "It looks like the FTV Guide database is broken."
+msgstr "It looks like the FTV Guide database is broken."
 
 msgctxt "#30158"
 msgid "The database will be deleted and recreated."
@@ -239,6 +239,34 @@ msgstr "Channels"
 msgctxt "#30308"
 msgid "Quit"
 msgstr "Quit"
+
+#empty strings from id 30309 to 30399
+
+msgctxt "#30400"
+msgid "Background Update Service"
+msgstr "Background Update Service"
+
+msgctxt "#30401"
+msgid "Service Interval"
+msgstr "Service Interval"
+
+msgctxt "#30402"
+msgid "2 hrs"
+msgstr "2 hrs"
+
+msgctxt "#30403"
+msgid "6 hrs"
+msgstr "6 hrs"
+
+msgctxt "#30404"
+msgid "12 hrs"
+msgstr "12 hrs"
+
+msgctxt "#30405"
+msgid "24 hrs"
+msgstr "24 hrs"
+
+#empty strings from id 30406 to 30499
 
 msgctxt "#30500"
 msgid "[B]Edit channel order and visibility[/B]"
@@ -313,8 +341,8 @@ msgid "Play channels using the Weeb.Tv addon"
 msgstr "Play channels using the Weeb.Tv addon"
 
 msgctxt "#30802"
-msgid "TV Guide is configured to stream using Weeb.Tv"
-msgstr "TV Guide is configured to stream using Weeb.Tv"
+msgid "FTV Guide is configured to stream using Weeb.Tv"
+msgstr "FTV Guide is configured to stream using Weeb.Tv"
 
 msgctxt "#30803"
 msgid "addon which is not installed."

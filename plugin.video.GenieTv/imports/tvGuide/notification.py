@@ -1,6 +1,10 @@
+# -*- coding: utf-8 -*-
 #
 #      Copyright (C) 2012 Tommy Winther
 #      http://tommy.winther.nu
+#
+#      Modified for GTV Guide (09/2014 onwards)
+#      by Thomas Geppert [bluezed] - bluezed.apps@gmail.com
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by

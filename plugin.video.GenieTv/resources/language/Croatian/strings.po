@@ -1,7 +1,7 @@
 # XBMC Media Center language file
-# Addon Name: TV Guide
-# Addon id: script.tvguide
-# Addon Provider: twinther
+# Addon Name: FTV Guide
+# Addon id: script.ftvguide
+# Addon Provider: rayw1986, bluezed
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Addons\n"
@@ -177,7 +177,7 @@ msgid "It looks like your current skin has a special"
 msgstr "Izgleda da vaša trenutna presvlaka ima posebnu"
 
 msgctxt "#30155"
-msgid "version of the TV Guide skin that is not up-to-date."
+msgid "version of the FTV Guide skin that is not up-to-date."
 msgstr "inačicu presvlake TV vodiča koja nije ažurirana."
 
 msgctxt "#30156"
@@ -185,7 +185,7 @@ msgid "Please try with a different skin..."
 msgstr "Pokušajte sa drugom presvlakom..."
 
 msgctxt "#30157"
-msgid "It looks like the TV Guide database is broken."
+msgid "It looks like the FTV Guide database is broken."
 msgstr "Izgleda da je baza podataka TV vodiča oštećena."
 
 msgctxt "#30158"
@@ -313,7 +313,7 @@ msgid "Play channels using the Weeb.Tv addon"
 msgstr "Reproduciraj program koristeći Weeb.Tv dodatak"
 
 msgctxt "#30802"
-msgid "TV Guide is configured to stream using Weeb.Tv"
+msgid "FTV Guide is configured to stream using Weeb.Tv"
 msgstr "TV vodič je podešen da streama koristeći Weeb.Tv"
 
 msgctxt "#30803"

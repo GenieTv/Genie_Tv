@@ -1,7 +1,7 @@
 # XBMC Media Center language file
-# Addon Name: TV Guide
-# Addon id: script.tvguide
-# Addon Provider: twinther
+# Addon Name: GTV Guide
+# Addon id: script.GTVguide
+# Addon Provider: rayw1986, bluezed
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Addons\n"
@@ -25,7 +25,7 @@ msgid "[B]Loading data from external source...[/B]"
 msgstr ""
 
 msgctxt "#30002"
-msgid "Calculating remaning time..."
+msgid "Calculating remaining time..."
 msgstr ""
 
 msgctxt "#30003"
@@ -126,7 +126,9 @@ msgctxt "#30116"
 msgid "Search for channel logos in"
 msgstr ""
 
-#empty string with id 30117
+msgctxt "#30117"
+msgid "Show Channel Logos"
+msgstr ""
 
 msgctxt "#30118"
 msgid "Enable OSD menu"
@@ -160,7 +162,101 @@ msgctxt "#30125"
 msgid "URL"
 msgstr ""
 
-#empty strings from id 30126 to 30149
+msgctxt "#30126"
+msgid "GTV (All)"
+msgstr ""
+
+msgctxt "#30127"
+msgid "GTV (Basic)"
+msgstr ""
+
+msgctxt "#30128"
+msgid "File download interval"
+msgstr ""
+
+msgctxt "#30129"
+msgid "every start"
+msgstr ""
+
+msgctxt "#30130"
+msgid "every 12 hrs"
+msgstr ""
+
+msgctxt "#30131"
+msgid "every 24 hrs"
+msgstr ""
+
+msgctxt "#30132"
+msgid "every 48 hrs"
+msgstr ""
+
+msgctxt "#30133"
+msgid "UK (Freeview)"
+msgstr ""
+
+msgctxt "#30134"
+msgid "UK (Sky Go)"
+msgstr ""
+
+msgctxt "#30135"
+msgid "USTVNow"
+msgstr ""
+
+msgctxt "#30136"
+msgid "US/UK (Basic)"
+msgstr ""
+
+msgctxt "#30137"
+msgid "** WARNING! ** Resetting your database will cause you to lose all settings!"
+msgstr ""
+
+msgctxt "#30138"
+msgid "Only do so if your database has become corrupt!"
+msgstr ""
+
+msgctxt "#30139"
+msgid "Yes, Reset Database"
+msgstr ""
+
+msgctxt "#30140"
+msgid "Reset Database"
+msgstr ""
+
+msgctxt "#30141"
+msgid "Guide Theme"
+msgstr ""
+
+msgctxt "#30142"
+msgid "Custom File"
+msgstr ""
+
+msgctxt "#30143"
+msgid "GTV Guide"
+msgstr ""
+
+msgctxt "#30144"
+msgid "addons.ini selection"
+msgstr ""
+
+msgctxt "#30145"
+msgid "addons.ini file"
+msgstr ""
+
+msgctxt "#30146"
+msgid "Logo source"
+msgstr ""
+
+msgctxt "#30147"
+msgid "Custom Folder"
+msgstr ""
+
+msgctxt "#30148"
+msgid "Appearance"
+msgstr ""
+
+msgctxt "#30149"
+msgid "Refresh on start"
+msgstr ""
 
 msgctxt "#30150"
 msgid "Oops, sorry about that!"
@@ -183,7 +279,7 @@ msgid "It looks like your current skin has a special"
 msgstr ""
 
 msgctxt "#30155"
-msgid "version of the TV Guide skin that is not up-to-date."
+msgid "version of the GTV Guide skin that is not up-to-date."
 msgstr ""
 
 msgctxt "#30156"
@@ -191,7 +287,7 @@ msgid "Please try with a different skin..."
 msgstr ""
 
 msgctxt "#30157"
-msgid "It looks like the TV Guide database is broken."
+msgid "It looks like the GTV Guide database is broken."
 msgstr ""
 
 msgctxt "#30158"
@@ -239,7 +335,7 @@ msgid "You can choose your own .strm file to play, when you want to watch this c
 msgstr ""
 
 msgctxt "#30306"
-msgid "Remove stream file"
+msgid "Remove Stream"
 msgstr ""
 
 msgctxt "#30307"
@@ -250,14 +346,40 @@ msgctxt "#30308"
 msgid "Quit"
 msgstr ""
 
-#empty strings from id 30309 to 30499
+#empty strings from id 30309 to 30399
+
+msgctxt "#30400"
+msgid "Background Update Service"
+msgstr ""
+
+msgctxt "#30401"
+msgid "Service Interval"
+msgstr ""
+
+msgctxt "#30402"
+msgid "2 hrs"
+msgstr ""
+
+msgctxt "#30403"
+msgid "6 hrs"
+msgstr ""
+
+msgctxt "#30404"
+msgid "12 hrs"
+msgstr ""
+
+msgctxt "#30405"
+msgid "24 hrs"
+msgstr ""
+
+#empty strings from id 30406 to 30499
 
 msgctxt "#30500"
 msgid "[B]Edit channel order and visibility[/B]"
 msgstr ""
 
 msgctxt "#30501"
-msgid "Move up and down to change the position of[CR]the channel. Select or navigate left to accept[CR]the position."
+msgid "Press left to pull a channel out, then move it up or down. When in place, press right again to set. Pressing on a channel in the list will enable or disable it.[CR]On touch devices long press on a channel to pull it out, move the list to the desired place and then long press on the pulled out channel to put it in its new place."
 msgstr ""
 
 msgctxt "#30502"
@@ -336,7 +458,7 @@ msgid "Play channels using the Weeb.Tv addon"
 msgstr ""
 
 msgctxt "#30802"
-msgid "TV Guide is configured to stream using Weeb.Tv"
+msgid "GTV Guide is configured to stream using Weeb.Tv"
 msgstr ""
 
 msgctxt "#30803"
@@ -345,4 +467,36 @@ msgstr ""
 
 msgctxt "#30804"
 msgid "Streaming using that addon is now disabled."
+msgstr ""
+
+msgctxt "#30900"
+msgid "Autostart GTV Guide when Kodi starts up"
+msgstr ""
+
+msgctxt "#31000"
+msgid "Connection problem"
+msgstr ""
+
+msgctxt "#31001"
+msgid "It was not possible to update from the server."
+msgstr ""
+
+msgctxt "#31002"
+msgid "Current local data will be kept for now..."
+msgstr ""
+
+msgctxt "#80000"
+msgid "My Movies"
+msgstr ""
+
+msgctxt "#80001"
+msgid "My TV Shows"
+msgstr ""
+
+msgctxt "#80002"
+msgid "Video Add-Ons"
+msgstr ""
+
+msgctxt "#80003"
+msgid "On-Demand"
 msgstr ""

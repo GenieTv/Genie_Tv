@@ -1,6 +1,10 @@
+# -*- coding: utf-8 -*-
 #
 #      Copyright (C) 2012 Tommy Winther
 #      http://tommy.winther.nu
+#
+#      Modified for GTV Guide (04/2016 onwards)
+#      by Thomas Geppert [bluezed] - bluezed.apps@gmail.com
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -64,6 +68,10 @@ WEEBTV_WEBTV_MISSING_3 = 30804
 DATABASE_SCHEMA_ERROR_1 = 30157
 DATABASE_SCHEMA_ERROR_2 = 30158
 DATABASE_SCHEMA_ERROR_3 = 30159
+
+FETCH_ERROR_TITLE = 31000
+FETCH_ERROR_LINE1 = 31001
+FETCH_ERROR_LINE2 = 31002
 
 def strings(id, replacements = None):
     string = ADDON.getLocalizedString(id)

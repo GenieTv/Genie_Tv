@@ -1,6 +1,10 @@
+# -*- coding: utf-8 -*-
 #
 #      Copyright (C) 2012 Tommy Winther
 #      http://tommy.winther.nu
+#
+#      Modified for GTV Guide (04/2016 onwards)
+#      by Thomas Geppert [bluezed] - bluezed.apps@gmail.com
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -27,7 +31,7 @@ class Service(object):
     def __init__(self):
         self.database = source.Database()
         self.database.initialize(self.onInit)
-
+            
     def onInit(self, success):
         if success:
             self.database.updateChannelAndProgramListCaches(self.onCachesUpdated)
@@ -42,11 +46,37 @@ class Service(object):
 
         self.database.close(None)
 
-try:
-    ADDON = xbmcaddon.Addon(id = 'plugin.video.GenieTv')
-    if ADDON.getSetting('cache.data.on.xbmc.startup') == 'true':
-        Service()
-except source.SourceNotConfiguredException:
-    pass  # ignore
-except Exception, ex:
-    xbmc.log('[plugin.video.GenieTv] Uncaugt exception in service.py: %s' % str(ex) , xbmc.LOGDEBUG)
+
+if __name__ == '__main__':
+    try:
+        ADDON = xbmcaddon.Addon('plugin.video.GenieTv')
+        if ADDON.getSetting('autostart') == "true":
+            xbmc.executebuiltin("RunAddon(plugin.video.GenieTv)")
+        
+        if ADDON.getSetting('background.service') == 'true':
+            monitor = xbmc.Monitor()
+            xbmc.log("[plugin.video.GenieTv] Background service started...", xbmc.LOGDEBUG)
+            Service()
+            interval = int(ADDON.getSetting('service.interval'))
+            waitTime = 21600  # Default 6hrs
+            if interval == 0:
+                waitTime = 7200   # 2hrs
+            elif interval == 1:
+                waitTime = 21600  # 6hrs
+            elif interval == 2:
+                waitTime = 43200  # 12hrs
+            elif interval == 3:
+                waitTime = 86400  # 24hrs
+            while not monitor.abortRequested():
+                # Sleep/wait for specified time
+                xbmc.log("[plugin.video.GenieTv] Service waiting for interval %s" % waitTime, xbmc.LOGDEBUG)
+                if monitor.waitForAbort(waitTime):
+                    # Abort was requested while waiting. We should exit
+                    break
+                xbmc.log("[plugin.video.GenieTv] Service now triggered...", xbmc.LOGDEBUG)
+                Service()
+                
+    except source.SourceNotConfiguredException:
+        pass  # ignore
+    except Exception, ex:
+        xbmc.log('[plugin.video.GenieTv] Uncaught exception in service.py: %s' % str(ex), xbmc.LOGDEBUG)

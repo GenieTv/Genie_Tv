@@ -1,6 +1,10 @@
+# -*- coding: utf-8 -*-
 #
 #      Copyright (C) 2013 Tommy Winther
 #      http://tommy.winther.nu
+#
+#      Modified for GTV Guide (09/2014 onwards)
+#      by Thomas Geppert [bluezed] - bluezed.apps@gmail.com
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -17,24 +21,23 @@
 #  the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
 #  http://www.gnu.org/copyleft/gpl.html
 #
-import StringIO
+
 import os
 import threading
 import datetime
 import time
-import urllib2
 from xml.etree import ElementTree
-import buggalo
 
 from strings import *
+from guideTypes import *
+from fileFetcher import *
 
-import ysapi
 import xbmc
 import xbmcgui
 import xbmcvfs
 import sqlite3
 
-SETTINGS_TO_CHECK = ['source', 'youseetv.category', 'xmltv.type', 'xmltv.file', 'xmltv.url', 'xmltv.logo.folder']
+SETTINGS_TO_CHECK = ['source', 'xmltv.type', 'xmltv.file', 'xmltv.url', 'xmltv.logo.folder']
 
 
 class Channel(object):
@@ -104,7 +107,7 @@ class DatabaseSchemaException(sqlite3.DatabaseError):
 
 class Database(object):
     SOURCE_DB = 'source.db'
-    CHANNELS_PER_PAGE = 9
+    CHANNELS_PER_PAGE = 8
 
     def __init__(self):
         self.conn = None
@@ -118,10 +121,6 @@ class Database(object):
         self.updateFailed = False
         self.settingsChanged = None
         self.alreadyTriedUnlinking = False
-        #buggalo.addExtraData('source', self.source.KEY)
-        #for key in SETTINGS_TO_CHECK:
-        #    buggalo.addExtraData('setting: %s' % key, ADDON.getSetting(key))
-
         self.channelList = list()
 
         profilePath = xbmc.translatePath(ADDON.getAddonInfo('profile'))
@@ -160,7 +159,6 @@ class Database(object):
 
             except Exception:
                 print 'Database.eventLoop() >>>>>>>>>> exception!'
-                buggalo.onExceptionRaised()
 
         print 'Database.eventLoop() >>>>>>>>>> exiting...'
 
@@ -243,7 +241,11 @@ class Database(object):
             self.conn.close()
 
     def _wasSettingsChanged(self, addon):
-        settingsChanged = False
+        gType = GuideTypes()
+        if int(addon.getSetting('xmltv.type')) == gType.CUSTOM_FILE_ID:
+            settingsChanged = addon.getSetting('xmltv.refresh') == 'true'
+        else:
+            settingsChanged = False
         noRows = True
         count = 0
 
@@ -312,8 +314,18 @@ class Database(object):
         sqlite3.register_adapter(datetime.datetime, self.adapt_datetime)
         sqlite3.register_converter('timestamp', self.convert_datetime)
 
-        if not self._isCacheExpired(date):
+        if not self._isCacheExpired(date) and not self.source.needReset:
             return
+        else:
+            # if the xmltv data needs to be loaded the database
+            # should be reset to avoid ghosting!
+            self.updateInProgress = True
+            c = self.conn.cursor()
+            c.execute("DELETE FROM updates")
+            c.execute("UPDATE sources SET channels_updated=0")
+            self.conn.commit()
+            c.close()
+            self.source.needReset = False
 
         self.updateInProgress = True
         self.updateFailed = False
@@ -577,9 +589,13 @@ class Database(object):
             return []
 
         c = self.conn.cursor()
-        c.execute('SELECT p.*, (SELECT 1 FROM notifications n WHERE n.channel=p.channel AND n.program_title=p.title AND n.source=p.source) AS notification_scheduled FROM programs p WHERE p.channel IN (\'' + ('\',\''.join(channelMap.keys())) + '\') AND p.source=? AND p.end_date > ? AND p.start_date < ?', [self.source.KEY, startTime, endTime])
+        c.execute(
+            'SELECT p.*, (SELECT 1 FROM notifications n WHERE n.channel=p.channel AND n.program_title=p.title AND n.source=p.source) AS notification_scheduled FROM programs p WHERE p.channel IN (\'' + (
+                '\',\''.join(channelMap.keys())) + '\') AND p.source=? AND p.end_date > ? AND p.start_date < ?',
+            [self.source.KEY, startTime, endTime])
         for row in c:
-            program = Program(channelMap[row['channel']], row['title'], row['start_date'], row['end_date'], row['description'], row['image_large'], row['image_small'], row['notification_scheduled'])
+            program = Program(channelMap[row['channel']], row['title'], row['start_date'], row['end_date'],
+                              row['description'], row['image_large'], row['image_small'], row['notification_scheduled'])
             programList.append(program)
 
         return programList
@@ -805,70 +821,80 @@ class Source(object):
         return False
 
 
-class YouSeeTvSource(Source):
-    KEY = 'youseetv'
-
-    def __init__(self, addon):
-        self.date = datetime.datetime.today()
-        self.channelCategory = addon.getSetting('youseetv.category')
-        self.ysApi = ysapi.YouSeeTVGuideApi()
-
-    def getDataFromExternal(self, date, progress_callback=None):
-        channels = self.ysApi.channelsInCategory(self.channelCategory)
-        for idx, channel in enumerate(channels):
-            c = Channel(id=channel['id'], title=channel['name'], logo=channel['logo'])
-            yield c
-
-            for program in self.ysApi.programs(c.id, tvdate=date):
-                description = program['description']
-                if description is None:
-                    description = strings(NO_DESCRIPTION)
-
-                imagePrefix = program['imageprefix']
-
-                p = Program(
-                    c,
-                    program['title'],
-                    datetime.datetime.fromtimestamp(program['begin']),
-                    datetime.datetime.fromtimestamp(program['end']),
-                    description,
-                    imagePrefix + program['images_sixteenbynine']['large'],
-                    imagePrefix + program['images_sixteenbynine']['small'],
-                )
-                yield p
-
-            if progress_callback:
-                if not progress_callback(100.0 / len(channels) * idx):
-                    raise SourceUpdateCanceledException()
-
-
 class XMLTVSource(Source):
+    PLUGIN_DATA = xbmc.translatePath(os.path.join('special://profile', 'addon_data', 'plugin.video.GenieTv'))
     KEY = 'xmltv'
-    TYPE_LOCAL_FILE = 0
-    TYPE_URL = 1
+    INI_TYPE_GTV = 0
+    INI_TYPE_CUSTOM = 1
+    INI_FILE = 'addons.ini'
+    LOGO_SOURCE_GTV = 0
+    LOGO_SOURCE_CUSTOM = 1
 
     def __init__(self, addon):
-        self.logoFolder = addon.getSetting('xmltv.logo.folder')
+        gType = GuideTypes()
+
+        self.needReset = False
+        self.fetchError = False
         self.xmltvType = int(addon.getSetting('xmltv.type'))
-        self.xmltvFile = addon.getSetting('xmltv.file')
-        self.xmltvUrl = addon.getSetting('xmltv.url')
+        self.xmltvInterval = int(addon.getSetting('xmltv.interval'))
+        self.logoSource = int(addon.getSetting('logos.source'))
+        self.addonsType = int(addon.getSetting('addons.ini.type'))
+
+        # make sure the folder in the user's profile exists or create it!
+        if not os.path.exists(XMLTVSource.PLUGIN_DATA):
+            os.makedirs(XMLTVSource.PLUGIN_DATA)
+
+        if self.logoSource == XMLTVSource.LOGO_SOURCE_GTV:
+            self.logoFolder = MAIN_URL + 'logos/'
+        else:
+            self.logoFolder = str(addon.getSetting('logos.folder'))
+
+        if self.xmltvType == gType.CUSTOM_FILE_ID:
+            customFile = str(addon.getSetting('xmltv.file'))
+            if os.path.exists(customFile):
+                # uses local file provided by user!
+                xbmc.log('[plugin.video.GenieTv] Use local file: %s' % customFile, xbmc.LOGDEBUG)
+                self.xmltvFile = customFile
+            else:
+                # Probably a remote file
+                xbmc.log('[plugin.video.GenieTv] Use remote file: %s' % customFile, xbmc.LOGDEBUG)
+                self.updateLocalFile(customFile, addon)
+                self.xmltvFile = os.path.join(XMLTVSource.PLUGIN_DATA, customFile.split('/')[-1])
+        else:
+            self.xmltvFile = self.updateLocalFile(gType.getGuideDataItem(self.xmltvType, gType.GUIDE_FILE), addon)
+
+        # make sure the ini file is fetched as well if necessary
+        if self.addonsType == XMLTVSource.INI_TYPE_GTV:
+            self.updateLocalFile(XMLTVSource.INI_FILE, addon, True)
+        else:
+            customFile = str(addon.getSetting('addons.ini.file'))
+            if os.path.exists(customFile):
+                # uses local file provided by user!
+                xbmc.log('[plugin.video.GenieTv] Use local file: %s' % customFile, xbmc.LOGDEBUG)
+            else:
+                # Probably a remote file
+                xbmc.log('[plugin.video.GenieTv] Use remote file: %s' % customFile, xbmc.LOGDEBUG)
+                self.updateLocalFile(customFile, addon, True)
 
         if not self.xmltvFile or not xbmcvfs.exists(self.xmltvFile):
             raise SourceNotConfiguredException()
 
-    def getDataFromExternal(self, date, progress_callback=None):
-        if self.xmltvType == XMLTVSource.TYPE_LOCAL_FILE:
-            f = FileWrapper(self.xmltvFile)
-            context = ElementTree.iterparse(f, events=("start", "end"))
-            size = f.size
-        else:
-            u = urllib2.urlopen(self.xmltvUrl, timeout=30)
-            xml = u.read()
-            u.close()
+    def updateLocalFile(self, name, addon, isIni=False):
+        path = os.path.join(XMLTVSource.PLUGIN_DATA, name)
+        fetcher = FileFetcher(name, addon)
+        retVal = fetcher.fetchFile()
+        if retVal == fetcher.FETCH_OK and not isIni:
+            self.needReset = True
+        elif retVal == fetcher.FETCH_ERROR:
+            xbmcgui.Dialog().ok(strings(FETCH_ERROR_TITLE), strings(FETCH_ERROR_LINE1), strings(FETCH_ERROR_LINE2))
 
-            f = StringIO.StringIO(xml)
-            context = ElementTree.iterparse(f)
-            size = len(xml)
+        return path
+
+    def getDataFromExternal(self, date, progress_callback=None):
+
+        f = FileWrapper(self.xmltvFile)
+        context = ElementTree.iterparse(f, events=("start", "end"))
+        size = f.size
 
         return self.parseXMLTV(context, f, size, self.logoFolder, progress_callback)
 
@@ -880,13 +906,48 @@ class XMLTVSource(Source):
         fileUpdated = datetime.datetime.fromtimestamp(stat.st_mtime())
         return fileUpdated > channelsLastUpdated
 
-    def parseXMLTVDate(self, dateString):
-        if dateString is not None:
-            if dateString.find(' ') != -1:
-                # remove timezone information
-                dateString = dateString[:dateString.find(' ')]
-            t = time.strptime(dateString, '%Y%m%d%H%M%S')
-            return datetime.datetime(t.tm_year, t.tm_mon, t.tm_mday, t.tm_hour, t.tm_min, t.tm_sec)
+    def parseXMLTVDate(self, origDateString):
+        if origDateString.find(' ') != -1:
+            # get timezone information
+            dateParts = origDateString.split()
+            if len(dateParts) == 2:
+                dateString = dateParts[0]
+                offset = dateParts[1]
+                if len(offset) == 5:
+                    offSign = offset[0]
+                    offHrs = int(offset[1:3])
+                    offMins = int(offset[-2:])
+                    td = datetime.timedelta(minutes=offMins, hours=offHrs)
+                else:
+                    td = datetime.timedelta(seconds=0)
+            elif len(dateParts) == 1:
+                dateString = dateParts[0]
+                td = datetime.timedelta(seconds=0)
+            else:
+                return None
+
+            # normalize the given time to UTC by applying the timedelta provided in the timestamp
+            try:
+                t_tmp = datetime.datetime.strptime(dateString, '%Y%m%d%H%M%S')
+            except TypeError:
+                xbmc.log('[plugin.video.GenieTv] strptime error with this date: %s' % dateString, xbmc.LOGDEBUG)
+                t_tmp = datetime.datetime.fromtimestamp(time.mktime(time.strptime(dateString, '%Y%m%d%H%M%S')))
+            if offSign == '+':
+                t = t_tmp - td
+            elif offSign == '-':
+                t = t_tmp + td
+            else:
+                t = t_tmp
+
+            # get the local timezone offset in seconds
+            is_dst = time.daylight and time.localtime().tm_isdst > 0
+            utc_offset = - (time.altzone if is_dst else time.timezone)
+            td_local = datetime.timedelta(seconds=utc_offset)
+
+            t = t + td_local
+
+            return t
+
         else:
             return None
 
@@ -898,7 +959,7 @@ class XMLTVSource(Source):
             if event == "end":
                 result = None
                 if elem.tag == "programme":
-                    channel = elem.get("channel")
+                    channel = elem.get("channel").replace("'", "")  # Make ID safe to use as ' can cause crashes!
                     description = elem.findtext("desc")
                     iconElement = elem.find("icon")
                     icon = None
@@ -910,17 +971,15 @@ class XMLTVSource(Source):
                                      self.parseXMLTVDate(elem.get('stop')), description, imageSmall=icon)
 
                 elif elem.tag == "channel":
-                    id = elem.get("id")
+                    cid = elem.get("id").replace("'", "")  # Make ID safe to use as ' can cause crashes!
                     title = elem.findtext("display-name")
                     logo = None
                     if logoFolder:
                         logoFile = os.path.join(logoFolder, title + '.png')
-                        if xbmcvfs.exists(logoFile):
-                            logo = logoFile
-                    if not logo:
-                        iconElement = elem.find("icon")
-                        if iconElement is not None:
-                            logo = iconElement.get("src")
+                        if self.logoSource == XMLTVSource.LOGO_SOURCE_GTV:
+                            logo = logoFile.replace(' ', '%20')  # needed due to fetching from a server!
+                        elif xbmcvfs.exists(logoFile):
+                            logo = logoFile  # local file instead of remote!
                     streamElement = elem.find("stream")
                     streamUrl = None
                     if streamElement is not None:
@@ -930,7 +989,7 @@ class XMLTVSource(Source):
                         visible = False
                     else:
                         visible = True
-                    result = Channel(id, title, logo, streamUrl, visible)
+                    result = Channel(cid, title, logo, streamUrl, visible)
 
                 if result:
                     elements_parsed += 1
@@ -961,14 +1020,4 @@ class FileWrapper(object):
 
 
 def instantiateSource():
-    SOURCES = {
-        'YouSee.tv': YouSeeTvSource,
-        'XMLTV': XMLTVSource
-    }
-
-    try:
-        activeSource = SOURCES[ADDON.getSetting('source')]
-    except KeyError:
-        activeSource = SOURCES['YouSee.tv']
-
-    return activeSource(ADDON)
+    return XMLTVSource(ADDON)

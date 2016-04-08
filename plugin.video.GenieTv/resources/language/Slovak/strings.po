@@ -1,7 +1,7 @@
 # XBMC Media Center language file
-# Addon Name: TV Guide
-# Addon id: script.tvguide
-# Addon Provider: twinther
+# Addon Name: FTV Guide
+# Addon id: script.ftvguide
+# Addon Provider: rayw1986, bluezed
 msgid ""
 msgstr ""
 "Project-Id-Version: XBMC Addons\n"
@@ -161,7 +161,7 @@ msgid "It looks like your current skin has a special"
 msgstr "Vyzerá to tak, že Váš aktuálny Vzhľad má špeciálnu"
 
 msgctxt "#30155"
-msgid "version of the TV Guide skin that is not up-to-date."
+msgid "version of the FTV Guide skin that is not up-to-date."
 msgstr "verziu Vzhľadu pre TV Program, ktorá nie je kompatibilná."
 
 msgctxt "#30156"
@@ -169,7 +169,7 @@ msgid "Please try with a different skin..."
 msgstr "Prosím vyskúšajte to s iným Vzhľadom..."
 
 msgctxt "#30157"
-msgid "It looks like the TV Guide database is broken."
+msgid "It looks like the FTV Guide database is broken."
 msgstr "Vyzerá to tak, že databáza TV Programu je poškodená."
 
 msgctxt "#30158"
@@ -297,7 +297,7 @@ msgid "Play channels using the Weeb.Tv addon"
 msgstr "Prehrať kanály použitím \"Weeb.Tv\" doplnku"
 
 msgctxt "#30802"
-msgid "TV Guide is configured to stream using Weeb.Tv"
+msgid "FTV Guide is configured to stream using Weeb.Tv"
 msgstr "TV Program je nastavený streamovať použitím Weeb.Tv"
 
 msgctxt "#30803"
