@@ -69,7 +69,7 @@
         <setting id="visitor_ga" type="text" label="GA visitor" default="" visible="false"/>
    	</category>	   	
 	<category label="Tv Guide Settings">
-		<setting id="xmltv.type_select" label="30123" type="action" action="RunScript($CWD/guideTypes.py)"/>
+		<setting id="xmltv.type_select" label="30123" type="action" action="RunScript($CWD/imports/tvGuide/guideTypes.py)"/>
         <setting id="xmltv.type" type="number" enable="false" visible="false"/>
         <setting id="xmltv.interval" label="30128" type="enum" default="2" lvalues="30129|30130|30131|30132" />
         <setting id="xmltv.file" label="30103" type="file" visible="eq(-2,6)" />
