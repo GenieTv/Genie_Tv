@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.GenieTv" name="[COLORgreen]GenieTv[/COLOR]" version="2.5.8" provider-name="GenieTv/Origin">
+<addon id="plugin.video.GenieTv" name="[COLORgreen]GenieTv[/COLOR]" version="2.5.9" provider-name="GenieTv/Origin">
   <requires>
   	<import addon="script.module.beautifulsoup" version="3.2.1"/>
 	<import addon="script.module.beautifulsoup4" />
     <import addon="xbmc.python" version="2.19.0"/>
 	<import addon="script.module.beautifulsoup4" />
-	<import addon="script.module.urlresolver"  version="2.1.2"/>
+    <import addon="script.module.urlresolver" version="3.0.0"/>
     <import addon="script.module.requests"/>
 	<import addon="script.module.addon.common" />
 	<import addon="script.module.simplejson" version="3.3.0"/>
