@@ -52,7 +52,7 @@ def oo ( i , t1 , t2 = [ ] ) :
  if 87 - 87: OoOoOO00
  if 27 - 27: OOOo0 / Oo - Ooo00oOo00o . I1IiI
  if 73 - 73: OOooOOo / ii11ii1ii
-O00ooOO = "2.6.12"
+O00ooOO = "2.6.13"
 I1iII1iiII = xbmc . translatePath ( 'special://home/addons/repository.GenieTv' )
 iI1Ii11111iIi = xbmc . translatePath ( 'special://home/addons/' )
 i1i1II = xbmc . translatePath ( 'special://home/addonsbroke/' )
@@ -237,7 +237,7 @@ def oo00O00oO ( ) :
  if 23 - 23: Ooo00oOo00o + Ooo00oOo00o . i1I111II1I
 def ii1ii11IIIiiI ( ) :
  IIIIii ( '[COLORgreen]SILENT HUNTER[/COLOR]' , ( i1111 ( 'aHR0cDovLzUuMTM1LjIwNy45Ni8=' ) ) , 1006 , ii11iIi1I + 'SILENTHUNTER.png' , i1iiIII111ii , '' )
- IIIIii ( '[COLORgreen]SILENT HUNTER SCRAPES[/COLOR]' , ( i1111 ( 'http://5.135.207.96/Scrapes/main.php' ) ) , 1016 , ii11iIi1I + 'SILENTHUNTER.png' , i1iiIII111ii , '' )
+ IIIIii ( '[COLORgreen]SILENT HUNTER SCRAPES[/COLOR]' , ( i1111 ( 'aHR0cDovLzUuMTM1LjIwNy45Ni9TY3JhcGVzL21haW4ucGhw' ) ) , 1016 , ii11iIi1I + 'SILENTHUNTER.png' , i1iiIII111ii , '' )
  if 67 - 67: Oooo0Ooo000 * O0ooOooooO * ii11ii1ii + i1I111II1I / i1IIi
  if 11 - 11: iI + i1I111ii1II1i - OOO0OOo * O0ooOooooO % i11iIiiIii - o00OO00OoO
  if 83 - 83: Oooo0Ooo000 / OOOo0
