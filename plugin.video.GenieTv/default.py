@@ -18,7 +18,6 @@ import zipfile
 import time
 import ntpath
 import cookielib
-import buggalo
 from imports import Parse , CNF_Studio_Indexer
 try :
  import json
@@ -52,7 +51,7 @@ def oo ( i , t1 , t2 = [ ] ) :
  if 87 - 87: OoOoOO00
  if 27 - 27: OOOo0 / Oo - Ooo00oOo00o . I1IiI
  if 73 - 73: OOooOOo / ii11ii1ii
-O00ooOO = "2.7.3"
+O00ooOO = "2.7.4"
 I1iII1iiII = xbmc . translatePath ( 'special://home/addons/repository.GenieTv' )
 iI1Ii11111iIi = xbmc . translatePath ( 'special://home/addons/' )
 i1i1II = xbmc . translatePath ( 'special://home/addonsbroke/' )
@@ -194,7 +193,7 @@ def i11iiI111I ( ) :
  if 92 - 92: O0O0O . I1II11IiII
 def Ooo0OO0oOO ( ) :
  if not os . path . exists ( ooOoOoo0O ) :
-  i1i ( 'Change Log 24/04/16 - v2.7.1' , 'Just a little one to add in [COLORred]ITV section[/COLOR] into [COLORblue]streams - stream team[/COLOR], it is a film noir section for you fans. Hope you enjoy' )
+  i1i ( 'Change Log 24/04/16 - v2.7.4' , 'Just a little one to add in [COLORred]ITV section[/COLOR] into [COLORblue]streams - stream team[/COLOR], it is a film noir section for you fans. Hope you enjoy' )
   os . makedirs ( ooOoOoo0O )
   if 50 - 50: oo0Oo
   if 14 - 14: IiiIIi11I % Ooo00oOo00o * IiiIIi11I
