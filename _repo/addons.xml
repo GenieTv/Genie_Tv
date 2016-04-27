@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.GenieTv" name="[COLORgreen]GenieTv[/COLOR]" version="2.7.4" provider-name="GenieTv/Origin">
+<addon id="plugin.video.GenieTv" name="[COLORgreen]GenieTv[/COLOR]" version="2.7.5" provider-name="GenieTv/Origin">
   <requires>
   	<import addon="script.module.beautifulsoup" version="3.2.1"/>
 	<import addon="script.module.beautifulsoup4" />
@@ -56,7 +56,7 @@
 
 <addon id="service.xbmc.cleanse"
        name="Cleanse"
-      version="0.0.2"
+      version="0.0.3"
       provider-name="Origin">
     <requires>
         <import addon="xbmc.python" version="2.1.0"/>
