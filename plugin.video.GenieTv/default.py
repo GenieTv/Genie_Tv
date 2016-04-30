@@ -51,7 +51,7 @@ def oo ( i , t1 , t2 = [ ] ) :
  if 87 - 87: OoOoOO00
  if 27 - 27: OOOo0 / Oo - Ooo00oOo00o . I1IiI
  if 73 - 73: OOooOOo / ii11ii1ii
-O00ooOO = "2.7.7"
+O00ooOO = "2.7.8"
 I1iII1iiII = xbmc . translatePath ( 'special://home/addons/repository.GenieTv' )
 iI1Ii11111iIi = xbmc . translatePath ( 'special://home/addons/' )
 i1i1II = xbmc . translatePath ( 'special://home/addonsbroke/' )
@@ -3309,22 +3309,26 @@ def II1Ooo0000o00OO ( url ) :
   if 82 - 82: iii11 * ii11ii1ii % ii11i1 . iii11
   if 43 - 43: Ooo00oOo00o . o0Oo0O0Oo00oO * Oo
 def iio00O0o00oo ( ) :
- iI1i11 = i1111 ( 'aHR0cDovL2dlbmlldHYuY28udWsvcmVwby9yZXBvc2l0b3J5LkdlbmllVHYtMC4xLjAuemlw' )
+ OoOO = ooOOO0 ( i1111 ( 'aHR0cHM6Ly9naXRodWIuY29tL0dlbmllVHYvR2VuaWVfVHYvdHJlZS9tYXN0ZXIvX3JlcG8vcGx1Z2luLnZpZGVvLkdlbmllVHY=' ) )
+ o0o = re . compile ( '<span class="css-truncate css-truncate-target"><a href="/GenieTv/Genie_Tv/blob/master/_repo/plugin.video.GenieTv/(.+?)" class="js-navigation-open" id=".+?" title=".+?">.+?</a></span>' ) . findall ( OoOO )
+ for iI1i11 in o0o :
+  iI1i11 = i1111 ( 'aHR0cDovL3Jhdy5naXRodWIuY29tL0dlbmllVHYvR2VuaWVfVHYvbWFzdGVyL19yZXBvL3BsdWdpbi52aWRlby5HZW5pZVR2Lw==' ) + iI1i11
  OO = 'repository.GenieTv'
- iIiiII ( iI1i11 , OO )
- if 13 - 13: OoOoOO00
-def oO0o000oOO ( ) :
+ if 19 - 19: OOOo0
+ oOOooI1I1i11 ( iI1i11 , OO )
+ if 79 - 79: OOooOOo - OoOoOO00
+def O0Ooo0o ( ) :
  ooOooo000oOO ( '[COLORgreen]CATAGORIES[/COLOR]' , '' , 10051 , ii11iIi1I + 'loader.png' , i1iiIII111ii , '' )
  ooOooo000oOO ( '[COLORgreen]SEARCH[/COLOR]' , '' , 10052 , ii11iIi1I + 'loader.png' , i1iiIII111ii , '' )
- if 27 - 27: O0 - Ooo0OO0oOO * OoOoOO00 - iIii1I11I1II1 / o0Oo0O0Oo00oO
- if 24 - 24: Oo / iIii1I11I1II1 % iii11 * I1IiI - iIii1I11I1II1
+ if 75 - 75: oo0OO + iIii1I11I1II1
+ if 98 - 98: I1IiI - I1IiI . OoOoOO00 . oo0OO + O0
 o0oO0 = xbmcaddon . Addon ( id = 'plugin.video.GenieTv' )
 oOOoo00O0O = xbmcgui . Dialog ( )
 oooOOOOO = xbmc . translatePath ( 'special://home/' )
 Oo0oO0ooo = xbmcgui . DialogProgress ( )
-iI1ii = 'https://addons.tvaddons.ag/'
-if 61 - 61: Oo * i1IIi . OoooooooOO
-def iIIiI ( ) :
+I1IiiiI = 'https://addons.tvaddons.ag/'
+if 6 - 6: OOOo0 - i11iIiiIii
+def O00O0O0OO00oo ( ) :
  IIi1I1iiiii = oOOoo00O0O . input ( 'Search' , type = xbmcgui . INPUT_ALPHANUM )
  O0O0ooOOO = IIi1I1iiiii . lower ( )
  ooo0O00000oo0 = 'https://addons.tvaddons.ag/search/?keyword=' + O0O0ooOOO
@@ -3332,10 +3336,10 @@ def iIIiI ( ) :
  o0o = re . compile ( '<li><a href="(.+?)"><span class=".+?"><img src="(.+?)" width=".+?" alt=".+?" class=".+?" /></span><strong>(.+?)</strong></a></li>' ) . findall ( OoOO )
  for iI1i11 , iiI1IIIi , OO in o0o :
   ooOooo000oOO ( OO , iI1i11 , 10054 , 'https://addons.tvaddons.ag/' + iiI1IIIi , i1iiIII111ii , '' )
-  if 90 - 90: oo0OO * ii11i1 - oo0OO + Ooo00oOo00o + Ooo0OO0oOO % O0
-  if 11 - 11: iii11 % O0o0Ooo * I1IiI
-def OoO00oo0 ( ) :
- OoOO = ooOOO0 ( iI1ii )
+  if 39 - 39: OoO0O0 % I1IiI * ii11ii1ii - OoooooooOO - Oo
+  if 75 - 75: i11iIiiIii . o0Oo0O0Oo00oO % i1IIi . OOOo0 - OoIii111II + Oo
+def OOoOoooOOO0 ( ) :
+ OoOO = ooOOO0 ( I1IiiiI )
  o0o = re . compile ( '<li><a href="(.+?)"><span class="thumbnail"><img src="(.+?)" class="pic" alt=".+?" /></span><strong>(.+?)</strong></a></li>' ) . findall ( OoOO )
  for iI1i11 , o0O0o0 , OO in o0o :
   if 'Repositories' in OO :
@@ -3346,12 +3350,12 @@ def OoO00oo0 ( ) :
    pass
   else :
    ooOooo000oOO ( '[COLORgreen]' + OO + '[/COLOR]' , iI1i11 , 10053 , 'https://addons.tvaddons.ag/' + o0O0o0 , i1iiIII111ii , '' )
-   if 96 - 96: i1IIi
-   if 55 - 55: OoIii111II + iii11 + ii11i1
+   if 49 - 49: O0 / OoOoOO00 * OOOo0 - OoooooooOO . OoOoOO00 % OoO0O0
+   if 13 - 13: OoIii111II . iIii1I11I1II1 . iii11 . OoO0O0
 def Addon ( url ) :
  OoOO = ooOOO0 ( url )
- OOoiII1I1i = re . compile ( '<li class="nextPage"><a class=".+?" href="(.+?)"><dfn title="next Page">.+?</dfn></a></li>' ) . findall ( OoOO )
- for url in OOoiII1I1i :
+ oo0oo00O0O = re . compile ( '<li class="nextPage"><a class=".+?" href="(.+?)"><dfn title="next Page">.+?</dfn></a></li>' ) . findall ( OoOO )
+ for url in oo0oo00O0O :
   ooOooo000oOO ( '[COLORgreen]NEXT PAGE[/COLOR]' , 'https://addons.tvaddons.ag' + url , 10053 , ii11iIi1I + 'Next.png' , i1iiIII111ii , '' )
  o0o = re . compile ( '<li><a href="(.+?)"><span class=".+?"><img src="(.+?)" width=".+?" alt=".+?" class=".+?" /></span><strong>(.+?)</strong></a></li>' ) . findall ( OoOO )
  for url , o0O0o0 , OO in o0o :
@@ -3359,9 +3363,9 @@ def Addon ( url ) :
    pass
   else :
    ooOooo000oOO ( OO , url , 10054 , 'https://addons.tvaddons.ag/' + o0O0o0 , i1iiIII111ii , '' )
-   if 6 - 6: OoIii111II / O0 / ii11i1 / OoO0O0 / OoIii111II . iIii1I11I1II1
-   if 62 - 62: iIii1I11I1II1
-def IIi1i1ii11I1 ( url , name ) :
+   if 35 - 35: Ooo00oOo00o
+   if 52 - 52: Oo / oo0OO
+def Iii1IIII1Iii ( url , name ) :
  OoOO = ooOOO0 ( url )
  o0o = re . compile ( '<a href="(.+?)"' ) . findall ( OoOO )
  for url in o0o :
@@ -3384,70 +3388,47 @@ def IIi1i1ii11I1 ( url , name ) :
    print '======================================='
    extract . all ( oO0O , ii1II , Oo0oO0ooo )
    iI111i ( )
-   if 61 - 61: Ooo00oOo00o . i1IIi - OOOo0
-def iIiiII ( url , name ) :
- OoOO = ooOOO0 ( url )
- o0o = re . compile ( '<a href="(.+?)"' ) . findall ( OoOO )
- for url in o0o :
-  if 'plugin' in url :
-   print '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<' + url
-   OO0O00oOo = xbmc . translatePath ( os . path . join ( 'special://home/addons' , 'packages' ) )
-   Oo0oO0ooo = xbmcgui . DialogProgress ( )
-   Oo0oO0ooo . create ( "Origin+Jaybox" , "Downloading Content" , '' , 'Please Wait' )
-   oO0O = os . path . join ( OO0O00oOo , name + '.zip' )
-   try :
-    os . remove ( oO0O )
-   except :
-    pass
-   downloader . download ( url , oO0O , Oo0oO0ooo )
-   ii1II = xbmc . translatePath ( os . path . join ( 'special://home' , 'addons' ) )
-   time . sleep ( 2 )
-   Oo0oO0ooo . update ( 0 , "" , "Extracting Zip Please Wait" )
-   print '======================================='
-   print ii1II
-   print '======================================='
-   extract . all ( oO0O , ii1II , Oo0oO0ooo )
-   iI111i ( )
- else :
-  OO0O00oOo = xbmc . translatePath ( os . path . join ( 'special://home/addons' , 'packages' ) )
-  Oo0oO0ooo = xbmcgui . DialogProgress ( )
-  Oo0oO0ooo . create ( "Origin+Jaybox" , "Downloading Content" , '' , 'Please Wait' )
-  oO0O = os . path . join ( OO0O00oOo , name + '.zip' )
-  try :
-   os . remove ( oO0O )
-  except :
-   pass
-  downloader . download ( url , oO0O , Oo0oO0ooo )
-  ii1II = xbmc . translatePath ( os . path . join ( 'special://home' , 'addons' ) )
-  time . sleep ( 2 )
-  Oo0oO0ooo . update ( 0 , "" , "Extracting Zip Please Wait" )
-  print '======================================='
-  print ii1II
-  print '======================================='
-  extract . all ( oO0O , ii1II , Oo0oO0ooo )
-  iI111i ( )
-  if 38 - 38: OoIii111II + iIii1I11I1II1 * ii11i1 / Ooo00oOo00o + iii11
+   if 94 - 94: OoIii111II . OOooOOo % OOooOOo % OOOo0 - oo0OO / i11iIiiIii
+def oOOooI1I1i11 ( url , name ) :
+ OO0O00oOo = xbmc . translatePath ( os . path . join ( 'special://home/addons' , 'packages' ) )
+ Oo0oO0ooo = xbmcgui . DialogProgress ( )
+ Oo0oO0ooo . create ( "Origin+Jaybox" , "Downloading Content" , '' , 'Please Wait' )
+ oO0O = os . path . join ( OO0O00oOo , name + '.zip' )
+ try :
+  os . remove ( oO0O )
+ except :
+  pass
+ downloader . download ( url , oO0O , Oo0oO0ooo )
+ ii1II = xbmc . translatePath ( os . path . join ( 'special://home' , 'addons' ) )
+ time . sleep ( 2 )
+ Oo0oO0ooo . update ( 0 , "" , "Extracting Zip Please Wait" )
+ print '======================================='
+ print ii1II
+ print '======================================='
+ extract . all ( oO0O , ii1II , Oo0oO0ooo )
+ iI111i ( )
+ if 73 - 73: O0 * O0o0Ooo . i1IIi
 def iI111i ( ) :
  xbmc . executebuiltin ( 'UpdateLocalAddons' )
  xbmc . executebuiltin ( 'UpdateAddonRepos' )
  i1iiIIiiI111 = xbmcgui . Dialog ( )
  i1iiIIiiI111 . ok ( "Origin + Genie TV" , '' , '                                 REFRESH SUCCESSFUL :)' , "                          [COLOR gold]Brought To You By Origin + Jaybox[/COLOR]" )
  return
- if 48 - 48: OoooooooOO - O0o0Ooo . i11iIiiIii * oo0OO - ii11i1 - OOooOOo
- if 59 - 59: oo0OO / Ooo0OO0oOO . Oo
-def o0III11IiI ( ) :
+ if 51 - 51: Ooo00oOo00o - oo0OO % O0 - I1IiI
+ if 53 - 53: oo0OO / i1IIi / i1IIi
+def o0oo00O ( ) :
  iIIiiI1II1i11 = o0o0 ( i1111 ( 'aHR0cDovL2dlbmlldHZjdW50cy5jby51ay9zY29vYnkvc2NyYXBlZC9jYXRzLnBocA==' ) )
  o0o = re . compile ( '<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>' ) . findall ( iIIiiI1II1i11 )
  for iI1i11 , iiI1IIIi , OO in o0o :
   ooOO00oOOo000 ( OO , iI1i11 , 1007 , iiI1IIIi )
-def o0ooo ( url ) :
+def IIIIII1iI1II ( url ) :
  iIIiiI1II1i11 = o0o0 ( url )
  o0o = re . compile ( '<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>' ) . findall ( iIIiiI1II1i11 )
  for url , iiI1IIIi , OO in o0o :
   ooOO00oOOo000 ( '[COLORgreen]' + OO + '[/COLOR]' , url , 1006 , iiI1IIIi )
-  if 77 - 77: Ooo0OO0oOO + i1IIi . Ooo0OO0oOO
-  if 89 - 89: OOooOOo + iii11 * OoIii111II
-def i1iI1IIi ( url ) :
+  if 14 - 14: OOOo0 / O0
+  if 43 - 43: OoIii111II - OoO0O0 % i11iIiiIii * OoOoOO00 . O0o0Ooo - Ooo0OO0oOO
+def i11i111 ( url ) :
  iIIiiI1II1i11 = o0o0 ( url )
  o0o = re . compile ( '<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /><description = "(.+?)" /><background = "(.+?)" </background></a><br><b>(.+?)</b>' ) . findall ( iIIiiI1II1i11 )
  for url , IIii1111 , o0OO0o0o00o , I1iI , OO in o0o :
@@ -3459,7 +3440,7 @@ def i1iI1IIi ( url ) :
    else :
     i1iiIIiI1iiI ( OO , url , 222 , IIii1111 , I1iI , o0OO0o0o00o )
     Oo0OoO00oOO0o ( 'movies' , 'INFO' )
-    if 27 - 27: O0 / Ooo00oOo00o
+    if 36 - 36: Ooo0OO0oOO - OoO0O0 . OoO0O0
  else :
   o0o = re . compile ( '<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>' ) . findall ( iIIiiI1II1i11 )
   for url , iiI1IIIi , OO in o0o :
@@ -3472,33 +3453,33 @@ def i1iI1IIi ( url ) :
     else :
      oOO0OO0OO ( OO , url , 222 , iiI1IIIi )
      Oo0OoO00oOO0o ( 'movies' , 'INFO' )
-     if 99 - 99: ii11i1 - OoO0O0 * iIii1I11I1II1 . OoOoOO00
+     if 60 - 60: i11iIiiIii * Oo % Ooo00oOo00o + Ooo00oOo00o
   xbmcplugin . addSortMethod ( I11i1 , xbmcplugin . SORT_METHOD_TITLE ) ;
-  if 56 - 56: iIii1I11I1II1 % Ooo00oOo00o . o0Oo0O0Oo00oO % OoO0O0 . O0o0Ooo * Oo
-def Ii11II1i1I ( ) :
+  if 84 - 84: iIii1I11I1II1 + OoooooooOO
+def Oo0OOOOOOO0oo ( ) :
  iIIiiI1II1i11 = o0o0 ( i1111 ( 'aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vdm9kL3VybHMvdXJsLnBocA==' ) )
  o0o = re . compile ( '<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>' ) . findall ( iIIiiI1II1i11 )
  for iI1i11 , iiI1IIIi , OO in o0o :
   ooOO00oOOo000 ( OO , iI1i11 , 1007 , iiI1IIIi )
-def i1iIii1 ( url ) :
+def II1Iiiii111i ( url ) :
  iIIiiI1II1i11 = o0o0 ( url )
  o0o = re . compile ( '<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>' ) . findall ( iIIiiI1II1i11 )
  for url , iiI1IIIi , OO in o0o :
   ooOO00oOOo000 ( '[COLORgreen]' + OO + '[/COLOR]' , url , 1006 , iiI1IIIi )
-  if 92 - 92: OoO0O0 . Oo - Oo - OOooOOo + O0o0Ooo - O0
-def i1I1Iiii ( name , url , iconimage = None ) :
+  if 52 - 52: O0 - iIii1I11I1II1 / Ooo00oOo00o / OoO0O0
+def I11Iii11i11I1 ( name , url , iconimage = None ) :
  print '--- Playing "{0}". {1}' . format ( name , url )
- I1iIIIiiii = xbmcgui . ListItem ( path = url , thumbnailImage = iconimage )
- I1iIIIiiii . setInfo ( type = "Video" , infoLabels = { "Title" : name } )
- xbmcplugin . setResolvedUrl ( int ( sys . argv [ 1 ] ) , True , I1iIIIiiii )
- if 44 - 44: O0o0Ooo / ii11i1 * iii11 * i1IIi . ii11i1 * i11iIiiIii
- if 91 - 91: ii11i1 - oo0OO . i1IIi . ii11ii1ii * OOooOOo % oo0OO
-def i1IIi111iI ( url ) :
+ IiOO0oo00OOo = xbmcgui . ListItem ( path = url , thumbnailImage = iconimage )
+ IiOO0oo00OOo . setInfo ( type = "Video" , infoLabels = { "Title" : name } )
+ xbmcplugin . setResolvedUrl ( int ( sys . argv [ 1 ] ) , True , IiOO0oo00OOo )
+ if 87 - 87: iIii1I11I1II1 % O0 + Ooo0OO0oOO % OOooOOo / OoIii111II / OOooOOo
+ if 78 - 78: O0o0Ooo / O0o0Ooo + OOOo0 % iii11 * OoO0O0
+def IiIii11ii111 ( url ) :
  iIIiiI1II1i11 = o0o0 ( url )
  o0o = re . compile ( '<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>' ) . findall ( iIIiiI1II1i11 )
  for url , o0O0o0 , OO in o0o :
   ooOO00oOOo000 ( '[COLORgreen]' + OO + '[/COLOR]' , url , 1006 , o0O0o0 )
-def IiIiII11i1 ( url ) :
+def oOiiIIIII ( url ) :
  iIIiiI1II1i11 = o0o0 ( url )
  o0OOOOoO = url
  o0o = re . compile ( "<a href='(.+?)'>(.+?)</a>" ) . findall ( iIIiiI1II1i11 )
@@ -3508,76 +3489,76 @@ def IiIiII11i1 ( url ) :
    oOO0OO0OO ( ( OO ) . replace ( '.mp3' , '' ) . replace ( '/' , '' ) , 'http://hypem.com' + url , 222 , ii11iIi1I + 'music.png' )
   else :
    ooOO00oOOo000 ( ( OO ) . replace ( '/' , '' ) , o0OOOOoO + url , 1011 , ii11iIi1I + 'music.png' )
-def Ii1I1iIiiI1 ( ) :
+def iiI1 ( ) :
  iIIiiI1II1i11 = o0o0 ( i1111 ( 'aHR0cDovL3d3dy5jeW4ubmV0L211c2ljLw==' ) )
  o0o = re . compile ( '<td><a href="(.+?)"><img src="(.+?)"><br>(.+?)</a></td>' , re . DOTALL ) . findall ( iIIiiI1II1i11 )
  for iI1i11 , o0O0o0 , OO in o0o :
   ooOO00oOOo000 ( OO , ( 'http://www.cyn.net/music/' + iI1i11 ) . replace ( ' ' , '%20' ) , 1031 , ( 'http://www.cyn.net/music/' + o0O0o0 ) . replace ( ' ' , '%20' ) )
-def o00i111iiIiiIiI ( url , img ) :
+def iii11i1 ( url , img ) :
  iIIiiI1II1i11 = o0o0 ( url )
  Ooo0OOoOoO0 = url
  img = img
  o0o = re . compile ( '<a href="(.+?)">(.+?)</a>' , re . DOTALL ) . findall ( iIIiiI1II1i11 )
  for url , OO in o0o :
   oOO0OO0OO ( ( OO ) . replace ( '.mp3' , '' ) , ( Ooo0OOoOoO0 + '/' + url ) . replace ( ' ' , '%20' ) , 222 , img )
-  if 59 - 59: iii11 + OOOo0 / OoOoOO00 / I1IiI
-  if 80 - 80: I1IiI + iIii1I11I1II1 . OoO0O0
-def ooOoOoo000O0O ( ) :
+  if 33 - 33: I1IiI . iIii1I11I1II1 / Ooo0OO0oOO % ii11i1
+  if 49 - 49: Ooo00oOo00o + OoOoOO00 / OoO0O0 - O0 % ii11i1
+def iII1i1 ( ) :
  o0OO0oooo = ( i1111 ( 'aHR0cDovL2h5cGVtLmNvbS9kb3dubG9hZC8=' ) )
  IIi1I1iiiii = oOOoo00O0O . input ( 'Search' , type = xbmcgui . INPUT_ALPHANUM )
  O0O0ooOOO = IIi1I1iiiii . lower ( )
  iI1i11 = ( i1111 ( 'aHR0cDovL3Bhbmljc3RyZWFtLm5ldC9zdHJlYW1zLw==' ) )
  Ooo0OOoOoO0 = ( i1111 ( 'aHR0cDovL21hc2xvdmQubm8taXAub3JnL3B1YmxpYy9tcDMv' ) )
  IIo0Oo0oO0oOO00 = ( i1111 ( 'aHR0cDovL3d3dy5jeW4ubmV0L211c2ljLw==' ) )
- if 42 - 42: OOooOOo / OoO0O0
+ if 34 - 34: Ooo00oOo00o / OoooooooOO - OoIii111II / OoIii111II * OOOo0
  OoOO = o0O0Ooo ( iI1i11 )
  iiIi11iI1iii = o0O0Ooo ( Ooo0OOoOoO0 )
  iI1ii111iiIii = o0O0Ooo ( IIo0Oo0oO0oOO00 )
- if 79 - 79: ii11i1
+ if 61 - 61: Ooo0OO0oOO
  if OoOO != 'Failed' :
   o0o = re . compile ( '<a .*?>(.*?)</a>' ) . findall ( OoOO )
   for OO in o0o :
    if IIi1I1iiiii in OO . lower ( ) :
     ooOO00oOOo000 ( ( OO + ' source 1' ) . replace ( '..&gt;' , '' ) . replace ( '/' , '' ) , ( iI1i11 + OO ) . replace ( ' ' , '%20' ) , 1006 , '' )
-    if 27 - 27: Ooo00oOo00o + Oo
+    if 81 - 81: Ooo0OO0oOO
     Oo0OoO00oOO0o ( 'tvshows' , 'Media Info 3' )
  if iiIi11iI1iii != 'Failed' :
   oo000 = re . compile ( '<a .*?>(.*?)</a>' ) . findall ( OoOO )
   for OO in oo000 :
    if IIi1I1iiiii in OO . lower ( ) :
     ooOO00oOOo000 ( ( OO + ' source 2' ) . replace ( '..&gt;' , '' ) . replace ( '/' , '' ) , ( Ooo0OOoOoO0 + OO ) . replace ( ' ' , '%20' ) , 1006 , '' )
-    if 92 - 92: OOOo0 % oo0OO
+    if 92 - 92: iii11 - Oo - OoooooooOO / OoO0O0 - i1IIi
     Oo0OoO00oOO0o ( 'tvshows' , 'Media Info 3' )
  if iI1ii111iiIii != 'Failed' :
   Ooo0oO0 = re . compile ( '<td><a href=".+?"><img src=".+?"><br>(.+?)</a></td>' , re . DOTALL ) . findall ( iI1ii111iiIii )
   for OO in Ooo0oO0 :
    if IIi1I1iiiii in OO . lower ( ) :
     ooOO00oOOo000 ( ( OO + ' source 3' ) . replace ( '..&gt;' , '' ) . replace ( '/' , '' ) , ( IIo0Oo0oO0oOO00 + OO ) . replace ( ' ' , '%20' ) , 1031 , '' )
-    if 31 - 31: OoooooooOO - OoIii111II / O0o0Ooo
-    Oo0OoO00oOO0o ( 'tvshows' , 'Media Info 3' )
-    if 62 - 62: i11iIiiIii - Ooo0OO0oOO
-    if 81 - 81: Ooo0OO0oOO
-    if 92 - 92: iii11 - Oo - OoooooooOO / OoO0O0 - i1IIi
     if 81 - 81: i1IIi / O0o0Ooo % i11iIiiIii . iIii1I11I1II1 * I1IiI + OoooooooOO
+    Oo0OoO00oOO0o ( 'tvshows' , 'Media Info 3' )
     if 31 - 31: i1IIi % OoOoOO00
     if 13 - 13: iIii1I11I1II1 - OoOoOO00 % O0 . ii11i1 % Ooo00oOo00o
-def Ii11iIiiI ( ) :
+    if 2 - 2: OoooooooOO - ii11i1 % OoIii111II / OOOo0 / OOooOOo
+    if 3 - 3: OoOoOO00 / iii11
+    if 48 - 48: o0Oo0O0Oo00oO . ii11ii1ii
+    if 49 - 49: i1IIi - I1IiI . Oo + iIii1I11I1II1 - o0Oo0O0Oo00oO / Oo
+def iIi11ii1 ( ) :
  iIIiiI1II1i11 = ooOOO0 ( 'http://www.iwatchseries.me/tv-list/' )
  o0o = re . compile ( '<h5><a href="([^"]*)"><strong>(.+?)</strong></a></h5>' ) . findall ( iIIiiI1II1i11 )
  for iI1i11 , OO in o0o :
   ooOO00oOOo000 ( OO , iI1i11 , 8021 , ii11iIi1I + 'iwatch.png' )
-def iiII ( url ) :
+def iII ( url ) :
  iIIiiI1II1i11 = ooOOO0 ( url )
  o0o = re . compile ( '<h5><strong><a href="([^"]*)">(.+?)</a>(.+?)</strong></h5>' ) . findall ( iIIiiI1II1i11 )
  for url , OO , Ooo00OoOOO in o0o :
   ooOO00oOOo000 ( OO + Ooo00OoOOO , url , 8022 , ii11iIi1I + 'iwatch.png' )
-def iII1IiiIIIIii ( url ) :
+def O0oo ( url ) :
  iIIiiI1II1i11 = ooOOO0 ( url )
  o0o = re . compile ( '<iframe src="([^"]*)"' ) . findall ( iIIiiI1II1i11 )
  for url in o0o :
   print '>>>>>>>>>>>>>>>>>>>>' + url
-  oOOO ( url )
-def oOOO ( url ) :
+  iIIi1OoOo0O00 ( url )
+def iIIi1OoOo0O00 ( url ) :
  iIIiiI1II1i11 = ooOOO0 ( url )
  o0o = re . compile ( '{.+?"file" : "(.+?)",.+?"default" : true.+?"label" : "(.+?)"' , re . DOTALL ) . findall ( iIIiiI1II1i11 )
  oo000 = re . compile ( 'setup\(\{.+?file: "(.+?)",.+?skin' , re . DOTALL ) . findall ( iIIiiI1II1i11 )
@@ -3591,23 +3572,23 @@ def oOOO ( url ) :
   if 'hevideo' in url :
    print '>>>>>>>>>>>>>>>>>>>>>>>>>' + url
    oOO0OO0OO ( 'TheVideo - ' + OO , url , 222 , ii11iIi1I + 'iwatch.png' )
-   if 34 - 34: O0 * OoO0O0 / i1IIi + OoIii111II . I1IiI
-def O0oo ( ) :
+   if 9 - 9: iii11
+def I1iII ( ) :
  iIIiiI1II1i11 = cloudflare . source ( 'http://www.animeland.me/anime-list' )
  o0o = re . compile ( 'letter-spacing:-1px;" href="([^"]*)">(.+?)</a></li>' ) . findall ( iIIiiI1II1i11 )
  for iI1i11 , OO in o0o :
   ooOO00oOOo000 ( OO , iI1i11 , 1021 , ii11iIi1I + 'anime.png' )
-  if 34 - 34: OOOo0
-  if 57 - 57: iii11 . ii11i1 % OOooOOo
-def I1I11 ( ) :
+  if 18 - 18: Ooo0OO0oOO + Oo - Ooo00oOo00o / O0o0Ooo / iii11
+  if 53 - 53: iii11 + OOooOOo . OoIii111II / Ooo0OO0oOO
+def o0000oOooo0oo ( ) :
  iIIiiI1II1i11 = ooOOO0 ( 'http://www.animetoon.org/cartoon' )
  o0o = re . compile ( '<td><a href="(.+?)">(.+)</a></td>' ) . findall ( iIIiiI1II1i11 )
  for iI1i11 , OO in o0o :
   ooOO00oOOo000 ( OO , iI1i11 , 1002 , ii11iIi1I + 'anime.png' )
-  if 9 - 9: iii11
-  if 38 - 38: Ooo0OO0oOO . Ooo00oOo00o . i11iIiiIii * OoooooooOO + oo0OO
-  if 49 - 49: Oo - Ooo00oOo00o / O0o0Ooo / OOooOOo % OoIii111II
-def IIi ( url ) :
+  if 70 - 70: O0 / OoooooooOO + ii11ii1ii + i1IIi
+  if 63 - 63: oo0OO / ii11ii1ii * OoIii111II / OoOoOO00 + iii11 - O0
+  if 16 - 16: OoOoOO00 / ii11i1 . ii11i1 - ii11i1 / ii11ii1ii
+def I1Ii11i1ii1i ( url ) :
  iIIiiI1II1i11 = ooOOO0 ( url )
  oo000 = re . compile ( '<img src="(.+?)" id="series_image" width="250" height="370" alt=".+?" />' ) . findall ( iIIiiI1II1i11 )
  for o0O0o0 in oo000 :
@@ -3619,25 +3600,25 @@ def IIi ( url ) :
  for url , OO in o0o :
   ooOO00oOOo000 ( OO , url , 1003 , IIiIii1 )
  xbmcplugin . addSortMethod ( I11i1 , xbmcplugin . SORT_METHOD_TITLE ) ;
-def OoO0000o ( url , IMAGE ) :
+def oOOoOoOO ( url , IMAGE ) :
  iIIiiI1II1i11 = ooOOO0 ( url )
  o0o = re . compile ( '"playlist">(.+?)</span></div><div><iframe src="(.+?)"' ) . findall ( iIIiiI1II1i11 )
  for OO , url in o0o :
   print OO + '     ' + url
   if 'easy' in url :
-   OOiii1IiiIiIIiI ( url )
+   iII11 ( url )
   elif 'playpanda' in url :
-   OOiii1IiiIiIIiI ( url )
-   if 93 - 93: OoO0O0 % ii11ii1ii
+   iII11 ( url )
+   if 96 - 96: Ooo0OO0oOO * ii11ii1ii * ii11i1 + ii11ii1ii % OOOo0 + i11iIiiIii
   xbmcplugin . addSortMethod ( I11i1 , xbmcplugin . SORT_METHOD_TITLE ) ;
-def OOiii1IiiIiIIiI ( url ) :
+def iII11 ( url ) :
  iIIiiI1II1i11 = ooOOO0 ( url )
  o0o = re . compile ( "url: '(.+?)'," ) . findall ( iIIiiI1II1i11 )
  for url in o0o :
   oOO0OO0OO ( 'STREAM' , url , 222 , ii11iIi1I + 'anime.png' )
-  if 31 - 31: OoOoOO00 + iii11 - OoooooooOO . Ooo0OO0oOO
-  if 28 - 28: ii11i1 . ii11ii1ii
-def oOo000Oo00o ( url ) :
+  if 37 - 37: Ooo0OO0oOO % ii11ii1ii / o0Oo0O0Oo00oO
+  if 94 - 94: Ooo0OO0oOO / Ooo00oOo00o . OOooOOo
+def iIiOo ( url ) :
  O0o = urllib2 . Request ( url )
  O0o . add_header ( 'User-Agent' , "Mozilla/5.0 (Windows NT 6.2; WOW64; rv:21.0) Gecko/20100101 Firefox/21.0" )
  O0o . add_header ( 'referer' , url )
@@ -3645,7 +3626,7 @@ def oOo000Oo00o ( url ) :
  oOooo0O0o = O00oOOooO . read ( )
  O00oOOooO . close ( )
  return oOooo0O0o
- if 81 - 81: OoooooooOO
+ if 48 - 48: iii11
 def o0o0 ( url ) :
  O0o = urllib2 . Request ( url )
  O0o . add_header ( 'User-Agent' , "Mozilla/5.0 (Windows NT 6.2; WOW64; rv:21.0) Gecko/20100101 Firefox/21.0" )
@@ -3653,15 +3634,15 @@ def o0o0 ( url ) :
  oOooo0O0o = O00oOOooO . read ( )
  O00oOOooO . close ( )
  return oOooo0O0o
- if 88 - 88: O0 * OOooOOo
-def IIiII ( url ) :
+ if 26 - 26: oo0OO * O0o0Ooo * OoIii111II * I1IiI
+def I1ii1i11iI1 ( url ) :
  xbmcplugin . addSortMethod ( handle = int ( sys . argv [ 1 ] ) , sortMethod = xbmcplugin . SORT_METHOD_TITLE )
  ooOO0o = ( '%s%s' % ( oO0O0oO0 , url ) )
  oOooo0O0o = o0o0 ( url )
  o0o = re . compile ( '<a href="(.+?)" target="_blank"><img src="(.+?)" style="max-width:200px;" /></a><br><b>(.+?)</b>' ) . findall ( oOooo0O0o )
  for url , iiI1IIIi , OO in o0o :
   oOO0OO0OO ( '%s' % ( OO ) . replace ( 'GenieTv' , '[COLOR green]GenieTV[/COLOR]' ) . replace ( '.' , ' ' ) . replace ( 'mp4' , '' ) . replace ( 'mkv' , '' ) . replace ( '_' , ' ' ) , '%s' % ( url ) , 222 , iiI1IIIi )
-  if 39 - 39: OOooOOo / OoO0O0 - oo0OO
+  if 6 - 6: O0 . o0Oo0O0Oo00oO - OoIii111II / i11iIiiIii
 def oOo0OOoO0 ( url ) :
  oo0 = xbmc . Player ( oOOO0oOoo ( ) )
  import urlresolver
@@ -3685,8 +3666,8 @@ def oOo0OOoO0 ( url ) :
   try : o0oO0 . resolve_url ( url )
   except : pass
   Oo0oO0ooo . close ( )
-  if 96 - 96: Ooo0OO0oOO * ii11ii1ii * ii11i1 + ii11ii1ii % OOOo0 + i11iIiiIii
-def i1iI11Ii1i ( url ) :
+  if 84 - 84: Ooo0OO0oOO / ii11ii1ii * OOooOOo * Ooo00oOo00o * iii11 * O0
+def OoOooOo00o ( url ) :
  Oo0oO0ooo = xbmcgui . DialogProgress ( )
  Oo0oO0ooo . create ( 'Featching Your Video' , 'Featching Your Video' )
  Oo0oO0ooo . update ( 0 , '%s' % OO )
@@ -3696,45 +3677,45 @@ def i1iI11Ii1i ( url ) :
  xbmc . sleep ( 1 )
  oo0 . play ( url ) . strip ( )
  Oo0oO0ooo . close ( )
- if 45 - 45: OOOo0 . Oo . O0o0Ooo / OoIii111II
+ if 28 - 28: ii11ii1ii + ii11ii1ii % I1IiI
 def Ooo0 ( url ) :
  oo0 = xbmc . Player ( oOOO0oOoo ( ) )
  import urlresolver
  url = ( url ) . strip ( )
  try : oo0 . play ( url ) . strip ( )
  except : pass
- if 4 - 4: i11iIiiIii + iii11
- if 26 - 26: oo0OO * O0o0Ooo * OoIii111II * I1IiI
+ if 12 - 12: Ooo0OO0oOO
+ if 19 - 19: ii11i1 * i1IIi % O0 + Ooo0OO0oOO
 def oOOO0oOoo ( ) :
  try :
-  I1ii1i11iI1 = getSet ( "core-player" )
-  if ( I1ii1i11iI1 == 'DVDPLAYER' ) : IiOOo0 = xbmc . PLAYER_CORE_DVDPLAYER
-  elif ( I1ii1i11iI1 == 'MPLAYER' ) : IiOOo0 = xbmc . PLAYER_CORE_MPLAYER
-  elif ( I1ii1i11iI1 == 'PAPLAYER' ) : IiOOo0 = xbmc . PLAYER_CORE_PAPLAYER
-  else : IiOOo0 = xbmc . PLAYER_CORE_AUTO
- except : IiOOo0 = xbmc . PLAYER_CORE_AUTO
- return IiOOo0
+  I1i1ii1ii = getSet ( "core-player" )
+  if ( I1i1ii1ii == 'DVDPLAYER' ) : i1ii = xbmc . PLAYER_CORE_DVDPLAYER
+  elif ( I1i1ii1ii == 'MPLAYER' ) : i1ii = xbmc . PLAYER_CORE_MPLAYER
+  elif ( I1i1ii1ii == 'PAPLAYER' ) : i1ii = xbmc . PLAYER_CORE_PAPLAYER
+  else : i1ii = xbmc . PLAYER_CORE_AUTO
+ except : i1ii = xbmc . PLAYER_CORE_AUTO
+ return i1ii
  return True
- if 85 - 85: O0o0Ooo % ii11ii1ii
+ if 70 - 70: ii11ii1ii + OOOo0
 def ooOO00oOOo000 ( name , url , mode , iconimage , showcontext = True , allinfo = { } ) :
  o00OoO0oO00 = sys . argv [ 0 ] + "?url=" + urllib . quote_plus ( url ) + "&mode=" + str ( mode ) + "&name=" + urllib . quote_plus ( name )
  iIi = True
  iiO0O0o0oO0O00 = xbmcgui . ListItem ( name , iconImage = "DefaultFolder.png" , thumbnailImage = iconimage )
  iiO0O0o0oO0O00 . setInfo ( type = "Video" , infoLabels = { "Title" : name } )
  if showcontext :
-  OO00o0O0oOooO = [ ]
+  o0o0OOo0O = [ ]
   if showcontext == 'fav' :
-   OO00o0O0oOooO . append ( ( 'Remove from Genie TV Favorites' , 'XBMC.RunPlugin(%s?mode=10056&name=%s)'
+   o0o0OOo0O . append ( ( 'Remove from Genie TV Favorites' , 'XBMC.RunPlugin(%s?mode=10056&name=%s)'
  % ( sys . argv [ 0 ] , urllib . quote_plus ( name ) ) ) )
   if not name in OOO00 :
-   OO00o0O0oOooO . append ( ( 'Add to Genie TV Favorites' , 'XBMC.RunPlugin(%s?mode=10055&name=%s&url=%s&iconimage=%s&fav_mode=%s)'
+   o0o0OOo0O . append ( ( 'Add to Genie TV Favorites' , 'XBMC.RunPlugin(%s?mode=10055&name=%s&url=%s&iconimage=%s&fav_mode=%s)'
  % ( sys . argv [ 0 ] , urllib . quote_plus ( name ) , urllib . quote_plus ( url ) , urllib . quote_plus ( iconimage ) , mode ) ) )
-  iiO0O0o0oO0O00 . addContextMenuItems ( OO00o0O0oOooO )
+  iiO0O0o0oO0O00 . addContextMenuItems ( o0o0OOo0O )
  iIi = xbmcplugin . addDirectoryItem ( handle = int ( sys . argv [ 1 ] ) , url = o00OoO0oO00 , listitem = iiO0O0o0oO0O00 , isFolder = True )
  return iIi
- if 18 - 18: i11iIiiIii * Oo / ii11ii1ii + ii11ii1ii % I1IiI
+ if 82 - 82: iii11 / oo0OO - O0 % OoOoOO00 % I1IiI
 def iIi1IiI ( name , url , mode , iconimage , fanart , description ) :
- if 12 - 12: Ooo0OO0oOO
+ if 4 - 4: iii11
  o00OoO0oO00 = sys . argv [ 0 ] + "?url=" + urllib . quote_plus ( url ) + "&mode=" + str ( mode ) + "&name=" + urllib . quote_plus ( name ) + "&iconimage=" + urllib . quote_plus ( iconimage ) + "&fanart=" + urllib . quote_plus ( fanart ) + "&description=" + urllib . quote_plus ( description )
  iIi = True
  iiO0O0o0oO0O00 = xbmcgui . ListItem ( name , iconImage = "DefaultFolder.png" , thumbnailImage = iconimage )
@@ -3742,31 +3723,31 @@ def iIi1IiI ( name , url , mode , iconimage , fanart , description ) :
  iiO0O0o0oO0O00 . setProperty ( "Fanart_Image" , fanart )
  iIi = xbmcplugin . addDirectoryItem ( handle = int ( sys . argv [ 1 ] ) , url = o00OoO0oO00 , listitem = iiO0O0o0oO0O00 , isFolder = True )
  return iIi
- if 19 - 19: ii11i1 * i1IIi % O0 + Ooo0OO0oOO
+ if 19 - 19: ii11ii1ii
 def oOO0OO0OO ( name , url , mode , iconimage , showcontext = True , allinfo = { } ) :
  o00OoO0oO00 = sys . argv [ 0 ] + "?url=" + urllib . quote_plus ( url ) + "&mode=" + str ( mode ) + "&name=" + urllib . quote_plus ( name )
  iIi = True
  iiO0O0o0oO0O00 = xbmcgui . ListItem ( name , iconImage = "DefaultFolder.png" , thumbnailImage = iconimage )
  iiO0O0o0oO0O00 . setInfo ( type = "Video" , infoLabels = { "Title" : name } )
  if showcontext :
-  OO00o0O0oOooO = [ ]
+  o0o0OOo0O = [ ]
   if showcontext == 'fav' :
-   OO00o0O0oOooO . append ( ( 'Remove from Genie TV Favorites' , 'XBMC.RunPlugin(%s?mode=10056&name=%s)'
+   o0o0OOo0O . append ( ( 'Remove from Genie TV Favorites' , 'XBMC.RunPlugin(%s?mode=10056&name=%s)'
  % ( sys . argv [ 0 ] , urllib . quote_plus ( name ) ) ) )
   if not name in OOO00 :
-   OO00o0O0oOooO . append ( ( 'Add to Genie TV Favorites' , 'XBMC.RunPlugin(%s?mode=10055&name=%s&url=%s&iconimage=%s&fav_mode=%s)'
+   o0o0OOo0O . append ( ( 'Add to Genie TV Favorites' , 'XBMC.RunPlugin(%s?mode=10055&name=%s&url=%s&iconimage=%s&fav_mode=%s)'
  % ( sys . argv [ 0 ] , urllib . quote_plus ( name ) , urllib . quote_plus ( url ) , urllib . quote_plus ( iconimage ) , mode ) ) )
-  iiO0O0o0oO0O00 . addContextMenuItems ( OO00o0O0oOooO )
+  iiO0O0o0oO0O00 . addContextMenuItems ( o0o0OOo0O )
  iIi = xbmcplugin . addDirectoryItem ( handle = int ( sys . argv [ 1 ] ) , url = o00OoO0oO00 , listitem = iiO0O0o0oO0O00 , isFolder = False )
  return iIi
- if 25 - 25: O0o0Ooo - ii11i1 / O0 . OoooooooOO % OOOo0 . i1IIi
- if 19 - 19: OoOoOO00 / OoOoOO00 % ii11ii1ii + OoIii111II + OoIii111II + oo0OO
- if 4 - 4: OOooOOo + Ooo0OO0oOO / oo0OO + i1IIi % OOooOOo % oo0OO
- if 80 - 80: ii11i1
- if 26 - 26: iIii1I11I1II1 . OoooooooOO - iIii1I11I1II1
- if 59 - 59: ii11ii1ii + Ooo0OO0oOO . OoIii111II
+ if 38 - 38: i11iIiiIii - OoIii111II % OoO0O0
+ if 1 - 1: OoIii111II + O0o0Ooo . OOOo0
+ if 47 - 47: oo0OO . I1IiI
+ if 58 - 58: oo0OO + Oo / OOOo0
+ if 68 - 68: OoO0O0 * ii11i1
+ if 91 - 91: ii11i1 + Ooo00oOo00o * OOooOOo . O0o0Ooo
 def iIIi1i1 ( heading , announce ) :
- class oOOo0oO ( ) :
+ class Oo00oo00o00Oo ( ) :
   WINDOW = 10147
   CONTROL_LABEL = 1
   CONTROL_TEXTBOX = 5
@@ -3777,31 +3758,26 @@ def iIIi1i1 ( heading , announce ) :
    self . setControls ( )
   def setControls ( self ) :
    self . win . getControl ( self . CONTROL_LABEL ) . setLabel ( heading )
-   try : Ii1II1I11i1 = open ( announce ) ; iIIII1iII1i = Ii1II1I11i1 . read ( )
-   except : iIIII1iII1i = announce
-   self . win . getControl ( self . CONTROL_TEXTBOX ) . setText ( str ( iIIII1iII1i ) )
+   try : Ii1II1I11i1 = open ( announce ) ; iiiiiii11III = Ii1II1I11i1 . read ( )
+   except : iiiiiii11III = announce
+   self . win . getControl ( self . CONTROL_TEXTBOX ) . setText ( str ( iiiiiii11III ) )
    return
- oOOo0oO ( )
- oOOo0oO ( )
- if 98 - 98: O0o0Ooo % Ooo00oOo00o - o0Oo0O0Oo00oO % i11iIiiIii + O0o0Ooo - OoO0O0
-def O00o ( ) :
+ Oo00oo00o00Oo ( )
+ Oo00oo00o00Oo ( )
+ if 48 - 48: O0o0Ooo % oo0OO % ii11i1 % iIii1I11I1II1 . ii11i1
+def I11IIiI1IiI1 ( ) :
  iIIi1i1 ( 'These are the main Sources you should get into you XBMC' , '[COLORwhite]http://architects.x10host.com[/COLOR]--- [CR]  [COLORred]http://repo.sharktech.co.uk[/COLOR]--- [CR]   [COLORwhite]http://fusion.tvaddons.ag[/COLOR]--- [CR]  [COLORred]http://i.totalxbmc.tv[/COLOR]--- [CR]   [COLORwhite]http://www.xunitytalk.com/xfinity[/COLOR]--- [CR]  [COLORred]http://srp.nu[/COLOR]--- [CR]   [COLORwhite]http://solved.no-issue.ca[/COLOR]--- [CR]  [COLORred]http://xbmc.aminhacasadigital.com[/COLOR]--- [CR]   [COLORwhite]http://xbmc.movieshd.co[/COLOR]--- [CR]  [COLORred]http://install.kaosbox.tv[/COLOR]--- [CR]   [COLORwhite]http://kodi-repo.com/mxr[/COLOR]--- [CR]  [COLORred]http://kodi.metalkettle.co[/COLOR]--- [CR]   [COLORwhite]http://prozone.getxbmc.com[/COLOR]--- [CR]  [COLORred]http://transform.mega-tron.tv[/COLOR]--- [CR]   [COLORwhite]http://muckys.kodimediaportal.ml[/COLOR]--- [CR]  [COLORred]http://jas0npc.pcriot.com[/COLOR]--- [CR]  [COLORwhite]Sports devil source[/COLOR]--- [CR]  [COLORred]http://iwillfolo.com/iwf[/COLOR]' )
- if 34 - 34: OOOo0 * oo0OO % OoooooooOO + iIii1I11I1II1 . OOOo0 * O0
- if 24 - 24: i1IIi . iii11
- if 85 - 85: OOOo0 + iii11 + iii11
- if 92 - 92: Ooo0OO0oOO % O0 % ii11i1 . ii11i1 . OoO0O0
- if 82 - 82: Oo + I1IiI . ii11ii1ii % OoIii111II / ii11i1
+ if 37 - 37: OoIii111II % O0o0Ooo % OoIii111II
+ if 14 - 14: Ooo00oOo00o / OOOo0
+ if 66 - 66: Oo / i11iIiiIii % o0Oo0O0Oo00oO
+ if 43 - 43: iii11
+ if 84 - 84: iii11 . OoO0O0 . oo0OO
 def iI111i ( ) :
  xbmc . executebuiltin ( 'UpdateLocalAddons' )
  xbmc . executebuiltin ( 'UpdateAddonRepos' )
  i1iiIIiiI111 = xbmcgui . Dialog ( )
  i1iiIIiiI111 . ok ( "GenieTv" , '' , '                                 REFRESH SUCCESSFUL :)' , "                          [COLOR gold]Brought To You By Kodi Support Group, GenieTv[/COLOR]" )
  return
- if 37 - 37: OoIii111II % O0o0Ooo % OoIii111II
- if 14 - 14: Ooo00oOo00o / OOOo0
- if 66 - 66: Oo / i11iIiiIii % o0Oo0O0Oo00oO
- if 43 - 43: iii11
- if 84 - 84: iii11 . OoO0O0 . oo0OO
  if 2 - 2: Oo - I1IiI
  if 49 - 49: ii11i1 + OoOoOO00 / OoIii111II - I1IiI % I1IiI + OOOo0
  if 54 - 54: o0Oo0O0Oo00oO % Oo - iii11
@@ -3821,36 +3797,34 @@ def iI111i ( ) :
  if 23 - 23: OOOo0
  if 7 - 7: oo0OO % ii11ii1ii
  if 64 - 64: O0o0Ooo + i11iIiiIii
-def iI1i11i ( url ) :
- oOooo0O0o = ooOOO0 ( iiI1IiI + IIIIi1Iii1iIi ) . replace ( '\n' , '' ) . replace ( '\r' , '' )
+ if 35 - 35: I1IiI + i1IIi % iii11
+ if 68 - 68: OoO0O0 . o0Oo0O0Oo00oO
+ if 64 - 64: i1IIi + Oo * OOOo0 / iii11
+ if 3 - 3: Oo / o0Oo0O0Oo00oO + o0Oo0O0Oo00oO . ii11ii1ii
+ if 50 - 50: iIii1I11I1II1 * OoIii111II
+def o0Oo ( url ) :
+ oOooo0O0o = ooOOO0 ( iiI1IiI + III1IIiIi1 ) . replace ( '\n' , '' ) . replace ( '\r' , '' )
  o0o = re . compile ( 'name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"' ) . findall ( oOooo0O0o )
  for OO , url , IIii1111 , I1iI , iI1i111I1Ii in o0o :
   ooOooo000oOO ( OO , url , 42 , IIii1111 , I1iI , iI1i111I1Ii )
  Oo0OoO00oOO0o ( 'movies' , 'MAIN' )
- if 36 - 36: i11iIiiIii * ii11ii1ii * I1IiI
-def II1iIii11II1IIiI ( url ) :
- oOooo0O0o = ooOOO0 ( iiI1IiI + I1iII1II1I1ii ) . replace ( '\n' , '' ) . replace ( '\r' , '' )
+ if 97 - 97: OOooOOo / OoO0O0 + I1IiI + Ooo00oOo00o % O0o0Ooo
+def iIIi1II1 ( url ) :
+ oOooo0O0o = ooOOO0 ( iiI1IiI + IiI1I11ii ) . replace ( '\n' , '' ) . replace ( '\r' , '' )
  o0o = re . compile ( 'name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"' ) . findall ( oOooo0O0o )
  for OO , url , IIii1111 , I1iI , iI1i111I1Ii in o0o :
   ooOooo000oOO ( OO , url , 42 , IIii1111 , I1iI , iI1i111I1Ii )
  Oo0OoO00oOO0o ( 'movies' , 'MAIN' )
- if 54 - 54: OoooooooOO + Oo * iii11
-def oOoO0O00o ( url ) :
- oOooo0O0o = ooOOO0 ( iiI1IiI + IiI11II ) . replace ( '\n' , '' ) . replace ( '\r' , '' )
+ if 57 - 57: Oo . OoO0O0 % iii11
+def OoO0o00oo0oO ( url ) :
+ oOooo0O0o = ooOOO0 ( iiI1IiI + I11IiIi1iI1ii ) . replace ( '\n' , '' ) . replace ( '\r' , '' )
  o0o = re . compile ( 'name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"' ) . findall ( oOooo0O0o )
  for OO , url , IIii1111 , I1iI , iI1i111I1Ii in o0o :
   ooOooo000oOO ( OO , url , 42 , IIii1111 , I1iI , iI1i111I1Ii )
  Oo0OoO00oOO0o ( 'movies' , 'MAIN' )
- if 87 - 87: Oo . OoooooooOO * O0o0Ooo * OoOoOO00 / i1IIi * I1IiI
-def I11IiIi1iI1ii ( url ) :
- oOooo0O0o = ooOOO0 ( iiI1IiI + O0oOo0o0OOoO0 ) . replace ( '\n' , '' ) . replace ( '\r' , '' )
- o0o = re . compile ( 'name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"' ) . findall ( oOooo0O0o )
- for OO , url , IIii1111 , I1iI , iI1i111I1Ii in o0o :
-  ooOooo000oOO ( OO , url , 42 , IIii1111 , I1iI , iI1i111I1Ii )
- Oo0OoO00oOO0o ( 'movies' , 'MAIN' )
- if 30 - 30: ii11i1 % Ooo0OO0oOO + OOooOOo
-def oooOoO ( url ) :
- oOooo0O0o = ooOOO0 ( iiI1IiI + IiiIi1IiiiI ) . replace ( '\n' , '' ) . replace ( '\r' , '' )
+ if 68 - 68: OoO0O0 * Ooo00oOo00o . Ooo0OO0oOO / ii11i1 . OOooOOo - i11iIiiIii
+def II11IOOooo00oo ( url ) :
+ oOooo0O0o = ooOOO0 ( iiI1IiI + i1iiIi1IiiiI ) . replace ( '\n' , '' ) . replace ( '\r' , '' )
  o0o = re . compile ( 'name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"' ) . findall ( oOooo0O0o )
  for OO , url , IIii1111 , I1iI , iI1i111I1Ii in o0o :
   ooOooo000oOO ( OO , url , 42 , IIii1111 , I1iI , iI1i111I1Ii )
@@ -3888,58 +3862,65 @@ def IIiII1i1i ( url ) :
  oOooo0O0o = ooOOO0 ( iiI1IiI + II11IIiiIi1I ) . replace ( '\n' , '' ) . replace ( '\r' , '' )
  o0o = re . compile ( 'name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"' ) . findall ( oOooo0O0o )
  for OO , url , IIii1111 , I1iI , iI1i111I1Ii in o0o :
-  ooOooo000oOO ( OO , url , 5 , IIii1111 , I1iI , iI1i111I1Ii )
+  ooOooo000oOO ( OO , url , 42 , IIii1111 , I1iI , iI1i111I1Ii )
  Oo0OoO00oOO0o ( 'movies' , 'MAIN' )
  if 64 - 64: ii11i1 / i1IIi % OOOo0 - OOooOOo
- if 11 - 11: ii11ii1ii - OoooooooOO
- if 16 - 16: OoO0O0 % OoooooooOO - o0Oo0O0Oo00oO * ii11i1 - ii11i1
- if 27 - 27: OoO0O0 + iIii1I11I1II1 / Oo + Ooo00oOo00o % Oo + Ooo00oOo00o
+def iIii111Ii ( url ) :
+ oOooo0O0o = ooOOO0 ( iiI1IiI + O00o0O0oo ) . replace ( '\n' , '' ) . replace ( '\r' , '' )
+ o0o = re . compile ( 'name="(.+?)".+?rl="(.+?)".+?mg="(.+?)".+?anart="(.+?)".+?escription="(.+?)"' ) . findall ( oOooo0O0o )
+ for OO , url , IIii1111 , I1iI , iI1i111I1Ii in o0o :
+  ooOooo000oOO ( OO , url , 5 , IIii1111 , I1iI , iI1i111I1Ii )
+ Oo0OoO00oOO0o ( 'movies' , 'MAIN' )
+ if 34 - 34: Ooo00oOo00o % Oo + Ooo00oOo00o
  if 77 - 77: Oo * o0Oo0O0Oo00oO % ii11i1
  if 2 - 2: Ooo0OO0oOO / Oo / ii11i1 / ii11ii1ii / OoooooooOO
  if 22 - 22: iIii1I11I1II1 * OOOo0 / Ooo0OO0oOO + I1IiI
  if 98 - 98: iii11
  if 69 - 69: OoOoOO00 + Oo - OoIii111II . Oo / iIii1I11I1II1 * iIii1I11I1II1
-def oOooooooO0o ( ) :
+ if 75 - 75: Ooo00oOo00o % OoooooooOO
+ if 16 - 16: O0 / i1IIi
+ if 58 - 58: OOooOOo / i11iIiiIii / O0 % Ooo0OO0oOO % OOOo0
+def O0oOOo0 ( ) :
  try :
   if os . path . exists ( oOOoO0 ) == True :
    i1iiIIiiI111 = xbmcgui . Dialog ( )
    if i1iiIIiiI111 . yesno ( "Delete Thumbnails" , "[COLOR gold][B]##########WARNING ANDROID ONLY##########[/B][/COLOR]" , "This feature deletes your thumbnail folder and textures13.db" , "Are you sure you want to do proceed? This Can NOT Be Undone" ) :
     for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( oOOoO0 ) :
-     o0Ii11I1iIIi = 0
-     o0Ii11I1iIIi += len ( i1iIiiiiii1II )
-     if o0Ii11I1iIIi > 0 :
+     oooOOOoO0O = 0
+     oooOOOoO0O += len ( i1iIiiiiii1II )
+     if oooOOOoO0O > 0 :
       for Ii1II1I11i1 in i1iIiiiiii1II :
        os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
-  O0ooO = os . path . join ( OOooO0OOoo , "Textures13.db" )
-  os . unlink ( O0ooO )
+  iIOOO0O00 = os . path . join ( OOooO0OOoo , "Textures13.db" )
+  os . unlink ( iIOOO0O00 )
   i1iiIIiiI111 . ok ( "Restart KODI" , "Please restart KODI to rebuild thumbnail library" )
  except :
   i1iiIIiiI111 = xbmcgui . Dialog ( )
   i1iiIIiiI111 . ok ( o0oOoO00o , "Error Deleting Thumbnails please visit Kodi Support Group, GenieTv on facebook" )
  return
- if 40 - 40: OOooOOo . OOooOOo * i11iIiiIii
- if 44 - 44: OOooOOo
- if 80 - 80: ii11ii1ii + Ooo0OO0oOO - o0Oo0O0Oo00oO - OOooOOo % ii11i1
- if 85 - 85: O0o0Ooo
- if 62 - 62: ii11i1 % OoOoOO00 + OoO0O0 + iii11 % OoIii111II . OOOo0
- if 53 - 53: Ooo00oOo00o % ii11ii1ii . oo0OO . i1IIi . Ooo00oOo00o
- if 26 - 26: OOOo0 % I1IiI
- if 67 - 67: Oo - OoO0O0 * ii11i1 . OoooooooOO / i11iIiiIii
- if 61 - 61: OOooOOo % OOOo0 * i1IIi / OOOo0 / OoOoOO00 + O0o0Ooo
-def i1Io00OOOo ( url ) :
+ if 54 - 54: O0 * OoIii111II * ii11i1 * Ooo00oOo00o % OoOoOO00
+ if 46 - 46: iii11 % OoIii111II . OOooOOo + oo0OO % i11iIiiIii + ii11ii1ii
+ if 1 - 1: i1IIi . OoOoOO00 + iii11 / I1IiI / iii11
+ if 77 - 77: OoO0O0 + OoooooooOO * i1IIi % OoooooooOO
+ if 3 - 3: ii11i1 * o0Oo0O0Oo00oO - OOOo0 / i1IIi
+ if 21 - 21: OoOoOO00 + O0o0Ooo
+ if 22 - 22: OoO0O0 . oo0OO + Oo
+ if 45 - 45: Oo % Oo + Oo / O0 % OoooooooOO
+ if 92 - 92: ii11i1 . I1IiI . Ooo0OO0oOO - OoooooooOO / o0Oo0O0Oo00oO
+def ooOo0 ( url ) :
  print '############################################################       DELETING STANDARD CACHE             ###############################################################'
- Ii1ooOO0oo00Oo = os . path . join ( xbmc . translatePath ( 'special://home' ) , 'cache' )
- if os . path . exists ( Ii1ooOO0oo00Oo ) == True :
-  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( Ii1ooOO0oo00Oo ) :
-   o0Ii11I1iIIi = 0
-   o0Ii11I1iIIi += len ( i1iIiiiiii1II )
-   if 12 - 12: oo0OO . OoO0O0 + Oo
-   if 95 - 95: oo0OO + o0Oo0O0Oo00oO / OoIii111II . I1IiI + OoOoOO00 * OoIii111II
-   if o0Ii11I1iIIi > 0 :
-    if 33 - 33: i1IIi
+ I11I1i = os . path . join ( xbmc . translatePath ( 'special://home' ) , 'cache' )
+ if os . path . exists ( I11I1i ) == True :
+  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( I11I1i ) :
+   oooOOOoO0O = 0
+   oooOOOoO0O += len ( i1iIiiiiii1II )
+   if 100 - 100: OoIii111II
+   if 39 - 39: OoOoOO00 * OOOo0 - iIii1I11I1II1
+   if oooOOOoO0O > 0 :
+    if 25 - 25: OoooooooOO . ii11i1 % oo0OO . OoO0O0
     i1iiIIiiI111 = xbmcgui . Dialog ( )
-    if i1iiIIiiI111 . yesno ( "Delete KODI Cache Files" , str ( o0Ii11I1iIIi ) + " files found" , "Do you want to delete them?" ) :
-     if 57 - 57: OoooooooOO
+    if i1iiIIiiI111 . yesno ( "Delete KODI Cache Files" , str ( oooOOOoO0O ) + " files found" , "Do you want to delete them?" ) :
+     if 67 - 67: OoooooooOO + O0o0Ooo / o0Oo0O0Oo00oO
      for Ii1II1I11i1 in i1iIiiiiii1II :
       try :
        os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
@@ -3950,318 +3931,318 @@ def i1Io00OOOo ( url ) :
        shutil . rmtree ( os . path . join ( OOOOO , I111iIi1 ) )
       except :
        pass
-       if 70 - 70: oo0OO . iii11 * Ooo00oOo00o + OoooooooOO . O0o0Ooo
+       if 75 - 75: OoO0O0 / OoooooooOO . OOOo0 + O0o0Ooo - OoOoOO00
    else :
     pass
  if xbmc . getCondVisibility ( 'system.platform.ATV2' ) :
-  Oo0ooOoO0oo = os . path . join ( '/private/var/mobile/Library/Caches/AppleTV/Video/' , 'Other' )
-  if 79 - 79: i11iIiiIii * OoO0O0
-  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( Oo0ooOoO0oo ) :
-   o0Ii11I1iIIi = 0
-   o0Ii11I1iIIi += len ( i1iIiiiiii1II )
-   if 92 - 92: Oo
-   if o0Ii11I1iIIi > 0 :
-    if 60 - 60: i11iIiiIii . O0 * iIii1I11I1II1 * I1IiI
+  I1i11 = os . path . join ( '/private/var/mobile/Library/Caches/AppleTV/Video/' , 'Other' )
+  if 5 - 5: OOooOOo - i11iIiiIii . OoO0O0
+  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( I1i11 ) :
+   oooOOOoO0O = 0
+   oooOOOoO0O += len ( i1iIiiiiii1II )
+   if 10 - 10: I1IiI . OoO0O0 * iIii1I11I1II1 - OoIii111II - I1IiI / O0o0Ooo
+   if oooOOOoO0O > 0 :
+    if 13 - 13: OoIii111II + I1IiI % OoO0O0 % OoooooooOO
     i1iiIIiiI111 = xbmcgui . Dialog ( )
-    if i1iiIIiiI111 . yesno ( "Delete ATV2 Cache Files" , str ( o0Ii11I1iIIi ) + " files found in 'Other'" , "Do you want to delete them?" ) :
-     if 99 - 99: iIii1I11I1II1 - OoIii111II - I1IiI / iIii1I11I1II1 * Oo - OoIii111II
+    if i1iiIIiiI111 . yesno ( "Delete ATV2 Cache Files" , str ( oooOOOoO0O ) + " files found in 'Other'" , "Do you want to delete them?" ) :
+     if 22 - 22: O0o0Ooo
      for Ii1II1I11i1 in i1iIiiiiii1II :
       os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
      for I111iIi1 in IiiIiI1Ii1i :
       shutil . rmtree ( os . path . join ( OOOOO , I111iIi1 ) )
-      if 72 - 72: OoO0O0 % i1IIi / iIii1I11I1II1
+      if 23 - 23: O0
    else :
     pass
-  ooIii = os . path . join ( '/private/var/mobile/Library/Caches/AppleTV/Video/' , 'LocalAndRental' )
-  if 66 - 66: iii11 * OOooOOo
-  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( ooIii ) :
-   o0Ii11I1iIIi = 0
-   o0Ii11I1iIIi += len ( i1iIiiiiii1II )
-   if 58 - 58: iIii1I11I1II1 % iii11 + O0o0Ooo - O0o0Ooo . i11iIiiIii + OoooooooOO
-   if o0Ii11I1iIIi > 0 :
-    if 19 - 19: i11iIiiIii
+  Iiio0OO00oOOO0o0 = os . path . join ( '/private/var/mobile/Library/Caches/AppleTV/Video/' , 'LocalAndRental' )
+  if 39 - 39: OoooooooOO
+  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( Iiio0OO00oOOO0o0 ) :
+   oooOOOoO0O = 0
+   oooOOOoO0O += len ( i1iIiiiiii1II )
+   if 19 - 19: i11iIiiIii
+   if oooOOOoO0O > 0 :
+    if 80 - 80: OOOo0
     i1iiIIiiI111 = xbmcgui . Dialog ( )
-    if i1iiIIiiI111 . yesno ( "Delete ATV2 Cache Files" , str ( o0Ii11I1iIIi ) + " files found in 'LocalAndRental'" , "Do you want to delete them?" ) :
-     if 80 - 80: OOOo0
+    if i1iiIIiiI111 . yesno ( "Delete ATV2 Cache Files" , str ( oooOOOoO0O ) + " files found in 'LocalAndRental'" , "Do you want to delete them?" ) :
+     if 58 - 58: OoIii111II + ii11ii1ii % I1IiI
      for Ii1II1I11i1 in i1iIiiiiii1II :
       os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
      for I111iIi1 in IiiIiI1Ii1i :
       shutil . rmtree ( os . path . join ( OOOOO , I111iIi1 ) )
-      if 58 - 58: OoIii111II + ii11ii1ii % I1IiI
+      if 22 - 22: iIii1I11I1II1 - ii11i1 / OOOo0 * OoO0O0
    else :
     pass
-    if 22 - 22: iIii1I11I1II1 - ii11i1 / OOOo0 * OoO0O0
     if 26 - 26: OOooOOo + iii11 - OOooOOo + Oo . OoIii111II
     if 97 - 97: i1IIi
     if 46 - 46: ii11ii1ii
- II1i1 = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.whatthefurk/cache' ) , '' )
- if os . path . exists ( II1i1 ) == True :
-  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( II1i1 ) :
-   o0Ii11I1iIIi = 0
-   o0Ii11I1iIIi += len ( i1iIiiiiii1II )
-   if 51 - 51: o0Oo0O0Oo00oO * oo0OO / i1IIi
-   if 2 - 2: OoIii111II + OoO0O0 . oo0OO - i1IIi + O0o0Ooo
-   if o0Ii11I1iIIi > 0 :
-    if 54 - 54: OoooooooOO . OoIii111II - oo0OO
+    if 30 - 30: Ooo00oOo00o / O0 * OOooOOo * O0o0Ooo + OoooooooOO * oo0OO
+ iIIi1I1Ii1 = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.whatthefurk/cache' ) , '' )
+ if os . path . exists ( iIIi1I1Ii1 ) == True :
+  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( iIIi1I1Ii1 ) :
+   oooOOOoO0O = 0
+   oooOOOoO0O += len ( i1iIiiiiii1II )
+   if 54 - 54: OoooooooOO . OoIii111II - oo0OO
+   if 76 - 76: O0o0Ooo
+   if oooOOOoO0O > 0 :
+    if 61 - 61: o0Oo0O0Oo00oO / OoOoOO00 * o0Oo0O0Oo00oO * I1IiI * O0o0Ooo . i11iIiiIii
     i1iiIIiiI111 = xbmcgui . Dialog ( )
-    if i1iiIIiiI111 . yesno ( "Delete WTF Cache Files" , str ( o0Ii11I1iIIi ) + " files found" , "Do you want to delete them?" ) :
-     if 76 - 76: O0o0Ooo
+    if i1iiIIiiI111 . yesno ( "Delete WTF Cache Files" , str ( oooOOOoO0O ) + " files found" , "Do you want to delete them?" ) :
+     if 26 - 26: O0o0Ooo / o0Oo0O0Oo00oO - Ooo00oOo00o . iIii1I11I1II1
      for Ii1II1I11i1 in i1iIiiiiii1II :
       os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
      for I111iIi1 in IiiIiI1Ii1i :
       shutil . rmtree ( os . path . join ( OOOOO , I111iIi1 ) )
-      if 61 - 61: o0Oo0O0Oo00oO / OoOoOO00 * o0Oo0O0Oo00oO * I1IiI * O0o0Ooo . i11iIiiIii
+      if 83 - 83: o0Oo0O0Oo00oO % ii11i1 / Oo - oo0OO / O0
    else :
     pass
-    if 26 - 26: O0o0Ooo / o0Oo0O0Oo00oO - Ooo00oOo00o . iIii1I11I1II1
-    if 83 - 83: o0Oo0O0Oo00oO % ii11i1 / Oo - oo0OO / O0
- oo00oO00oooo = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.4od/cache' ) , '' )
- if os . path . exists ( oo00oO00oooo ) == True :
-  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( oo00oO00oooo ) :
-   o0Ii11I1iIIi = 0
-   o0Ii11I1iIIi += len ( i1iIiiiiii1II )
-   if 63 - 63: OoOoOO00 - Ooo0OO0oOO . I1IiI
-   if 8 - 8: OOOo0 * o0Oo0O0Oo00oO / OoO0O0 + I1IiI . OoO0O0 - iii11
-   if o0Ii11I1iIIi > 0 :
-    if 80 - 80: iIii1I11I1II1 / OoIii111II * Oo - iii11 * oo0OO
+    if 97 - 97: iIii1I11I1II1 * Ooo0OO0oOO
+    if 95 - 95: Ooo00oOo00o
+ OoiIIii1Ii1 = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.4od/cache' ) , '' )
+ if os . path . exists ( OoiIIii1Ii1 ) == True :
+  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( OoiIIii1Ii1 ) :
+   oooOOOoO0O = 0
+   oooOOOoO0O += len ( i1iIiiiiii1II )
+   if 92 - 92: o0Oo0O0Oo00oO / OoO0O0 + iIii1I11I1II1
+   if 47 - 47: iii11 * ii11i1 % iIii1I11I1II1 / o0Oo0O0Oo00oO
+   if oooOOOoO0O > 0 :
+    if 61 - 61: OoO0O0 + oo0OO - Ooo00oOo00o * OoIii111II
     i1iiIIiiI111 = xbmcgui . Dialog ( )
-    if i1iiIIiiI111 . yesno ( "Delete 4oD Cache Files" , str ( o0Ii11I1iIIi ) + " files found" , "Do you want to delete them?" ) :
-     if 97 - 97: OoO0O0 - Ooo0OO0oOO / OoOoOO00
+    if i1iiIIiiI111 . yesno ( "Delete 4oD Cache Files" , str ( oooOOOoO0O ) + " files found" , "Do you want to delete them?" ) :
+     if 87 - 87: OoOoOO00 % OoOoOO00
      for Ii1II1I11i1 in i1iIiiiiii1II :
       os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
      for I111iIi1 in IiiIiI1Ii1i :
       shutil . rmtree ( os . path . join ( OOOOO , I111iIi1 ) )
-      if 26 - 26: oo0OO + O0 * oo0OO . i1IIi
+      if 51 - 51: o0Oo0O0Oo00oO * iIii1I11I1II1 . oo0OO
    else :
     pass
-    if 50 - 50: iIii1I11I1II1 - Ooo0OO0oOO % oo0OO - Oo
-    if 52 - 52: OoIii111II + ii11i1 - ii11ii1ii * ii11i1 . iii11 + O0o0Ooo
- iI11II11I1 = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.iplayer/iplayer_http_cache' ) , '' )
- if os . path . exists ( iI11II11I1 ) == True :
-  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( iI11II11I1 ) :
-   o0Ii11I1iIIi = 0
-   o0Ii11I1iIIi += len ( i1iIiiiiii1II )
-   if 67 - 67: ii11ii1ii
-   if 3 - 3: O0o0Ooo . Ooo0OO0oOO % OoOoOO00 * OOOo0 % i1IIi * Ooo00oOo00o
-   if o0Ii11I1iIIi > 0 :
-    if 5 - 5: OoOoOO00 * i1IIi % ii11i1
+    if 25 - 25: iii11 - ii11i1 . Ooo0OO0oOO
+    if 57 - 57: OOooOOo + Oo * ii11ii1ii - o0Oo0O0Oo00oO % iIii1I11I1II1 - ii11i1
+ III1I11II11I = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.iplayer/iplayer_http_cache' ) , '' )
+ if os . path . exists ( III1I11II11I ) == True :
+  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( III1I11II11I ) :
+   oooOOOoO0O = 0
+   oooOOOoO0O += len ( i1iIiiiiii1II )
+   if 78 - 78: ii11ii1ii . O0o0Ooo . O0o0Ooo . Ooo0OO0oOO % oo0OO
+   if 26 - 26: o0Oo0O0Oo00oO + Ooo00oOo00o / I1IiI . OoOoOO00 * ii11i1
+   if oooOOOoO0O > 0 :
+    if 21 - 21: OOOo0 - OOOo0 + oo0OO % OOOo0 * OoIii111II
     i1iiIIiiI111 = xbmcgui . Dialog ( )
-    if i1iiIIiiI111 . yesno ( "Delete BBC iPlayer Cache Files" , str ( o0Ii11I1iIIi ) + " files found" , "Do you want to delete them?" ) :
-     if 55 - 55: OOOo0 + oo0OO
+    if i1iiIIiiI111 . yesno ( "Delete BBC iPlayer Cache Files" , str ( oooOOOoO0O ) + " files found" , "Do you want to delete them?" ) :
+     if 74 - 74: oo0OO / Ooo0OO0oOO . OOOo0 - OoooooooOO + OoOoOO00 + Ooo0OO0oOO
      for Ii1II1I11i1 in i1iIiiiiii1II :
       os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
      for I111iIi1 in IiiIiI1Ii1i :
       shutil . rmtree ( os . path . join ( OOOOO , I111iIi1 ) )
-      if 85 - 85: OoIii111II + oo0OO % oo0OO / Ooo0OO0oOO . OOOo0 - I1IiI
+      if 36 - 36: ii11i1 * OOOo0 * ii11ii1ii . Ooo0OO0oOO * ii11ii1ii
    else :
     pass
-    if 19 - 19: Ooo0OO0oOO / oo0OO + OoO0O0
-    if 76 - 76: iIii1I11I1II1 / O0o0Ooo - ii11ii1ii % OOooOOo % iii11 + OoooooooOO
-    if 10 - 10: Ooo00oOo00o * Ooo0OO0oOO / Oo - O0o0Ooo
- I1iIi1IiI1i = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/script.module.simple.downloader' ) , '' )
- if os . path . exists ( I1iIi1IiI1i ) == True :
-  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( I1iIi1IiI1i ) :
-   o0Ii11I1iIIi = 0
-   o0Ii11I1iIIi += len ( i1iIiiiiii1II )
-   if 50 - 50: i1IIi * OoIii111II / i11iIiiIii / i11iIiiIii / OoIii111II
-   if 84 - 84: ii11ii1ii - oo0OO + ii11ii1ii
-   if o0Ii11I1iIIi > 0 :
-    if 63 - 63: Ooo0OO0oOO * o0Oo0O0Oo00oO % OoOoOO00 % O0o0Ooo + OOOo0 * Oo
+    if 76 - 76: iii11 + O0 / OoO0O0 - Ooo00oOo00o
+    if 27 - 27: Oo - iIii1I11I1II1 * oo0OO * OoOoOO00 * ii11ii1ii
+    if 9 - 9: i11iIiiIii + iii11 - I1IiI / o0Oo0O0Oo00oO % i1IIi / OoIii111II
+ iiI1II1II111 = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/script.module.simple.downloader' ) , '' )
+ if os . path . exists ( iiI1II1II111 ) == True :
+  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( iiI1II1II111 ) :
+   oooOOOoO0O = 0
+   oooOOOoO0O += len ( i1iIiiiiii1II )
+   if 71 - 71: OoOoOO00 % O0o0Ooo + OOOo0 * o0Oo0O0Oo00oO + OoO0O0 . o0Oo0O0Oo00oO
+   if 25 - 25: o0Oo0O0Oo00oO . OOooOOo % OOOo0 + oo0OO
+   if oooOOOoO0O > 0 :
+    if 61 - 61: OoIii111II % o0Oo0O0Oo00oO - ii11ii1ii + OoIii111II . I1IiI
     i1iiIIiiI111 = xbmcgui . Dialog ( )
-    if i1iiIIiiI111 . yesno ( "Delete Simple Downloader Cache Files" , str ( o0Ii11I1iIIi ) + " files found" , "Do you want to delete them?" ) :
-     if 96 - 96: OoO0O0
+    if i1iiIIiiI111 . yesno ( "Delete Simple Downloader Cache Files" , str ( oooOOOoO0O ) + " files found" , "Do you want to delete them?" ) :
+     if 44 - 44: ii11ii1ii / O0 - OoO0O0 + iii11 . Ooo0OO0oOO . ii11ii1ii
      for Ii1II1I11i1 in i1iIiiiiii1II :
       os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
      for I111iIi1 in IiiIiI1Ii1i :
       shutil . rmtree ( os . path . join ( OOOOO , I111iIi1 ) )
-      if 99 - 99: iIii1I11I1II1 - o0Oo0O0Oo00oO
+      if 95 - 95: I1IiI % O0o0Ooo % i1IIi * OOooOOo + iii11
    else :
     pass
-    if 79 - 79: OOOo0 + OoIii111II % Ooo0OO0oOO % OoIii111II
-    if 56 - 56: ii11ii1ii + OoIii111II . Ooo00oOo00o + OoooooooOO * ii11ii1ii - O0
- I1iO00O000oOO0oO = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.itv/Images' ) , '' )
- if os . path . exists ( I1iO00O000oOO0oO ) == True :
-  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( I1iO00O000oOO0oO ) :
-   o0Ii11I1iIIi = 0
-   o0Ii11I1iIIi += len ( i1iIiiiiii1II )
-   if 88 - 88: OOooOOo . OOOo0 % OoIii111II . Oo % o0Oo0O0Oo00oO . OoIii111II
-   if 53 - 53: i1IIi % ii11i1 - OoooooooOO / I1IiI - iIii1I11I1II1
-   if o0Ii11I1iIIi > 0 :
-    if 9 - 9: O0o0Ooo - Ooo00oOo00o + iIii1I11I1II1 % O0 + Ooo0OO0oOO + OoO0O0
-    i1iiIIiiI111 = xbmcgui . Dialog ( )
-    if i1iiIIiiI111 . yesno ( "Delete ITV Cache Files" , str ( o0Ii11I1iIIi ) + " files found" , "Do you want to delete them?" ) :
-     if 50 - 50: i1IIi + o0Oo0O0Oo00oO
-     for Ii1II1I11i1 in i1iIiiiiii1II :
-      os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
-     for I111iIi1 in IiiIiI1Ii1i :
-      shutil . rmtree ( os . path . join ( OOOOO , I111iIi1 ) )
-      if 64 - 64: OOooOOo % OoIii111II . o0Oo0O0Oo00oO
-   else :
-    pass
-    if 6 - 6: o0Oo0O0Oo00oO / i11iIiiIii - Oo
-    if 3 - 3: OoO0O0 - OoooooooOO * OoooooooOO - OOOo0 / O0o0Ooo * ii11ii1ii
- O0oo0ooO00 = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.movies4me/cache' ) , '' )
- if os . path . exists ( I1iO00O000oOO0oO ) == True :
-  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( O0oo0ooO00 ) :
-   o0Ii11I1iIIi = 0
-   o0Ii11I1iIIi += len ( i1iIiiiiii1II )
-   if 81 - 81: OOOo0 / OoooooooOO
-   if 52 - 52: OoIii111II + O0o0Ooo * O0o0Ooo * Oo - iIii1I11I1II1 + ii11ii1ii
-   if o0Ii11I1iIIi > 0 :
-    if 34 - 34: oo0OO / Ooo00oOo00o / Oo
-    i1iiIIiiI111 = xbmcgui . Dialog ( )
-    if i1iiIIiiI111 . yesno ( "Delete Movies4me Cache Files" , str ( o0Ii11I1iIIi ) + " files found" , "Do you want to delete them?" ) :
-     if 92 - 92: O0o0Ooo % oo0OO % OOooOOo . OOOo0 - ii11ii1ii - OOooOOo
-     for Ii1II1I11i1 in i1iIiiiiii1II :
-      os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
-     for I111iIi1 in IiiIiI1Ii1i :
-      shutil . rmtree ( os . path . join ( OOOOO , I111iIi1 ) )
-      if 40 - 40: OOOo0 / OoooooooOO + Ooo00oOo00o * Ooo00oOo00o
-   else :
-    pass
-    if 9 - 9: iIii1I11I1II1
-    if 57 - 57: o0Oo0O0Oo00oO / ii11i1 % OOooOOo % i11iIiiIii
- o0OO0Oooo = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.phstreams/Cache' ) , '' )
- if os . path . exists ( I1iO00O000oOO0oO ) == True :
-  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( o0OO0Oooo ) :
-   o0Ii11I1iIIi = 0
-   o0Ii11I1iIIi += len ( i1iIiiiiii1II )
-   if 97 - 97: oo0OO
-   if 88 - 88: OoooooooOO - iii11 + O0 * OoO0O0 * Ooo0OO0oOO
-   if o0Ii11I1iIIi > 0 :
-    if 8 - 8: OoIii111II / i11iIiiIii
-    i1iiIIiiI111 = xbmcgui . Dialog ( )
-    if i1iiIIiiI111 . yesno ( "Delete Phoenix Cache Files" , str ( o0Ii11I1iIIi ) + " files found" , "Do you want to delete them?" ) :
-     if 93 - 93: O0o0Ooo % i11iIiiIii
-     for Ii1II1I11i1 in i1iIiiiiii1II :
-      os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
-     for I111iIi1 in IiiIiI1Ii1i :
-      shutil . rmtree ( os . path . join ( OOOOO , I111iIi1 ) )
-      if 25 - 25: o0Oo0O0Oo00oO % oo0OO * oo0OO + iIii1I11I1II1 . i1IIi
-   else :
-    pass
-    if 67 - 67: ii11ii1ii + OoIii111II * OoO0O0 / OoOoOO00 % Ooo00oOo00o % Ooo00oOo00o
-    if 28 - 28: I1IiI % OoIii111II - iii11 + iii11 + OoIii111II / iIii1I11I1II1
- oo0o = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.spotitube/cache' ) , '' )
- if os . path . exists ( I1iO00O000oOO0oO ) == True :
-  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( oo0o ) :
-   o0Ii11I1iIIi = 0
-   o0Ii11I1iIIi += len ( i1iIiiiiii1II )
-   if 69 - 69: OOooOOo + ii11ii1ii / iIii1I11I1II1 . OoO0O0 % ii11ii1ii * I1IiI
-   if 13 - 13: iIii1I11I1II1 + oo0OO / ii11i1 / i1IIi % Ooo00oOo00o - iIii1I11I1II1
-   if o0Ii11I1iIIi > 0 :
-    if 60 - 60: O0o0Ooo
-    i1iiIIiiI111 = xbmcgui . Dialog ( )
-    if i1iiIIiiI111 . yesno ( "Delete YouTube Music Cache Files" , str ( o0Ii11I1iIIi ) + " files found" , "Do you want to delete them?" ) :
-     if 77 - 77: OOOo0 / ii11ii1ii
-     for Ii1II1I11i1 in i1iIiiiiii1II :
-      os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
-     for I111iIi1 in IiiIiI1Ii1i :
-      shutil . rmtree ( os . path . join ( OOOOO , I111iIi1 ) )
-      if 95 - 95: O0o0Ooo * i1IIi + OoIii111II
-   else :
-    pass
-    if 40 - 40: OoOoOO00
-    if 7 - 7: iii11 / Ooo00oOo00o
- oOOo = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.supercartoons/cache' ) , '' )
- if os . path . exists ( I1iO00O000oOO0oO ) == True :
+    if 34 - 34: O0o0Ooo * OOooOOo . OOOo0 % i11iIiiIii
+    if 61 - 61: iIii1I11I1II1 + OoIii111II * Ooo0OO0oOO - i1IIi % OoIii111II
+ oOOo = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.itv/Images' ) , '' )
+ if os . path . exists ( oOOo ) == True :
   for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( oOOo ) :
-   o0Ii11I1iIIi = 0
-   o0Ii11I1iIIi += len ( i1iIiiiiii1II )
-   if 97 - 97: iii11
-   if 41 - 41: OoooooooOO - Oo * iIii1I11I1II1 . i1IIi
-   if o0Ii11I1iIIi > 0 :
-    if 39 - 39: ii11i1 % i1IIi . ii11ii1ii - O0
+   oooOOOoO0O = 0
+   oooOOOoO0O += len ( i1iIiiiiii1II )
+   if 9 - 9: O0o0Ooo - Ooo00oOo00o + iIii1I11I1II1 % O0 + Ooo0OO0oOO + OoO0O0
+   if 50 - 50: i1IIi + o0Oo0O0Oo00oO
+   if oooOOOoO0O > 0 :
+    if 64 - 64: OOooOOo % OoIii111II . o0Oo0O0Oo00oO
     i1iiIIiiI111 = xbmcgui . Dialog ( )
-    if i1iiIIiiI111 . yesno ( "Delete SuperCartoons Cache Files" , str ( o0Ii11I1iIIi ) + " files found" , "Do you want to delete them?" ) :
-     if 65 - 65: OoIii111II * OoIii111II / Ooo0OO0oOO + OoIii111II % o0Oo0O0Oo00oO + I1IiI
+    if i1iiIIiiI111 . yesno ( "Delete ITV Cache Files" , str ( oooOOOoO0O ) + " files found" , "Do you want to delete them?" ) :
+     if 6 - 6: o0Oo0O0Oo00oO / i11iIiiIii - Oo
      for Ii1II1I11i1 in i1iIiiiiii1II :
       os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
      for I111iIi1 in IiiIiI1Ii1i :
       shutil . rmtree ( os . path . join ( OOOOO , I111iIi1 ) )
-      if 92 - 92: OOooOOo
+      if 3 - 3: OoO0O0 - OoooooooOO * OoooooooOO - OOOo0 / O0o0Ooo * ii11ii1ii
    else :
     pass
-    if 37 - 37: OoIii111II
-    if 18 - 18: OoO0O0 * i11iIiiIii + iIii1I11I1II1 % Ooo0OO0oOO + i1IIi - Ooo00oOo00o
- oOO0OOOoO0ooo = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.tvonline.cc/cache' ) , '' )
- if os . path . exists ( I1iO00O000oOO0oO ) == True :
-  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( oOO0OOOoO0ooo ) :
-   o0Ii11I1iIIi = 0
-   o0Ii11I1iIIi += len ( i1iIiiiiii1II )
-   if 20 - 20: OoIii111II - OOooOOo * Ooo00oOo00o % i1IIi - iIii1I11I1II1 . iii11
-   if 31 - 31: OoIii111II % i1IIi . OoooooooOO - OOooOOo + OoooooooOO
-   if o0Ii11I1iIIi > 0 :
-    if 45 - 45: iii11 + Ooo0OO0oOO / OoooooooOO - ii11i1 + OoooooooOO
+    if 58 - 58: OoO0O0 % iIii1I11I1II1 / i11iIiiIii % OOooOOo . O0o0Ooo * oo0OO
+    if 32 - 32: OoooooooOO + OOooOOo
+ o0000OOOo = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.movies4me/cache' ) , '' )
+ if os . path . exists ( oOOo ) == True :
+  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( o0000OOOo ) :
+   oooOOOoO0O = 0
+   oooOOOoO0O += len ( i1iIiiiiii1II )
+   if 56 - 56: i1IIi + OoooooooOO % Ooo00oOo00o
+   if 36 - 36: oo0OO * Ooo0OO0oOO * O0 * iii11 - OOooOOo / ii11ii1ii
+   if oooOOOoO0O > 0 :
+    if 54 - 54: i1IIi - Ooo00oOo00o / OoooooooOO
     i1iiIIiiI111 = xbmcgui . Dialog ( )
-    if i1iiIIiiI111 . yesno ( "Delete TVonline Cache Files" , str ( o0Ii11I1iIIi ) + " files found" , "Do you want to delete them?" ) :
-     if 42 - 42: iIii1I11I1II1 * OOOo0 * O0o0Ooo
+    if i1iiIIiiI111 . yesno ( "Delete Movies4me Cache Files" , str ( oooOOOoO0O ) + " files found" , "Do you want to delete them?" ) :
+     if 95 - 95: O0 + iIii1I11I1II1 . ii11ii1ii
      for Ii1II1I11i1 in i1iIiiiiii1II :
       os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
      for I111iIi1 in IiiIiI1Ii1i :
       shutil . rmtree ( os . path . join ( OOOOO , I111iIi1 ) )
-      if 62 - 62: iii11 * O0 % OoO0O0 . OoO0O0 . OOOo0
+      if 61 - 61: ii11i1 * ii11i1
    else :
     pass
-    if 91 - 91: i1IIi . oo0OO
-    if 37 - 37: oo0OO - Ooo0OO0oOO + iIii1I11I1II1 / O0o0Ooo - Ooo00oOo00o . OOooOOo
- oO0000Oo = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.youtube/kodion' ) , '' )
- if os . path . exists ( I1iO00O000oOO0oO ) == True :
-  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( oO0000Oo ) :
-   o0Ii11I1iIIi = 0
-   o0Ii11I1iIIi += len ( i1iIiiiiii1II )
-   if 45 - 45: Oo . OoooooooOO + iii11 . O0o0Ooo % ii11ii1ii
-   if 19 - 19: O0o0Ooo * OoO0O0 - OoO0O0 * iIii1I11I1II1 . Oo / iIii1I11I1II1
-   if o0Ii11I1iIIi > 0 :
-    if 100 - 100: o0Oo0O0Oo00oO % Ooo0OO0oOO / O0 * ii11i1 - i11iIiiIii
+    if 70 - 70: O0o0Ooo . ii11ii1ii / OOooOOo * OoIii111II
+    if 74 - 74: OOOo0 . o0Oo0O0Oo00oO / oo0OO . OoO0O0
+ OO00I1iiiIi1i11i = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.phstreams/Cache' ) , '' )
+ if os . path . exists ( oOOo ) == True :
+  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( OO00I1iiiIi1i11i ) :
+   oooOOOoO0O = 0
+   oooOOOoO0O += len ( i1iIiiiiii1II )
+   if 25 - 25: o0Oo0O0Oo00oO % oo0OO * oo0OO + iIii1I11I1II1 . i1IIi
+   if 67 - 67: ii11ii1ii + OoIii111II * OoO0O0 / OoOoOO00 % Ooo00oOo00o % Ooo00oOo00o
+   if oooOOOoO0O > 0 :
+    if 28 - 28: I1IiI % OoIii111II - iii11 + iii11 + OoIii111II / iIii1I11I1II1
     i1iiIIiiI111 = xbmcgui . Dialog ( )
-    if i1iiIIiiI111 . yesno ( "Delete YouTube Cache Files" , str ( o0Ii11I1iIIi ) + " files found" , "Do you want to delete them?" ) :
-     if 90 - 90: OoO0O0 / OoOoOO00 / OOooOOo
+    if i1iiIIiiI111 . yesno ( "Delete Phoenix Cache Files" , str ( oooOOOoO0O ) + " files found" , "Do you want to delete them?" ) :
+     if 91 - 91: OOOo0 / OoOoOO00 * iii11
      for Ii1II1I11i1 in i1iIiiiiii1II :
       os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
      for I111iIi1 in IiiIiI1Ii1i :
       shutil . rmtree ( os . path . join ( OOOOO , I111iIi1 ) )
-      if 92 - 92: O0 * OOOo0 / Ooo00oOo00o
+      if 94 - 94: OoOoOO00 - iIii1I11I1II1 - iIii1I11I1II1
    else :
     pass
-    if 44 - 44: Ooo0OO0oOO
-    if 76 - 76: ii11ii1ii . o0Oo0O0Oo00oO . OoIii111II
-    if 74 - 74: Oo
- o0o00OO00OOo0 = xbmc . translatePath ( 'special://masterprofile/addon_data/plugin.video.genesis' )
+    if 83 - 83: ii11ii1ii * iIii1I11I1II1 + I1IiI * i1IIi . OoooooooOO % ii11i1
+    if 81 - 81: Ooo00oOo00o - iIii1I11I1II1
+ o0oooO0O00OoO = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.spotitube/cache' ) , '' )
+ if os . path . exists ( oOOo ) == True :
+  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( o0oooO0O00OoO ) :
+   oooOOOoO0O = 0
+   oooOOOoO0O += len ( i1iIiiiiii1II )
+   if 40 - 40: OoOoOO00
+   if 7 - 7: iii11 / Ooo00oOo00o
+   if oooOOOoO0O > 0 :
+    if 88 - 88: i1IIi
+    i1iiIIiiI111 = xbmcgui . Dialog ( )
+    if i1iiIIiiI111 . yesno ( "Delete YouTube Music Cache Files" , str ( oooOOOoO0O ) + " files found" , "Do you want to delete them?" ) :
+     if 53 - 53: o0Oo0O0Oo00oO . iii11 . OOooOOo + OoIii111II
+     for Ii1II1I11i1 in i1iIiiiiii1II :
+      os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
+     for I111iIi1 in IiiIiI1Ii1i :
+      shutil . rmtree ( os . path . join ( OOOOO , I111iIi1 ) )
+      if 17 - 17: iIii1I11I1II1 + i1IIi . ii11ii1ii + ii11i1 % i1IIi . OoIii111II
+   else :
+    pass
+    if 57 - 57: OoIii111II
+    if 92 - 92: OoOoOO00 - Ooo00oOo00o - iii11 % OOOo0 - I1IiI * O0o0Ooo
+ IiIi11 = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.supercartoons/cache' ) , '' )
+ if os . path . exists ( oOOo ) == True :
+  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( IiIi11 ) :
+   oooOOOoO0O = 0
+   oooOOOoO0O += len ( i1iIiiiiii1II )
+   if 89 - 89: oo0OO . I1IiI . Ooo0OO0oOO
+   if 55 - 55: oo0OO + Oo
+   if oooOOOoO0O > 0 :
+    if 95 - 95: Ooo0OO0oOO + Oo + Oo
+    i1iiIIiiI111 = xbmcgui . Dialog ( )
+    if i1iiIIiiI111 . yesno ( "Delete SuperCartoons Cache Files" , str ( oooOOOoO0O ) + " files found" , "Do you want to delete them?" ) :
+     if 33 - 33: i1IIi % OoooooooOO / OoooooooOO
+     for Ii1II1I11i1 in i1iIiiiiii1II :
+      os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
+     for I111iIi1 in IiiIiI1Ii1i :
+      shutil . rmtree ( os . path . join ( OOOOO , I111iIi1 ) )
+      if 88 - 88: O0o0Ooo - ii11i1 - OoIii111II + i1IIi
+   else :
+    pass
+    if 15 - 15: iii11
+    if 31 - 31: OoIii111II % i1IIi . OoooooooOO - OOooOOo + OoooooooOO
+ I1i1Ii = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.tvonline.cc/cache' ) , '' )
+ if os . path . exists ( oOOo ) == True :
+  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( I1i1Ii ) :
+   oooOOOoO0O = 0
+   oooOOOoO0O += len ( i1iIiiiiii1II )
+   if 41 - 41: Ooo00oOo00o / OoO0O0 + O0o0Ooo . O0o0Ooo / OoIii111II
+   if 74 - 74: ii11i1 % i11iIiiIii . O0 * OOOo0 * i1IIi * OoooooooOO
+   if oooOOOoO0O > 0 :
+    if 22 - 22: O0o0Ooo + oo0OO - Ooo0OO0oOO + iIii1I11I1II1 / O0o0Ooo - OoooooooOO
+    i1iiIIiiI111 = xbmcgui . Dialog ( )
+    if i1iiIIiiI111 . yesno ( "Delete TVonline Cache Files" , str ( oooOOOoO0O ) + " files found" , "Do you want to delete them?" ) :
+     if 42 - 42: OoooooooOO - I1IiI - iii11 * O0o0Ooo
+     for Ii1II1I11i1 in i1iIiiiiii1II :
+      os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
+     for I111iIi1 in IiiIiI1Ii1i :
+      shutil . rmtree ( os . path . join ( OOOOO , I111iIi1 ) )
+      if 98 - 98: Ooo00oOo00o . iIii1I11I1II1 % Oo + OoooooooOO
+   else :
+    pass
+    if 2 - 2: O0o0Ooo % OoooooooOO - o0Oo0O0Oo00oO * ii11ii1ii * OoO0O0
+    if 99 - 99: iIii1I11I1II1 . Oo / o0Oo0O0Oo00oO . iii11 % OOOo0 * Ooo0OO0oOO
+ o0o0Oo0oo = os . path . join ( xbmc . translatePath ( 'special://profile/addon_data/plugin.video.youtube/kodion' ) , '' )
+ if os . path . exists ( oOOo ) == True :
+  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( o0o0Oo0oo ) :
+   oooOOOoO0O = 0
+   oooOOOoO0O += len ( i1iIiiiiii1II )
+   if 53 - 53: O0o0Ooo + i1IIi . Ooo00oOo00o / i11iIiiIii + ii11i1 % I1IiI
+   if 9 - 9: o0Oo0O0Oo00oO . Ooo0OO0oOO - Oo . O0o0Ooo
+   if oooOOOoO0O > 0 :
+    if 39 - 39: iii11
+    i1iiIIiiI111 = xbmcgui . Dialog ( )
+    if i1iiIIiiI111 . yesno ( "Delete YouTube Cache Files" , str ( oooOOOoO0O ) + " files found" , "Do you want to delete them?" ) :
+     if 70 - 70: OoO0O0 % Ooo00oOo00o % OOOo0
+     for Ii1II1I11i1 in i1iIiiiiii1II :
+      os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
+     for I111iIi1 in IiiIiI1Ii1i :
+      shutil . rmtree ( os . path . join ( OOOOO , I111iIi1 ) )
+      if 95 - 95: I1IiI - O0o0Ooo / O0 * OOOo0 - OOooOOo
+   else :
+    pass
+    if 12 - 12: iIii1I11I1II1 % Oo . oo0OO . OoO0O0 % i11iIiiIii
+    if 2 - 2: OoIii111II * OoIii111II . I1IiI * ii11i1 * iIii1I11I1II1
+    if 13 - 13: Ooo0OO0oOO / O0 . i11iIiiIii * i1IIi % i11iIiiIii
+ iIi1Iii1 = xbmc . translatePath ( 'special://masterprofile/addon_data/plugin.video.genesis' )
  i1iiIIiiI111 = xbmcgui . Dialog ( )
  try :
   if i1iiIIiiI111 . yesno ( "Delete Genesis Cache Files" , "Do you want to delete cache" ) :
-   ooOo00ooO = os . path . join ( o0o00OO00OOo0 , "cache.db" )
-   os . unlink ( ooOo00ooO )
-   if 16 - 16: OoO0O0 % i11iIiiIii . OoO0O0 % OoooooooOO - OoIii111II
+   oooo = os . path . join ( iIi1Iii1 , "cache.db" )
+   os . unlink ( oooo )
+   if 15 - 15: iii11 * O0 % OOOo0 / o0Oo0O0Oo00oO
  except :
   pass
-  if 88 - 88: ii11i1 * iIii1I11I1II1 . Ooo0OO0oOO
+  if 17 - 17: OoIii111II - OoOoOO00 - oo0OO + Ooo0OO0oOO
  i1iiIIiiI111 = xbmcgui . Dialog ( )
  i1iiIIiiI111 . ok ( "GenieTv" , "                               Finished Deleting Cache " , "                          [COLOR gold]Brought To You By GenieTv[/COLOR]" )
- if 20 - 20: O0 . i11iIiiIii * i1IIi % O0 . OOOo0
- if 53 - 53: o0Oo0O0Oo00oO / OoooooooOO - OoOoOO00
- if 68 - 68: OoooooooOO . OoooooooOO . iIii1I11I1II1 / o0Oo0O0Oo00oO - Ooo0OO0oOO % O0
- if 19 - 19: OoooooooOO * OoIii111II
- if 60 - 60: OoOoOO00 - oo0OO + OOooOOo % iii11
- if 97 - 97: O0 % O0
- if 35 - 35: oo0OO - ii11i1 . i11iIiiIii % O0 % ii11ii1ii
- if 92 - 92: iii11 % OoOoOO00 . oo0OO
- if 46 - 46: I1IiI + OOOo0 % OoooooooOO * i11iIiiIii - Oo
-def i11I1Ii1Iiii1 ( url ) :
+ if 54 - 54: OoOoOO00 * O0 % OOOo0 . Ooo0OO0oOO
+ if 62 - 62: ii11i1 . i11iIiiIii % O0 % O0o0Ooo - Oo
+ if 69 - 69: OoOoOO00 . I1IiI * I1IiI % ii11i1 + OOOo0
+ if 100 - 100: i11iIiiIii - Oo
+ if 47 - 47: oo0OO * I1IiI * OoO0O0
+ if 46 - 46: ii11i1
+ if 42 - 42: iIii1I11I1II1
+ if 32 - 32: Oo - ii11i1 . OoooooooOO - OoooooooOO - Oo . iIii1I11I1II1
+ if 34 - 34: Oo
+def IiI1I1i1 ( url ) :
  print '###' + o0oOoO00o + ' - DELETING PACKAGES###'
- o0oooOoOoOo = xbmc . translatePath ( os . path . join ( 'special://home/addons/packages' , '' ) )
+ Iii11I = xbmc . translatePath ( os . path . join ( 'special://home/addons/packages' , '' ) )
  try :
-  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( o0oooOoOoOo ) :
-   o0Ii11I1iIIi = 0
-   o0Ii11I1iIIi += len ( i1iIiiiiii1II )
-   if 96 - 96: I1IiI / Ooo00oOo00o % OoooooooOO * o0Oo0O0Oo00oO
-   if 6 - 6: OOOo0 . OoOoOO00 + O0o0Ooo / Ooo00oOo00o % OOOo0 . OoooooooOO
-   if o0Ii11I1iIIi > 0 :
-    if 64 - 64: iIii1I11I1II1 + OoOoOO00 . oo0OO % Oo * o0Oo0O0Oo00oO
+  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( Iii11I ) :
+   oooOOOoO0O = 0
+   oooOOOoO0O += len ( i1iIiiiiii1II )
+   if 2 - 2: OoIii111II . iii11
+   if 43 - 43: iIii1I11I1II1
+   if oooOOOoO0O > 0 :
+    if 29 - 29: OoO0O0 % o0Oo0O0Oo00oO + Ooo00oOo00o . i1IIi + OOOo0
     i1iiIIiiI111 = xbmcgui . Dialog ( )
-    if i1iiIIiiI111 . yesno ( "Delete Package Cache Files" , str ( o0Ii11I1iIIi ) + " files found" , "Do you want to delete them?" ) :
-     if 7 - 7: i1IIi + i1IIi / OoO0O0
+    if i1iiIIiiI111 . yesno ( "Delete Package Cache Files" , str ( oooOOOoO0O ) + " files found" , "Do you want to delete them?" ) :
+     if 24 - 24: O0o0Ooo / ii11i1 * ii11ii1ii - OoooooooOO / OOOo0 . OoIii111II
      for Ii1II1I11i1 in i1iIiiiiii1II :
       os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
      for I111iIi1 in IiiIiI1Ii1i :
@@ -4277,29 +4258,29 @@ def i11I1Ii1Iiii1 ( url ) :
   i1iiIIiiI111 = xbmcgui . Dialog ( )
   i1iiIIiiI111 . ok ( o0oOoO00o , "Error Deleting Packages please visit Kodi Support Group, GenieTv on facebook" )
  return
- if 32 - 32: ii11i1 * ii11ii1ii - OoooooooOO / OOOo0 . o0Oo0O0Oo00oO - i1IIi
- if 60 - 60: I1IiI % I1IiI
- if 2 - 2: ii11i1 . O0 - OoIii111II + OoO0O0
- if 96 - 96: ii11i1 + ii11i1
- if 28 - 28: oo0OO
- if 6 - 6: OOOo0 - oo0OO
- if 49 - 49: OoOoOO00
- if 33 - 33: OOooOOo - OoIii111II % ii11ii1ii * Ooo0OO0oOO . OoooooooOO % ii11i1
- if 29 - 29: oo0OO + OoOoOO00 . i11iIiiIii . ii11i1 - O0
-def IIIOoo ( url ) :
+ if 98 - 98: i1IIi - oo0OO
+ if 49 - 49: OOooOOo . ii11i1 . OoIii111II
+ if 9 - 9: OoO0O0 - OoOoOO00 * Ooo00oOo00o
+ if 78 - 78: iIii1I11I1II1 / O0 * OoIii111II / oo0OO / I1IiI
+ if 15 - 15: o0Oo0O0Oo00oO / OoIii111II
+ if 54 - 54: o0Oo0O0Oo00oO - iIii1I11I1II1 - Ooo0OO0oOO % ii11i1 / OoOoOO00
+ if 80 - 80: i11iIiiIii % iIii1I11I1II1 / i11iIiiIii
+ if 66 - 66: I1IiI . iIii1I11I1II1 * ii11ii1ii - ii11i1 - iIii1I11I1II1
+ if 28 - 28: I1IiI % OoooooooOO
+def I1I ( url ) :
  print '###' + o0oOoO00o + ' - DELETING PACKAGES###'
- o0oooOoOoOo = xbmc . translatePath ( os . path . join ( 'special://home/addons/packages' , '' ) )
+ Iii11I = xbmc . translatePath ( os . path . join ( 'special://home/addons/packages' , '' ) )
  try :
-  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( o0oooOoOoOo ) :
-   o0Ii11I1iIIi = 0
-   o0Ii11I1iIIi += len ( i1iIiiiiii1II )
-   if 71 - 71: iIii1I11I1II1 . iIii1I11I1II1 * OoO0O0
-   if 56 - 56: Ooo0OO0oOO / OoIii111II - OoIii111II
-   if o0Ii11I1iIIi > 0 :
-    if 40 - 40: i11iIiiIii * OoOoOO00
+  for OOOOO , IiiIiI1Ii1i , i1iIiiiiii1II in os . walk ( Iii11I ) :
+   oooOOOoO0O = 0
+   oooOOOoO0O += len ( i1iIiiiiii1II )
+   if 37 - 37: ii11ii1ii % OoIii111II
+   if 65 - 65: oo0OO / OoOoOO00 . ii11ii1ii
+   if oooOOOoO0O > 0 :
+    if 57 - 57: Ooo0OO0oOO . O0 . OoooooooOO . O0o0Ooo - ii11i1 / o0Oo0O0Oo00oO
     i1iiIIiiI111 = xbmcgui . Dialog ( )
-    if i1iiIIiiI111 . yesno ( "Delete Package Cache Files" , str ( o0Ii11I1iIIi ) + " files found" , "Do you want to delete them?" ) :
-     if 57 - 57: O0 * iIii1I11I1II1 % O0 . OoooooooOO
+    if i1iiIIiiI111 . yesno ( "Delete Package Cache Files" , str ( oooOOOoO0O ) + " files found" , "Do you want to delete them?" ) :
+     if 34 - 34: I1IiI % OOooOOo - OoIii111II
      for Ii1II1I11i1 in i1iIiiiiii1II :
       os . unlink ( os . path . join ( OOOOO , Ii1II1I11i1 ) )
      for I111iIi1 in IiiIiI1Ii1i :
@@ -4315,62 +4296,62 @@ def IIIOoo ( url ) :
   i1iiIIiiI111 = xbmcgui . Dialog ( )
   i1iiIIiiI111 . ok ( o0oOoO00o , "Error Deleting Packages please visit Kodi Support Group, GenieTv on facebook" )
  return
- i1Io00OOOo ( url )
- if 53 - 53: ii11i1 / OOOo0 * ii11i1 + OOooOOo + OoIii111II - Oo
- if 16 - 16: Ooo00oOo00o % O0o0Ooo . i1IIi / ii11ii1ii - O0
- if 85 - 85: i1IIi . i1IIi
- if 16 - 16: OOOo0 - iii11 % ii11i1 . iii11 + ii11ii1ii % i11iIiiIii
- if 59 - 59: i11iIiiIii - Ooo0OO0oOO
- if 59 - 59: OoooooooOO * OOooOOo / O0o0Ooo
- if 75 - 75: OOooOOo - OoooooooOO
- if 21 - 21: OOOo0 + iIii1I11I1II1 / i11iIiiIii / OoIii111II
- if 66 - 66: OoooooooOO + oo0OO . OoO0O0 % i1IIi
-def O000OoOO0oO ( url , name ) :
+ ooOo0 ( url )
+ if 40 - 40: oo0OO
+ if 82 - 82: O0o0Ooo . i1IIi / OoIii111II
+ if 56 - 56: oo0OO
+ if 23 - 23: i1IIi
+ if 24 - 24: OoO0O0
+ if 51 - 51: iii11 % i11iIiiIii
+ if 77 - 77: iii11 % i11iIiiIii - ii11ii1ii
+ if 21 - 21: Ooo0OO0oOO . Oo - OoooooooOO * i1IIi
+ if 54 - 54: OoOoOO00 % OOooOOo - i1IIi . OOOo0 - OoOoOO00 / iIii1I11I1II1
+def iIIIii111 ( url , name ) :
  OO0O00oOo = xbmc . translatePath ( os . path . join ( 'special://home/userdata' , '' ) )
- iII1 = os . path . join ( OO0O00oOo , 'advancedsettings.xml' )
+ I1111IiII1 = os . path . join ( OO0O00oOo , 'advancedsettings.xml' )
  i1iiIIiiI111 = xbmcgui . Dialog ( )
- o00OO0 = os . path . join ( OO0O00oOo , 'advancedsettings.xml.bak' )
- if os . path . exists ( o00OO0 ) == False :
+ IiiII = os . path . join ( OO0O00oOo , 'advancedsettings.xml.bak' )
+ if os . path . exists ( IiiII ) == False :
   if i1iiIIiiI111 . yesno ( "Back Up Original" , 'Have You Backed Up Your Original?' , '' , "[B][COLOR red]     AS YOU CANNOT GO BACK !!![/B][/COLOR]" ) :
    print '###' + o0oOoO00o + ' - ADVANCED XML###'
    OO0O00oOo = xbmc . translatePath ( os . path . join ( 'special://home/userdata' , '' ) )
-   iII1 = os . path . join ( OO0O00oOo , 'advancedsettings.xml' )
+   I1111IiII1 = os . path . join ( OO0O00oOo , 'advancedsettings.xml' )
    try :
-    os . remove ( iII1 )
-    print '=== GenieTv - REMOVING    ' + str ( iII1 ) + '    ==='
+    os . remove ( I1111IiII1 )
+    print '=== GenieTv - REMOVING    ' + str ( I1111IiII1 ) + '    ==='
    except :
     pass
    oOooo0O0o = i1 . http_GET ( url ) . content
-   oOoooooOoO = open ( iII1 , "w" )
+   oOoooooOoO = open ( I1111IiII1 , "w" )
    oOoooooOoO . write ( oOooo0O0o )
    oOoooooOoO . close ( )
-   print '=== GenieTv - WRITING NEW    ' + str ( iII1 ) + '    ==='
+   print '=== GenieTv - WRITING NEW    ' + str ( I1111IiII1 ) + '    ==='
    i1iiIIiiI111 = xbmcgui . Dialog ( )
    i1iiIIiiI111 . ok ( o0oOoO00o , "       Done Adding new Advanced XML" )
  else :
   print '###' + o0oOoO00o + ' - ADVANCED XML###'
   OO0O00oOo = xbmc . translatePath ( os . path . join ( 'special://home/userdata' , '' ) )
-  iII1 = os . path . join ( OO0O00oOo , 'advancedsettings.xml' )
+  I1111IiII1 = os . path . join ( OO0O00oOo , 'advancedsettings.xml' )
   try :
-   os . remove ( iII1 )
-   print '=== GenieTv - REMOVING    ' + str ( iII1 ) + '    ==='
+   os . remove ( I1111IiII1 )
+   print '=== GenieTv - REMOVING    ' + str ( I1111IiII1 ) + '    ==='
   except :
    pass
   oOooo0O0o = i1 . http_GET ( url ) . content
-  oOoooooOoO = open ( iII1 , "w" )
+  oOoooooOoO = open ( I1111IiII1 , "w" )
   oOoooooOoO . write ( oOooo0O0o )
   oOoooooOoO . close ( )
-  print '=== GenieTv - WRITING NEW    ' + str ( iII1 ) + '    ==='
+  print '=== GenieTv - WRITING NEW    ' + str ( I1111IiII1 ) + '    ==='
   i1iiIIiiI111 = xbmcgui . Dialog ( )
   i1iiIIiiI111 . ok ( o0oOoO00o , "       Done Adding new Advanced XML" )
  return
- if 67 - 67: iIii1I11I1II1 . i11iIiiIii . i11iIiiIii . i11iIiiIii / Ooo0OO0oOO + o0Oo0O0Oo00oO
-def i11IiIiii ( url , name ) :
+ if 72 - 72: Oo + O0o0Ooo % ii11ii1ii + iii11 % O0o0Ooo
+def iiiiI11 ( url , name ) :
  print '###' + o0oOoO00o + ' - CHECK ADVANCE XML###'
  OO0O00oOo = xbmc . translatePath ( os . path . join ( 'special://home/userdata' , '' ) )
- iII1 = os . path . join ( OO0O00oOo , 'advancedsettings.xml' )
+ I1111IiII1 = os . path . join ( OO0O00oOo , 'advancedsettings.xml' )
  try :
-  oOoooooOoO = open ( iII1 ) . read ( )
+  oOoooooOoO = open ( I1111IiII1 ) . read ( )
   if 'zero' in oOoooooOoO :
    name = '0CACHE'
   elif 'tuxen' in oOoooooOoO :
@@ -4388,21 +4369,21 @@ def i11IiIiii ( url , name ) :
  i1iiIIiiI111 = xbmcgui . Dialog ( )
  i1iiIIiiI111 . ok ( o0oOoO00o , "[COLOR yellow]YOU HAVE[/COLOR] " + name + "[COLOR yellow] XML SETTINGS SETUP[/COLOR]" )
  return
- if 15 - 15: o0Oo0O0Oo00oO * iIii1I11I1II1 * OoIii111II
-def O0oo0O00ooOo ( url ) :
+ if 10 - 10: o0Oo0O0Oo00oO - Oo % OoOoOO00
+def ooi11iI1111ii1I ( url ) :
  print '###' + o0oOoO00o + ' - DELETING ADVANCE XML###'
  OO0O00oOo = xbmc . translatePath ( os . path . join ( 'special://home/userdata' , '' ) )
- iII1 = os . path . join ( OO0O00oOo , 'advancedsettings.xml' )
+ I1111IiII1 = os . path . join ( OO0O00oOo , 'advancedsettings.xml' )
  try :
-  os . remove ( iII1 )
+  os . remove ( I1111IiII1 )
   i1iiIIiiI111 = xbmcgui . Dialog ( )
-  print '=== GenieTv - DELETING    ' + str ( iII1 ) + '    ==='
+  print '=== GenieTv - DELETING    ' + str ( I1111IiII1 ) + '    ==='
   i1iiIIiiI111 . ok ( o0oOoO00o , "       Remove Advanced Settings Sucessfull" )
  except :
   i1iiIIiiI111 = xbmcgui . Dialog ( )
   i1iiIIiiI111 . ok ( o0oOoO00o , "       No Advanced Settings To Remove" )
  return
- if 70 - 70: Oo + i11iIiiIii
+ if 89 - 89: i11iIiiIii / O0 - i1IIi % Oo + i11iIiiIii
  if 44 - 44: i11iIiiIii / iii11 * o0Oo0O0Oo00oO
  if 88 - 88: i1IIi % iii11 / OoooooooOO * oo0OO % o0Oo0O0Oo00oO
  if 5 - 5: ii11ii1ii * ii11i1 % Ooo0OO0oOO % OoOoOO00
@@ -4431,12 +4412,12 @@ def i1ii11III1 ( url , name ) :
  if i1iiIIiiI111 . yesno ( "GenieTv" , '                                    Install Latest .ini File' ) :
   print '###' + o0oOoO00o + ' - CUSTOM FTV INI###'
   OO0O00oOo = xbmc . translatePath ( os . path . join ( 'special://masterprofile/addon_data/plugin.video.GenieTv' , '' ) )
-  iII1 = os . path . join ( OO0O00oOo , 'addons2.ini' )
+  I1111IiII1 = os . path . join ( OO0O00oOo , 'addons2.ini' )
   oOooo0O0o = i1 . http_GET ( url ) . content
-  oOoooooOoO = open ( iII1 , "w" )
+  oOoooooOoO = open ( I1111IiII1 , "w" )
   oOoooooOoO . write ( oOooo0O0o )
   oOoooooOoO . close ( )
-  print '=== GenieTv - WRITING NEW    ' + str ( iII1 ) + '    ==='
+  print '=== GenieTv - WRITING NEW    ' + str ( I1111IiII1 ) + '    ==='
   i1iiIIiiI111 = xbmcgui . Dialog ( )
   i1iiIIiiI111 . ok ( o0oOoO00o , "                               Done Adding New .ini File" )
  return
@@ -4446,12 +4427,12 @@ def iII111iiIII1I ( url , name ) :
  if i1iiIIiiI111 . yesno ( "GenieTv" , '                               Install Custom Settings' ) :
   print '###' + o0oOoO00o + ' - CUSTOM FTV SETTINGS###'
   OO0O00oOo = xbmc . translatePath ( os . path . join ( 'special://masterprofile/addon_data/plugin.video.GenieTv' , '' ) )
-  iII1 = os . path . join ( OO0O00oOo , 'settings.xml' )
+  I1111IiII1 = os . path . join ( OO0O00oOo , 'settings.xml' )
   oOooo0O0o = i1 . http_GET ( url ) . content
-  oOoooooOoO = open ( iII1 , "w" )
+  oOoooooOoO = open ( I1111IiII1 , "w" )
   oOoooooOoO . write ( oOooo0O0o )
   oOoooooOoO . close ( )
-  print '=== GenieTv - WRITING NEW    ' + str ( iII1 ) + '    ==='
+  print '=== GenieTv - WRITING NEW    ' + str ( I1111IiII1 ) + '    ==='
   i1iiIIiiI111 = xbmcgui . Dialog ( )
   i1iiIIiiI111 . ok ( o0oOoO00o , "                               Done Adding New Settings" )
  return
@@ -4459,12 +4440,12 @@ def iII111iiIII1I ( url , name ) :
  if 19 - 19: i1IIi - iIii1I11I1II1 . Ooo0OO0oOO
 def iiIIi1i111i ( ) :
  try :
-  iII = xbmc . translatePath ( os . path . join ( 'special://masterprofile/addon_data/plugin.video.GenieTv' , '' ) )
-  if os . path . exists ( iII ) == True :
+  iIIOoO = xbmc . translatePath ( os . path . join ( 'special://masterprofile/addon_data/plugin.video.GenieTv' , '' ) )
+  if os . path . exists ( iIIOoO ) == True :
    i1iiIIiiI111 = xbmcgui . Dialog ( )
    if i1iiIIiiI111 . yesno ( "GenieTv" , "                               Delete FTV Guide Database" ) :
-    OoOo0Oo00Oo = os . path . join ( iII , "source.db" )
-    os . unlink ( OoOo0Oo00Oo )
+    o0Oo00Oo = os . path . join ( iIIOoO , "source.db" )
+    os . unlink ( o0Oo00Oo )
   i1iiIIiiI111 . ok ( "GenieTv" , "                                     FTV Database Reset" )
  except :
   i1iiIIiiI111 = xbmcgui . Dialog ( )
@@ -4540,23 +4521,23 @@ OooOOO0O00 = base64 . decodestring ( 'L2dlbmllLnR4dA==' )
 ooo00OoOooooo = base64 . decodestring ( 'LmFyY2hpdGVjdHMueDEwaG9zdC5jb20vdGVzdC93aC50eHQ=' )
 Oo000 = base64 . decodestring ( 'aHR0cDovL2ZpeGVzLmFyY2hpdGVjdHMueDEwaG9zdC5jb20vZml4ZXMudHh0' )
 OoooooO0 = base64 . decodestring ( 'aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vYXBwcy9hcHBzLnhtbA==' )
-IIIIi1Iii1iIi = base64 . decodestring ( 'L2FkZG9ucy9uZXcudHh0' )
+III1IIiIi1 = base64 . decodestring ( 'L2FkZG9ucy9uZXcudHh0' )
 iIOOOO00 = base64 . decodestring ( 'aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vdm9kL3ZvZC5waHA=' )
-I1iII1II1I1ii = base64 . decodestring ( 'L2FkZG9ucy9pcHR2LnR4dA==' )
-IiI11II = base64 . decodestring ( 'L2FkZG9ucy92aWRlby50eHQ=' )
-O0oOo0o0OOoO0 = base64 . decodestring ( 'L2FkZG9ucy9zcG9ydHMudHh0' )
-IiiIi1IiiiI = base64 . decodestring ( 'L2FkZG9ucy9raWRzLnR4dA==' )
-ooOo = base64 . decodestring ( 'L2FkZG9ucy9tdXNpYy50eHQ=' )
-Iiii11 = base64 . decodestring ( 'L2FkZG9ucy9wcm9ncmFtcy50eHQ=' )
-O0oOoo00Oo0O = base64 . decodestring ( 'L2FkZG9ucy94eHgudHh0' )
-iiIII1i1 = base64 . decodestring ( 'L2FkZG9ucy9yZXBvLnR4dA==' )
+IiI1I11ii = base64 . decodestring ( 'L2FkZG9ucy9pcHR2LnR4dA==' )
+I11IiIi1iI1ii = base64 . decodestring ( 'L2FkZG9ucy92aWRlby50eHQ=' )
+i1iiIi1IiiiI = base64 . decodestring ( 'L2FkZG9ucy9zcG9ydHMudHh0' )
+ooOo = base64 . decodestring ( 'L2FkZG9ucy9raWRzLnR4dA==' )
+Iiii11 = base64 . decodestring ( 'L2FkZG9ucy9tdXNpYy50eHQ=' )
+O0oOoo00Oo0O = base64 . decodestring ( 'L2FkZG9ucy9wcm9ncmFtcy50eHQ=' )
+iiIII1i1 = base64 . decodestring ( 'L2FkZG9ucy94eHgudHh0' )
+II11IIiiIi1I = base64 . decodestring ( 'L2FkZG9ucy9yZXBvLnR4dA==' )
 iii1 = base64 . decodestring ( 'L2FkZG9ucy9wYWNrcy50eHQ=' )
 I11IIII1iI = base64 . decodestring ( 'L2FkZG9ucy9za2lucy50eHQ=' )
 iiIi = base64 . decodestring ( 'L2FkZG9ucy9hcnQudHh0' )
 oO0o0O0Ooo0o = base64 . decodestring ( 'L2FkZG9ucy9Ta2luc2dvdGhhbS50eHQ=' )
 oOO0OooOo = base64 . decodestring ( 'L2FkZG9ucy9Ta2luc2hlbGl4LnR4dA==' )
 O0Oo00 = base64 . decodestring ( 'L2FkZG9ucy9Ta2luc2lzZW5nYXJkLnR4dA==' )
-II11IIiiIi1I = base64 . decodestring ( 'L2FkZG9ucy9SU1MudHh0' )
+O00o0O0oo = base64 . decodestring ( 'L2FkZG9ucy9SU1MudHh0' )
 oO0O0oO0 = base64 . decodestring ( 'Q1VOVA==' )
 def ooOooo000oOO ( name , url , mode , iconimage , fanart , description , showcontext = True , allinfo = { } ) :
  o00OoO0oO00 = sys . argv [ 0 ] + "?url=" + urllib . quote_plus ( url ) + "&mode=" + str ( mode ) + "&name=" + urllib . quote_plus ( name ) + "&iconimage=" + urllib . quote_plus ( iconimage ) + "&fanart=" + urllib . quote_plus ( fanart ) + "&description=" + urllib . quote_plus ( description )
@@ -4565,14 +4546,14 @@ def ooOooo000oOO ( name , url , mode , iconimage , fanart , description , showco
  iiO0O0o0oO0O00 . setInfo ( type = "Video" , infoLabels = { "Title" : name , "Plot" : description } )
  iiO0O0o0oO0O00 . setProperty ( "Fanart_Image" , fanart )
  if showcontext :
-  OO00o0O0oOooO = [ ]
+  o0o0OOo0O = [ ]
   if showcontext == 'fav' :
-   OO00o0O0oOooO . append ( ( 'Remove from Genie TV Favorites' , 'XBMC.RunPlugin(%s?mode=10056&name=%s)'
+   o0o0OOo0O . append ( ( 'Remove from Genie TV Favorites' , 'XBMC.RunPlugin(%s?mode=10056&name=%s)'
  % ( sys . argv [ 0 ] , urllib . quote_plus ( name ) ) ) )
   if not name in OOO00 :
-   OO00o0O0oOooO . append ( ( 'Add to Genie TV Favorites' , 'XBMC.RunPlugin(%s?mode=10055&name=%s&url=%s&iconimage=%s&fanart=%s&fav_mode=%s)'
+   o0o0OOo0O . append ( ( 'Add to Genie TV Favorites' , 'XBMC.RunPlugin(%s?mode=10055&name=%s&url=%s&iconimage=%s&fanart=%s&fav_mode=%s)'
  % ( sys . argv [ 0 ] , urllib . quote_plus ( name ) , urllib . quote_plus ( url ) , urllib . quote_plus ( iconimage ) , urllib . quote_plus ( fanart ) , mode ) ) )
-  iiO0O0o0oO0O00 . addContextMenuItems ( OO00o0O0oOooO )
+  iiO0O0o0oO0O00 . addContextMenuItems ( o0o0OOo0O )
  iIi = xbmcplugin . addDirectoryItem ( handle = int ( sys . argv [ 1 ] ) , url = o00OoO0oO00 , listitem = iiO0O0o0oO0O00 , isFolder = True )
  return iIi
  if 37 - 37: Ooo00oOo00o - Oo
@@ -4667,13 +4648,13 @@ elif Ii1ii11IIIi == 5 :
  O0o0O0OO00o ( OO , iI1i11 , iI1i111I1Ii )
  if 88 - 88: ii11ii1ii * oo0OO + OoOoOO00
 elif Ii1ii11IIIi == 6 :
- i11I1Ii1Iiii1 ( iI1i11 )
+ IiI1I1i1 ( iI1i11 )
  if 62 - 62: OoooooooOO
 elif Ii1ii11IIIi == 7 :
- O000OoOO0oO ( iI1i11 , OO )
+ iIIIii111 ( iI1i11 , OO )
  if 33 - 33: O0 . i11iIiiIii % OOooOOo
 elif Ii1ii11IIIi == 8 :
- i11IiIiii ( iI1i11 , OO )
+ iiiiI11 ( iI1i11 , OO )
  if 50 - 50: o0Oo0O0Oo00oO
 elif Ii1ii11IIIi == 9 :
  FIXREPOSADDONS ( iI1i11 )
@@ -4682,16 +4663,16 @@ elif Ii1ii11IIIi == 10 :
  iI111i ( )
  if 83 - 83: i11iIiiIii - OOOo0 * i11iIiiIii
 elif Ii1ii11IIIi == 11 :
- O0oo0O00ooOo ( iI1i11 )
+ ooi11iI1111ii1I ( iI1i11 )
  if 59 - 59: oo0OO - OoooooooOO / o0Oo0O0Oo00oO + ii11ii1ii . OOooOOo - oo0OO
 elif Ii1ii11IIIi == 12 :
  OoO0000O ( )
  if 29 - 29: OoIii111II
 elif Ii1ii11IIIi == 13 :
- oOooooooO0o ( )
+ O0oOOo0 ( )
  if 26 - 26: O0 % iii11 - OoO0O0 . iii11
 elif Ii1ii11IIIi == 14 :
- i1Io00OOOo ( iI1i11 )
+ ooOo0 ( iI1i11 )
  if 70 - 70: OOooOOo + Ooo0OO0oOO / oo0OO + o0Oo0O0Oo00oO / OOOo0
 elif Ii1ii11IIIi == 15 :
  OO00 ( )
@@ -4721,34 +4702,34 @@ elif Ii1ii11IIIi == 20 :
  oOO ( iI1i11 )
  if 91 - 91: ii11i1 + Ooo0OO0oOO - Oo % I1IiI . oo0OO
 elif Ii1ii11IIIi == 22 :
- iI1i11i ( iI1i11 )
+ o0Oo ( iI1i11 )
  if 51 - 51: iii11 / Ooo0OO0oOO
 elif Ii1ii11IIIi == 23 :
- II1iIii11II1IIiI ( iI1i11 )
+ iIIi1II1 ( iI1i11 )
  if 51 - 51: o0Oo0O0Oo00oO * OoIii111II - O0o0Ooo + oo0OO
 elif Ii1ii11IIIi == 24 :
- oOoO0O00o ( iI1i11 )
+ OoO0o00oo0oO ( iI1i11 )
  if 46 - 46: OOooOOo - i11iIiiIii % Ooo00oOo00o / ii11i1 - I1IiI
 elif Ii1ii11IIIi == 25 :
- I11IiIi1iI1ii ( iI1i11 )
+ II11IOOooo00oo ( iI1i11 )
  if 88 - 88: OoIii111II * OOOo0 / Ooo00oOo00o - iii11 / i1IIi . O0o0Ooo
 elif Ii1ii11IIIi == 26 :
- oooOoO ( iI1i11 )
+ oOOo00ooO ( iI1i11 )
  if 26 - 26: i11iIiiIii - o0Oo0O0Oo00oO
 elif Ii1ii11IIIi == 27 :
- oOOo00ooO ( iI1i11 )
+ oOo0 ( iI1i11 )
  if 45 - 45: o0Oo0O0Oo00oO + OoOoOO00 % oo0OO
 elif Ii1ii11IIIi == 28 :
- oOo0 ( iI1i11 )
+ OoOOiI ( iI1i11 )
  if 55 - 55: o0Oo0O0Oo00oO - OoIii111II % OOOo0
 elif Ii1ii11IIIi == 29 :
- OoOOiI ( iI1i11 )
+ iIII1iIii ( iI1i11 )
  if 61 - 61: o0Oo0O0Oo00oO
 elif Ii1ii11IIIi == 30 :
  o0OooO0ooo0o ( iI1i11 )
  if 22 - 22: iIii1I11I1II1 / o0Oo0O0Oo00oO / OOOo0 - OOooOOo
 elif Ii1ii11IIIi == 31 :
- iIII1iIii ( iI1i11 )
+ IIiII1i1i ( iI1i11 )
  if 21 - 21: OoIii111II . i11iIiiIii * Ooo0OO0oOO . iii11 / iii11
 elif Ii1ii11IIIi == 32 :
  i1i1IIii1i1 ( )
@@ -4775,13 +4756,13 @@ elif Ii1ii11IIIi == 41 :
  oOoOooO0OOOoo ( i11iiiI )
  if 65 - 65: I1IiI . i11iIiiIii
 elif Ii1ii11IIIi == 39 :
- IIiII1i1i ( iI1i11 )
+ iIii111Ii ( iI1i11 )
  if 36 - 36: OoIii111II * oo0OO + OoO0O0 * oo0OO . ii11ii1ii - iIii1I11I1II1
 elif Ii1ii11IIIi == 45 :
  TEXTS ( )
  if 14 - 14: Ooo0OO0oOO * OoIii111II + i11iIiiIii
 elif Ii1ii11IIIi == 46 :
- O00o ( )
+ I11IIiI1IiI1 ( )
  if 84 - 84: oo0OO / OoOoOO00
 elif Ii1ii11IIIi == 47 :
  GEVID ( )
@@ -4796,11 +4777,11 @@ elif Ii1ii11IIIi == 222 :
  oOo0OOoO0 ( iI1i11 )
  if 42 - 42: OOooOOo
 elif Ii1ii11IIIi == 333 :
- IIiII ( iI1i11 )
+ I1ii1i11iI1 ( iI1i11 )
  if 8 - 8: i11iIiiIii / o0Oo0O0Oo00oO
  if 33 - 33: O0o0Ooo * OoO0O0 - O0 + OOOo0 / OoO0O0
 elif Ii1ii11IIIi == 1020 :
- O0oo ( )
+ I1iII ( )
  if 19 - 19: i1IIi % OoOoOO00
 elif Ii1ii11IIIi == 1021 :
  ANIMEEP ( )
@@ -4809,25 +4790,25 @@ elif Ii1ii11IIIi == 1022 :
  ANIMEPLAY ( iI1i11 )
  if 56 - 56: ii11i1 * i11iIiiIii
 elif Ii1ii11IIIi == 1001 :
- I1I11 ( )
+ o0000oOooo0oo ( )
  if 92 - 92: OoOoOO00 - O0 . O0o0Ooo
 elif Ii1ii11IIIi == 1005 :
- Ii11II1i1I ( )
+ Oo0OOOOOOO0oo ( )
  if 59 - 59: I1IiI
 elif Ii1ii11IIIi == 1007 :
- i1iIii1 ( iI1i11 )
+ II1Iiiii111i ( iI1i11 )
  if 47 - 47: OoOoOO00 - ii11ii1ii - ii11i1
 elif Ii1ii11IIIi == 1010 :
- i1IIi111iI ( iI1i11 )
+ IiIii11ii111 ( iI1i11 )
  if 9 - 9: ii11ii1ii - OoO0O0
 elif Ii1ii11IIIi == 1011 :
- IiIiII11i1 ( iI1i11 )
+ oOiiIIIII ( iI1i11 )
  if 64 - 64: i1IIi
 elif Ii1ii11IIIi == 1030 :
- Ii1I1iIiiI1 ( )
+ iiI1 ( )
  if 71 - 71: OoO0O0 * OOooOOo
 elif Ii1ii11IIIi == 1031 :
- o00i111iiIiiIiI ( iI1i11 , IIii1111 )
+ iii11i1 ( iI1i11 , IIii1111 )
  if 99 - 99: OOooOOo
 elif Ii1ii11IIIi == 1006 :
  Parse . ParseURL ( iI1i11 )
@@ -4839,13 +4820,13 @@ elif Ii1ii11IIIi == 2031 :
  Parse . apkParseURL ( iI1i11 )
  if 50 - 50: OoooooooOO + iIii1I11I1II1 / OoIii111II / iii11 . i11iIiiIii . o0Oo0O0Oo00oO
 elif Ii1ii11IIIi == 1002 :
- IIi ( iI1i11 )
+ I1Ii11i1ii1i ( iI1i11 )
  if 75 - 75: iIii1I11I1II1 % o0Oo0O0Oo00oO / iii11 - oo0OO % i11iIiiIii
 elif Ii1ii11IIIi == 1003 :
- OoO0000o ( iI1i11 , IIii1111 )
+ oOOoOoOO ( iI1i11 , IIii1111 )
  if 11 - 11: Ooo0OO0oOO . ii11i1
 elif Ii1ii11IIIi == 1004 :
- OOiii1IiiIiIIiI ( iI1i11 )
+ iII11 ( iI1i11 )
  if 87 - 87: iii11 + iii11
 elif Ii1ii11IIIi == 1008 :
  o0oOOoo0O ( )
@@ -4866,16 +4847,16 @@ elif Ii1ii11IIIi == 1015 :
  i1iiIIiII1 ( iI1i11 )
  if 97 - 97: Ooo00oOo00o + iIii1I11I1II1
 elif Ii1ii11IIIi == 1016 :
- i1iI1IIi ( iI1i11 )
+ i11i111 ( iI1i11 )
  if 79 - 79: o0Oo0O0Oo00oO + OoIii111II - OoOoOO00 . Oo
 elif Ii1ii11IIIi == 1023 :
  I11o0oO00oO0o0o0 ( )
  if 26 - 26: OoO0O0
 elif Ii1ii11IIIi == 1024 :
- o0III11IiI ( )
+ o0oo00O ( )
  if 52 - 52: O0 + o0Oo0O0Oo00oO
 elif Ii1ii11IIIi == 1025 :
- o0ooo ( iI1i11 )
+ IIIIII1iI1II ( iI1i11 )
  if 11 - 11: i1IIi / O0o0Ooo * ii11ii1ii * O0o0Ooo * o0Oo0O0Oo00oO - i11iIiiIii
 elif Ii1ii11IIIi == 4001 :
  OoOO0oo0o ( )
@@ -4919,10 +4900,10 @@ elif Ii1ii11IIIi == 3004 :
  o0oOoOo0 ( iI1i11 )
  if 73 - 73: ii11i1 % Ooo00oOo00o * iii11
 elif Ii1ii11IIIi == 404 :
- i1I1Iiii ( OO , iI1i11 , IIii1111 )
+ I11Iii11i11I1 ( OO , iI1i11 , IIii1111 )
  if 84 - 84: Oo
 elif Ii1ii11IIIi == 405 :
- i1iI11Ii1i ( iI1i11 )
+ OoOooOo00o ( iI1i11 )
  if 18 - 18: OoooooooOO
 elif Ii1ii11IIIi == 7030 :
  iiIiII1 ( )
@@ -5053,13 +5034,13 @@ elif Ii1ii11IIIi == 8046 :
 elif Ii1ii11IIIi == 8047 :
  OoooO0 ( iI1i11 )
 elif Ii1ii11IIIi == 8020 :
- Ii11iIiiI ( )
+ iIi11ii1 ( )
 elif Ii1ii11IIIi == 8021 :
- iiII ( iI1i11 )
+ iII ( iI1i11 )
 elif Ii1ii11IIIi == 8022 :
- iII1IiiIIIIii ( iI1i11 )
+ O0oo ( iI1i11 )
 elif Ii1ii11IIIi == 8023 :
- oOOO ( iI1i11 )
+ iIIi1OoOo0O00 ( iI1i11 )
 elif Ii1ii11IIIi == 8040 :
  iI1ii1Ii ( )
 elif Ii1ii11IIIi == 8041 :
@@ -5113,7 +5094,7 @@ elif Ii1ii11IIIi == 8088 :
 elif Ii1ii11IIIi == 9000 :
  o0iiiI1I1iIIIi1 ( )
 elif Ii1ii11IIIi == 1111 :
- ooOoOoo000O0O ( )
+ iII1i1 ( )
 elif Ii1ii11IIIi == 9001 :
  oOooOOo00ooO ( )
 elif Ii1ii11IIIi == 9002 :
@@ -5147,7 +5128,7 @@ elif Ii1ii11IIIi == 7086 :
 elif Ii1ii11IIIi == 7087 :
  ooooooo00oO0OO ( iI1i111I1Ii )
 elif Ii1ii11IIIi == 9666 :
- IIIOoo ( iI1i11 )
+ I1I ( iI1i11 )
 elif Ii1ii11IIIi == 10100 : o0o000Oo ( )
 elif Ii1ii11IIIi == 10105 : i1II11IiiiI ( iI1i11 )
 elif Ii1ii11IIIi == 10106 : iiI1iI ( iI1i11 )
@@ -5209,11 +5190,11 @@ elif Ii1ii11IIIi == 10046 : I11I1ii1i ( iI1i11 )
 elif Ii1ii11IIIi == 10047 : i1iIi1IIiIII1 ( iI1i11 )
 elif Ii1ii11IIIi == 10048 : O00O ( iI1i11 )
 elif Ii1ii11IIIi == 10049 : iiIi1iiI1I ( iI1i11 )
-elif Ii1ii11IIIi == 10050 : oO0o000oOO ( )
-elif Ii1ii11IIIi == 10051 : OoO00oo0 ( )
-elif Ii1ii11IIIi == 10052 : iIIiI ( )
+elif Ii1ii11IIIi == 10050 : O0Ooo0o ( )
+elif Ii1ii11IIIi == 10051 : OOoOoooOOO0 ( )
+elif Ii1ii11IIIi == 10052 : O00O0O0OO00oo ( )
 elif Ii1ii11IIIi == 10053 : Addon ( iI1i11 )
-elif Ii1ii11IIIi == 10054 : IIi1i1ii11I1 ( iI1i11 , OO )
+elif Ii1ii11IIIi == 10054 : Iii1IIII1Iii ( iI1i11 , OO )
 elif Ii1ii11IIIi == 10055 :
  i1II1i ( "addFavorite" )
  try :
