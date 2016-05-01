@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.GenieTv" name="[COLORgreen]GenieTv[/COLOR]" version="2.7.8" provider-name="GenieTv/Origin">
+<addon id="plugin.video.GenieTv" name="[COLORgreen]GenieTv[/COLOR]" version="2.7.9" provider-name="GenieTv/Origin">
   <requires>
   	<import addon="script.module.beautifulsoup" version="3.2.1"/>
 	<import addon="script.module.beautifulsoup4" />
@@ -24,14 +24,14 @@
   </extension>
 </addon>
 
-    <addon id="repository.GenieTv" name="GenieTv Repo" version="0.1.0" provider-name="JayBox">
+    <addon id="repository.GenieTv" name="GenieTv Repo" version="0.1.3" provider-name="JayBox">
         <requires>
             <import addon="xbmc.addon" version="12.0.0"/>
         </requires>
         <extension point="xbmc.addon.repository" name="GenieTv Repo">
-            <info compressed="false">http://raw.github.com/GenieTv/GenieTv/master/_repo/addons.xml</info>
-            <checksum>http://raw.github.com/GenieTv/GenieTv/master/_repo/addons.xml.md5</checksum>
-            <datadir zip="true">http://raw.github.com/GenieTv/GenieTv/master/_repo/</datadir>
+            <info compressed="false">http://raw.githubusercontent.com/GenieTv/Genie_Tv/master/_repo/addons.xml</info>
+            <checksum>http://raw.githubusercontent.com/GenieTv/Genie_Tv/master/_repo/addons.xml.md5</checksum>
+            <datadir zip="true">http://raw.githubusercontent.com/GenieTv/Genie_Tv/master/_repo/</datadir>
             <hashes>false</hashes>
         </extension>
         <extension point="xbmc.addon.metadata">
