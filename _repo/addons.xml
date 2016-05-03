@@ -73,4 +73,23 @@
 		<description lang="en">Resolve common video host URL's to be playable in XBMC/Kodi, simplify addon development of video plugins requiring multi video hosts.</description>
 	</extension>
 </addon>
+
+<addon id="service.xbmc.cleanse"
+       name="Cleanse"
+      version="0.0.1"
+      provider-name="Origin">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0"/>
+    </requires>
+    <extension point="xbmc.service" library="service.py" start="login"/>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Just Ignore me</summary>
+        <platform>all</platform>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <forum>http://schooloflife.com</forum>
+        <website>http://byebye.com</website>
+        <email></email>
+        <source></source>
+    </extension>
+</addon>
 </addons>
