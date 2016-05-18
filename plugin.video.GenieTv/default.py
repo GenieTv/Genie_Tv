@@ -56,7 +56,7 @@ def o0OO00 ( i , t1 , t2 = [ ] ) :
  if 40 - 40: ooOoO0O00 * IIiIiII11i
  if 51 - 51: oOo0O0Ooo * I1ii11iIi11i
  if 48 - 48: oO0o / OOooOOo / I11i / Ii1I
-IiiIII111iI = "2.8.4"
+IiiIII111iI = "2.8.5"
 IiII = xbmc . translatePath ( 'special://home/addons/repository.GenieTv' )
 iI1Ii11111iIi = xbmc . translatePath ( 'special://home/addons/' )
 i1i1II = xbmc . translatePath ( 'special://home/addonsbroke/' )
@@ -1064,10 +1064,10 @@ def OoOo0OOOoOo ( url ) :
 def I11IIIiIi11 ( url ) :
  O000oo0O = iiI111I1iIiI ( url )
  url = url
- Ii1i = re . compile ( '<li><a href="(.+?)"> (.+?)</a></li>' ) . findall ( O000oo0O )
+ Ii1i = re . compile ( '<a href="(.+?)">(.+?)</a>' ) . findall ( O000oo0O )
  for ooo0O0o00O , ooo in Ii1i :
   if 'png' in ooo :
-   ooOOoooooo ( 'image' , '' , '' , url + ooo0O0o00O , url + '/' + ooo0O0o00O , '' )
+   ooOOoooooo ( 'image' , '' , '' , url + '/' + ooo0O0o00O , url + '/' + ooo0O0o00O , '' )
  iiO0o0oOOOoOo ( 'movies' , 'MAIN' )
  if 39 - 39: Ii11Ii1I % o0o00Oo0O % OOooOOo . ooOoO0O00
 def oOo00OooO0oO ( name , url , description ) :
