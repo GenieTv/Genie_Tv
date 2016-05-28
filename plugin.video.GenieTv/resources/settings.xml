@@ -56,8 +56,8 @@
         <setting id="WCO" type="bool" label="WCO" default="true" visible="gt(0,-29)"/>
     </category>	
     <category label="Playlist Loader">
-		<setting label="Local M3u" type="file" id="LocalM3u" value="path_to_files"/>
-		<setting id="Remote" type="text" label="M3u Url =" default="Enter Url Here" visible="true"/>
+		<setting label="Local M3u" type="file" id="LocalM3u" value="path_to_files" visible="true"/>
+		<setting id="Remote" type="text" label="M3u Url =" default="" visible="true"/>
     </category>	
 	<category label="Auto-View">
 		<setting id="auto-view" type="bool" label="Enable Auto View" default="true"/>
