@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
 	<category label="GtV Login">
-		<setting id="User" type="text" label="[COLORgreen]GenieTv User =[/COLOR]" default="insert_username" visible="true"/>
-		<setting id="Pass" type="text" label="[COLORgreen]GenieTv Pass =[/COLOR]" default="insert_password" visible="true"/>
-		<setting id="AdultPass" type="text" label="[COLORgreen]GenieTv AdultPass =[/COLOR]" default="insert_adultpass" visible="true"/>
+		<setting id="TEXTCOL" type="text" label="[COLORsteelblue]Text Color[/COLOR]" default="steelblue" visible="true"/>
+		<setting id="User" type="text" label="[COLORsteelblue]GenieTv User =[/COLOR]" default="insert_username" visible="true"/>
+		<setting id="Pass" type="text" label="[COLORsteelblue]GenieTv Pass =[/COLOR]" default="insert_password" visible="true"/>
+		<setting id="AdultPass" type="text" label="[COLORsteelblue]GenieTv AdultPass =[/COLOR]" default="insert_adultpass" visible="true"/>
 	    <setting id="zip" type="folder"    label="Set Build Backup Storage Location Here"      default=""/>
     </category>	
 	<category label="Restore Build">
