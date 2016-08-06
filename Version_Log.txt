@@ -1,2 +1,2 @@
-GENIE TV ADDON - Version = "3.0.3"
+GENIE TV ADDON - Version = "3.0.4"
 GENIE TV REPO - Version = "0.1.3"
