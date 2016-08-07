@@ -24,7 +24,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.gtv" name="[COLORgreen]GTV[/COLOR]" version="0.0.1" provider-name="GenieTv/Origin">
+<addon id="plugin.video.gtv" name="[COLORsteelblue]GTV[/COLOR]" version="0.0.2" provider-name="GenieTv/Origin">
   <requires>
     <import addon="xbmc.python" version="2.19.0"/>
     <import addon="script.module.urlresolver" version="3.0.0"/>
@@ -37,7 +37,7 @@
   </extension>
   <extension point="xbmc.service" library="service.py" start="login" />
   <extension point="xbmc.addon.metadata">
-    <summary lang="en">GenieTv Kodi's largest support tool. [CR]  Brought to you by the Architects@Work</summary>
+    <summary lang="en">GenieTv Kodi's largest support tool. [CR]  Brought to you by GenieTv</summary>
     <description lang="en">GenieTv The Ultimate Kodi Utility, This All In One Addon Has Been Created To Service All Kodi Needs And Hopefully In The Future, To Brings Devs And Streamers Alike A Platform And Home To host Their Content.</description>
 	<disclaimer lang="en">The author neither hosts or stores any content, the author has no affiliation with content hosts</disclaimer>
     <platform>all</platform>
