@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.G-Tv_ULTIMATE" name="G-Tv ULTIMATE" version="0.0.3" provider-name="Origin/GenieTv">
+<addon id="plugin.video.G-Tv_ULTIMATE" name="G-Tv ULTIMATE" version="0.0.4" provider-name="Origin/GenieTv">
   <requires>
   	<import addon="script.module.beautifulsoup" version="3.2.1"/>
 	<import addon="script.module.beautifulsoup4" />

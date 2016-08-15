@@ -45,7 +45,7 @@ oOOoo00O0O = xbmc . translatePath ( 'special://home/' )
 i1111 = ( o00 ( 'aHR0cDovL2dlbmlldHYuY28udWsvcmVkby8=' ) )
 i11 = xbmc . translatePath ( os . path . join ( 'special://home/addons/' + IiiIII111iI , 'icon.png' ) )
 I11 = i1111 + 'GenieArt/NEW/'
-Oo0o0000o0o0 = "0.0.3"
+Oo0o0000o0o0 = "0.0.4"
 oOo0oooo00o = xbmc . translatePath ( 'special://home/userdata/addon_data/plugin.video.G-Tv_ULTIMATE' )
 oO0o0o0ooO0oO = xbmc . translatePath ( os . path . join ( 'special://home/addons/plugin.video.G-Tv_ULTIMATE/imports/tvGuide/ResetDatabase.py' ) )
 oo0o0O00 = xbmc . translatePath ( 'special://thumbnails' ) ;
@@ -65,10 +65,9 @@ iiI1IiI = xbmcgui . Dialog ( )
 if 13 - 13: II . iii1I1 . iI % o0O00oooo
 def O00o ( ) :
  O00 ( )
- i11I1 ( '[COLORsteelblue]PLEASE LINK CHANNELS TO GUIDE[/COLOR]' , '' , 11 , I11 + 'TvGuide.png' , i1iiIIiiI111 , '' )
- Ii11Ii11I ( 'Tv Guide' , '' , 11 , I11 + 'TvGuide.png' , i1iiIIiiI111 , '' )
- Ii11Ii11I ( 'Link Channels to Guide' , '' , 13 , I11 + 'linkchannels.png' , i1iiIIiiI111 , '' )
- i11I1 ( 'Stream Lists' , '' , 16 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
+ i11I1 ( '[COLORsteelblue]PLEASE LINK CHANNELS TO GUIDE[/COLOR]' , '' , 13 , I11 + 'linkchannels.png' , i1iiIIiiI111 , '' )
+ i11I1 ( 'Tv Guide' , '' , 11 , I11 + 'TvGuide.png' , i1iiIIiiI111 , '' )
+ Ii11Ii11I ( 'Stream Lists' , '' , 16 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
  if 43 - 43: I1IiiI - II * iIii1I11I1II1
  if 97 - 97: I11i % I11i + II111iiii * II
 def O00 ( ) :
@@ -86,17 +85,17 @@ def O00 ( ) :
     if 26 - 26: OoooooooOO
 def IiiI11Iiiii ( ) :
  O00 ( )
- i11I1 ( 'Live Events' , '' , 17 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
- i11I1 ( 'Full List' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
- i11I1 ( 'VOD Latest' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
- i11I1 ( 'Entertainment' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
- i11I1 ( 'Factual' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
- i11I1 ( 'Movie Channels' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
- i11I1 ( 'Kids' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
- i11I1 ( 'Music' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
- i11I1 ( 'UK Sports' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
- i11I1 ( 'International Sports' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
- i11I1 ( 'World' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
+ Ii11Ii11I ( 'Live Events' , '' , 17 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
+ Ii11Ii11I ( 'Full List' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
+ Ii11Ii11I ( 'VOD Latest' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
+ Ii11Ii11I ( 'Entertainment' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
+ Ii11Ii11I ( 'Factual' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
+ Ii11Ii11I ( 'Movie Channels' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
+ Ii11Ii11I ( 'Kids' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
+ Ii11Ii11I ( 'Music' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
+ Ii11Ii11I ( 'UK Sports' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
+ Ii11Ii11I ( 'International Sports' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
+ Ii11Ii11I ( 'World' , '' , 14 , I11 + 'UnltimateList.png' , i1iiIIiiI111 , '' )
  if 18 - 18: o0oOOo0O0Ooo
  if 28 - 28: OOooOOo - iii1I1 . iii1I1 + OoOoOO00 - OoooooooOO + O0
 def oOoOooOo0o0 ( name ) :
@@ -105,9 +104,9 @@ def oOoOooOo0o0 ( name ) :
  iIi1ii1I1 = re . compile ( '#EXTINF:-1 tvg-name="(.+?)" tvg-logo="(.+?)" group-title="Live Events"",.+?\n(.+?)\n' ) . findall ( OOO00 )
  for name , O000OO0 , I11iii1Ii in iIi1ii1I1 :
   I11iii1Ii = ( I11iii1Ii ) . replace ( 'replace_user' , Oo0oO0ooo ) . replace ( 'replace_pass' , o0oOoO00o )
-  Ii11Ii11I ( ( '' + name + '' ) . replace ( '_' , ' ' ) , ( I11iii1Ii ) . strip ( ) , 15 , O000OO0 , O000OO0 , '' )
+  i11I1 ( ( '' + name + '' ) . replace ( '_' , ' ' ) , ( I11iii1Ii ) . strip ( ) , 15 , O000OO0 , O000OO0 , '' )
  else :
-  Ii11Ii11I ( '[COLORred]Streams will appear here for live events when available[/COLOR]' , '' , 15 , '' , '' , '' )
+  i11I1 ( '[COLORred]Streams will appear here for live events when available[/COLOR]' , '' , 15 , '' , '' , '' )
   if 13 - 13: iI % OoOoOO00 - i11iIiiIii . I1IiiI + II111iiii
 def II111ii1II1i ( ) :
  iiI1IiI . ok ( '[COLOR=white]ReCreate Addons.ini[/COLOR]' , 'If it doesnt work ensure login details are correct and retry' , '' , 'This will allow access to streams in guide without linking to favourites' )
@@ -123,13 +122,13 @@ def OOOoO0O0o ( name ) :
  for name , O000OO0 , O0o0Ooo , I11iii1Ii in iIi1ii1I1 :
   if OOOO == 'Full List' :
    I11iii1Ii = ( I11iii1Ii ) . replace ( 'replace_user' , Oo0oO0ooo ) . replace ( 'replace_pass' , o0oOoO00o )
-   Ii11Ii11I ( ( '' + name + '' ) . replace ( '_' , ' ' ) , ( I11iii1Ii ) . strip ( ) , 15 , O000OO0 , O000OO0 , '' )
+   i11I1 ( ( '' + name + '' ) . replace ( '_' , ' ' ) , ( I11iii1Ii ) . strip ( ) , 15 , O000OO0 , O000OO0 , '' )
   else :
    OOOO = ( OOOO ) . replace ( 'World' , 'القنوات العربية' )
    if OOOO in O0o0Ooo :
     I11iii1Ii = ( I11iii1Ii ) . replace ( 'replace_user' , Oo0oO0ooo ) . replace ( 'replace_pass' , o0oOoO00o )
     print I11iii1Ii + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
-    Ii11Ii11I ( ( '' + name + '' ) . replace ( '_' , ' ' ) , ( I11iii1Ii ) . strip ( ) , 15 , O000OO0 , O000OO0 , '' )
+    i11I1 ( ( '' + name + '' ) . replace ( '_' , ' ' ) , ( I11iii1Ii ) . strip ( ) , 15 , O000OO0 , O000OO0 , '' )
    else :
     pass
 def O00iI1Ii11iII1 ( ) :
@@ -481,7 +480,7 @@ def IIIi1I1IIii1II ( ) :
  return True
  if 5 - 5: o0oOOo0O0Ooo * o0O00oooo + OoOoOO00 . OOooOOo + OoOoOO00
  if 91 - 91: O0
-def i11I1 ( name , url , mode , iconimage , fanart , description ) :
+def Ii11Ii11I ( name , url , mode , iconimage , fanart , description ) :
  if 61 - 61: II111iiii
  O0OOO = sys . argv [ 0 ] + "?url=" + urllib . quote_plus ( url ) + "&mode=" + str ( mode ) + "&name=" + urllib . quote_plus ( name ) + "&iconimage=" + urllib . quote_plus ( iconimage ) + "&fanart=" + urllib . quote_plus ( fanart ) + "&description=" + urllib . quote_plus ( description )
  II11iIiIIIiI = True
@@ -491,7 +490,7 @@ def i11I1 ( name , url , mode , iconimage , fanart , description ) :
  II11iIiIIIiI = xbmcplugin . addDirectoryItem ( handle = int ( sys . argv [ 1 ] ) , url = O0OOO , listitem = o0o , isFolder = True )
  return II11iIiIIIiI
  if 84 - 84: O0
-def Ii11Ii11I ( name , url , mode , iconimage , fanart , description ) :
+def i11I1 ( name , url , mode , iconimage , fanart , description ) :
  if 74 - 74: I1ii11iIi11i - I1IiiI - Oo0Ooo . Ii1I - iii1I1
  O0OOO = sys . argv [ 0 ] + "?url=" + urllib . quote_plus ( url ) + "&mode=" + str ( mode ) + "&name=" + urllib . quote_plus ( name ) + "&iconimage=" + urllib . quote_plus ( iconimage ) + "&fanart=" + urllib . quote_plus ( fanart ) + "&description=" + urllib . quote_plus ( description )
  II11iIiIIIiI = True
