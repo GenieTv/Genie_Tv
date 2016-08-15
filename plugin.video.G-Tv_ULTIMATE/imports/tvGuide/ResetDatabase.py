@@ -2,7 +2,7 @@
 #
 # Copyright (C) 2014 Sean Poyser and Richard Dean (write2dixie@gmail.com)
 #
-#      Modified for Xhoans Guide (09/2014 onwards)
+#      Modified for GTV Guide (09/2014 onwards)
 #      by Thomas Geppert [bluezed] - bluezed.apps@gmail.com
 #
 # This Program is free software; you can redistribute it and/or modify
@@ -59,8 +59,8 @@ def delete_file(filename):
 if __name__ == '__main__':
     if deleteDB():
         d = xbmcgui.Dialog()
-        d.ok('Xhoans Guide', 'The database has been successfully deleted.', 'It will be re-created next time you start the guide')
+        d.ok('GTV Guide', 'The database has been successfully deleted.', 'It will be re-created next time you start the guide')
     else:
         d = xbmcgui.Dialog()
-        d.ok('Xhoans Guide', 'Failed to delete database.', 'Database may be locked,', 'please restart XBMC and try again')
+        d.ok('GTV Guide', 'Failed to delete database.', 'Database may be locked,', 'please restart XBMC and try again')
 

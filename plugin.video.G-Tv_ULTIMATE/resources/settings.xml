@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
 	<category label="Login">
-		<setting id="User" type="text" label="[COLORpurple]GenieTv User =[/COLOR]" default="insert_username" visible="true"/>
-		<setting id="Pass" type="text" label="[COLORpurple]GenieTv Pass =[/COLOR]" default="insert_password" visible="true"/>
+		<setting id="User" type="text" label="[COLORsteelblue]GenieTv User =[/COLOR]" default="insert_username" visible="true"/>
+		<setting id="Pass" type="text" label="[COLORsteelblue]GenieTv Pass =[/COLOR]" default="insert_password" visible="true"/>
     </category>	
 	<category label="Auto-View">
 		<setting id="auto-view" type="bool" label="Enable Auto View" default="true"/>
