@@ -163,7 +163,7 @@ msgid "URL"
 msgstr ""
 
 msgctxt "#30126"
-msgid "GTV (All)"
+msgid "GTV (ULTIMATE)"
 msgstr ""
 
 msgctxt "#30127"

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.video.G-Tv_ULTIMATE" name="G-Tv ULTIMATE" version="0.0.4" provider-name="Origin/GenieTv">
+<addon id="plugin.video.G-Tv_ULTIMATE" name="G-Tv ULTIMATE" version="0.0.5" provider-name="Origin/GenieTv">
   <requires>
   	<import addon="script.module.beautifulsoup" version="3.2.1"/>
 	<import addon="script.module.beautifulsoup4" />
@@ -24,7 +24,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.GenieTv" name="[COLORsteelblue]GenieTv[/COLOR]" version="3.0.5" provider-name="GenieTv/Origin">
+<addon id="plugin.video.GenieTv" name="[COLORsteelblue]GenieTv[/COLOR]" version="3.0.6" provider-name="GenieTv/Origin">
   <requires>
   	<import addon="script.module.beautifulsoup" version="3.2.1"/>
 	<import addon="script.module.beautifulsoup4" />
@@ -48,7 +48,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.gtv" name="[COLORsteelblue]GTV[/COLOR]" version="0.0.2" provider-name="GenieTv/Origin">
+<addon id="plugin.video.gtv" name="[COLORsteelblue]GTV[/COLOR]" version="0.0.3" provider-name="GenieTv/Origin">
   <requires>
     <import addon="xbmc.python" version="2.19.0"/>
     <import addon="script.module.urlresolver" version="3.0.0"/>
