@@ -1,2 +1,0 @@
-string="HomeMusicButton1,plugin.program.SpeedTester.net
-"

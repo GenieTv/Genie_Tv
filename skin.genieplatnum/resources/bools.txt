@@ -1,3 +1,0 @@
-bool="HomeMenuNoWeatherButton,true"
-bool="HomeMenuMusicButton,true"
-bool="HomeMenuNoSystemButton,true"
