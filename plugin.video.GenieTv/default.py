@@ -57,7 +57,7 @@ def o0OO00 ( i , t1 , t2 = [ ] ) :
  if 40 - 40: ooOoO0O00 * IIiIiII11i
  if 51 - 51: oOo0O0Ooo * I1ii11iIi11i
  if 48 - 48: oO0o / OOooOOo / I11i / Ii1I
-IiiIII111iI = "3.0.9"
+IiiIII111iI = "3.1.0"
 IiII = 'plugin.video.GenieTv'
 iI1Ii11111iIi = xbmc . translatePath ( 'special://home/addons/repository.GenieTv' )
 i1i1II = xbmc . translatePath ( 'special://home/addons/' )
@@ -344,7 +344,7 @@ def oOOoo00O00o ( ) :
  if 77 - 77: O0OoO * iI11I1II1I1I
 def OOoO00 ( ) :
  if not os . path . exists ( O00o0OO ) :
-  ii1I ( 'Change Log 5/9/16 - v3.0.9' , 'GenieTv now clears cache on every start-up, Force close on all platforms Android included, RaysRavers added to music section, RadioNomy section added to music, Quicksilver fixed in music, WatchSeries fixed now playing from genres, Go fishing work in progress, View log file from within maintenance, Speedtest added to maintenance section, GenieTv contact information within addon, Search tweaked performing faster and more sources, Tv theme tunes section added to music, new servers online' )
+  ii1I ( 'Change Log 5/9/16 - v3.1.0' , 'GenieTv now clears cache on every start-up, Force close on all platforms Android included, RaysRavers added to music section, RadioNomy section added to music, Quicksilver fixed in music, WatchSeries fixed now playing from genres, Go fishing work in progress, View log file from within maintenance, Speedtest added to maintenance section, GenieTv contact information within addon, Search tweaked performing faster and more sources, Tv theme tunes section added to music, new servers online' )
   os . makedirs ( O00o0OO )
   if 98 - 98: oOo0O0Ooo % O0O0OoOO0 * ii
   if 51 - 51: iI11I1II1I1I . OOooOOo / IIIi + I11i
@@ -362,7 +362,7 @@ def o000O0O ( ) :
  I1i1i1iii ( )
  if 16 - 16: O0O0OoOO0 + ooo0oo0o0oo * o0o00Oo0O % ooOoO0O00 . oOo0O0Ooo
  if 67 - 67: ii / oOo0O0Ooo * O0O0OoOO0 + oO0o0OOOO
- iiIi1IIi1I ( '[COLOR' + iIii1 + ']Football On G-Tv[/COLOR]' , ( i1iiIII111ii ( 'aHR0cDovL2dlbmlldHZjdW50cy5jby51ay9mb290eS9mb290eS5tM3U=' ) ) , 7080 , i11i1I1 + 'TodaysMacthes.png' , ooOoOoo0O , '' )
+ iiIi1IIi1I ( '[COLOR' + iIii1 + ']Live Sport On G-Tv[/COLOR]' , ( i1iiIII111ii ( 'aHR0cDovL2dlbmlldHZjdW50cy5jby51ay9mb290eS9mb290eS5tM3U=' ) ) , 7080 , i11i1I1 + 'TodaysMacthes.png' , ooOoOoo0O , '' )
  if oo00 . getSetting ( 'TV GUIDE' ) == 'true' :
   I1iI1iIi111i ( '[COLOR' + iIii1 + ']TV GUIDE[/COLOR]' , '' , 10063 , i11i1I1 + 'TvGuide.png' , ooOoOoo0O , '' )
  I1iI1iIi111i ( '[COLOR' + iIii1 + ']Link GTV to Guide[/COLOR]' , '' , 4010 , i11i1I1 + 'linkchannels.png' , ooOoOoo0O , '' )
