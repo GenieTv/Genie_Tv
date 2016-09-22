@@ -46,7 +46,7 @@ i1111 = xbmc . translatePath ( 'special://home/' )
 i11 = ( Oo0oO0ooo ( 'aHR0cDovL2dlbmlldHYuY28udWsvcmVkby8=' ) )
 I11 = xbmc . translatePath ( os . path . join ( 'special://home/addons/' + IiII , 'icon.png' ) )
 Oo0o0000o0o0 = i11 + 'GenieArt/NEW/'
-oOo0oooo00o = "0.0.6"
+oOo0oooo00o = "0.0.7"
 oO0o0o0ooO0oO = xbmc . translatePath ( 'special://home/userdata/addon_data/plugin.video.G-Tv_ULTIMATE' )
 oo0o0O00 = xbmc . translatePath ( os . path . join ( 'special://home/addons/plugin.video.G-Tv_ULTIMATE/imports/tvGuide/ResetDatabase.py' ) )
 oO = xbmc . translatePath ( os . path . join ( 'special://home/addons/plugin.video.G-Tv_ULTIMATE/imports/tvGuide/addon.py' ) )
@@ -86,22 +86,22 @@ def oOOO00o ( ) :
     if 28 - 28: OOooOOo - i1I . i1I + OoOoOO00 - OoooooooOO + O0
     if 95 - 95: OoO0O00 % oO0o . O0
 def I1i1I ( ) :
- O0O00o0OOO0 ( 'Full List' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
- O0O00o0OOO0 ( 'PPV' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
- O0O00o0OOO0 ( 'Entertainment' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
- O0O00o0OOO0 ( 'Factual' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
- O0O00o0OOO0 ( 'Movie Channels' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
- O0O00o0OOO0 ( 'US Movie Channels TEST' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
- O0O00o0OOO0 ( 'Kids' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
- O0O00o0OOO0 ( 'Music' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
- O0O00o0OOO0 ( 'UK Sports' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
- O0O00o0OOO0 ( 'International Sports' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
- O0O00o0OOO0 ( 'News UK & International' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
- O0O00o0OOO0 ( 'German' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
- O0O00o0OOO0 ( 'Arabic' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
- O0O00o0OOO0 ( 'TV Series Latest' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
- O0O00o0OOO0 ( 'VOD Latest' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
- O0O00o0OOO0 ( 'VOD Bollywood' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ Ii1iIIIi1ii ( 'Full List' , '' , 14 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ Ii1iIIIi1ii ( 'PPV' , '' , 14 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ Ii1iIIIi1ii ( 'Entertainment' , '' , 14 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ Ii1iIIIi1ii ( 'Factual' , '' , 14 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ Ii1iIIIi1ii ( 'Movie Channels' , '' , 14 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ Ii1iIIIi1ii ( 'US Movie Channels TEST' , '' , 14 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ Ii1iIIIi1ii ( 'Kids' , '' , 14 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ Ii1iIIIi1ii ( 'Music' , '' , 14 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ Ii1iIIIi1ii ( 'UK Sports' , '' , 14 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ Ii1iIIIi1ii ( 'International Sports' , '' , 14 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ Ii1iIIIi1ii ( 'News UK & International' , '' , 14 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ Ii1iIIIi1ii ( 'German' , '' , 14 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ Ii1iIIIi1ii ( 'Arabic' , '' , 14 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ Ii1iIIIi1ii ( 'TV Series Latest' , '' , 14 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ Ii1iIIIi1ii ( 'VOD Latest' , '' , 14 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ Ii1iIIIi1ii ( 'VOD Bollywood' , '' , 14 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
  if 80 - 80: OoOoOO00 - OoO0O00
  if 87 - 87: oO0o / I11i - i1IIi * OOooOOo / OoooooooOO . O0
 def iii11I111 ( name ) :
@@ -128,13 +128,13 @@ def iIIIIii1 ( name ) :
  for name , oOOoOo00o , oo000OO00Oo , o0OOoo0OO0OOO in iiI1 :
   if OOOO00ooo0Ooo == 'Full List' :
    o0OOoo0OO0OOO = ( o0OOoo0OO0OOO ) . replace ( '.ts' , '.m3u8' )
-   addDir2 ( ( '' + name + '' ) . replace ( '_' , ' ' ) , ( o0OOoo0OO0OOO ) . strip ( ) , 10012 , oOOoOo00o , oOOoOo00o , '' )
+   O0O00o0OOO0 ( ( '' + name + '' ) . replace ( '_' , ' ' ) , ( o0OOoo0OO0OOO ) . strip ( ) , 15 , oOOoOo00o , oOOoOo00o , '' )
   else :
    OOOO00ooo0Ooo = ( OOOO00ooo0Ooo ) . replace ( 'World' , 'القنوات العربية' )
    if OOOO00ooo0Ooo in oo000OO00Oo :
     o0OOoo0OO0OOO = ( o0OOoo0OO0OOO ) . replace ( '.ts' , '.m3u8' )
     print o0OOoo0OO0OOO + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
-    addDir2 ( ( '' + name + '' ) . replace ( '_' , ' ' ) , ( o0OOoo0OO0OOO ) . strip ( ) , 10012 , oOOoOo00o , oOOoOo00o , '' )
+    O0O00o0OOO0 ( ( '' + name + '' ) . replace ( '_' , ' ' ) , ( o0OOoo0OO0OOO ) . strip ( ) , 15 , oOOoOo00o , oOOoOo00o , '' )
    else :
     pass
 def O0OOO0OOoO0O ( ) :
@@ -168,7 +168,7 @@ def o0O ( ) :
  O00ooo0O0 . write ( r'[' + IiiIII111iI + ']' + '\n' )
  for i1iIi1iIi1i , oOOoOo00o , oo000OO00Oo , o0OOoo0OO0OOO in iiI1 :
   o0OOoo0OO0OOO = ( o0OOoo0OO0OOO + '.m3u8' ) . replace ( ':' , '%3A' ) . replace ( '/' , '%2F' )
-  I1I1iIiII1 = ( i1iIi1iIi1i + '=plugin://' + IiiIII111iI + '/?url=' + o0OOoo0OO0OOO + '&mode=10012&name=' + ( i1iIi1iIi1i ) . replace ( ' ' , '+' ) + '&amp;iconimage=' + ( oOOoOo00o ) . replace ( ' ' , '' ) + '+&amp;fanart=' + ( oOOoOo00o ) . replace ( ' ' , '' ) + '+&amp;description=' )
+  I1I1iIiII1 = ( i1iIi1iIi1i + '=plugin://' + IiiIII111iI + '/?url=' + o0OOoo0OO0OOO + '&mode=15&name=' + ( i1iIi1iIi1i ) . replace ( ' ' , '+' ) + '&amp;iconimage=' + ( oOOoOo00o ) . replace ( ' ' , '' ) + '+&amp;fanart=' + ( oOOoOo00o ) . replace ( ' ' , '' ) + '+&amp;description=' )
   O00ooo0O0 . write ( I1I1iIiII1 + '\n' )
   if 4 - 4: oo + O0 * OOooOOo
 def OOoo0O ( url ) :
