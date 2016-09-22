@@ -28,562 +28,270 @@ if 73 - 73: II111iiii
 if 22 - 22: I1IiiI * Oo0Ooo / OoO0O00 . OoOoOO00 . o0oOOo0O0Ooo / I1ii11iIi11i
 if 48 - 48: oO0o / OOooOOo / I11i / Ii1I
 IiiIII111iI = 'plugin.video.G-Tv_ULTIMATE'
-IiII = xbmc . translatePath ( 'special://home/addons/' )
-iI1Ii11111iIi = xbmc . translatePath ( 'special://home/addonsbroke/' )
-i1i1II = xbmcaddon . Addon ( id = IiiIII111iI )
-O0oo0OO0 = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3'
-IiiIII111iI = 'plugin.video.G-Tv_ULTIMATE'
-I1i1iiI1 = 'plugin.video.G-Tv_ULTIMATE'
-iiIIIII1i1iI = xbmcgui . DialogProgress ( )
-o0oO0 = "G-Tv ULTIMATE"
-oo00 = Net ( )
-o00 = base64 . decodestring
-Oo0oO0ooo = i1i1II . getSetting ( 'User' )
-o0oOoO00o = i1i1II . getSetting ( 'Pass' )
-i1 = i1i1II . getSetting ( 'AdultPass' )
-oOOoo00O0O = xbmc . translatePath ( 'special://home/' )
-i1111 = ( o00 ( 'aHR0cDovL2dlbmlldHYuY28udWsvcmVkby8=' ) )
-i11 = xbmc . translatePath ( os . path . join ( 'special://home/addons/' + IiiIII111iI , 'icon.png' ) )
-I11 = i1111 + 'GenieArt/NEW/'
-Oo0o0000o0o0 = "0.0.5"
-oOo0oooo00o = xbmc . translatePath ( 'special://home/userdata/addon_data/plugin.video.G-Tv_ULTIMATE' )
-oO0o0o0ooO0oO = xbmc . translatePath ( os . path . join ( 'special://home/addons/plugin.video.G-Tv_ULTIMATE/imports/tvGuide/ResetDatabase.py' ) )
-oo0o0O00 = xbmc . translatePath ( os . path . join ( 'special://home/addons/plugin.video.G-Tv_ULTIMATE/imports/tvGuide/addon.py' ) )
-oO = xbmc . translatePath ( 'special://thumbnails' ) ;
-i1iiIIiiI111 = "Xhoans"
-oooOOOOO = xbmc . translatePath ( os . path . join ( 'special://home/addons/' + IiiIII111iI , 'fanart.jpg' ) )
-i1iiIII111ii = base64 . decodestring ( 'LnBocA==' )
-i1iIIi1 = i1i1II . getLocalizedString
-ii11iIi1I = CookieJar ( )
-iI111I11I1I1 = urllib2 . build_opener ( urllib2 . HTTPCookieProcessor ( ii11iIi1I ) )
-iI111I11I1I1 . addheaders = [ ( 'User-Agent' , 'Mozilla/5.0' ) ]
-OOooO0OOoo = int ( sys . argv [ 1 ] )
-iIii1 = xbmc . translatePath ( i1i1II . getAddonInfo ( 'profile' ) . decode ( 'utf-8' ) )
-oOOoO0 = xbmc . translatePath ( 'special://home/userdata/' )
-O0OoO000O0OO = xbmc . translatePath ( os . path . join ( 'special://home/userdata' , 'favourites.xml' ) )
-iiI1IiI = oOo0oooo00o + '/addons.ini'
-II = xbmcgui . Dialog ( )
-if 57 - 57: ooOoo0O
-def OooO0 ( ) :
- II11iiii1Ii ( )
- OO0o ( '[COLORsteelblue]PLEASE LINK CHANNELS TO GUIDE[/COLOR]' , '' , 13 , I11 + 'linkchannels.png' , oooOOOOO , '' )
- OO0o ( 'Tv Guide' , '' , 11 , I11 + 'TvGuide.png' , oooOOOOO , '' )
- Ooo ( 'Stream Lists' , '' , 16 , I11 + 'UltimateList.png' , oooOOOOO , '' )
- if 68 - 68: oOo00Oo00O + I11i1I + o0o0OOO0o0 % O0 % i1IIi * OoOoOO00
- if 62 - 62: oOo00Oo00O . i1IIi / Ii1I
-def II11iiii1Ii ( ) :
- if o0oOoO00o == 'insert_password' :
-  II . ok ( '[COLORsteelblue]G-Tv Ultimate Login[/COLOR]' , 'You need to set username and password to access this' , 'These are unique and provided upon purchase ' , ' @ [COLORsteelblue]http://genietv.co.uk[/COLOR]' )
-  i1i1II . openSettings ( sys . argv [ 0 ] )
+IiII = 'plugin.video.G-Tv_ULTIMATE'
+iI1Ii11111iIi = xbmc . translatePath ( 'special://home/addons/' )
+i1i1II = xbmc . translatePath ( 'special://home/addonsbroke/' )
+O0oo0OO0 = xbmcaddon . Addon ( id = IiII )
+I1i1iiI1 = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3'
+IiII = 'plugin.video.G-Tv_ULTIMATE'
+iiIIIII1i1iI = 'plugin.video.G-Tv_ULTIMATE'
+o0oO0 = xbmcgui . DialogProgress ( )
+oo00 = "G-Tv ULTIMATE"
+o00 = Net ( )
+Oo0oO0ooo = base64 . decodestring
+o0oOoO00o = O0oo0OO0 . getSetting ( 'User' )
+i1 = O0oo0OO0 . getSetting ( 'Pass' )
+oOOoo00O0O = O0oo0OO0 . getSetting ( 'AdultPass' )
+i1111 = xbmc . translatePath ( 'special://home/' )
+i11 = ( Oo0oO0ooo ( 'aHR0cDovL2dlbmlldHYuY28udWsvcmVkby8=' ) )
+I11 = xbmc . translatePath ( os . path . join ( 'special://home/addons/' + IiII , 'icon.png' ) )
+Oo0o0000o0o0 = i11 + 'GenieArt/NEW/'
+oOo0oooo00o = "0.0.6"
+oO0o0o0ooO0oO = xbmc . translatePath ( 'special://home/userdata/addon_data/plugin.video.G-Tv_ULTIMATE' )
+oo0o0O00 = xbmc . translatePath ( os . path . join ( 'special://home/addons/plugin.video.G-Tv_ULTIMATE/imports/tvGuide/ResetDatabase.py' ) )
+oO = xbmc . translatePath ( os . path . join ( 'special://home/addons/plugin.video.G-Tv_ULTIMATE/imports/tvGuide/addon.py' ) )
+i1iiIIiiI111 = xbmc . translatePath ( 'special://thumbnails' ) ;
+oooOOOOO = "Xhoans"
+i1iiIII111ii = xbmc . translatePath ( os . path . join ( 'special://home/addons/' + IiII , 'fanart.jpg' ) )
+i1iIIi1 = base64 . decodestring ( 'LnBocA==' )
+ii11iIi1I = O0oo0OO0 . getLocalizedString
+iI111I11I1I1 = CookieJar ( )
+OOooO0OOoo = urllib2 . build_opener ( urllib2 . HTTPCookieProcessor ( iI111I11I1I1 ) )
+OOooO0OOoo . addheaders = [ ( 'User-Agent' , 'Mozilla/5.0' ) ]
+iIii1 = int ( sys . argv [ 1 ] )
+oOOoO0 = xbmc . translatePath ( O0oo0OO0 . getAddonInfo ( 'profile' ) . decode ( 'utf-8' ) )
+O0OoO000O0OO = xbmc . translatePath ( 'special://home/userdata/' )
+iiI1IiI = xbmc . translatePath ( os . path . join ( 'special://home/userdata' , 'favourites.xml' ) )
+II = oO0o0o0ooO0oO + '/addons.ini'
+ooOoOoo0O = xbmcgui . Dialog ( )
+if 76 - 76: i1II1I11 / i1I / OO0o / oo % OOooOOo
+def oo0Oo00Oo0 ( ) :
+ oOOO00o ( )
+ O0O00o0OOO0 ( '[COLORsteelblue]PLEASE LINK CHANNELS TO GUIDE[/COLOR]' , '' , 13 , Oo0o0000o0o0 + 'linkchannels.png' , i1iiIII111ii , '' )
+ O0O00o0OOO0 ( 'Tv Guide' , '' , 11 , Oo0o0000o0o0 + 'TvGuide.png' , i1iiIII111ii , '' )
+ Ii1iIIIi1ii ( 'Stream Lists' , '' , 16 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ if 80 - 80: I11i * i11iIiiIii / OO0o
+ if 9 - 9: Ii1I + oO0o % Ii1I + i1IIi . OOooOOo
+def oOOO00o ( ) :
+ if i1 == 'insert_password' :
+  ooOoOoo0O . ok ( '[COLORsteelblue]G-Tv Ultimate Login[/COLOR]' , 'You need to set username and password to access this' , 'These are unique and provided upon purchase ' , ' @ [COLORsteelblue]http://genietv.co.uk[/COLOR]' )
+  O0oo0OO0 . openSettings ( sys . argv [ 0 ] )
  else :
-  Iii1i1I11I = open ( iiI1IiI , "r" )
-  Ii1 = re . compile ( 'plugin.video.G-Tv_ULTIMATE.+?2Flive%2F(.+?)%2F(.+?)%2F' ) . findall ( str ( Iii1i1I11I ) )
-  for III1i1i , iiI1 in Ii1 :
-   if III1i1i == 'replace_user' or iiI1 == 'replace_pass' :
-    II . ok ( '[COLOR=yellow]Need to set login details' , 'You need to input your login details to activate streams' , '' )
-    i1i1II . openSettings ( sys . argv [ 0 ] )
-    if 19 - 19: I11i + o0o0OOO0o0
-    if 53 - 53: OoooooooOO . i1IIi
-def ii1I1i1I ( ) :
- II11iiii1Ii ( )
- Ooo ( 'Live Events' , '' , 17 , I11 + 'UltimateList.png' , oooOOOOO , '' )
- Ooo ( 'Full List' , '' , 14 , I11 + 'UltimateList.png' , oooOOOOO , '' )
- Ooo ( 'VOD Latest' , '' , 14 , I11 + 'UltimateList.png' , oooOOOOO , '' )
- Ooo ( 'Entertainment' , '' , 14 , I11 + 'UltimateList.png' , oooOOOOO , '' )
- Ooo ( 'Factual' , '' , 14 , I11 + 'UltimateList.png' , oooOOOOO , '' )
- Ooo ( 'Movie Channels' , '' , 14 , I11 + 'UltimateList.png' , oooOOOOO , '' )
- Ooo ( 'Kids' , '' , 14 , I11 + 'UltimateList.png' , oooOOOOO , '' )
- Ooo ( 'Music' , '' , 14 , I11 + 'UltimateList.png' , oooOOOOO , '' )
- Ooo ( 'UK Sports' , '' , 14 , I11 + 'UltimateList.png' , oooOOOOO , '' )
- Ooo ( 'International Sports' , '' , 14 , I11 + 'UltimateList.png' , oooOOOOO , '' )
- Ooo ( 'German' , '' , 14 , I11 + 'UltimateList.png' , oooOOOOO , '' )
- Ooo ( 'World' , '' , 14 , I11 + 'UltimateList.png' , oooOOOOO , '' )
- if 88 - 88: OoO0O00 + O0 / OoOoOO00 * ooOoo0O
- if 41 - 41: oO0o
-def ii1i1I1i ( name ) :
- o00oOO0 = name
- oOoo = iIii11I ( o00 ( 'aHR0cDovL2dlbmlldHYuY28udWsvZ3VpZGUvdGhlbGlzdHVsdC5tM3U=' ) )
- Ii1 = re . compile ( '#EXTINF:-1 tvg-name="(.+?)" tvg-logo="(.+?)" group-title="Live Events"",.+?\n(.+?)\n' ) . findall ( oOoo )
- for name , OOO0OOO00oo , Iii111II in Ii1 :
-  Iii111II = ( Iii111II ) . replace ( 'replace_user' , Oo0oO0ooo ) . replace ( 'replace_pass' , o0oOoO00o )
-  OO0o ( ( '' + name + '' ) . replace ( '_' , ' ' ) , ( Iii111II ) . strip ( ) , 15 , OOO0OOO00oo , OOO0OOO00oo , '' )
+  III1i1i = open ( II , "r" )
+  iiI1 = re . compile ( 'plugin.video.G-Tv_ULTIMATE.+?2Flive%2F(.+?)%2F(.+?)%2F' ) . findall ( str ( III1i1i ) )
+  for i11Iiii , iI in iiI1 :
+   if i11Iiii == 'replace_user' or iI == 'replace_pass' :
+    ooOoOoo0O . ok ( '[COLOR=yellow]Need to set login details' , 'You need to input your login details to activate streams' , '' )
+    O0oo0OO0 . openSettings ( sys . argv [ 0 ] )
+    if 28 - 28: OOooOOo - i1I . i1I + OoOoOO00 - OoooooooOO + O0
+    if 95 - 95: OoO0O00 % oO0o . O0
+def I1i1I ( ) :
+ O0O00o0OOO0 ( 'Full List' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ O0O00o0OOO0 ( 'PPV' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ O0O00o0OOO0 ( 'Entertainment' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ O0O00o0OOO0 ( 'Factual' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ O0O00o0OOO0 ( 'Movie Channels' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ O0O00o0OOO0 ( 'US Movie Channels TEST' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ O0O00o0OOO0 ( 'Kids' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ O0O00o0OOO0 ( 'Music' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ O0O00o0OOO0 ( 'UK Sports' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ O0O00o0OOO0 ( 'International Sports' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ O0O00o0OOO0 ( 'News UK & International' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ O0O00o0OOO0 ( 'German' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ O0O00o0OOO0 ( 'Arabic' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ O0O00o0OOO0 ( 'TV Series Latest' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ O0O00o0OOO0 ( 'VOD Latest' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ O0O00o0OOO0 ( 'VOD Bollywood' , '' , 60003 , Oo0o0000o0o0 + 'UltimateList.png' , i1iiIII111ii , '' )
+ if 80 - 80: OoOoOO00 - OoO0O00
+ if 87 - 87: oO0o / I11i - i1IIi * OOooOOo / OoooooooOO . O0
+def iii11I111 ( name ) :
+ OOOO00ooo0Ooo = name
+ OOOooOooo00O0 = Oo0OO ( Oo0oO0ooo ( 'aHR0cDovL2dlbmlldHYuY28udWsvZ3VpZGUvdGhlbGlzdHVsdC5tM3U=' ) )
+ iiI1 = re . compile ( '#EXTINF:-1 tvg-name="(.+?)" tvg-logo="(.+?)" group-title="Live Events"",.+?\n(.+?)\n' ) . findall ( OOOooOooo00O0 )
+ for name , oOOoOo00o , o0OOoo0OO0OOO in iiI1 :
+  o0OOoo0OO0OOO = ( o0OOoo0OO0OOO ) . replace ( 'replace_user' , o0oOoO00o ) . replace ( 'replace_pass' , i1 )
+  O0O00o0OOO0 ( ( '' + name + '' ) . replace ( '_' , ' ' ) , ( o0OOoo0OO0OOO ) . strip ( ) , 15 , oOOoOo00o , oOOoOo00o , '' )
  else :
-  OO0o ( '[COLORred]Streams will appear here for live events when available[/COLOR]' , '' , 15 , '' , '' , '' )
-  if 9 - 9: OoO0O00
-def i11O0oo0OO0oOOOo ( ) :
- II . ok ( '[COLOR=white]ReCreate Addons.ini[/COLOR]' , 'If it doesnt work ensure login details are correct and retry' , '' , 'This will allow access to streams in guide without linking to favourites' )
- xbmc . executebuiltin ( "XBMC.RunScript(" + oO0o0o0ooO0oO + ")" )
- i1i1i11IIi ( )
- II . ok ( '[COLOR=yellow]Done[/COLOR]' , 'Done' , 'Easy as that' , 'Now Go to guide and it should link your GTV streams' )
- if 33 - 33: o0oOOo0O0Ooo + OOooOOo * OoO0O00 - Oo0Ooo / oO0o % Ii1I
- if 21 - 21: OoO0O00 * iIii1I11I1II1 % oO0o * i1IIi
-def Ii11Ii1I ( name ) :
- o00oOO0 = name
- oOoo = iIii11I ( o00 ( 'aHR0cDovL2dlbmlldHYuY28udWsvZ3VpZGUvdGhlbGlzdHVsdC5tM3U=' ) )
- Ii1 = re . compile ( '#EXTINF:.+?tvg-name="(.+?)" tvg-logo="(.+?)" group-title="(.+?)"",.+?\n(.+?)\n' ) . findall ( oOoo )
- for name , OOO0OOO00oo , O00oO , Iii111II in Ii1 :
-  if o00oOO0 == 'Full List' :
-   Iii111II = ( Iii111II ) . replace ( 'replace_user' , Oo0oO0ooo ) . replace ( 'replace_pass' , o0oOoO00o )
-   OO0o ( ( '' + name + '' ) . replace ( '_' , ' ' ) , ( Iii111II ) . strip ( ) , 15 , OOO0OOO00oo , OOO0OOO00oo , '' )
+  O0O00o0OOO0 ( '[COLORred]Streams will appear here for live events when available[/COLOR]' , '' , 15 , '' , '' , '' )
+  if 19 - 19: oO0o % i1IIi % o0oOOo0O0Ooo
+def oo0OooOOo0 ( ) :
+ ooOoOoo0O . ok ( '[COLOR=white]ReCreate Addons.ini[/COLOR]' , 'If it doesnt work ensure login details are correct and retry' , '' , 'This will allow access to streams in guide without linking to favourites' )
+ xbmc . executebuiltin ( "XBMC.RunScript(" + oo0o0O00 + ")" )
+ o0O ( )
+ ooOoOoo0O . ok ( '[COLOR=yellow]Done[/COLOR]' , 'Done' , 'Easy as that' , 'Now Go to guide and it should link your GTV streams' )
+ if 72 - 72: i1II1I11 / i1IIi * Oo0Ooo - OO0o
+ if 51 - 51: II111iiii * OoO0O00 % o0oOOo0O0Ooo * II111iiii % I1ii11iIi11i / oo
+def iIIIIii1 ( name ) :
+ OOOO00ooo0Ooo = name
+ OOOooOooo00O0 = Oo0OO ( 'http://piesustv.net:8000/get.php?username=' + o0oOoO00o + '&password=' + i1 + '&type=m3u_plus&output=mpegts' )
+ iiI1 = re . compile ( '#EXTINF:.+?tvg-name="([^"]*)" tvg-logo="([^"]*)" group-title="([^"]*)"",.+?\n(.+?)\n' ) . findall ( OOOooOooo00O0 )
+ for name , oOOoOo00o , oo000OO00Oo , o0OOoo0OO0OOO in iiI1 :
+  if OOOO00ooo0Ooo == 'Full List' :
+   o0OOoo0OO0OOO = ( o0OOoo0OO0OOO ) . replace ( '.ts' , '.m3u8' )
+   addDir2 ( ( '' + name + '' ) . replace ( '_' , ' ' ) , ( o0OOoo0OO0OOO ) . strip ( ) , 10012 , oOOoOo00o , oOOoOo00o , '' )
   else :
-   o00oOO0 = ( o00oOO0 ) . replace ( 'World' , 'القنوات العربية' )
-   if o00oOO0 in O00oO :
-    Iii111II = ( Iii111II ) . replace ( 'replace_user' , Oo0oO0ooo ) . replace ( 'replace_pass' , o0oOoO00o )
-    print Iii111II + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
-    OO0o ( ( '' + name + '' ) . replace ( '_' , ' ' ) , ( Iii111II ) . strip ( ) , 15 , OOO0OOO00oo , OOO0OOO00oo , '' )
+   OOOO00ooo0Ooo = ( OOOO00ooo0Ooo ) . replace ( 'World' , 'القنوات العربية' )
+   if OOOO00ooo0Ooo in oo000OO00Oo :
+    o0OOoo0OO0OOO = ( o0OOoo0OO0OOO ) . replace ( '.ts' , '.m3u8' )
+    print o0OOoo0OO0OOO + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
+    addDir2 ( ( '' + name + '' ) . replace ( '_' , ' ' ) , ( o0OOoo0OO0OOO ) . strip ( ) , 10012 , oOOoOo00o , oOOoOo00o , '' )
    else :
     pass
-def I11i1I1I ( ) :
- i1i1i11IIi ( )
+def O0OOO0OOoO0O ( ) :
+ o0O ( )
  try :
-  oO0Oo = gui . TVGuide ( )
-  oO0Oo . doModal ( )
-  del oO0Oo
-  if 54 - 54: o0oOOo0O0Ooo - I1IiiI + OoooooooOO
+  O00Oo000ooO0 = gui . TVGuide ( )
+  O00Oo000ooO0 . doModal ( )
+  del O00Oo000ooO0
+  if 100 - 100: O0 + i1I - OOooOOo + i11iIiiIii * Ii1I
  except :
   import sys
   import traceback as tb
-  ( O0o0 , OO00Oo , traceback ) = sys . exc_info ( )
-  tb . print_exception ( O0o0 , OO00Oo , traceback )
-  if 51 - 51: oOo00Oo00O * o0oOOo0O0Ooo + I11i + OoO0O00
-def iIii11I ( url ) :
- o0O0O00 = urllib2 . Request ( url )
- o0O0O00 . add_header ( 'User-Agent' , 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3' )
- o000o = urllib2 . urlopen ( o0O0O00 )
- I11IiI1I11i1i = o000o . read ( )
- o000o . close ( )
- return I11IiI1I11i1i
- if 38 - 38: o0oOOo0O0Ooo
- if 57 - 57: O0 / oO0o * I11i1I / OoOoOO00 . II111iiii
- if 26 - 26: ooOoo0O
-def i1i1i11IIi ( ) :
- OOO = os . path . join ( oOo0oooo00o , 'addons.ini' )
- Oo0oOOo = open ( OOO , "w+" )
- if 58 - 58: II111iiii * OOooOOo * I1ii11iIi11i / OOooOOo
- Oo0oOOo . write ( r'# This file contains the "built-in" channels' + '\n' )
- Oo0oOOo . write ( r'# It is parsed by Pythons ConfigParser' + '\n\n' )
- Oo0oOOo . write ( r'[plugin.video.G-Tv_ULTIMATE]' + '\n' )
- Oo0oOOo . write ( r'BBC One=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F191.m3u8&mode=15&name=BBC+One+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bbc_one.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bbc_one.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'BBC Two=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F190.m3u8&mode=15&name=BBC+Two+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bbc_two_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bbc_two_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'BBC Three=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F189.m3u8&mode=15&name=BBC+Three+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bbc_three.jpg&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bbc_three.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'BBC Four=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F188.m3u8&mode=15&name=BBC+Four+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bbc_four_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bbc_four_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'ITV=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F208.m3u8&mode=15&name=ITV1+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/itv_uk_london.jpg&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/itv_uk_london.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'ITV2=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F207.m3u8&mode=15&name=ITV2+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/itv2.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/itv2.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'ITV3=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F206.m3u8&mode=15&name=ITV3+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/itv3.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/itv3.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'ITV4=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F205.m3u8&mode=15&name=ITV4+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/itv4.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/itv4.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'ITV Encore=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F328.m3u8&mode=15&name=ITV+Encore&amp;iconimage=http%3A//j.static-locatetv.com/images/content/mid/3/1026632_the_encore_hour.jpg&amp;fanart=http%3A//j.static-locatetv.com/images/content/mid/3/1026632_the_encore_hour.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'ITVBe=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F203.m3u8&mode=15&name=ITV+BE+UK&amp;iconimage=http%3A//hub.tv-ark.org.uk/images/itv/images/itv_be.jpg+&amp;fanart=http%3A//hub.tv-ark.org.uk/images/itv/images/itv_be.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'E4=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F775.m3u8&mode=15&name=E4+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/e4_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/e4_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'More4=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F776.m3u8&mode=15&name=More4+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/channel4_more4_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/channel4_more4_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'5STAR=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F187.m3u8&mode=15&name=5%2A+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/channel5_star.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/channel5_star.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'5 USA=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F186.m3u8&mode=15&name=5USA+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/channel5_usa.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/channel5_usa.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Channel 4=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F183.m3u8&mode=15&name=Channel+4+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/channel4_ie.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/channel4_ie.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Channel 5=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F185.m3u8&mode=15&name=Channel+5+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/channel5_uk.jpg&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/channel5_uk.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'alibi HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F329.m3u8&mode=15&name=Alibi+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/alibi_uktv.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/alibi_uktv.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Dave HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F325.m3u8&mode=15&name=Dave+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/dave_uktv.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/dave_uktv.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'GOLD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F326.m3u8&mode=15&name=Gold+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/gold_uktv.jpg&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/gold_uktv.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Pick=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F324.m3u8&mode=15&name=Pick+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/pick_tv.jpg&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/pick_tv.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Really=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F631.m3u8&mode=15&name=Really&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/really_uktv.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/really_uktv.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'YESTERDAY=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F377.m3u8&mode=15&name=Yesterday+UK&amp;iconimage=http%3A//lm-media-ltd.net/logos/Yesterday.jpg&amp;fanart=http%3A//lm-media-ltd.net/logos/Yesterday.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Watch HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F518.m3u8&mode=15&name=Watch+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/watch_uktv.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/watch_uktv.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'CBS Action=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F637.m3u8&mode=15&name=CBS+Action+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/cbs_action.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/cbs_action.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'CBS Drama=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F636.m3u8&mode=15&name=CBC+Drama+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/cbs_drama.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/cbs_drama.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'CBS Reality=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F635.m3u8&mode=15&name=CBS+Reality+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/cbs_reality.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/cbs_reality.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'True Drama=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F634.m3u8&mode=15&name=True+Drama+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/true_drama_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/true_drama_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Challenge=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F772.m3u8&mode=15&name=Challenge+UK&amp;iconimage=https%3A//i.ytimg.com/i/RCV-1IVhGZWY1k-Em9QVQA/mq1.jpg+&amp;fanart=https%3A//i.ytimg.com/i/RCV-1IVhGZWY1k-Em9QVQA/mq1.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'RTE One=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F194.m3u8&mode=15&name=RTE+One+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/rte_one.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/rte_one.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'RTE Two=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F193.m3u8&mode=15&name=RTE+Two+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/rte_two.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/rte_two.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'TG4=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F192.m3u8&mode=15&name=TG4&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/tg4.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/tg4.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'3e=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F769.m3u8&mode=15&name=3e+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/3e_ie.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/3e_ie.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'TV3=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F774.m3u8&mode=15&name=TV3+UK&amp;iconimage=https%3A//pbs.twimg.com/profile_images/683994318852485125/eQ0KQ53-.jpg+&amp;fanart=https%3A//pbs.twimg.com/profile_images/683994318852485125/eQ0KQ53-.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'ComedyXtra=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F767.m3u8&mode=15&name=Comedy+Central+Extra+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/comedy_central_extra_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/comedy_central_extra_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'FOX HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F179.m3u8&mode=15&name=FOX+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Syfy HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F180.m3u8&mode=15&name=Syfy+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/syfy_uk.jpg&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/syfy_uk.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'TCM=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F632.m3u8&mode=15&name=TCM+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/tcm_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/tcm_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'TLC=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F768.m3u8&mode=15&name=TLC+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/tlc_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/tlc_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Universal HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F404.m3u8&mode=15&name=Universal+Channel+UK&amp;iconimage=http%3A//theident.gallery/universalhd/2013/misc/UNIVERSAL-2013-PROMO-100PERCENT-1-8.jpg+&amp;fanart=http%3A//theident.gallery/universalhd/2013/misc/UNIVERSAL-2013-PROMO-100PERCENT-1-8.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Universal+1=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F771.m3u8&mode=15&name=Universal+Channel+%2B1+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/universal_channel_uk_plus1.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/universal_channel_uk_plus1.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky1=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F32.m3u8&mode=15&name=Sky+1+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_1.jpg&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_1.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky2=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F33.m3u8&mode=15&name=Sky+2+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_2.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_2.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Living=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F35.m3u8&mode=15&name=Sky+Living+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_living.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_living.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Atlantic=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F34.m3u8&mode=15&name=Sky+Atlantic+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_atlantic.jpg&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_atlantic.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Food Network=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F639.m3u8&mode=15&name=Food+Network&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/food_network_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/food_network_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'SkyPremiereHD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F516.m3u8&mode=15&name=Sky+Movies+Premiere+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_premiere.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_premiere.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Action=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F732.m3u8&mode=15&name=Sky+Movies+Action+%26+Adventure+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_action_adventure.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_action_adventure.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Thriller=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F514.m3u8&mode=15&name=Sky+Movies+Crime+%26+Thriller+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_crime_thriller.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_crime_thriller.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky ScFiHorror=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F511.m3u8&mode=15&name=Sky+Movies+Sci-Fi+%26+Horror+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_scifi_horror.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_scifi_horror.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Comedy=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F513.m3u8&mode=15&name=Sky+Movies+Comedy+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_comedy.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_comedy.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Greats=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F512.m3u8&mode=15&name=Sky+Movies+Greats+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_modern_greats.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_modern_greats.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Showcase=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F46.m3u8&mode=15&name=Sky+Movies+Showcase+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_showcase.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_showcase.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Select=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F45.m3u8&mode=15&name=Sky+Movies+Select+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_select_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_select_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky DramaRom=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F510.m3u8&mode=15&name=Sky+Movies+Drama+%26+Romance+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_drama_romance.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_drama_romance.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Family=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F509.m3u8&mode=15&name=Sky+Movies+Family+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_family_hd.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_family_hd.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Disney=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F195.m3u8&mode=15&name=Sky+Movies+Disney+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_disney.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_movies_disney.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Film4=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F182.m3u8&mode=15&name=Film4+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/film4.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/film4.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Movies 24=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F633.m3u8&mode=15&name=Movies+24+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/movies24_uk.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/movies24_uk.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'JollyHD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F739.m3u8&mode=15&name=JollyHD&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/tring_jolly_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/tring_jolly_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Film Dy HD AL=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F777.m3u8&mode=15&name=Film+Dy+HD+AL&amp;iconimage=http%3A//www.sat-address.com/f/pics/logotipi/Film-Dy-DigitAlb_o.jpg+&amp;fanart=http%3A//www.sat-address.com/f/pics/logotipi/Film-Dy-DigitAlb_o.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Film Nje HD AL=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F778.m3u8&mode=15&name=Film+Nje+HD+AL&amp;iconimage=http%3A//www.sat-address.com/f/pics/logotipi/Film-Nje-DigitAlb_o.jpg+&amp;fanart=http%3A//www.sat-address.com/f/pics/logotipi/Film-Nje-DigitAlb_o.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'HBO Adria=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F564.m3u8&mode=15&name=HBO+Adria&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo_adria.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo_adria.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'HBO 2 Adria=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F672.m3u8&mode=15&name=HBO+2+Adria&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo2_ce.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo2_ce.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'HBO 3 Adria=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F738.m3u8&mode=15&name=HBO+3+Adria&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo3_nl.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo3_nl.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'HBO 1 (NL)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F675.m3u8&mode=15&name=HBO+1+%28NL%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo_nl_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo_nl_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'HBO 2 (NL)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F674.m3u8&mode=15&name=HBO+2+%28NL%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo2_nl.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo2_nl.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'HBO 3 (NL)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F673.m3u8&mode=15&name=HBO+3+%28NL%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo3_nl.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo3_nl.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'TVCINE 1 HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F851.m3u8&mode=15&name=TVCINE+1+HD+PT&amp;iconimage=http%3A//www.zipestream.com/images/TVC1.png+&amp;fanart=http%3A//www.zipestream.com/images/TVC1.png+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'TVCINE 2 HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F850.m3u8&mode=15&name=TVCINE+2+HD+PT&amp;iconimage=http%3A//www.zipestream.com/images/TVC2.png&amp;fanart=http%3A//www.zipestream.com/images/TVC2.png&amp;description=' + '\n' )
- Oo0oOOo . write ( r'TVCINE 3 HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F849.m3u8&mode=15&name=TVCINE+3+HD+PT&amp;iconimage=http%3A//www.zipestream.com/images/TVC3.png+&amp;fanart=http%3A//www.zipestream.com/images/TVC3.png+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'TVCINE 4 HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F848.m3u8&mode=15&name=TVCINE+4+HD+PT&amp;iconimage=http%3A//www.zipestream.com/images/TVC4.png+&amp;fanart=http%3A//www.zipestream.com/images/TVC4.png+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Hollywood (Pt)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F702.m3u8&mode=15&name=Hollywood+%28Pt%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/canal_hollywood_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/canal_hollywood_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'US &amp; UK Movies from Asia=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F396.m3u8&mode=15&name=US+%26+UK+Movies+from+Asia&amp;iconimage=http%3A//vignette4.wikia.nocookie.net/logopedia/images/8/8e/My_Movie_Channel_official_slogan.jpg+&amp;fanart=http%3A//vignette4.wikia.nocookie.net/logopedia/images/8/8e/My_Movie_Channel_official_slogan.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'ABC HD US=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F295.m3u8&mode=15&name=ABC+HD+US&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/abc_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/abc_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'ABC=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F11.m3u8&mode=15&name=ABC+%28US%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/abc_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/abc_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'A&E=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F16.m3u8&mode=15&name=A%26E+%28US%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/ae_us.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/ae_us.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'AMC=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F52.m3u8&mode=15&name=AMC+%28US%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/amc_us.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/amc_us.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'AXS TV=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F392.m3u8&mode=15&name=AXS+TV+%28US%29&amp;iconimage=http%3A//www.musicnewsnashville.com/wp-content/uploads/2014/04/axs-tv_logo.jpg&amp;fanart=http%3A//www.musicnewsnashville.com/wp-content/uploads/2014/04/axs-tv_logo.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Bravo=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F14.m3u8&mode=15&name=Bravo+%28US%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bravo_us.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bravo_us.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'CBS=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F250.m3u8&mode=15&name=CBS+%28US%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/cbs.jpg&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/cbs.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'CW=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F626.m3u8&mode=15&name=CW+%28US%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/kcwq_palm_springs.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/kcwq_palm_springs.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'FOX=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F297.m3u8&mode=15&name=Fox+HD+US&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_bg.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_bg.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'FOX=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F13.m3u8&mode=15&name=Fox+%28US%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_bg.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_bg.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'FX=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F409.m3u8&mode=15&name=FX+%28US%29&amp;iconimage=http%3A//www.casinopartydesigners.com/images/fx-140x140.jpg+&amp;fanart=http%3A//www.casinopartydesigners.com/images/fx-140x140.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'NBC=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F15.m3u8&mode=15&name=NBC+%28US%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nbc.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nbc.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'PBSNET (PBS)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F398.m3u8&mode=15&name=PBS+%28US%29&amp;iconimage=http%3A//vignette2.wikia.nocookie.net/arthur/images/5/58/PBS.jpg+&amp;fanart=http%3A//vignette2.wikia.nocookie.net/arthur/images/5/58/PBS.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Lifetime HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F627.m3u8&mode=15&name=Lifetime+USA&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/lifetime_us.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/lifetime_us.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Spike TV<=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F375.m3u8&mode=15&name=Spike+%28US%29&amp;iconimage=http%3A//1.images.spike.com/images/missing_image2.jpg&amp;fanart=http%3A//1.images.spike.com/images/missing_image2.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Syfy=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F238.m3u8&mode=15&name=Syfy+%28US%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/syfy_us.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/syfy_us.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'TBS=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F253.m3u8&mode=15&name=TBS+%28US%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/tbs_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/tbs_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'TNT=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F381.m3u8&mode=15&name=TNT+%28US%29&amp;iconimage=http%3A//web.cablecolor.cl/images/Canales/Seriespeliculas/tnt.jpg++&amp;fanart=http%3A//web.cablecolor.cl/images/Canales/Seriespeliculas/tnt.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'USA=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F379.m3u8&mode=15&name=USA+%28US%29&amp;iconimage=http%3A//images.bwwstatic.com/columnpic6/24BBCD1DC-0C7F-5F83-A9B18707E9842A5E.jpg+&amp;fanart=http%3A//images.bwwstatic.com/columnpic6/24BBCD1DC-0C7F-5F83-A9B18707E9842A5E.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'KTLA=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F628.m3u8&mode=15&name=KTLA+/CW&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/ktla_cw5_los_angeles.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/ktla_cw5_los_angeles.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Global BC (CA)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F399.m3u8&mode=15&name=Global+BC+%28CA%29&amp;iconimage=http%3A//priceypads.com/wp-content/uploads/2010/01/Global-BC.jpg&amp;fanart=http%3A//priceypads.com/wp-content/uploads/2010/01/Global-BC.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Space HD Ca=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F630.m3u8&mode=15&name=Space+HD+Ca&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/space_ca_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/space_ca_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'WPIX=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F629.m3u8&mode=15&name=WPIX+II+CA&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/wpix_cw11_new_york.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/wpix_cw11_new_york.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Hallmark Channel=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F525.m3u8&mode=15&name=Hallmark+Channel+HD&amp;iconimage=http%3A//www.kadoshop-leenhouts.nl/uploads/1/3/5/1/13510121/8447772_orig.jpg++&amp;fanart=http%3A//www.kadoshop-leenhouts.nl/uploads/1/3/5/1/13510121/8447772_orig.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'CineMAX=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F553.m3u8&mode=15&name=Cinemax+East&amp;iconimage=http%3A//static.wixstatic.com/media/17a537_42bb4d4b404748b490b8252b9d3c8451.jpeg+&amp;fanart=http%3A//static.wixstatic.com/media/17a537_42bb4d4b404748b490b8252b9d3c8451.jpeg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Cinemax 5 StarMAX HD East (5MAXHD)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F403.m3u8&mode=15&name=Cinemax+5+StarMax&amp;iconimage=http%3A//vignette2.wikia.nocookie.net/logopedia/images/2/22/5StarMax_2011.jpg++++&amp;fanart=http%3A//vignette2.wikia.nocookie.net/logopedia/images/2/22/5StarMax_2011.jpg++++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Cinemax ActionMax HD East (AMAXHD)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F402.m3u8&mode=15&name=Cinemax+ActionMax+East&amp;iconimage=http%3A//vignette3.wikia.nocookie.net/company-bumpers/images/1/10/ActionMax_ID_%281998-2001%29.jpg+++&amp;fanart=http%3A//vignette3.wikia.nocookie.net/company-bumpers/images/1/10/ActionMax_ID_%281998-2001%29.jpg+++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'MoreMAX=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F401.m3u8&mode=15&name=Cinemax+Moremax&amp;iconimage=http%3A//vignette3.wikia.nocookie.net/logopedia/images/3/38/MoreMax_2011.jpg+++&amp;fanart=http%3A//vignette3.wikia.nocookie.net/logopedia/images/3/38/MoreMax_2011.jpg+++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'HBO (Pacific)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F249.m3u8&mode=15&name=HBO&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo_east.jpg+++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo_east.jpg+++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'HBO Comedy HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F244.m3u8&mode=15&name=HBO+Comedy+%28US%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo_comedy_us.jpg+++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo_comedy_us.jpg+++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'HBO Signature (Pacific)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F247.m3u8&mode=15&name=HBO+Signature&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo_signature.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo_signature.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'HBO Zone (Pacific)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F242.m3u8&mode=15&name=HBO+Zone&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo_zone_us.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hbo_zone_us.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Starz (Pacific)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F582.m3u8&mode=15&name=Starz+%28US%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/starz.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/starz.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Starz Cinema=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F400.m3u8&mode=15&name=Starz+Cinema+East&amp;iconimage=https%3A//www.starzplay.com/Images/starz/starz_facebook_logo_large.png+++&amp;fanart=https%3A//www.starzplay.com/Images/starz/starz_facebook_logo_large.png+++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Starz Edge (Pacific)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F413.m3u8&mode=15&name=Starz+Edge+East&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/starz_edge.jpg+++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/starz_edge.jpg+++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Encore (ENCe)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F581.m3u8&mode=15&name=Starz+Encore+East+%28US%29&amp;iconimage=http%3A//www.secv.com/images/premium_starz.jpg+&amp;fanart=http%3A//www.secv.com/images/premium_starz.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Showtime=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F554.m3u8&mode=15&name=Showtime+%28US%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/showtime_west.jpg+++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/showtime_west.jpg+++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Showtime Beyond=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F414.m3u8&mode=15&name=Showtime+2+East&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/showtime2_east.jpg+++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/showtime2_east.jpg+++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Showtime West=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F416.m3u8&mode=15&name=Showtime+West&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/showtime_west.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/showtime_west.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Showtime Beyond=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F415.m3u8&mode=15&name=Showtime+Showcase+East&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/showtime_showcase_east.jpg+++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/showtime_showcase_east.jpg+++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'BabyTV=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F523.m3u8&mode=15&name=BabyTV&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/baby_tv.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/baby_tv.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Cartoon Netwrk=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F519.m3u8&mode=15&name=Cartoon+Netwrk&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/cartoon_network_us.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/cartoon_network_us.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Disney Chnl=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F231.m3u8&mode=15&name=Disney+Channel+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/disney_channel_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/disney_channel_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Disney Junior=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F230.m3u8&mode=15&name=Disney+Jr.+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/disney_junior_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/disney_junior_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Disney XD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F770.m3u8&mode=15&name=Disney+XD+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/disney_xd_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/disney_xd_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Nicktoons=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F520.m3u8&mode=15&name=Nicktoons&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nicktoons_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nicktoons_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Nickelodeon=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F521.m3u8&mode=15&name=Nickelodeon&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nickelodeon_us.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nickelodeon_us.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Nick Jr.=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F522.m3u8&mode=15&name=Nick+Jr.&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nick_jr_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nick_jr_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Animal Planet (APL)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F198.m3u8&mode=15&name=Animal+Planet+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/animal_planet_europe.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/animal_planet_europe.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Discovery=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F200.m3u8&mode=15&name=Discovery+Channel+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/discovery_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/discovery_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Disc.History=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F201.m3u8&mode=15&name=Discovery+History+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/discovery_history.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/discovery_history.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Disc.Science=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F199.m3u8&mode=15&name=Discovery+Science+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/discovery_science.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/discovery_science.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Disc.Turbo=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F168.m3u8&mode=15&name=Discovery+Turbo+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/discovery_turbo_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/discovery_turbo_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'DMAX=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F638.m3u8&mode=15&name=DMAX+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/dmax_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/dmax_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'History=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F196.m3u8&mode=15&name=History+Channel+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/history_uk.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/history_uk.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'H2=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F468.m3u8&mode=15&name=H2+UK&amp;iconimage=http%3A//www.mediared.tv/uploads/9/0/6/6/9066987/9872449.jpg+&amp;fanart=http%3A//www.mediared.tv/uploads/9/0/6/6/9066987/9872449.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'CI=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F202.m3u8&mode=15&name=Crime+%26+Investigation+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/crime_investigation_network_uk.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/crime_investigation_network_uk.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'National Geographic Channel=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F197.m3u8&mode=15&name=National+Geographic+Channel+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nat_geo_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nat_geo_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'National Geographic Wild=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F622.m3u8&mode=15&name=Nat+Geo+Wild+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nat_geo_wild_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nat_geo_wild_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'MTV CLASSIC=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F420.m3u8&mode=15&name=MTV+Classic&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/mtv_classic_uk.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/mtv_classic_uk.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'MTV HITS=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F235.m3u8&mode=15&name=MTV+Hits&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/mtv_hits_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/mtv_hits_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'MTV MUSIC=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F234.m3u8&mode=15&name=MTV+Music+UK&amp;iconimage=https%3A//upload.wikimedia.org/wikipedia/commons/thumb/f/f9/MTV_Music_2013.png/220px-MTV_Music_2013.png&amp;fanart=https%3A//upload.wikimedia.org/wikipedia/commons/thumb/f/f9/MTV_Music_2013.png/220px-MTV_Music_2013.png&amp;description=' + '\n' )
- Oo0oOOo . write ( r'VH1=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F556.m3u8&mode=15&name=VH1+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/vh1_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/vh1_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Sports 1 HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F323.m3u8&mode=15&name=Sky+Sports+1+HD&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_hd1.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_hd1.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Sports 1=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F18.m3u8&mode=15&name=Sky+Sports+1+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_hd1.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_hd1.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Sports 2 HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F322.m3u8&mode=15&name=Sky+Sports+2+HD&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_hd2.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_hd2.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Sports 2=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F19.m3u8&mode=15&name=Sky+Sports+2+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_hd2.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_hd2.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Sports 3 HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F321.m3u8&mode=15&name=Sky+Sports+3+HD&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_hd3.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_hd3.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Sports 3=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F20.m3u8&mode=15&name=Sky+Sports+3+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_hd3.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_hd3.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Sports 4 HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F320.m3u8&mode=15&name=Sky+Sports+4+HD&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_hd4.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_hd4.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Sports 4=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F21.m3u8&mode=15&name=Sky+Sports+4+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_hd4.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_hd4.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Sports 5 HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F339.m3u8&mode=15&name=Sky+Sports+5+HD&amp;iconimage=http%3A//www.sky.com/shop/export/sites/www.sky.com/shop/__EPG/EPGImages/sports_5hd.png_1689595083.png&amp;fanart=http%3A//www.sky.com/shop/export/sites/www.sky.com/shop/__EPG/EPGImages/sports_5hd.png_1689595083.png&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Sports 5=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F22.m3u8&mode=15&name=Sky+Sports+5+UK&amp;iconimage=http%3A//store.virginmedia.com/content/dam/eSales/TV/logos-81x45/sky-sports-5-hd-pos.png+&amp;fanart=http%3A//store.virginmedia.com/content/dam/eSales/TV/logos-81x45/sky-sports-5-hd-pos.png+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Sports F1 HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F374.m3u8&mode=15&name=Sky+Sports+F1+HD&amp;iconimage=http%3A//img.skysports.com/11/11/660x350/f1new_2682772.jpg+&amp;fanart=http%3A//img.skysports.com/11/11/660x350/f1new_2682772.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Sports F1=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F24.m3u8&mode=15&name=Sky+Sports+F1+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_f1_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_f1_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky SpN HQ HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F23.m3u8&mode=15&name=Sky+Sports+News+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_news_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_uk_sports_news_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'BT Sport 1 HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F316.m3u8&mode=15&name=BT+Sport+1+HD&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bt_sport_1_hd.jpg&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bt_sport_1_hd.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'BT Sport 1=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F309.m3u8&mode=15&name=BT+Sport+1+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bt_sport_1_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bt_sport_1_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'BT Sport 2 HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F308.m3u8&mode=15&name=BT+Sport+2+HD&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bt_sport_2_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bt_sport_2_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'BT Sports 2 HD (1080) Test=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F599.m3u8&mode=15&name=BT+Sports+2+HD+%281080%29+Test&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bt_sport_2_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bt_sport_2_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'BT Sports 2 HD Test=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F707.m3u8&mode=15&name=BT+Sports+2+HD+Test&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bt_sport_2_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bt_sport_2_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'BT Sport 2=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F26.m3u8&mode=15&name=BT+Sport+2+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bt_sport_2_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bt_sport_2_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'BT Sport EurHD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F382.m3u8&mode=15&name=BT+Sport+Europe+HD&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bt_sport_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bt_sport_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'BT Sport Europe=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F705.m3u8&mode=15&name=BT+Sport+Europe&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bt_sport_1_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bt_sport_1_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'BT Sport\/\/ESPN=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F28.m3u8&mode=15&name=BT+Sport+ESPN&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/espn_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/espn_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Premier HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F310.m3u8&mode=15&name=Premier+Sports+HD&amp;iconimage=http%3A//w3.satkurier.pl/pliki/24801.jpg+&amp;fanart=http%3A//w3.satkurier.pl/pliki/24801.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Premier Sports HD 1080P=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F384.m3u8&mode=15&name=Premier+Sports+HD+1080P&amp;iconimage=http%3A//w3.satkurier.pl/pliki/24801.jpg+&amp;fanart=http%3A//w3.satkurier.pl/pliki/24801.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Premier Sports=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F175.m3u8&mode=15&name=Premier+Sports+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/premier_sports.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/premier_sports.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Setanta Ireland=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F176.m3u8&mode=15&name=Setanta+Sports+Ireland+1+UK&amp;iconimage=http%3A//www.setanta.com/Themes/setanta/img/channel_logos/Setanta.png+&amp;fanart=http%3A//www.setanta.com/Themes/setanta/img/channel_logos/Setanta.png+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'At The Races=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F170.m3u8&mode=15&name=At+the+Races+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/at_the_races_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/at_the_races_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Racing UK=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F171.m3u8&mode=15&name=Racing+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/racing_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/racing_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'MUTV=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F172.m3u8&mode=15&name=Manchester+United+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/mutv.jpg&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/mutv.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'LFCTV=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F174.m3u8&mode=15&name=Liverpool+TV+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/liverpool_football_club.jpg&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/liverpool_football_club.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Chelsea TV=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F177.m3u8&mode=15&name=Chelsea+TV+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/chelsea_tv.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/chelsea_tv.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Eurosport=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F269.m3u8&mode=15&name=Eurosport+1+UK&amp;iconimage=http%3A//euro-2012.ru/download/Logo-eurosport.jpg+&amp;fanart=http%3A//euro-2012.ru/download/Logo-eurosport.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Eurosport 2 UK=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F748.m3u8&mode=15&name=Eurosport+2+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/eurosport2.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/eurosport2.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'1HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F83.m3u8&mode=15&name=BEIN+SPORTS+1&amp;iconimage=http%3A//digigroup.az/media/images/1.jpg+&amp;fanart=http%3A//digigroup.az/media/images/1.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'2HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F84.m3u8&mode=15&name=BEIN+SPORTS+2&amp;iconimage=http%3A//digigroup.az/media/images/2.jpg++&amp;fanart=http%3A//digigroup.az/media/images/2.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'3HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F85.m3u8&mode=15&name=BEIN+SPORTS+3&amp;iconimage=http%3A//digigroup.az/media/images/3.jpg++&amp;fanart=http%3A//digigroup.az/media/images/3.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'4HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F86.m3u8&mode=15&name=BEIN+SPORTS+4&amp;iconimage=http%3A//digigroup.az/media/images/4.jpg++&amp;fanart=http%3A//digigroup.az/media/images/4.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'5HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F87.m3u8&mode=15&name=BEIN+SPORTS+5&amp;iconimage=http%3A//digigroup.az/media/images/5.jpg++&amp;fanart=http%3A//digigroup.az/media/images/5.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'6HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F88.m3u8&mode=15&name=BEIN+SPORTS+6&amp;iconimage=http%3A//digigroup.az/media/images/6.jpg++&amp;fanart=http%3A//digigroup.az/media/images/6.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'7HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F89.m3u8&mode=15&name=BEIN+SPORTS+7&amp;iconimage=http%3A//digigroup.az/media/images/7.jpg++&amp;fanart=http%3A//digigroup.az/media/images/7.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'8HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F90.m3u8&mode=15&name=BEIN+SPORTS+8&amp;iconimage=http%3A//digigroup.az/media/images/8.jpg++&amp;fanart=http%3A//digigroup.az/media/images/8.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'9HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F91.m3u8&mode=15&name=BEIN+SPORTS+9&amp;iconimage=http%3A//digigroup.az/media/images/9.jpg++&amp;fanart=http%3A//digigroup.az/media/images/9.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'10HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F92.m3u8&mode=15&name=BEIN+SPORTS+10&amp;iconimage=http%3A//digigroup.az/media/images/10.jpg++&amp;fanart=http%3A//digigroup.az/media/images/10.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'12HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F424.m3u8&mode=15&name=BEIN+SPORTS+12&amp;iconimage=http%3A//digigroup.az/media/images/12.jpg++&amp;fanart=http%3A//digigroup.az/media/images/12.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Astro SuperSport=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F60.m3u8&mode=15&name=Astro+Supersport+1&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/astro_supersport1.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/astro_supersport1.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Astro SuperSport 2=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F59.m3u8&mode=15&name=Astro+Supersport+2&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/astro_supersport2.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/astro_supersport2.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Astro SuperSport 3=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F58.m3u8&mode=15&name=Astro+Supersport+3&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/astro_supersport3.jpg+++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/astro_supersport3.jpg+++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Astro SuperSport 4=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F57.m3u8&mode=15&name=Astro+Supersport+4&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/astro_supersport4.jpg++++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/astro_supersport4.jpg++++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'STADIUM 1 (CTH 211 SD / 56HD)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F67.m3u8&mode=15&name=CTH+Stadium+1+HD&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/stadium1_th.jpg+++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/stadium1_th.jpg+++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'STADIUM 2 (CTH 212 SD / 57 HD)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F66.m3u8&mode=15&name=CTH+Stadium+2+HD&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/stadium2_th.jpg+++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/stadium2_th.jpg+++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'STADIUM 3 (CTH 213 SD / 58 HD)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F65.m3u8&mode=15&name=CTH+Stadium+3+HD&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/stadium3_th.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/stadium3_th.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'STADIUM 4 (CTH 214 SD / 59 HD)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F64.m3u8&mode=15&name=CTH+Stadium+4+HD&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/stadium4_th.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/stadium4_th.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'STADIUM 5 (CTH 216 SD / 60 HD)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F63.m3u8&mode=15&name=CTH+Stadium+5+HD&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/stadium5_th.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/stadium5_th.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'STADIUM 6 (CTH 216 SD / 61 HD)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F62.m3u8&mode=15&name=CTH+STADIUM+6+HD&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/stadium6_th.jpg+++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/stadium6_th.jpg+++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'STADIUM X (CTH 217 SD / 62 HD)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F61.m3u8&mode=15&name=CTH+STADIUM+X+HD&amp;iconimage=http%3A//stepfb.net/live/movieposters/136.png++&amp;fanart=http%3A//stepfb.net/live/movieposters/136.png++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'TV Arena Sport 1=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F163.m3u8&mode=15&name=Arena+Sport+1&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/arenasport1_rs.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/arenasport1_rs.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'TV Arena Sport 2=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F167.m3u8&mode=15&name=Arena+Sport+2&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/arenasport2_rs.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/arenasport2_rs.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'TV Arena Sport 3=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F164.m3u8&mode=15&name=Arena+Sport+3&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/arenasport3_rs.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/arenasport3_rs.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'TV Arena Sport 4=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F165.m3u8&mode=15&name=Arena+Sport+4&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/arenasport4_rs.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/arenasport4_rs.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'TSN1=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F96.m3u8&mode=15&name=TSN+1&amp;iconimage=http%3A//tgo-tv.com/images/tv/tsn1.jpg+++&amp;fanart=http%3A//tgo-tv.com/images/tv/tsn1.jpg+++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'TSN2=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F97.m3u8&mode=15&name=TSN+2&amp;iconimage=http%3A//tgo-tv.com/images/tv/tsn2.jpg++&amp;fanart=http%3A//tgo-tv.com/images/tv/tsn2.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'TSN3=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F98.m3u8&mode=15&name=TSN+3&amp;iconimage=http%3A//cdn1.sportngin.com/attachments/news_article/5782/7585/tsn_thumb.jpg+++&amp;fanart=http%3A//cdn1.sportngin.com/attachments/news_article/5782/7585/tsn_thumb.jpg+++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'TSN4=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F99.m3u8&mode=15&name=TSN+4&amp;iconimage=http%3A//contact.sourcecable.ca/wp-content/uploads/2015/05/TSN4_CMYK.jpg+&amp;fanart=http%3A//contact.sourcecable.ca/wp-content/uploads/2015/05/TSN4_CMYK.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'FOX Sports 1 Eredivisie HD"=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F531.m3u8&mode=15&name=Fox+Sports+1+%28Nl%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_sports1_au.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_sports1_au.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'FOX Sports 2 HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F530.m3u8&mode=15&name=Fox+Sports+2+%28Nl%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_sports_nl_02.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_sports_nl_02.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'FOX Sports 3 Eredivisie HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F529.m3u8&mode=15&name=Fox+Sports+3+%28Nl%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_sports3_au.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_sports3_au.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'FOX Sports 4 HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F528.m3u8&mode=15&name=Fox+Sports+4+%28Nl%29&amp;iconimage=http%3A//www.sat-address.com/f/pics/logotipi/Fox-Sports-4-Int-NL_o.jpg+&amp;fanart=http%3A//www.sat-address.com/f/pics/logotipi/Fox-Sports-4-Int-NL_o.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'FOX Sports 5 Eredivisie HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F527.m3u8&mode=15&name=Fox+Sports+5+%28Nl%29&amp;iconimage=http%3A//www.sat-address.com/f/pics/logotipi/Fox-Sports-5-Eredivisie_o.jpg+&amp;fanart=http%3A//www.sat-address.com/f/pics/logotipi/Fox-Sports-5-Eredivisie_o.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Arena Sport 5=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F166.m3u8&mode=15&name=Arena+Sport+5&amp;iconimage=http%3A//fanclub365.vn/s/41663-arena_sport_5-.jpg+++&amp;fanart=http%3A//fanclub365.vn/s/41663-arena_sport_5-.jpg+++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'CBS Sports Network (CBS SN)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F378.m3u8&mode=15&name=CBS+Sports+%28US%29&amp;iconimage=http%3A//images.bwwstatic.com/columnpic6/2FBEB2A30-DAF8-BAC8-F5562F03F5F07369.jpg++&amp;fanart=http%3A//images.bwwstatic.com/columnpic6/2FBEB2A30-DAF8-BAC8-F5562F03F5F07369.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'NBA TV=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F304.m3u8&mode=15&name=NBA+TV+%28US%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nba_tv.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nba_tv.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'NFL NETWORK=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F95.m3u8&mode=15&name=NFL+Network+%28US%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nfl_network.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nfl_network.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Viasat Sports RU=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F278.m3u8&mode=15&name=Viasat+Sports+RU&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/viasat_sport_no.jpg&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/viasat_sport_no.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'E! Entertainment Television=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F835.m3u8&mode=15&name=E%21+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/e_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/e_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'London Live=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F830.m3u8&mode=15&name=London+Live&amp;iconimage=http%3A//www.londoncommunications.co.uk/wp-content/uploads/2014/03/London-Live.jpg+&amp;fanart=http%3A//www.londoncommunications.co.uk/wp-content/uploads/2014/03/London-Live.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'AXNHD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F842.m3u8&mode=15&name=AXN+HD+PT&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/axn_de_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/axn_de_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'AXNBLACKHD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F841.m3u8&mode=15&name=AXN+BLACK+HD+PT&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/axn_black_pt.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/axn_black_pt.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'FOX=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F845.m3u8&mode=15&name=Fox+hd+PT&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_hd_lam.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_hd_lam.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'FOXLIFE=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F843.m3u8&mode=15&name=FoxLife+HD+PT&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_life_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_life_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'FOXCRIME=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F844.m3u8&mode=15&name=Fox+Crime+HD+PT&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_crime_asia_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_crime_asia_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'MOVHD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F839.m3u8&mode=15&name=Mov+HD+PT&amp;iconimage=http%3A//canalmov.pt/wp-content/themes/site/images/cabecera_logo/logoprincipal.png+&amp;fanart=http%3A//canalmov.pt/wp-content/themes/site/images/cabecera_logo/logoprincipal.png+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'SYFYHD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F838.m3u8&mode=15&name=SyFy+PT&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/syfy_universal_fr.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/syfy_universal_fr.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'True Movies 1=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F853.m3u8&mode=15&name=True+Movies+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/true_movies1_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/true_movies1_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'True Movies 2 UK=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F852.m3u8&mode=15&name=True+Movies+2+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/true_movies2.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/true_movies2.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'FOXMOVIESHD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F846.m3u8&mode=15&name=Fox+Movies+PT&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_movies_pt.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_movies_pt.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Comedy Central=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F837.m3u8&mode=15&name=Comedy+Central+HD+US&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/comedy_central_at_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/comedy_central_at_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Discovery Family Channel (DFCH)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F836.m3u8&mode=15&name=Discovery+Family++HD+US&amp;iconimage=https%3A//pmcdeadline2.files.wordpress.com/2015/03/discovery-family.jpg+&amp;fanart=https%3A//pmcdeadline2.files.wordpress.com/2015/03/discovery-family.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'E! (E!)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F834.m3u8&mode=15&name=E%21+US&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/e_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/e_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'ABC Family=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F833.m3u8&mode=15&name=Family+Channel+US&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/my_family_tv.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/my_family_tv.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'VH1 (VH1)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F828.m3u8&mode=15&name=VH1+US&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/vh1_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/vh1_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Slice=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F829.m3u8&mode=15&name=SLICE+TV+US&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/slice.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/slice.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Lifetime Movie Network=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F524.m3u8&mode=15&name=LMN+US&amp;iconimage=http%3A//cdn.realscreen.com/wp/wp-content/uploads/2013/09/LMN.jpg+++&amp;fanart=http%3A//cdn.realscreen.com/wp/wp-content/uploads/2013/09/LMN.jpg+++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Cartoon Netwrk=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F519.m3u8&mode=15&name=Cartoon+Network+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/cartoon_network_uk.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/cartoon_network_uk.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Cartoon Network=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F809.m3u8&mode=15&name=Cartoon+Network+US&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/cartoon_network_us.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/cartoon_network_us.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'CBBC=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F808.m3u8&mode=15&name=CBBC+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bbc_cbbc.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bbc_cbbc.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'CBeebies=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F807.m3u8&mode=15&name=Cbeebies&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bbc_cbeebies_asia.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/bbc_cbeebies_asia.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Animal Planet=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F818.m3u8&mode=15&name=Animal+Planet+HD+US&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/animal_planet_us_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/animal_planet_us_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'The Discovery Channel=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F817.m3u8&mode=15&name=Discovery+Channel+HD+US&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/discovery_ca.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/discovery_ca.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Do-It-Yourself Network=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F815.m3u8&mode=15&name=DIY+Network+US&amp;iconimage=http%3A//www.homesoldpledge.com/wp-content/uploads/2014/04/logo-diy-network.jpg+&amp;fanart=http%3A//www.homesoldpledge.com/wp-content/uploads/2014/04/logo-diy-network.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'H2 (H2)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F814.m3u8&mode=15&name=H2+US&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/history_2_us.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/history_2_us.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'History Channel (HIST)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F813.m3u8&mode=15&name=HISTORY+US&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/history_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/history_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Investigation Discovery (ID)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F812.m3u8&mode=15&name=Investigation+Discovery++US&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/investigation_discovery_us_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/investigation_discovery_us_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'National Geographic Channel=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F810.m3u8&mode=15&name=National+Geographic+US&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nat_geo_eur_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nat_geo_eur_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'NatGeo WILD (NGWILD)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F811.m3u8&mode=15&name=NAT+GEO+WILD+US&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nat_geo_wild_us_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/nat_geo_wild_us_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'MTV CLASSIC=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F420.m3u8&mode=15&name=MTV+Classic&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/mtv_classic_uk.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/mtv_classic_uk.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Clubland TV=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F806.m3u8&mode=15&name=Clubland+Music&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/clubland_tv.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/clubland_tv.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'The Box=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F805.m3u8&mode=15&name=The+Box&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/the_box_uk.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/the_box_uk.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'BoxNation=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F173.m3u8&mode=15&name=Box+Nation+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/box_nation.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/box_nation.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Big Ten HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F823.m3u8&mode=15&name=Big+Ten+Network+US&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/big_ten_network_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/big_ten_network_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'MLB Network=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F822.m3u8&mode=15&name=MLB+US&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/mlb_network.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/mlb_network.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Willow Cricket=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F824.m3u8&mode=15&name=Willow+Sports+HD+US&amp;iconimage=https%3A//1.bp.blogspot.com/-Ar8J69gqR44/Vuak-8J1uWI/AAAAAAAAA1o/nQgEJbrZRbQnz_iXtg4TkNU5TAg5MPDLA/s320/willow-cricket.jpg+&amp;fanart=https%3A//1.bp.blogspot.com/-Ar8J69gqR44/Vuak-8J1uWI/AAAAAAAAA1o/nQgEJbrZRbQnz_iXtg4TkNU5TAg5MPDLA/s320/willow-cricket.jpg+&amp;description=' + '\n' )
- if 75 - 75: oO0o
- if 50 - 50: Ii1I / Oo0Ooo - oO0o - I11i % ooOoo0O - oO0o
- Oo0oOOo . write ( r'AXN White HD PT=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F840.m3u8&mode=15&name=AXN+White+HD+PT&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/axn_white_us.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/axn_white_us.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'CINEMUNDO PT=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F847.m3u8&mode=15&name=CINEMUNDO+PT&amp;iconimage=https%3A//i.vimeocdn.com/portrait/9079238_300x300.jpg+&amp;fanart=https%3A//i.vimeocdn.com/portrait/9079238_300x300.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'FreeForm US=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F832.m3u8&mode=15&name=FreeForm+US&amp;iconimage=http%3A//t2.snewsi.com/188/8/18885012.jpg+&amp;fanart=http%3A//t2.snewsi.com/188/8/18885012.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'HIFI US=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F831.m3u8&mode=15&name=HIFI+US&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hifi_music_art.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/hifi_music_art.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Discovery Home &amp; Health UK=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F816.m3u8&mode=15&name=Discovery+Home+%26+Health+UK&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/discovery_home_health_uk_plus1.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/discovery_home_health_uk_plus1.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'CITY TV=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F803.m3u8&mode=15&name=CITY+TV&amp;iconimage=http%3A//thewatchtv.com/wp-content/uploads/2013/05/Watch-CITY-TV-Live-TV-from-Bulgaria.jpg+&amp;fanart=http%3A//thewatchtv.com/wp-content/uploads/2013/05/Watch-CITY-TV-Live-TV-from-Bulgaria.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'DANCE HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F802.m3u8&mode=15&name=DANCE+HD&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/dance_tv_hu.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/dance_tv_hu.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Dream music=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F799.m3u8&mode=15&name=Dream+music&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/dream_tv_tr.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/dream_tv_tr.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Europe Plus Music=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F796.m3u8&mode=15&name=Europe+Plus+Music&amp;iconimage=http%3A//1tv.ucoz.ru/logo_channel/ee.jpeg+&amp;fanart=http%3A//1tv.ucoz.ru/logo_channel/ee.jpeg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'HITV Music=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F804.m3u8&mode=15&name=HITV+Music&amp;iconimage=http%3A//static-cdn1.ustream.tv/i/channel/picture/8/6/3/7/8637664/8637664_hit_music_channel_1309019162%2C66x66%2Cr%3A1.jpg+&amp;fanart=http%3A//static-cdn1.ustream.tv/i/channel/picture/8/6/3/7/8637664/8637664_hit_music_channel_1309019162%2C66x66%2Cr%3A1.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Music Channel=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F800.m3u8&mode=15&name=Music+Channel&amp;iconimage=https%3A//upload.wikimedia.org/wikipedia/en/f/f8/Music_Choice_%2528logo%2529.jpg+&amp;fanart=https%3A//upload.wikimedia.org/wikipedia/en/f/f8/Music_Choice_%2528logo%2529.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Heavy Metal=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F801.m3u8&mode=15&name=Heavy+Metal&amp;iconimage=https%3A//channelpear.com/images/heavymetaltelevision.png+&amp;fanart=https%3A//channelpear.com/images/heavymetaltelevision.png+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Si TV Music=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F797.m3u8&mode=15&name=Si+TV+Music&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/si_tv_hn.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/si_tv_hn.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'VEVO Music=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F798.m3u8&mode=15&name=VEVO+Music&amp;iconimage=http%3A//i.imgur.com/6Bv76t9.jpg+&amp;fanart=http%3A//i.imgur.com/6Bv76t9.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'beIN Sport 1 (Fr)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F9.m3u8&mode=15&name=beIN+Sport+1+%28Fr%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/be_in_sport1_hd.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/be_in_sport1_hd.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'beIN Sport 2 (Fr)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F81.m3u8&mode=15&name=beIN+Sport+2+%28Fr%29&amp;iconimage=http%3A//3.bp.blogspot.com/-X28wcyKEmyA/Vl-TLcw3MEI/AAAAAAAAAIo/AZGqtQkviSM/s1600/index.png+&amp;fanart=http%3A//3.bp.blogspot.com/-X28wcyKEmyA/Vl-TLcw3MEI/AAAAAAAAAIo/AZGqtQkviSM/s1600/index.png+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'beIN Sport 3 (Fr)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F82.m3u8&mode=15&name=beIN+Sport+3+%28Fr%29&amp;iconimage=http%3A//nowwatchtvlive.me/wp-content/uploads/2014/01/beinsport_3hd.jpg+++&amp;fanart=http%3A//nowwatchtvlive.me/wp-content/uploads/2014/01/beinsport_3hd.jpg+++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Bein Sport US HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F766.m3u8&mode=15&name=Bein+Sport+US+HD&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/be_in_sport_us.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/be_in_sport_us.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'RDS=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F505.m3u8&mode=15&name=RDS&amp;iconimage=http%3A//www.bellmedia.ca/wp-content/uploads/2014/02/tv_rds-500x500.png++&amp;fanart=http%3A//www.bellmedia.ca/wp-content/uploads/2014/02/tv_rds-500x500.png++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Fox Sports 1 (US)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F262.m3u8&mode=15&name=Fox+Sports+1+%28US%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_sports_lam_basico.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_sports_lam_basico.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Fox Sports 2 (US)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F261.m3u8&mode=15&name=Fox+Sports+2+%28US%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_sports_lam_basico.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_sports_lam_basico.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Fox Sports 1 (Asia)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F391.m3u8&mode=15&name=Fox+Sports+1+%28Asia%29&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_sports_lam_hd.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/fox_sports_lam_hd.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'KP+ PM HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F475.m3u8&mode=15&name=KP%2B+PM+HD&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/k_plus_pc.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/k_plus_pc.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'K+ 1 HD Sports/Movies=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F390.m3u8&mode=15&name=K%2B+1+HD+Sports/Movies&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/k_plus_1.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/k_plus_1.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Skynet Sports HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F473.m3u8&mode=15&name=Skynet+Sports+HD&amp;iconimage=http%3A//www.sat-address.com/f/pics/logotipi/Sky-Net-Sports-HD_o.jpg+&amp;fanart=http%3A//www.sat-address.com/f/pics/logotipi/Sky-Net-Sports-HD_o.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Skynet Sports 2=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F474.m3u8&mode=15&name=Skynet+Sports+2&amp;iconimage=http%3A//www.sat-address.com/f/pics/logotipi/Sky-Net-Sports-2_o.jpg+&amp;fanart=http%3A//www.sat-address.com/f/pics/logotipi/Sky-Net-Sports-2_o.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'True SportsHD 3=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F274.m3u8&mode=15&name=True+SportsHD+3&amp;iconimage=http%3A//stepfb.net/live/movieposters/22.jpg+&amp;fanart=http%3A//stepfb.net/live/movieposters/22.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'True Sport 2=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F276.m3u8&mode=15&name=True+Sport+2&amp;iconimage=http%3A//tv-online.im/wp-content/uploads/2013/10/True-Sport-2-LIVE.jpg&amp;fanart=http%3A//tv-online.im/wp-content/uploads/2013/10/True-Sport-2-LIVE.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'NBC Sports Network (US)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F209.m3u8&mode=15&name=NBC+Sports+Network+%28US%29&amp;iconimage=http%3A//www.nyinterconnect.com/wp-content/uploads/nbc_sports.jpg+++&amp;fanart=http%3A//www.nyinterconnect.com/wp-content/uploads/nbc_sports.jpg+++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'EPL Extra Time 1 (USA TV)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F255.m3u8&mode=15&name=EPL+Extra+Time+1+%28USA+TV%29&amp;iconimage=https%3A//secure.toolkitfiles.co.uk/clients/7007/siteimages/medium/Premier_League_logo.jpg++&amp;fanart=https%3A//secure.toolkitfiles.co.uk/clients/7007/siteimages/medium/Premier_League_logo.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'EPL Extra Time 3 (Spike USA)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F257.m3u8&mode=15&name=EPL+Extra+Time+3+%28Spike+USA%29&amp;iconimage=https%3A//secure.toolkitfiles.co.uk/clients/7007/siteimages/medium/Premier_League_logo.jpg++&amp;fanart=https%3A//secure.toolkitfiles.co.uk/clients/7007/siteimages/medium/Premier_League_logo.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'EPL Extra Time 4 (AXS TV)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F258.m3u8&mode=15&name=EPL+Extra+Time+4+%28AXS+TV%29&amp;iconimage=https%3A//secure.toolkitfiles.co.uk/clients/7007/siteimages/medium/Premier_League_logo.jpg++&amp;fanart=https%3A//secure.toolkitfiles.co.uk/clients/7007/siteimages/medium/Premier_League_logo.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sportsnet World=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F367.m3u8&mode=15&name=Sportsnet+World+HD+US&amp;iconimage=http%3A//www.stream2watch.co/images/thumbs/sportsnet%2520world%2520live%2520stream.jpg++&amp;fanart=http%3A//www.stream2watch.co/images/thumbs/sportsnet%2520world%2520live%2520stream.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sportsnet NY=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F385.m3u8&mode=15&name=Sportsnet+Ontario+HD&amp;iconimage=http%3A//www.stream2watch.co/images/thumbs/Sportsnet_ontario%2520live%2520stream.jpg+&amp;fanart=http%3A//www.stream2watch.co/images/thumbs/Sportsnet_ontario%2520live%2520stream.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sportsnet One HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F259.m3u8&mode=15&name=Sportsnet+One+HD&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sportsnet_one.jpg++&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sportsnet_one.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'ESPN=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F314.m3u8&mode=15&name=ESPN+%28US%29&amp;iconimage=http%3A//www.allaccess.com/assets/img/editorial/raw/es/espn.jpg&amp;fanart=http%3A//www.allaccess.com/assets/img/editorial/raw/es/espn.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'ESPN 2 (US)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F315.m3u8&mode=15&name=ESPN+2+%28US%29&amp;iconimage=http%3A//www.lime.com/widgets/limetv/bb-coverflow/images/channel-logos/espn2-logo.jpg+&amp;fanart=http%3A//www.lime.com/widgets/limetv/bb-coverflow/images/channel-logos/espn2-logo.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sport Klub 1=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F594.m3u8&mode=15&name=Sport+Klub+1&amp;iconimage=http%3A//www.stream2watch.co/images/thumbs/sport_klub_si_1.jpg+&amp;fanart=http%3A//www.stream2watch.co/images/thumbs/sport_klub_si_1.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sport Klub 2=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F593.m3u8&mode=15&name=Sport+Klub+2&amp;iconimage=http%3A//www.sat-address.com/f/pics/logotipi/Sport-Klub-2-Slovenia_o.jpg+&amp;fanart=http%3A//www.sat-address.com/f/pics/logotipi/Sport-Klub-2-Slovenia_o.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sport Klub 3=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F592.m3u8&mode=15&name=Sport+Klub+3&amp;iconimage=http%3A//www.sat-address.com/f/pics/logotipi/Sport-Klub-3-Slovenia_o.jpg+&amp;fanart=http%3A//www.sat-address.com/f/pics/logotipi/Sport-Klub-3-Slovenia_o.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Golf HD=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F260.m3u8&mode=15&name=Golf+HD&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/golf_channel_us_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/golf_channel_us_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Golf Channel 1080p=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F332.m3u8&mode=15&name=Golf+Channel+1080p&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/golf_channel_us_hd.jpg&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/golf_channel_us_hd.jpg&amp;description=' + '\n' )
- Oo0oOOo . write ( r'WWENetwork=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F178.m3u8&mode=15&name=WWENetwork&amp;iconimage=http%3A//3.bp.blogspot.com/-d6ZVw8_zw14/VWh38v-qd2I/AAAAAAAAFKQ/9_kwqxiqYUc/s320/20140102_EPLIGHT_Network_Announcement_nodate_C.jpg++&amp;fanart=http%3A//3.bp.blogspot.com/-d6ZVw8_zw14/VWh38v-qd2I/AAAAAAAAFKQ/9_kwqxiqYUc/s320/20140102_EPLIGHT_Network_Announcement_nodate_C.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Motor Sports 1 Aus=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F281.m3u8&mode=15&name=Motor+Sports+1+Aus&amp;iconimage=http%3A//4.bp.blogspot.com/_Fb0x6TGTbPs/SMhHr89KwEI/AAAAAAAABkU/CCkn-Bo_iEY/s400/motosport%2Btv.JPG++&amp;fanart=http%3A//4.bp.blogspot.com/_Fb0x6TGTbPs/SMhHr89KwEI/AAAAAAAABkU/CCkn-Bo_iEY/s400/motosport%2Btv.JPG++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Fight Sports (USEE)=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F433.m3u8&mode=15&name=Fight+Sports+%28USEE%29&amp;iconimage=http%3A//www.frocus.net/images/logotv/original/fight-channel.jpg+&amp;fanart=http%3A//www.frocus.net/images/logotv/original/fight-channel.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Sport 2 IT=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F471.m3u8&mode=15&name=Sky+Sport+2+IT&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_it_sport2_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_it_sport2_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'Sky Sport 1 IT=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F472.m3u8&mode=15&name=Sky+Sport+1+IT&amp;iconimage=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_it_sport1_hd.jpg+&amp;fanart=http%3A//www.tv-logo.com/pt-data/uploads/images/logo/sky_it_sport1_hd.jpg+&amp;description=' + '\n' )
- Oo0oOOo . write ( r'TyC Sports=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F31.m3u8&mode=15&name=TyC+Sports&amp;iconimage=http%3A//1.bp.blogspot.com/_yDxTw4hZsW8/TEnPHPkFjqI/AAAAAAAAQsk/IJH-Y4kFA8g/s400/TYC_logo.jpg++&amp;fanart=http%3A//1.bp.blogspot.com/_yDxTw4hZsW8/TEnPHPkFjqI/AAAAAAAAQsk/IJH-Y4kFA8g/s400/TYC_logo.jpg++&amp;description=' + '\n' )
- Oo0oOOo . write ( r'ORF Sport +=plugin://plugin.video.G-Tv_ULTIMATE/?url=http%3A%2F%2Fpiesustv.net%3A8000%2Flive%2F' + Oo0oO0ooo + '%2F' + o0oOoO00o + '%2F423.m3u8&mode=15&name=ORF+Sport+%2B&amp;iconimage=http%3A//tubestatic.orf.at/static/images/site/tube/20141042/17.10.14-sporthd.5298157.jpg+&amp;fanart=http%3A//tubestatic.orf.at/static/images/site/tube/20141042/17.10.14-sporthd.5298157.jpg+&amp;description=' + '\n' )
- if 91 - 91: OoO0O00 / I11i - II111iiii . I11i
- if 18 - 18: o0oOOo0O0Ooo
-def O0o0O00Oo0o0 ( url ) :
- O00O0oOO00O00 = xbmc . Player ( i1Oo00 ( ) )
+  ( iII , o0 , traceback ) = sys . exc_info ( )
+  tb . print_exception ( iII , o0 , traceback )
+  if 62 - 62: iIii1I11I1II1 * OoOoOO00
+def Oo0OO ( url ) :
+ i1OOO = urllib2 . Request ( url )
+ i1OOO . add_header ( 'User-Agent' , 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-GB; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3' )
+ Oo0oOOo = urllib2 . urlopen ( i1OOO )
+ Oo0OoO00oOO0o = Oo0oOOo . read ( )
+ Oo0oOOo . close ( )
+ return Oo0OoO00oOO0o
+ if 80 - 80: oO0o + OOooOOo - OOooOOo % i1II1I11
+ if 63 - 63: I1IiiI - I1ii11iIi11i + O0 % I11i / iIii1I11I1II1 / o0oOOo0O0Ooo
+ if 98 - 98: i1II1I11 * i1II1I11 / i1II1I11 + I11i
+def o0O ( ) :
+ ii111111I1iII = os . path . join ( oO0o0o0ooO0oO , 'addons.ini' )
+ O00ooo0O0 = open ( ii111111I1iII , "w+" )
+ OOOooOooo00O0 = Oo0OO ( 'http://piesustv.net:8000/get.php?username=' + o0oOoO00o + '&password=' + i1 + '&type=m3u_plus&output=mpegts' )
+ iiI1 = re . compile ( '#EXTINF:.+?tvg-name="([^"]*)" tvg-logo="([^"]*)" group-title="([^"]*)"",.+?\n(.+?).ts' ) . findall ( OOOooOooo00O0 )
+ O00ooo0O0 . write ( r'[' + IiiIII111iI + ']' + '\n' )
+ for i1iIi1iIi1i , oOOoOo00o , oo000OO00Oo , o0OOoo0OO0OOO in iiI1 :
+  o0OOoo0OO0OOO = ( o0OOoo0OO0OOO + '.m3u8' ) . replace ( ':' , '%3A' ) . replace ( '/' , '%2F' )
+  I1I1iIiII1 = ( i1iIi1iIi1i + '=plugin://' + IiiIII111iI + '/?url=' + o0OOoo0OO0OOO + '&mode=10012&name=' + ( i1iIi1iIi1i ) . replace ( ' ' , '+' ) + '&amp;iconimage=' + ( oOOoOo00o ) . replace ( ' ' , '' ) + '+&amp;fanart=' + ( oOOoOo00o ) . replace ( ' ' , '' ) + '+&amp;description=' )
+  O00ooo0O0 . write ( I1I1iIiII1 + '\n' )
+  if 4 - 4: oo + O0 * OOooOOo
+def OOoo0O ( url ) :
+ Oo0ooOo0o = xbmc . Player ( Ii1i1 ( ) )
  import urlresolver
- try : O00O0oOO00O00 . play ( url ) . strip ( )
+ try : Oo0ooOo0o . play ( url ) . strip ( )
  except : pass
- if 31 - 31: I11i1I . OoOoOO00 / O0
- if 89 - 89: OoOoOO00
-def i1Oo00 ( ) :
+ if 15 - 15: II111iiii
+ if 18 - 18: i11iIiiIii . i1IIi % OoooooooOO / O0
+def Ii1i1 ( ) :
  try :
-  OO0oOoOO0oOO0 = getSet ( "core-player" )
-  if ( OO0oOoOO0oOO0 == 'DVDPLAYER' ) : oO0OOoo0OO = xbmc . PLAYER_CORE_DVDPLAYER
-  elif ( OO0oOoOO0oOO0 == 'MPLAYER' ) : oO0OOoo0OO = xbmc . PLAYER_CORE_MPLAYER
-  elif ( OO0oOoOO0oOO0 == 'PAPLAYER' ) : oO0OOoo0OO = xbmc . PLAYER_CORE_PAPLAYER
-  else : oO0OOoo0OO = xbmc . PLAYER_CORE_AUTO
- except : oO0OOoo0OO = xbmc . PLAYER_CORE_AUTO
- return oO0OOoo0OO
+  OO0OoO0o00 = getSet ( "core-player" )
+  if ( OO0OoO0o00 == 'DVDPLAYER' ) : ooOO0O0ooOooO = xbmc . PLAYER_CORE_DVDPLAYER
+  elif ( OO0OoO0o00 == 'MPLAYER' ) : ooOO0O0ooOooO = xbmc . PLAYER_CORE_MPLAYER
+  elif ( OO0OoO0o00 == 'PAPLAYER' ) : ooOO0O0ooOooO = xbmc . PLAYER_CORE_PAPLAYER
+  else : ooOO0O0ooOooO = xbmc . PLAYER_CORE_AUTO
+ except : ooOO0O0ooOooO = xbmc . PLAYER_CORE_AUTO
+ return ooOO0O0ooOooO
  return True
- if 65 - 65: Ii1I . iIii1I11I1II1 / O0 - Ii1I
- if 21 - 21: I1IiiI * iIii1I11I1II1
-def Ooo ( name , url , mode , iconimage , fanart , description ) :
- if 91 - 91: oOo00Oo00O
- iiIii = sys . argv [ 0 ] + "?url=" + urllib . quote_plus ( url ) + "&mode=" + str ( mode ) + "&name=" + urllib . quote_plus ( name ) + "&iconimage=" + urllib . quote_plus ( iconimage ) + "&fanart=" + urllib . quote_plus ( fanart ) + "&description=" + urllib . quote_plus ( description )
- ooo0O = True
- oOoO0o00OO0 = xbmcgui . ListItem ( name , iconImage = "DefaultFolder.png" , thumbnailImage = iconimage )
- oOoO0o00OO0 . setInfo ( type = "Video" , infoLabels = { "Title" : name , "Plot" : description } )
- oOoO0o00OO0 . setProperty ( "Fanart_Image" , fanart )
- ooo0O = xbmcplugin . addDirectoryItem ( handle = int ( sys . argv [ 1 ] ) , url = iiIii , listitem = oOoO0o00OO0 , isFolder = True )
- return ooo0O
- if 7 - 7: OOooOOo + I11i1I + O0
-def OO0o ( name , url , mode , iconimage , fanart , description ) :
- if 9 - 9: II111iiii . o0oOOo0O0Ooo - o0o0OOO0o0 / o0oOOo0O0Ooo
- iiIii = sys . argv [ 0 ] + "?url=" + urllib . quote_plus ( url ) + "&mode=" + str ( mode ) + "&name=" + urllib . quote_plus ( name ) + "&iconimage=" + urllib . quote_plus ( iconimage ) + "&fanart=" + urllib . quote_plus ( fanart ) + "&description=" + urllib . quote_plus ( description )
- ooo0O = True
- oOoO0o00OO0 = xbmcgui . ListItem ( name , iconImage = "DefaultFolder.png" , thumbnailImage = iconimage )
- oOoO0o00OO0 . setInfo ( type = "Video" , infoLabels = { "Title" : name , "Plot" : description } )
- oOoO0o00OO0 . setProperty ( "Fanart_Image" , fanart )
- ooo0O = xbmcplugin . addDirectoryItem ( handle = int ( sys . argv [ 1 ] ) , url = iiIii , listitem = oOoO0o00OO0 , isFolder = False )
- return ooo0O
- if 46 - 46: I11i . OOooOOo * I11i % i1IIi
-def iIIiII ( ) :
- ii1ii11IIIiiI = [ ]
- O00OOOoOoo0O = sys . argv [ 2 ]
- if len ( O00OOOoOoo0O ) >= 2 :
-  O000OOo00oo = sys . argv [ 2 ]
-  oo0OOo = O000OOo00oo . replace ( '?' , '' )
-  if ( O000OOo00oo [ len ( O000OOo00oo ) - 1 ] == '/' ) :
-   O000OOo00oo = O000OOo00oo [ 0 : len ( O000OOo00oo ) - 2 ]
-  ooOOO00Ooo = oo0OOo . split ( '&' )
-  ii1ii11IIIiiI = { }
-  for IiIIIi1iIi in range ( len ( ooOOO00Ooo ) ) :
-   ooOOoooooo = { }
-   ooOOoooooo = ooOOO00Ooo [ IiIIIi1iIi ] . split ( '=' )
-   if ( len ( ooOOoooooo ) ) == 2 :
-    ii1ii11IIIiiI [ ooOOoooooo [ 0 ] ] = ooOOoooooo [ 1 ]
-    if 1 - 1: Oo0Ooo / o0oOOo0O0Ooo % ooOoo0O * oOo00Oo00O . i11iIiiIii
- return ii1ii11IIIiiI
- if 2 - 2: I1ii11iIi11i * I11i - iIii1I11I1II1 + I1IiiI . oO0o % ooOoo0O
- if 92 - 92: ooOoo0O
-O000OOo00oo = iIIiII ( )
-Iii111II = None
-IIiIiiIi = None
-O000oo = None
-IIi1I11I1II = None
-OooOoooOo = None
-ii11IIII11I = None
-OOooo = None
-if 90 - 90: o0oOOo0O0Ooo % i1IIi / OoO0O00
-if 44 - 44: Oo0Ooo . OoO0O00 / I1ii11iIi11i + Ii1I
+ if 55 - 55: o0oOOo0O0Ooo * OoOoOO00
+ if 61 - 61: I11i
+def Ii1iIIIi1ii ( name , url , mode , iconimage , fanart , description ) :
+ if 86 - 86: I11i % OoOoOO00 / I1IiiI / OoOoOO00
+ iIIi1i1 = sys . argv [ 0 ] + "?url=" + urllib . quote_plus ( url ) + "&mode=" + str ( mode ) + "&name=" + urllib . quote_plus ( name ) + "&iconimage=" + urllib . quote_plus ( iconimage ) + "&fanart=" + urllib . quote_plus ( fanart ) + "&description=" + urllib . quote_plus ( description )
+ i1IIIiiII1 = True
+ OOOOoOoo0O0O0 = xbmcgui . ListItem ( name , iconImage = "DefaultFolder.png" , thumbnailImage = iconimage )
+ OOOOoOoo0O0O0 . setInfo ( type = "Video" , infoLabels = { "Title" : name , "Plot" : description } )
+ OOOOoOoo0O0O0 . setProperty ( "Fanart_Image" , fanart )
+ i1IIIiiII1 = xbmcplugin . addDirectoryItem ( handle = int ( sys . argv [ 1 ] ) , url = iIIi1i1 , listitem = OOOOoOoo0O0O0 , isFolder = True )
+ return i1IIIiiII1
+ if 85 - 85: oO0o % i11iIiiIii - i1II1I11 * OoooooooOO / I1IiiI % I1IiiI
+def O0O00o0OOO0 ( name , url , mode , iconimage , fanart , description ) :
+ if 1 - 1: OoO0O00 - oO0o . I11i . OoO0O00 / Oo0Ooo + I11i
+ iIIi1i1 = sys . argv [ 0 ] + "?url=" + urllib . quote_plus ( url ) + "&mode=" + str ( mode ) + "&name=" + urllib . quote_plus ( name ) + "&iconimage=" + urllib . quote_plus ( iconimage ) + "&fanart=" + urllib . quote_plus ( fanart ) + "&description=" + urllib . quote_plus ( description )
+ i1IIIiiII1 = True
+ OOOOoOoo0O0O0 = xbmcgui . ListItem ( name , iconImage = "DefaultFolder.png" , thumbnailImage = iconimage )
+ OOOOoOoo0O0O0 . setInfo ( type = "Video" , infoLabels = { "Title" : name , "Plot" : description } )
+ OOOOoOoo0O0O0 . setProperty ( "Fanart_Image" , fanart )
+ i1IIIiiII1 = xbmcplugin . addDirectoryItem ( handle = int ( sys . argv [ 1 ] ) , url = iIIi1i1 , listitem = OOOOoOoo0O0O0 , isFolder = False )
+ return i1IIIiiII1
+ if 78 - 78: O0 . oO0o . II111iiii % OOooOOo
+def i1iIi ( ) :
+ ooOOoooooo = [ ]
+ II1I = sys . argv [ 2 ]
+ if len ( II1I ) >= 2 :
+  O0i1II1Iiii1I11 = sys . argv [ 2 ]
+  IIII = O0i1II1Iiii1I11 . replace ( '?' , '' )
+  if ( O0i1II1Iiii1I11 [ len ( O0i1II1Iiii1I11 ) - 1 ] == '/' ) :
+   O0i1II1Iiii1I11 = O0i1II1Iiii1I11 [ 0 : len ( O0i1II1Iiii1I11 ) - 2 ]
+  iiIiI = IIII . split ( '&' )
+  ooOOoooooo = { }
+  for o00oooO0Oo in range ( len ( iiIiI ) ) :
+   o0O0OOO0Ooo = { }
+   o0O0OOO0Ooo = iiIiI [ o00oooO0Oo ] . split ( '=' )
+   if ( len ( o0O0OOO0Ooo ) ) == 2 :
+    ooOOoooooo [ o0O0OOO0Ooo [ 0 ] ] = o0O0OOO0Ooo [ 1 ]
+    if 45 - 45: O0 / o0oOOo0O0Ooo
+ return ooOOoooooo
+ if 32 - 32: i1II1I11 . i1I . i1I
+ if 62 - 62: I1ii11iIi11i + i1I % i1II1I11 + OOooOOo
+O0i1II1Iiii1I11 = i1iIi ( )
+o0OOoo0OO0OOO = None
+i1iIi1iIi1i = None
+iii = None
+oOooOOOoOo = None
+i1Iii1i1I = None
+OOoO00 = None
+IiI111111IIII = None
+if 37 - 37: OO0o / OoOoOO00
+if 23 - 23: O0
 try :
- OOooo = int ( O000OOo00oo [ "fav_mode" ] )
+ IiI111111IIII = int ( O0i1II1Iiii1I11 [ "fav_mode" ] )
 except :
  pass
- if 65 - 65: O0
+ if 85 - 85: Ii1I
 try :
- Iii111II = urllib . unquote_plus ( O000OOo00oo [ "url" ] )
-except :
- pass
-try :
- IIiIiiIi = urllib . unquote_plus ( O000OOo00oo [ "name" ] )
+ o0OOoo0OO0OOO = urllib . unquote_plus ( O0i1II1Iiii1I11 [ "url" ] )
 except :
  pass
 try :
- IIi1I11I1II = urllib . unquote_plus ( O000OOo00oo [ "iconimage" ] )
+ i1iIi1iIi1i = urllib . unquote_plus ( O0i1II1Iiii1I11 [ "name" ] )
 except :
  pass
 try :
- O000oo = int ( O000OOo00oo [ "mode" ] )
+ oOooOOOoOo = urllib . unquote_plus ( O0i1II1Iiii1I11 [ "iconimage" ] )
 except :
  pass
 try :
- OooOoooOo = urllib . unquote_plus ( O000OOo00oo [ "fanart" ] )
+ iii = int ( O0i1II1Iiii1I11 [ "mode" ] )
 except :
  pass
 try :
- ii11IIII11I = urllib . unquote_plus ( O000OOo00oo [ "description" ] )
+ i1Iii1i1I = urllib . unquote_plus ( O0i1II1Iiii1I11 [ "fanart" ] )
 except :
  pass
- if 68 - 68: OOooOOo % I11i1I
- if 88 - 88: iIii1I11I1II1 - o0o0OOO0o0 + OOooOOo
-print str ( i1iiIIiiI111 ) + ': ' + str ( Oo0o0000o0o0 )
-print "Mode: " + str ( O000oo )
-print "URL: " + str ( Iii111II )
-print "Name: " + str ( IIiIiiIi )
-print "IconImage: " + str ( IIi1I11I1II )
-if 40 - 40: I1IiiI * Ii1I + OOooOOo % ooOoo0O
-if 74 - 74: oO0o - Oo0Ooo + OoooooooOO + I11i1I / OoOoOO00
-def i1I1iI1iIi111i ( content , viewType ) :
- if 44 - 44: i1IIi % II111iiii + I11i
+try :
+ OOoO00 = urllib . unquote_plus ( O0i1II1Iiii1I11 [ "description" ] )
+except :
+ pass
+ if 84 - 84: I1IiiI . iIii1I11I1II1 % OoooooooOO + Ii1I % OoooooooOO % OoO0O00
+ if 42 - 42: OoO0O00 / I11i / o0oOOo0O0Ooo + i1II1I11 / OoOoOO00
+print str ( oooOOOOO ) + ': ' + str ( oOo0oooo00o )
+print "Mode: " + str ( iii )
+print "URL: " + str ( o0OOoo0OO0OOO )
+print "Name: " + str ( i1iIi1iIi1i )
+print "IconImage: " + str ( oOooOOOoOo )
+if 84 - 84: oo * II111iiii + Oo0Ooo
+if 53 - 53: i1II1I11 % II111iiii . i1I - iIii1I11I1II1 - i1I * II111iiii
+def ooO0oOOooOo0 ( content , viewType ) :
+ if 38 - 38: OO0o
  if content :
   xbmcplugin . setContent ( int ( sys . argv [ 1 ] ) , content )
- if i1i1II . getSetting ( 'auto-view' ) == 'true' :
-  xbmc . executebuiltin ( "Container.SetViewMode(%s)" % i1i1II . getSetting ( viewType ) )
-  if 45 - 45: ooOoo0O / ooOoo0O + I11i1I + o0o0OOO0o0
-  if 47 - 47: o0oOOo0O0Ooo + o0o0OOO0o0
-if O000oo == None : OooO0 ( )
-elif O000oo == 11 : xbmc . executebuiltin ( "XBMC.RunScript(" + oo0o0O00 + ")" )
-elif O000oo == 12 : II11iiii1Ii ( )
-elif O000oo == 13 : i11O0oo0OO0oOOOo ( )
-elif O000oo == 14 : Ii11Ii1I ( IIiIiiIi )
-elif O000oo == 15 : O0o0O00Oo0o0 ( Iii111II )
-elif O000oo == 16 : ii1I1i1I ( )
-elif O000oo == 17 : ii1i1I1i ( IIiIiiIi )
+ if O0oo0OO0 . getSetting ( 'auto-view' ) == 'true' :
+  xbmc . executebuiltin ( "Container.SetViewMode(%s)" % O0oo0OO0 . getSetting ( viewType ) )
+  if 84 - 84: iIii1I11I1II1 % i1II1I11 / iIii1I11I1II1 % I11i
+  if 45 - 45: O0
+if iii == None : oo0Oo00Oo0 ( )
+elif iii == 11 : xbmc . executebuiltin ( "XBMC.RunScript(" + oO + ")" )
+elif iii == 12 : oOOO00o ( )
+elif iii == 13 : oo0OooOOo0 ( )
+elif iii == 14 : iIIIIii1 ( i1iIi1iIi1i )
+elif iii == 15 : OOoo0O ( o0OOoo0OO0OOO )
+elif iii == 16 : I1i1I ( )
+elif iii == 17 : iii11I111 ( i1iIi1iIi1i )
 xbmcplugin . endOfDirectory ( int ( sys . argv [ 1 ] ) )
 # dd678faae9ac167bc83abf78e5cb2f3f0688d3a3

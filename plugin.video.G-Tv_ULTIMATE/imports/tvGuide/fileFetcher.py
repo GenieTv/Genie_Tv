@@ -26,7 +26,7 @@ import urllib2
 import datetime
 import zlib
 
-MAIN_URL = 'http://architects.x10host.com/PieTv/'
+MAIN_URL = 'http://genietv.co.uk/guide/'
 
 
 class FileFetcher(object):

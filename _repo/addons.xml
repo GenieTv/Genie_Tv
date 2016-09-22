@@ -23,7 +23,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.G-Tv_ULTIMATE" name="G-Tv ULTIMATE" version="0.0.5" provider-name="Origin/GenieTv">
+<addon id="plugin.video.G-Tv_ULTIMATE" name="G-Tv ULTIMATE" version="0.0.6" provider-name="Origin/GenieTv">
   <requires>
   	<import addon="script.module.beautifulsoup" version="3.2.1"/>
 	<import addon="script.module.beautifulsoup4" />
