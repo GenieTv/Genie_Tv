@@ -57,7 +57,7 @@ def o0OO00 ( i , t1 , t2 = [ ] ) :
  if 40 - 40: ooOoO0O00 * IIiIiII11i
  if 51 - 51: oOo0O0Ooo * I1ii11iIi11i
  if 48 - 48: oO0o / OOooOOo / I11i / Ii1I
-IiiIII111iI = "3.1.5"
+IiiIII111iI = "3.1.6"
 IiII = 'plugin.video.GenieTv'
 iI1Ii11111iIi = xbmc . translatePath ( 'special://home/addons/repository.GenieTv' )
 i1i1II = xbmc . translatePath ( 'special://home/addons/' )
@@ -351,7 +351,7 @@ def O000OOO ( ) :
  if 11 - 11: Ii1I . oO0o * ooOOOoO * ii + O0OOOoOoo0
 def O0ooO0Oo00o ( ) :
  if not os . path . exists ( o0 ) :
-  O0O0Oooo0o ( 'Change Log 5/9/16 - v3.1.5' , 'Apk tool added download and instal over 100,000 apps direct to your box, new documentaries section added, Bollywood section added' )
+  O0O0Oooo0o ( 'Change Log 30/9/16 - v3.1.6' , 'Apk tool added download and instal over 100,000 apps direct to your box, new documentaries section added, Bollywood section added' )
   os . makedirs ( o0 )
   if 33 - 33: o0o00Oo0O * I11i - ii1ii11IIIiiI % ii1ii11IIIiiI
   if 18 - 18: ii1ii11IIIiiI / I1ii11iIi11i * ii1ii11IIIiiI + ii1ii11IIIiiI * Ii * Ii1I
@@ -511,8 +511,11 @@ def o000oo ( ) :
 def o00o0 ( url ) :
  IIIi1I1IIii1II = O0i1II1Iiii1I11 ( url )
  IIi1I11I1II = re . compile ( '<a href="([^"]*)"><img width="138" height="173" src="([^"]*)" class="attachment-index-thumb size-index-thumb wp-post-image" alt="([^"]*)"' ) . findall ( IIIi1I1IIii1II )
+ next = re . compile ( 'href="([^"]*)">Next &raquo;</a>' ) . findall ( IIIi1I1IIii1II )
  for url , II1III1I1I1Ii , oO00oooOOoOo0 in IIi1I11I1II :
   OOOoOO ( oO00oooOOoOo0 , url , 80007 , II1III1I1I1Ii )
+ for url , II1III1I1I1Ii , oO00oooOOoOo0 in IIi1I11I1II :
+  oOo0 ( 'Next' , url , 80006 , III1iII1I1ii + 'Next.png' )
 def OOOOoO00o0O ( url ) :
  IIIi1I1IIii1II = O0i1II1Iiii1I11 ( url )
  IIi1I11I1II = re . compile ( 'file: "([^"]*)"' ) . findall ( IIIi1I1IIii1II )
