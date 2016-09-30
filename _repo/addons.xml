@@ -23,30 +23,6 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.G-Tv_ULTIMATE" name="G-Tv ULTIMATE" version="0.0.7" provider-name="Origin/GenieTv">
-  <requires>
-  	<import addon="script.module.beautifulsoup" version="3.2.1"/>
-	<import addon="script.module.beautifulsoup4" />
-    <import addon="xbmc.python" version="2.19.0"/>
-	<import addon="script.module.beautifulsoup4" />
-	<import addon="script.module.urlresolver"  version="2.1.2"/>
-    <import addon="script.module.requests"/>
-	<import addon="script.module.addon.common" />
-	<import addon="script.module.simplejson" version="3.3.0"/>
-    <import addon="script.module.buggalo" version="1.1.2"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video executable</provides>
-  </extension>
-  <extension point="xbmc.service" library="service.py" start="login" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">G-Tv ULTIMATE. Brought to you by Origin/GenieTv</summary>
-    <description lang="en">A Plugin for G-Tv ULTIMATES amazing iptv service</description>
-	<disclaimer lang="en">The author neither hosts or stores any content, the author has no affiliation with content hosts</disclaimer>
-    <platform>all</platform>
-  </extension>
-</addon>
-
 <addon id="plugin.video.GenieTv" name="[COLORsteelblue]GenieTv[/COLOR]" version="3.1.3" provider-name="GenieTv/Origin">
   <requires>
   	<import addon="script.module.beautifulsoup" version="3.2.1"/>
@@ -76,26 +52,6 @@
     <info compressed="true">https://github.com/GenieTv/Genie_Tv/blob/master/_repo/addons.xml</info>
     <checksum>https://github.com/GenieTv/Genie_Tv/blob/master/_repo/addons.xml.md5</checksum>
     <datadir zip="true">https://github.com/GenieTv/Genie_Tv/tree/master/_repo</datadir>
-  </extension>
-</addon>
-
-<addon id="plugin.video.gtv" name="[COLORsteelblue]GTV[/COLOR]" version="0.0.3" provider-name="GenieTv/Origin">
-  <requires>
-    <import addon="xbmc.python" version="2.19.0"/>
-    <import addon="script.module.urlresolver" version="3.0.0"/>
-    <import addon="script.module.requests"/>
-	<import addon="script.module.addon.common" />
-	<import addon="script.module.simplejson" version="3.3.0"/>
-  </requires>
-  <extension point="xbmc.python.pluginsource" library="default.py">
-    <provides>video executable</provides>
-  </extension>
-  <extension point="xbmc.service" library="service.py" start="login" />
-  <extension point="xbmc.addon.metadata">
-    <summary lang="en">GenieTv Kodi's largest support tool. [CR]  Brought to you by GenieTv</summary>
-    <description lang="en">GenieTv The Ultimate Kodi Utility, This All In One Addon Has Been Created To Service All Kodi Needs And Hopefully In The Future, To Brings Devs And Streamers Alike A Platform And Home To host Their Content.</description>
-	<disclaimer lang="en">The author neither hosts or stores any content, the author has no affiliation with content hosts</disclaimer>
-    <platform>all</platform>
   </extension>
 </addon>
 
