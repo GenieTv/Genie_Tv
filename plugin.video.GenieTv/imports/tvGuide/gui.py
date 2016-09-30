@@ -23,7 +23,7 @@
 import datetime
 import threading
 import time
-
+import os
 import xbmc
 import xbmcgui
 
@@ -66,6 +66,9 @@ CHANNELS_PER_PAGE = 8
 HALF_HOUR = datetime.timedelta(minutes=30)
 
 SKIN = ADDON.getSetting('skin')
+
+start_guide = xbmc.translatePath(os.path.join('special://home/addons/plugin.video.GenieTv/imports/tvGuide/addon.py'))
+
 
 def debug(s):
     if DEBUG: xbmc.log(str(s), xbmc.LOGDEBUG)
@@ -429,6 +432,9 @@ class TVGuide(xbmcgui.WindowXML):
 			
         elif buttonClicked == PopupMenu.C_POPUP_VIDEOADDONS:
             xbmc.executebuiltin('ActivateWindow(Videos,addons://sources/video/)')
+			
+        elif buttonClicked == PopupMenu.C_POPUP_CHOOSEGUIDE:
+            xbmc.executebuiltin("XBMC.RunScript("+start_guide+")")
 			
     def setFocusId(self, controlId):
         control = self.getControl(controlId)
@@ -972,6 +978,7 @@ class PopupMenu(xbmcgui.WindowXMLDialog):
     C_POPUP_LIBMOV = 80000
     C_POPUP_LIBTV = 80001
     C_POPUP_VIDEOADDONS = 80002
+    C_POPUP_CHOOSEGUIDE = 80003
 	
 	
     def __new__(cls, database, program, showRemind):
