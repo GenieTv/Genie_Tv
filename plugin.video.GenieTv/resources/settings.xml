@@ -2,6 +2,7 @@
 <settings>
 	<category label="GtV Login">
 		<setting id="TEXTCOL" type="text" label="[COLORsteelblue]Text Color[/COLOR]" default="steelblue" visible="true"/>
+        <setting id="Simplify" type="bool" label="[COLORsteelblue]Simplify Menus[/COLOR]" default="true" visible="true"/>	
 		<setting id="User" type="text" label="[COLORsteelblue]GenieTv User =[/COLOR]" default="insert_username" visible="true"/>
 		<setting id="Pass" type="text" label="[COLORsteelblue]GenieTv Pass =[/COLOR]" default="insert_password" visible="true"/>
 		<setting id="AdultPass" type="text" label="[COLORsteelblue]GenieTv AdultPass =[/COLOR]" default="insert_adultpass" visible="true"/>
