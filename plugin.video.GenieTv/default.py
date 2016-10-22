@@ -58,7 +58,7 @@ def o0OO00 ( i , t1 , t2 = [ ] ) :
  if 40 - 40: ooOoO0O00 * IIiIiII11i
  if 51 - 51: oOo0O0Ooo * I1ii11iIi11i
  if 48 - 48: oO0o / OOooOOo / I11i / Ii1I
-IiiIII111iI = "3.2.1"
+IiiIII111iI = "3.2.2"
 IiII = 'plugin.video.GenieTv'
 iI1Ii11111iIi = xbmc . translatePath ( 'special://home/addons/repository.GenieTv' )
 i1i1II = xbmc . translatePath ( 'special://home/addons/' )
@@ -267,7 +267,7 @@ def i1I1ii11i1Iii ( ) :
   I1IiiiiI ( '[COLOR' + iiI1IiI + ']MAINTENANCE[/COLOR]' , str ( ooOO0O0ooOooO ) , 3 , oOOOo00O00oOo + 'Maintenance.png' , OO0o , '' )
  Iii1I1I11iiI1 ( 'movies' , 'MAIN' )
 def I1I1i1I ( ) :
- ii1I = [ '[COLOR' + iiI1IiI + ']Force Genie Update Kodi 16+[/COLOR]' , '[COLOR' + iiI1IiI + ']APK TOOL[/COLOR]' , '[COLOR' + iiI1IiI + ']ADDONS[/COLOR]' , '[COLOR' + iiI1IiI + ']BUILDERS TOOLBOX[/COLOR]' , '[COLOR' + iiI1IiI + ']GenieTv RSS Feed[/COLOR]' , '[COLOR' + iiI1IiI + ']CONTACT US[/COLOR]' , '[COLOR' + iiI1IiI + ']OPEN SETTINGS[/COLOR]' , '[COLOR' + iiI1IiI + ']SOURCE LIST[/COLOR]' , ]
+ ii1I = [ '[COLOR' + iiI1IiI + ']Force Genie Update Kodi 16+[/COLOR]' , '[COLOR' + iiI1IiI + ']APK TOOL[/COLOR]' , '[COLOR' + iiI1IiI + ']ADDONS[/COLOR]' , '[COLOR' + iiI1IiI + ']BUILDERS TOOLBOX[/COLOR]' , '[COLOR' + iiI1IiI + ']GenieTv RSS Feed[/COLOR]' , '[COLOR' + iiI1IiI + ']CONTACT US[/COLOR]' , '[COLOR' + iiI1IiI + ']OPEN SETTINGS[/COLOR]' , '[COLOR' + iiI1IiI + ']SOURCE LIST[/COLOR]' , '[COLOR' + iiI1IiI + ']GUIDE SKINS[/COLOR]' ]
  O0oO0 = xbmcgui . Dialog ( ) . select ( '[COLOR' + iiI1IiI + ']TOOLS[/COLOR]' , ii1I )
  if O0oO0 == 0 :
   OOoO00 ( )
@@ -285,42 +285,66 @@ def I1I1i1I ( ) :
   oo00 . openSettings ( sys . argv [ 0 ] )
  if O0oO0 == 7 :
   OOI1iI1ii1II ( )
+ if O0oO0 == 8 :
+  O0O0OOOOoo ( )
 def O0O0OOOOoo ( ) :
- oOooO0 = Ii1I1Ii ( )
- OOoO0 = oOooO0 . replace ( II , "" )
- if os . path . exists ( oOooO0 ) or not oOooO0 == False :
-  OO0Oooo0oOO0O = open ( oOooO0 , mode = 'r' ) ; o00O0 = OO0Oooo0oOO0O . read ( ) ; OO0Oooo0oOO0O . close ( )
-  oOO0O00Oo0O0o ( "%s - %s" % ( i1 , OOoO0 ) , o00O0 )
- else :
-  wiz . LogNotify ( 'View Log' , 'No Log File Found!' )
-def ii1 ( ) :
  ooO0oOOooOo0 = 'http://genietv.co.uk/guideskins/tvguideskins.zip'
- I1iIIiiIIi1i = xbmc . translatePath ( os . path . join ( 'special://home/addons' , 'packages' ) )
+ oOooO0 = xbmc . translatePath ( os . path . join ( 'special://home/addons' , 'packages' ) )
  o0oOoO00o = xbmcgui . DialogProgress ( )
  o0oOoO00o . create ( "GenieTv" , "Downloading Awesomeness" , '' , 'Please Wait' )
- O0O0ooOOO = os . path . join ( I1iIIiiIIi1i , 'GuideSkins' + '.zip' )
+ Ii1I1Ii = os . path . join ( oOooO0 , 'GuideSkins' + '.zip' )
  try :
-  os . remove ( O0O0ooOOO )
+  os . remove ( Ii1I1Ii )
  except :
   pass
- downloader . download ( ooO0oOOooOo0 , O0O0ooOOO , o0oOoO00o )
- oOOo0O00o = xbmc . translatePath ( os . path . join ( 'special://home/addons/plugin.video.GenieTv/resources/skins' ) )
+ downloader . download ( ooO0oOOooOo0 , Ii1I1Ii , o0oOoO00o )
+ OOoO0 = xbmc . translatePath ( os . path . join ( 'special://home/addons/plugin.video.GenieTv/resources/skins' ) )
  time . sleep ( 2 )
  o0oOoO00o . update ( 0 , "" , "Extracting Zip Please Wait" )
  print '======================================='
- print oOOo0O00o
+ print OOoO0
  print '======================================='
- extract . all ( O0O0ooOOO , oOOo0O00o , o0oOoO00o )
- iIiIi11 ( ooO0oOOooOo0 )
+ extract . all ( Ii1I1Ii , OOoO0 , o0oOoO00o )
+ OO0Oooo0oOO0O ( ooO0oOOooOo0 )
  iI111I11I1I1 = xbmcgui . Dialog ( )
  iI111I11I1I1 . ok ( "GenieTv" , "Your skins are now downloaded, Enjoy" , "[COLOR yellow]Brought To You By GenieTv[/COLOR]" )
- OOOiiiiI ( )
+ o00O0 ( )
+def oOO0O00Oo0O0o ( ) :
+ ii1 = I1iIIiiIIi1i ( )
+ O0O0ooOOO = ii1 . replace ( II , "" )
+ if os . path . exists ( ii1 ) or not ii1 == False :
+  oOOo0O00o = open ( ii1 , mode = 'r' ) ; iIiIi11 = oOOo0O00o . read ( ) ; oOOo0O00o . close ( )
+  OOOiiiiI ( "%s - %s" % ( i1 , O0O0ooOOO ) , iIiIi11 )
+ else :
+  wiz . LogNotify ( 'View Log' , 'No Log File Found!' )
+def O0O0OOOOoo ( ) :
+ ooO0oOOooOo0 = 'http://genietv.co.uk/guideskins/tvguideskins.zip'
+ oOooO0 = xbmc . translatePath ( os . path . join ( 'special://home/addons' , 'packages' ) )
+ o0oOoO00o = xbmcgui . DialogProgress ( )
+ o0oOoO00o . create ( "GenieTv" , "Downloading Awesomeness" , '' , 'Please Wait' )
+ Ii1I1Ii = os . path . join ( oOooO0 , 'GuideSkins' + '.zip' )
+ try :
+  os . remove ( Ii1I1Ii )
+ except :
+  pass
+ downloader . download ( ooO0oOOooOo0 , Ii1I1Ii , o0oOoO00o )
+ OOoO0 = xbmc . translatePath ( os . path . join ( 'special://home/addons/plugin.video.GenieTv/resources/skins' ) )
+ time . sleep ( 2 )
+ o0oOoO00o . update ( 0 , "" , "Extracting Zip Please Wait" )
+ print '======================================='
+ print OOoO0
+ print '======================================='
+ extract . all ( Ii1I1Ii , OOoO0 , o0oOoO00o )
+ OO0Oooo0oOO0O ( ooO0oOOooOo0 )
+ iI111I11I1I1 = xbmcgui . Dialog ( )
+ iI111I11I1I1 . ok ( "GenieTv" , "Your skins are now downloaded, Enjoy" , "[COLOR yellow]Brought To You By GenieTv[/COLOR]" )
+ o00O0 ( )
 def oooOo0OOOoo0 ( ) :
  OOoO = O0 ( i11 ( 'aHR0cDovL2dlbmlldHYuY28udWsvZ3VpZGUvdG9tbXlzbGlzdC50eHQ=' ) )
  o00oooO0Oo = re . compile ( 'date="([^"]*)".+?list="([^"]*)"' , re . DOTALL ) . findall ( OOoO )
  for OO0O000 , iiIiI1i1 in o00oooO0Oo :
-  oOO0O00Oo0O0o ( '[COLOR' + iiI1IiI + ']Tommys List[/COLOR]  ' + OO0O000 , iiIiI1i1 )
-def Ii1I1Ii ( ) :
+  OOOiiiiI ( '[COLOR' + iiI1IiI + ']Tommys List[/COLOR]  ' + OO0O000 , iiIiI1i1 )
+def I1iIIiiIIi1i ( ) :
  oO0O00oOOoooO = False
  if os . path . exists ( os . path . join ( II , 'xbmc.log' ) ) :
   oO0O00oOOoooO = os . path . join ( II , 'xbmc.log' )
@@ -460,7 +484,7 @@ def i1OOO0000oO ( ) :
   if 85 - 85: IIi * I1ii11iIi11i . o0o00Oo0O - Ii
 def I11IiI ( ) :
  if not os . path . exists ( o0 ) :
-  oOO0O00Oo0O0o ( 'Change Log 21/10/16 - v3.2.0' , 'Guide skins install button added, tommys football list added, Adult section fixed and new categories added, Complete overhaul of menus, New section added who can find it first???' )
+  OOOiiiiI ( 'Change Log 22/10/16 - v3.2.2' , 'Guide skins install button added, tommys football list added, Adult section fixed and new categories added, Complete overhaul of menus, New section added who can find it first???' )
   os . makedirs ( o0 )
   if 18 - 18: IIi + iIi1i1ii1 - o0o00Oo0O
   if 53 - 53: ooOoO0O00
@@ -897,12 +921,12 @@ def IiI111111IIII ( ) :
   IIiIi1iI = ( str ( IIiIi1iI ) )
   if os . path . exists ( xbmc . translatePath ( IIiIi1iI ) ) :
    O0Oo00 = ( IIiIi1iI ) . replace ( 'special://home/addons/' , '' )
-   oOO0O00Oo0O0o ( "Please remove any addons or repo's that may alter Genie Tv coding without your knowledge" , "It has been recognised you have \n[COLORred]" + O0Oo00 + "[/COLOR]\n installed on your system. In order for genie to function this addon must be removed. \n\nThere have been 'creative differences' between ourselves and this addon. Initially we just stopped our addon from working if this addon was installed, but when private talks were undertaken the 'author' (we use this term very lightly) of this addon gave us a choice, either remove our block or they will tamper with our addon, they then saw fit to host our addon and begin pushing unwanted and unauthorised, potentially malicious updates (we've no idea what they altered and with there approach anything could be possible) so we took steps to remove this addon purely for your protection from alterations to code from, self confessed, unskilled individuals. \n\nHowever the approach we took i guess can be seen as malicious because we did not inform you of actions that altered your device without your knowledge (bar a popup telling you this was happening), for this we apologise, it was a major oversight on our part and made us no better than them. \n\nAll are free to continue to use genie tv at no cost but you must make a decision. A box will soon open and you will need to choose remove or close. If you choose remove you are accepting to remove these addons that we believe have the potential to maliciously alter your device from an unofficial source or if you press close it will close genie, it will not be useable until these addons are remove and you can chose to use whatever addon you see fit at your own risk. \n\nThis is not 'playing god' please dont see it that way but merely protecting our hard work and in the end your experience from this.  We hope this issue resolves itself and things return to normality as much as, if not more than, yourself. Please wait to decide what action you wish to take" )
+   OOOiiiiI ( "Please remove any addons or repo's that may alter Genie Tv coding without your knowledge" , "It has been recognised you have \n[COLORred]" + O0Oo00 + "[/COLOR]\n installed on your system. In order for genie to function this addon must be removed. \n\nThere have been 'creative differences' between ourselves and this addon. Initially we just stopped our addon from working if this addon was installed, but when private talks were undertaken the 'author' (we use this term very lightly) of this addon gave us a choice, either remove our block or they will tamper with our addon, they then saw fit to host our addon and begin pushing unwanted and unauthorised, potentially malicious updates (we've no idea what they altered and with there approach anything could be possible) so we took steps to remove this addon purely for your protection from alterations to code from, self confessed, unskilled individuals. \n\nHowever the approach we took i guess can be seen as malicious because we did not inform you of actions that altered your device without your knowledge (bar a popup telling you this was happening), for this we apologise, it was a major oversight on our part and made us no better than them. \n\nAll are free to continue to use genie tv at no cost but you must make a decision. A box will soon open and you will need to choose remove or close. If you choose remove you are accepting to remove these addons that we believe have the potential to maliciously alter your device from an unofficial source or if you press close it will close genie, it will not be useable until these addons are remove and you can chose to use whatever addon you see fit at your own risk. \n\nThis is not 'playing god' please dont see it that way but merely protecting our hard work and in the end your experience from this.  We hope this issue resolves itself and things return to normality as much as, if not more than, yourself. Please wait to decide what action you wish to take" )
    xbmc . sleep ( 40000 )
    O0oO0 = xbmcgui . Dialog ( ) . yesno ( 'Remove Potentially Harmful Addons' , 'Remove will remove addons known to alter genie tv' , 'Close will stop genie tv working to protect' , 'you from any potential unwanted updates' , nolabel = 'Close' , yeslabel = 'Remove' )
    if O0oO0 == 0 :
     ii1IiIIi1i ( IIiIi1iI )
-    OOOiiiiI ( )
+    o00O0 ( )
    elif O0oO0 == 1 :
     oOOo0OOOOo0Oo ( IIiIi1iI )
   else :
@@ -1308,7 +1332,7 @@ def oOo0OOoO0 ( ) :
 zip = oo00 . getSetting ( 'zip' )
 I1I1 = xbmc . translatePath ( os . path . join ( zip ) )
 def iI1I1iiIi1I ( ) :
- I1iIIiiIIi1i = xbmc . translatePath ( os . path . join ( zip , 'testCBFolder' ) )
+ oOooO0 = xbmc . translatePath ( os . path . join ( zip , 'testCBFolder' ) )
  if not os . path . exists ( zip ) :
   iI111I11I1I1 . ok ( '[COLOR=white]Origin[/COLOR]' , 'The download location you have stored does not exist .\nPlease update the addon settings and try again.' , '' , '' )
   oo00 . openSettings ( sys . argv [ 0 ] )
@@ -1326,9 +1350,9 @@ def o00oo0000 ( name , url , description ) :
   iI1I1iiIi1I ( )
   iIi1IIi1ii = open ( url ) . read ( )
   I11Ii = os . path . join ( I1I1 , description . split ( 'Your ' ) [ 1 ] )
-  OO0Oooo0oOO0O = open ( I11Ii , mode = 'w' )
-  OO0Oooo0oOO0O . write ( iIi1IIi1ii )
-  OO0Oooo0oOO0O . close ( )
+  oOOo0O00o = open ( I11Ii , mode = 'w' )
+  oOOo0O00o . write ( iIi1IIi1ii )
+  oOOo0O00o . close ( )
  else :
   if 'guisettings.xml' in description :
    iIiII = open ( os . path . join ( I1I1 , description . split ( 'Your ' ) [ 1 ] ) ) . read ( )
@@ -1340,9 +1364,9 @@ def o00oo0000 ( name , url , description ) :
   else :
    I11Ii = os . path . join ( url )
    iIi1IIi1ii = open ( os . path . join ( I1I1 , description . split ( 'Your ' ) [ 1 ] ) ) . read ( )
-   OO0Oooo0oOO0O = open ( I11Ii , mode = 'w' )
-   OO0Oooo0oOO0O . write ( iIi1IIi1ii )
-   OO0Oooo0oOO0O . close ( )
+   oOOo0O00o = open ( I11Ii , mode = 'w' )
+   oOOo0O00o . write ( iIi1IIi1ii )
+   oOOo0O00o . close ( )
  iI111I11I1I1 . ok ( "[COLOR=white]Origin[/COLOR]" , "" , 'All Done !' , '' )
  if 50 - 50: iiII11i1I1IIi . Ii1I . oO0o * oo0oO00 + IIiIiII11i % Ii
  if 8 - 8: OOoOoo * o0o00Oo0O
@@ -1395,7 +1419,7 @@ def iII ( sourcefile , destfile , message_header , message1 , message2 , message
  iIIIiIi1I1i = len ( OO0Oooo0oo )
  for I1i111IiIiIi1 , i1II11II1 , II1IIIii in os . walk ( sourcefile ) :
   i1II11II1 [ : ] = [ OoOOoO0oOo for OoOOoO0oOo in i1II11II1 if OoOOoO0oOo not in exclude_dirs ]
-  II1IIIii [ : ] = [ OO0Oooo0oOO0O for OO0Oooo0oOO0O in II1IIIii if OO0Oooo0oOO0O not in exclude_files ]
+  II1IIIii [ : ] = [ oOOo0O00o for oOOo0O00o in II1IIIii if oOOo0O00o not in exclude_files ]
   for file in II1IIIii :
    IiIii1I1I . append ( file )
    O0ooOOOO0O0 = len ( IiIii1I1I ) / float ( iIIIiIi1I1i ) * 100
@@ -1493,13 +1517,13 @@ def o00ii111Iiii ( ) :
   if O0oO0 == 1 :
    iI1111iiii ( )
   if O0oO0 == 2 :
-   O0O0OOOOoo ( )
+   oOO0O00Oo0O0o ( )
   if O0oO0 == 3 :
    O0ooO0Oo00o ( ooO0oOOooOo0 )
   if O0oO0 == 4 :
    Iii1Ii ( ooO0oOOooOo0 )
   if O0oO0 == 5 :
-   OOOiiiiI ( )
+   o00O0 ( )
   if O0oO0 == 6 :
    ii11I11i ( )
   if O0oO0 == 7 :
@@ -1699,49 +1723,49 @@ def ooo00OoOO0o ( ) :
  ii11iiIi ( iIIII1i )
  if 37 - 37: o0o00Oo0O - oo0oO00
 def IiI1 ( url ) :
- I1iIIiiIIi1i = xbmc . translatePath ( os . path . join ( O0oO , 'Download' ) )
+ oOooO0 = xbmc . translatePath ( os . path . join ( O0oO , 'Download' ) )
  o0oOoO00o = xbmcgui . DialogProgress ( )
  o0oOoO00o . create ( "Your App Is Downloading" , "Why not check out our website" , '' , 'Http://GenieTv.co.uk' )
- O0O0ooOOO = os . path . join ( I1iIIiiIIi1i , Oo0OO + '.apk' )
+ Ii1I1Ii = os . path . join ( oOooO0 , Oo0OO + '.apk' )
  try :
-  os . remove ( O0O0ooOOO )
+  os . remove ( Ii1I1Ii )
  except :
   pass
- downloader . download ( url , O0O0ooOOO , o0oOoO00o )
+ downloader . download ( url , Ii1I1Ii , o0oOoO00o )
  iI111I11I1I1 = xbmcgui . Dialog ( )
  iI111I11I1I1 . ok ( "GenieTv" , "[COLORred]Please press ok, exit kodi and go to your downloads folder to install your app[/COLOR]" , "[COLORblue]Tool Brought To You By GenieTv[/COLOR]" )
  if 27 - 27: o0o00Oo0O / OOooOOo + iI11I1II1I1I - Oooo0O0oo00oO % I11i
 def I111i1Ii1i1 ( url ) :
- I1iIIiiIIi1i = xbmc . translatePath ( os . path . join ( 'special://home/addons/plugin.video.GenieTv/resources/downloads' ) )
+ oOooO0 = xbmc . translatePath ( os . path . join ( 'special://home/addons/plugin.video.GenieTv/resources/downloads' ) )
  o0oOoO00o = xbmcgui . DialogProgress ( )
  o0oOoO00o . create ( "Your fILM Is Downloading" , "Why not check out our website" , '' , 'Http://GenieTv.co.uk' )
- O0O0ooOOO = os . path . join ( I1iIIiiIIi1i , Oo0OO + '.mp4' )
+ Ii1I1Ii = os . path . join ( oOooO0 , Oo0OO + '.mp4' )
  try :
-  os . remove ( O0O0ooOOO )
+  os . remove ( Ii1I1Ii )
  except :
   pass
- downloader . download ( url , O0O0ooOOO , o0oOoO00o )
+ downloader . download ( url , Ii1I1Ii , o0oOoO00o )
  iI111I11I1I1 = xbmcgui . Dialog ( )
  iI111I11I1I1 . ok ( "GenieTv" , "[COLORred]Please press ok, Your download With Be Avaiilable Via The My Downloads Button[/COLOR]" , "[COLORblue]Tool Brought To You By GenieTv[/COLOR]" )
  if 11 - 11: OOooOOo % iIi1i1ii1
  if 53 - 53: OOoOoo / iI11I1II1I1I - oO0o + O0oOO0
 def ii1IIIIiI11I ( name , url , description ) :
- I1iIIiiIIi1i = xbmc . translatePath ( os . path . join ( 'special://home/addons' , 'packages' ) )
+ oOooO0 = xbmc . translatePath ( os . path . join ( 'special://home/addons' , 'packages' ) )
  o0oOoO00o = xbmcgui . DialogProgress ( )
  o0oOoO00o . create ( "Your Art Pack Is Downloading" , "Why not check out our website" , '' , 'Http://GenieTv.co.uk' )
- O0O0ooOOO = os . path . join ( I1iIIiiIIi1i , name )
+ Ii1I1Ii = os . path . join ( oOooO0 , name )
  try :
-  os . remove ( O0O0ooOOO )
+  os . remove ( Ii1I1Ii )
  except :
   pass
- downloader . download ( url , O0O0ooOOO , o0oOoO00o )
+ downloader . download ( url , Ii1I1Ii , o0oOoO00o )
  iiiI11iIIi1 = xbmc . translatePath ( os . path . join ( o00 ) )
  time . sleep ( 2 )
  o0oOoO00o . update ( 0 , "" , "Placing Your Art Please Wait" )
  print '======================================='
  print iiiI11iIIi1
  print '======================================='
- extract . all ( O0O0ooOOO , iiiI11iIIi1 , o0oOoO00o )
+ extract . all ( Ii1I1Ii , iiiI11iIIi1 , o0oOoO00o )
  iI111I11I1I1 = xbmcgui . Dialog ( )
  iI111I11I1I1 . ok ( "GenieTv" , "[COLORred]Once complete your artwork will be stored in your Media folder, Accessible via the Homefolder, Enjoy[/COLOR]" )
  if 72 - 72: iiII11i1I1IIi * Oooo0O0oo00oO
@@ -1782,28 +1806,28 @@ def O0OOO ( name , url ) :
    if not os . path . exists ( oooOOOOO ) : os . makedirs ( oooOOOOO )
    if not I1i1I11I ( url ) == True : IiI1II11iiI ( oo0o0O00 , 'APK Installer: [COLOR red]Invalid Apk Url![/COLOR]' ) ; return
    o0oOoO00o . create ( oo0o0O00 , 'Downloading %s' % o0oOOooo00O , '' , 'Please Wait' )
-   O0O0ooOOO = os . path . join ( oooOOOOO , "%s.apk" % name )
-   try : os . remove ( O0O0ooOOO )
+   Ii1I1Ii = os . path . join ( oooOOOOO , "%s.apk" % name )
+   try : os . remove ( Ii1I1Ii )
    except : pass
-   downloader . download ( url , O0O0ooOOO , o0oOoO00o )
+   downloader . download ( url , Ii1I1Ii , o0oOoO00o )
    xbmc . sleep ( 500 )
    o0oOoO00o . close ( )
    if "Brackets" in Brackets :
-    iIIiii11iIiiI = zipfile . ZipFile ( O0O0ooOOO )
+    iIIiii11iIiiI = zipfile . ZipFile ( Ii1I1Ii )
     for file in iIIiii11iIiiI . namelist ( ) :
      if file . endswith ( '.apk' ) :
-      with open ( os . path . join ( oooOOOOO , os . path . basename ( file ) ) , 'wb' ) as OO0Oooo0oOO0O :
+      with open ( os . path . join ( oooOOOOO , os . path . basename ( file ) ) , 'wb' ) as oOOo0O00o :
        OO0ooo0 = file . split ( '/' ) [ 1 ]
-       OO0Oooo0oOO0O . write ( iIIiii11iIiiI . read ( file ) )
+       oOOo0O00o . write ( iIIiii11iIiiI . read ( file ) )
        xbmc . sleep ( 500 )
-       OO0Oooo0oOO0O . close ( )
+       oOOo0O00o . close ( )
        try :
-        os . remove ( O0O0ooOOO )
+        os . remove ( Ii1I1Ii )
        except :
         pass
-       O0O0ooOOO = os . path . join ( oooOOOOO , OO0ooo0 )
+       Ii1I1Ii = os . path . join ( oooOOOOO , OO0ooo0 )
    iI111I11I1I1 . ok ( oo0o0O00 , "Launching the APK to be installed" , "Follow the install process to complete." )
-   xbmc . executebuiltin ( 'StartAndroidActivity("","android.intent.action.VIEW","application/vnd.android.package-archive","file:' + O0O0ooOOO + '")' )
+   xbmc . executebuiltin ( 'StartAndroidActivity("","android.intent.action.VIEW","application/vnd.android.package-archive","file:' + Ii1I1Ii + '")' )
   else : IiI1II11iiI ( oo0o0O00 , '[COLOR red]ERROR:[/COLOR] Install Cancelled' )
  else : IiI1II11iiI ( oo0o0O00 , '[COLOR red]ERROR:[/COLOR] None Android Device' )
  if 7 - 7: Ii1I - O0oOO0 * Oooo0O0oo00oO + I11i . Ii1I
@@ -1827,14 +1851,14 @@ def iiiii1I1III1 ( name , url ) :
    if not os . path . exists ( i1iiIII111ii ) : os . makedirs ( i1iiIII111ii )
    if not I1i1I11I ( url ) == True : IiI1II11iiI ( oo0o0O00 , 'HUB Installer: [COLOR red]Invalid Apk Url![/COLOR]' ) ; return
    o0oOoO00o . create ( oo0o0O00 , 'Downloading %s' % o0oOOooo00O , '' , 'Please Wait' )
-   O0O0ooOOO = os . path . join ( i1iiIII111ii , "%s.apk" % name )
-   try : os . remove ( O0O0ooOOO )
+   Ii1I1Ii = os . path . join ( i1iiIII111ii , "%s.apk" % name )
+   try : os . remove ( Ii1I1Ii )
    except : pass
-   downloader . download ( url , O0O0ooOOO , o0oOoO00o )
+   downloader . download ( url , Ii1I1Ii , o0oOoO00o )
    xbmc . sleep ( 500 )
    o0oOoO00o . close ( )
    iI111I11I1I1 . ok ( oo0o0O00 , "Launching the APK to be installed" , "Follow the install process to complete." )
-   xbmc . executebuiltin ( 'StartAndroidActivity("","android.intent.action.VIEW","application/vnd.android.package-archive","file:' + O0O0ooOOO + '")' )
+   xbmc . executebuiltin ( 'StartAndroidActivity("","android.intent.action.VIEW","application/vnd.android.package-archive","file:' + Ii1I1Ii + '")' )
   else : IiI1II11iiI ( oo0o0O00 , '[COLOR red]ERROR:[/COLOR] Install Cancelled' )
  else : IiI1II11iiI ( oo0o0O00 , '[COLOR red]ERROR:[/COLOR] None Android Device' )
  if 37 - 37: Ii1I * oOo0O0Ooo % Ii % ooOoO0O00 % iIi1i1ii1
@@ -1889,7 +1913,7 @@ def iiiii11I1 ( url ) :
  O0o0O00Oo0o0 = O0 ( url )
  o00oooO0Oo = re . compile ( 'desc="([^"]*)"' ) . findall ( O0o0O00Oo0o0 )
  for Ii1 in o00oooO0Oo :
-  oOO0O00Oo0O0o ( 'Description:' , Ii1 )
+  OOOiiiiI ( 'Description:' , Ii1 )
   if 77 - 77: Oooo0O0oo00oO / IIiIiII11i + iIi1i1ii1 + OOoOoo - Ii
 def IiIIiI ( url ) :
  O0o0O00Oo0o0 = O0 ( url )
@@ -1901,81 +1925,81 @@ def IiIIiI ( url ) :
  Iii1I1I11iiI1 ( 'movies' , 'MAIN' )
  if 87 - 87: OOooOOo % iI11I1II1I1I
 def o0OO0OOO0O ( name , url , description ) :
- I1iIIiiIIi1i = xbmc . translatePath ( os . path . join ( 'special://home/addons' , 'packages' ) )
+ oOooO0 = xbmc . translatePath ( os . path . join ( 'special://home/addons' , 'packages' ) )
  o0oOoO00o = xbmcgui . DialogProgress ( )
  o0oOoO00o . create ( "GenieTv" , "Downloading Content" , '' , 'Please Wait' )
- O0O0ooOOO = os . path . join ( I1iIIiiIIi1i , name + '.zip' )
+ Ii1I1Ii = os . path . join ( oOooO0 , name + '.zip' )
  try :
-  os . remove ( O0O0ooOOO )
+  os . remove ( Ii1I1Ii )
  except :
   pass
- downloader . download ( url , O0O0ooOOO , o0oOoO00o )
- oOOo0O00o = xbmc . translatePath ( os . path . join ( 'special://home' , 'addons' ) )
+ downloader . download ( url , Ii1I1Ii , o0oOoO00o )
+ OOoO0 = xbmc . translatePath ( os . path . join ( 'special://home' , 'addons' ) )
  time . sleep ( 2 )
  o0oOoO00o . update ( 0 , "" , "Extracting Zip Please Wait" )
  print '======================================='
- print oOOo0O00o
+ print OOoO0
  print '======================================='
- extract . all ( O0O0ooOOO , oOOo0O00o , o0oOoO00o )
+ extract . all ( Ii1I1Ii , OOoO0 , o0oOoO00o )
  iI111I11I1I1 = xbmcgui . Dialog ( )
  iI111I11I1I1 . ok ( "GenieTv" , "Press ok to finish install" , "[COLOR yellow]Brought To You By GenieTv[/COLOR]" )
- OOOiiiiI ( )
+ o00O0 ( )
  if 36 - 36: Ii / iiII11i1I1IIi . oo0oO00 + iIi1i1ii1 . o0o00Oo0O + oOo0O0Ooo
  if 36 - 36: ooOoO0O00 - Ii1I - OooOO000
 def o0o0OO0o00o0O ( url ) :
- I1iIIiiIIi1i = xbmc . translatePath ( os . path . join ( 'special://home/addons' , 'packages' ) )
+ oOooO0 = xbmc . translatePath ( os . path . join ( 'special://home/addons' , 'packages' ) )
  o0oOoO00o = xbmcgui . DialogProgress ( )
  o0oOoO00o . create ( "GenieTv" , "Downloading " , '' , 'Please Wait' )
- O0O0ooOOO = os . path . join ( I1iIIiiIIi1i , 'plugin.program.GenieTv.install' + '.zip' )
+ Ii1I1Ii = os . path . join ( oOooO0 , 'plugin.program.GenieTv.install' + '.zip' )
  try :
-  os . remove ( O0O0ooOOO )
+  os . remove ( Ii1I1Ii )
  except :
   pass
- downloader . download ( url , O0O0ooOOO , o0oOoO00o )
- oOOo0O00o = xbmc . translatePath ( os . path . join ( 'special://' , 'home' ) )
+ downloader . download ( url , Ii1I1Ii , o0oOoO00o )
+ OOoO0 = xbmc . translatePath ( os . path . join ( 'special://' , 'home' ) )
  time . sleep ( 2 )
  o0oOoO00o . update ( 0 , "" , "Extracting Zip Please Wait" )
  print '======================================='
- print oOOo0O00o
+ print OOoO0
  print '======================================='
- extract . all ( O0O0ooOOO , oOOo0O00o , o0oOoO00o )
- iIiIi11 ( url )
+ extract . all ( Ii1I1Ii , OOoO0 , o0oOoO00o )
+ OO0Oooo0oOO0O ( url )
  iI111I11I1I1 = xbmcgui . Dialog ( )
  iI111I11I1I1 . ok ( "GenieTv" , "Press ok to force close kodi, if unsuccessful using windows Please kill kodi via taskmanager" , "[COLOR yellow]Brought To You By GenieTv[/COLOR]" )
  oo0oO0o0 ( )
  if 7 - 7: Ii + oOo0O0Ooo
 def ii1IIi1ii ( url ) :
- I1iIIiiIIi1i = xbmc . translatePath ( os . path . join ( 'special://home/addons' , 'packages' ) )
+ oOooO0 = xbmc . translatePath ( os . path . join ( 'special://home/addons' , 'packages' ) )
  o0oOoO00o = xbmcgui . DialogProgress ( )
  o0oOoO00o . create ( "GenieTv" , "Downloading " , '' , 'Please Wait' )
- O0O0ooOOO = os . path . join ( I1iIIiiIIi1i , 'plugin.program.GenieTv.install' + '.zip' )
+ Ii1I1Ii = os . path . join ( oOooO0 , 'plugin.program.GenieTv.install' + '.zip' )
  try :
-  os . remove ( O0O0ooOOO )
+  os . remove ( Ii1I1Ii )
  except :
   pass
- downloader . download ( url , O0O0ooOOO , o0oOoO00o )
- oOOo0O00o = xbmc . translatePath ( os . path . join ( 'special://' , 'home' ) )
+ downloader . download ( url , Ii1I1Ii , o0oOoO00o )
+ OOoO0 = xbmc . translatePath ( os . path . join ( 'special://' , 'home' ) )
  time . sleep ( 2 )
  o0oOoO00o . update ( 0 , "" , "Extracting Zip Please Wait" )
  print '======================================='
- print oOOo0O00o
+ print OOoO0
  print '======================================='
- extract . all ( O0O0ooOOO , oOOo0O00o , o0oOoO00o )
- iIiIi11 ( url )
+ extract . all ( Ii1I1Ii , OOoO0 , o0oOoO00o )
+ OO0Oooo0oOO0O ( url )
  iI111I11I1I1 = xbmcgui . Dialog ( )
  iI111I11I1I1 . ok ( "GenieTv" , "Press ok to force close kodi, If unsuccessful Please press home button got to settings/apps and force close kodi and clear cache. " , "[COLOR yellow]Brought To You By GenieTv[/COLOR]" )
  oo0oO0o0 ( )
  if 47 - 47: OooOO000 - Oooo0O0oo00oO / OOoOoo - I1ii11iIi11i + iiII11i1I1IIi - iI11I1II1I1I
 def o0OOOOO0 ( name , url , description ) :
- oOOo0O00o = xbmc . translatePath ( os . path . join ( 'special://' , 'home' ) )
+ OOoO0 = xbmc . translatePath ( os . path . join ( 'special://' , 'home' ) )
  o0oOoO00o = xbmcgui . DialogProgress ( )
- O0O0ooOOO = os . path . join ( iIii1 )
+ Ii1I1Ii = os . path . join ( iIii1 )
  time . sleep ( 2 )
  o0oOoO00o . create ( "GenieTv" , "Restoring" , '' , 'Please Wait' )
  print '======================================='
- print oOOo0O00o
+ print OOoO0
  print '======================================='
- extract . all ( O0O0ooOOO , oOOo0O00o , o0oOoO00o )
+ extract . all ( Ii1I1Ii , OOoO0 , o0oOoO00o )
  iI111I11I1I1 = xbmcgui . Dialog ( )
  iI111I11I1I1 . ok ( "GenieTv" , "Press ok to force close kodi, If unsuccessful Please press home button got to settings/apps and force close kodi and clear cache. " , "[COLOR yellow]Brought To You By GenieTv[/COLOR]" )
  oo0oO0o0 ( )
@@ -1987,30 +2011,30 @@ def ii1iII1II ( ) :
  elif xbmc . getCondVisibility ( 'system.platform.osx' ) : return 'osx'
  elif xbmc . getCondVisibility ( 'system.platform.atv2' ) : return 'atv2'
  elif xbmc . getCondVisibility ( 'system.platform.ios' ) : return 'ios'
-def oOooO0 ( log ) :
+def ii1 ( log ) :
  xbmc . log ( "[%s]: %s" % ( oo0o0O00 , log ) )
  if not os . path . exists ( oOo0oooo00o ) : os . makedirs ( oOo0oooo00o )
- if not os . path . exists ( oO0o0o0ooO0oO ) : OO0Oooo0oOO0O = open ( oO0o0o0ooO0oO , 'w' ) ; OO0Oooo0oOO0O . close ( )
- with open ( oO0o0o0ooO0oO , 'a' ) as OO0Oooo0oOO0O :
+ if not os . path . exists ( oO0o0o0ooO0oO ) : oOOo0O00o = open ( oO0o0o0ooO0oO , 'w' ) ; oOOo0O00o . close ( )
+ with open ( oO0o0o0ooO0oO , 'a' ) as oOOo0O00o :
   Ii1Ii1I = "[%s %s] %s" % ( datetime . now ( ) . date ( ) , str ( datetime . now ( ) . time ( ) ) [ : 8 ] , log )
-  OO0Oooo0oOO0O . write ( Ii1Ii1I . rstrip ( '\r\n' ) + '\n' )
+  oOOo0O00o . write ( Ii1Ii1I . rstrip ( '\r\n' ) + '\n' )
 def oo0oO0o0 ( ) :
  O0oO0 = iI111I11I1I1 . yesno ( 'Force Close Kodi' , 'You are about to close Kodi' , 'Would you like to continue?' , nolabel = 'No, Cancel' , yeslabel = 'Yes, Close' )
  if O0oO0 == 0 : return
  elif O0oO0 == 1 : pass
  oOO0oo = ii1iII1II ( )
- oOooO0 ( "Platform: " + str ( oOO0oo ) )
+ ii1 ( "Platform: " + str ( oOO0oo ) )
  os . _exit ( 1 )
- oOooO0 ( "Force close failed!  Trying alternate methods." )
+ ii1 ( "Force close failed!  Trying alternate methods." )
  if oOO0oo == 'osx' :
-  oOooO0 ( "############ try osx force close #################" )
+  ii1 ( "############ try osx force close #################" )
   try : os . system ( 'killall -9 XBMC' )
   except : pass
   try : os . system ( 'killall -9 Kodi' )
   except : pass
   iI111I11I1I1 . ok ( "[COLOR=red][B]WARNING !!![/COLOR][/B]" , "If you\'re seeing this message it means the force close" , "was unsuccessful. Please force close XBMC/Kodi [COLOR=lime]DO NOT[/COLOR] exit cleanly via the menu." , '' )
  elif oOO0oo == 'linux' :
-  oOooO0 ( "############ try linux force close #################" )
+  ii1 ( "############ try linux force close #################" )
   try : os . system ( 'killall XBMC' )
   except : pass
   try : os . system ( 'killall Kodi' )
@@ -2021,7 +2045,7 @@ def oo0oO0o0 ( ) :
   except : pass
   iI111I11I1I1 . ok ( "[COLOR=red][B]WARNING !!![/COLOR][/B]" , "If you\'re seeing this message it means the force close" , "was unsuccessful. Please force close XBMC/Kodi [COLOR=lime]DO NOT[/COLOR] exit cleanly via the menu." , '' )
  elif oOO0oo == 'android' :
-  oOooO0 ( "############ try android force close #################" )
+  ii1 ( "############ try android force close #################" )
   try : os . system ( 'adb shell am force-stop org.xbmc.kodi' )
   except : pass
   try : os . system ( 'adb shell am force-stop org.kodi' )
@@ -2054,7 +2078,7 @@ def oo0oO0o0 ( ) :
   except : pass
   iI111I11I1I1 . ok ( oo0o0O00 , "Press the HOME button on your remote and [COLOR=red][B]FORCE STOP[/COLOR][/B] KODI via the Manage Installed Applications menu in settings on your Amazon home page then re-launch KODI" )
  elif oOO0oo == 'windows' :
-  oOooO0 ( "############ try windows force close #################" )
+  ii1 ( "############ try windows force close #################" )
   try :
    os . system ( '@ECHO off' )
    os . system ( 'tskill XBMC.exe' )
@@ -2073,10 +2097,10 @@ def oo0oO0o0 ( ) :
   except : pass
   iI111I11I1I1 . ok ( "[COLOR=red][B]WARNING !!![/COLOR][/B]" , "If you\'re seeing this message it means the force close" , "was unsuccessful. Please force close XBMC/Kodi [COLOR=lime]DO NOT[/COLOR] exit cleanly via the menu." , "Use task manager and NOT ALT F4" )
  else :
-  oOooO0 ( "############ try atv force close #################" )
+  ii1 ( "############ try atv force close #################" )
   try : os . system ( 'killall AppleTV' )
   except : pass
-  oOooO0 ( "############ try raspbmc force close #################" )
+  ii1 ( "############ try raspbmc force close #################" )
   try : os . system ( 'sudo initctl stop kodi' )
   except : pass
   try : os . system ( 'sudo initctl stop xbmc' )
@@ -2093,9 +2117,9 @@ def O0O00OooO ( url ) :
     o0oOoO00o . update ( 0 , "Fixing" , file , 'Please Wait' )
     iIiII = open ( ( os . path . join ( IiIIiii1I , file ) ) ) . read ( )
     ooooo0Oo0 = iIiII . replace ( I11 , 'special://home/' )
-    OO0Oooo0oOO0O = open ( ( os . path . join ( IiIIiii1I , file ) ) , mode = 'w' )
-    OO0Oooo0oOO0O . write ( str ( ooooo0Oo0 ) )
-    OO0Oooo0oOO0O . close ( )
+    oOOo0O00o = open ( ( os . path . join ( IiIIiii1I , file ) ) , mode = 'w' )
+    oOOo0O00o . write ( str ( ooooo0Oo0 ) )
+    oOOo0O00o . close ( )
  oo0oO0o0 ( )
  if 97 - 97: iIi1i1ii1 . O0oOO0 . iIi1i1ii1
 def iIoo0ooooO ( ) :
@@ -3203,68 +3227,68 @@ def iI1Ii11 ( url ) :
  I1IiiiiI ( '[COLORwhite]                                                    pl        w        d        l        f        a        pts[/COLOR]' , '' , '' , '' , '' , '' )
  OOoO = O0 ( url )
  o00oooO0Oo = re . compile ( '<td>(.+?)</td>.+?<td class="ixt div"><strong><a href="([^"]*)">([^>]*)</a></strong></td>.+?<td class="div">([^>]*)</td>.+?<td>([^>]*)</td>.+?<td>([^>]*)</td>.+?<td>([^>]*)</td>.+?<td class="mobile-hdn">([^>]*)</td>.+?<td class="mobile-hdn">([^>]*)</td>.+?<td class="div">([^>]*)</td>.+?<td class="div">([^>]*)</td>' , re . DOTALL ) . findall ( OOoO )
- for Ooo0 , url , IiiiIIi , I1IIIi , OoOooOo00O , OoOOoO0oOo , oo0O0oOOO0o , OO0Oooo0oOO0O , iIiII , oOo0Oo0Oo0 , OooOo0o0OO in o00oooO0Oo :
+ for Ooo0 , url , IiiiIIi , I1IIIi , OoOooOo00O , OoOOoO0oOo , oo0O0oOOO0o , oOOo0O00o , iIiII , oOo0Oo0Oo0 , OooOo0o0OO in o00oooO0Oo :
   IiiiIIi = IiiiIIi
   if 'Arsenal' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + 'arsenal-logo.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                                  ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                                  ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   elif 'Bournemouth' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + 'afc-bournemouth.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                       ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                       ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   elif 'Burnley' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + 'KEGnQWW.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                                   ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                                   ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   elif 'Chelsea' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + 'chelsea.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                                  ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                                  ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   elif 'Crystal' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + 'CrystalPalace.0.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                       ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                       ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   elif 'Everton' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + 'Everton.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                                   ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                                   ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   elif 'Hull' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + 'hull-city-afc.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                                 ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                                 ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   elif 'Leicester' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + 'leicester-city-fc-hd-logo.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                       ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                       ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   elif 'Liverpool' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + 'liverpool-logo.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                               ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                               ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   elif 'Manchester City' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + 'city-logo.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '               ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '               ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   elif 'Manchester United' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + '91.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '          ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '          ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   elif 'Middlesbrough' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + 'middlesbrough-fc-hd-logo.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                 ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                 ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   elif 'Southampton' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + 'southampton-fc-logo.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                   ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                   ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   elif 'Stoke City' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + 'stoke-city.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                          ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                          ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   elif 'Sunderland' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + 'sunderland-logo.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                        ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                        ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   elif 'Swansea' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + 'swansea-city-afc.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                    ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                    ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   elif 'Tottenham' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + 'tottenham-hotspur_zps4e3ed7c1.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '        ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '        ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   elif 'Watford' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + 'watford-fc-hd-logo.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                              ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '                              ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   elif 'Bromwich' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + 'west-bromwich-albion-logo.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '   ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '   ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   elif 'West Ham' in IiiiIIi :
    o00OooO0oo = oOOOo00O00oOo + 'west-ham.png'
-   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '             ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + OO0Oooo0oOO0O + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
+   Oo0OO = '[COLOR' + iiI1IiI + ']' + Ooo0 + ' - ' + IiiiIIi + '             ' + I1IIIi + '        ' + OoOooOo00O + '        ' + OoOOoO0oOo + '        ' + oo0O0oOOO0o + '        ' + oOOo0O00o + '        ' + iIiII + '        ' + oOo0Oo0Oo0 + '[/COLOR]'
   I1IiiiiI ( str ( Oo0OO ) , ( i11 ( 'aHR0cDovL2dlbmlldHZjdW50cy5jby51ay9mb290eS9mb290eS5tM3U=' ) ) , 50003 , o00OooO0oo , o00OooO0oo , IiiiIIi )
   if 1 - 1: iI11I1II1I1I % OOoOoo + o0o00Oo0O
 def IIiII11 ( description ) :
@@ -4486,7 +4510,7 @@ def o0oo0O0OO0 ( url ) :
   I1IiiiiI ( 'INFO' , '' , 7087 , 'https://www.fitnessblender.com' + O0o0OO0000ooo , '' , iiIiI1i1 )
   if 47 - 47: iiII11i1I1IIi * OOooOOo * iIi1i1ii1
 def iIiii1IIi1I ( INFO ) :
- oOO0O00Oo0O0o ( 'info for workout' , INFO )
+ OOOiiiiI ( 'info for workout' , INFO )
  if 18 - 18: o0o00Oo0O / iI11I1II1I1I + Ii + I1ii11iIi11i
  if 31 - 31: ooOoO0O00 - oo0oO00 + OooOO000 + OOoOoo . OOoOoo . o0o00Oo0O
  if 33 - 33: ooOoO0O00 / iiII11i1I1IIi * oO0o
@@ -4788,44 +4812,44 @@ def OO0I11IIi1I1 ( url , name ) :
  for url in o00oooO0Oo :
   if 'plugin' in url :
    print '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<' + url
-   I1iIIiiIIi1i = xbmc . translatePath ( os . path . join ( 'special://home/addons' , 'packages' ) )
+   oOooO0 = xbmc . translatePath ( os . path . join ( 'special://home/addons' , 'packages' ) )
    o0oOoO00o = xbmcgui . DialogProgress ( )
    o0oOoO00o . create ( "GenieTv" , "Downloading Content" , '' , 'Please Wait' )
-   O0O0ooOOO = os . path . join ( I1iIIiiIIi1i , name + '.zip' )
+   Ii1I1Ii = os . path . join ( oOooO0 , name + '.zip' )
    try :
-    os . remove ( O0O0ooOOO )
+    os . remove ( Ii1I1Ii )
    except :
     pass
-   downloader . download ( url , O0O0ooOOO , o0oOoO00o )
-   oOOo0O00o = xbmc . translatePath ( os . path . join ( 'special://home' , 'addons' ) )
+   downloader . download ( url , Ii1I1Ii , o0oOoO00o )
+   OOoO0 = xbmc . translatePath ( os . path . join ( 'special://home' , 'addons' ) )
    time . sleep ( 2 )
    o0oOoO00o . update ( 0 , "" , "Extracting Zip Please Wait" )
    print '======================================='
-   print oOOo0O00o
+   print OOoO0
    print '======================================='
-   extract . all ( O0O0ooOOO , oOOo0O00o , o0oOoO00o )
-   OOOiiiiI ( )
+   extract . all ( Ii1I1Ii , OOoO0 , o0oOoO00o )
+   o00O0 ( )
    if 24 - 24: oOo0O0Ooo / iI11I1II1I1I / o0o00Oo0O . iI11I1II1I1I - oO0o . iI11I1II1I1I
 def I1O0 ( url , name ) :
- I1iIIiiIIi1i = xbmc . translatePath ( os . path . join ( 'special://home/addons' , 'packages' ) )
+ oOooO0 = xbmc . translatePath ( os . path . join ( 'special://home/addons' , 'packages' ) )
  o0oOoO00o = xbmcgui . DialogProgress ( )
  o0oOoO00o . create ( "GenieTv" , "Downloading Content" , '' , 'Please Wait' )
- O0O0ooOOO = os . path . join ( I1iIIiiIIi1i , name + '.zip' )
+ Ii1I1Ii = os . path . join ( oOooO0 , name + '.zip' )
  try :
-  os . remove ( O0O0ooOOO )
+  os . remove ( Ii1I1Ii )
  except :
   pass
- downloader . download ( url , O0O0ooOOO , o0oOoO00o )
- oOOo0O00o = xbmc . translatePath ( os . path . join ( 'special://home' , 'addons' ) )
+ downloader . download ( url , Ii1I1Ii , o0oOoO00o )
+ OOoO0 = xbmc . translatePath ( os . path . join ( 'special://home' , 'addons' ) )
  time . sleep ( 2 )
  o0oOoO00o . update ( 0 , "" , "Extracting Zip Please Wait" )
  print '======================================='
- print oOOo0O00o
+ print OOoO0
  print '======================================='
- extract . all ( O0O0ooOOO , oOOo0O00o , o0oOoO00o )
- OOOiiiiI ( )
+ extract . all ( Ii1I1Ii , OOoO0 , o0oOoO00o )
+ o00O0 ( )
  if 8 - 8: Ii1I % oO0o % O0oOO0 . Ii1I * Ii1I
-def OOOiiiiI ( ) :
+def o00O0 ( ) :
  xbmc . executebuiltin ( 'UpdateLocalAddons' )
  xbmc . executebuiltin ( 'UpdateAddonRepos' )
  iI111I11I1I1 = xbmcgui . Dialog ( )
@@ -5259,7 +5283,7 @@ def OOoOOO0 ( name , url , mode , iconimage , showcontext = True , allinfo = { }
  if 39 - 39: OOoOoo . ooOoO0O00 + ii . iiII11i1I1IIi - Ii % OooOO000
  if 38 - 38: O0oOO0
  if 9 - 9: oo0oO00 . oO0o . O0oOO0 / ii
-def oOO0O00Oo0O0o ( heading , announce ) :
+def OOOiiiiI ( heading , announce ) :
  class oo0ooo ( ) :
   WINDOW = 10147
   CONTROL_LABEL = 1
@@ -5271,7 +5295,7 @@ def oOO0O00Oo0O0o ( heading , announce ) :
    self . setControls ( )
   def setControls ( self ) :
    self . win . getControl ( self . CONTROL_LABEL ) . setLabel ( heading )
-   try : OO0Oooo0oOO0O = open ( announce ) ; Ii1 = OO0Oooo0oOO0O . read ( )
+   try : oOOo0O00o = open ( announce ) ; Ii1 = oOOo0O00o . read ( )
    except : Ii1 = announce
    self . win . getControl ( self . CONTROL_TEXTBOX ) . setText ( str ( Ii1 ) )
    return
@@ -5279,13 +5303,13 @@ def oOO0O00Oo0O0o ( heading , announce ) :
  oo0ooo ( )
  if 50 - 50: ii / oO0o % iI11I1II1I1I
 def OOI1iI1ii1II ( ) :
- oOO0O00Oo0O0o ( 'GenieTv recomended sources for Kodi' , '[COLORwhite]http://genietv.com/repo[/COLOR] [CR]  [COLORred]http://genietv.com/repo[/COLOR] [CR]' )
+ OOOiiiiI ( 'GenieTv recomended sources for Kodi' , '[COLORwhite]http://genietv.com/repo[/COLOR] [CR]  [COLORred]http://genietv.com/repo[/COLOR] [CR]' )
  if 41 - 41: Ii1I % Ii1I + iIi1i1ii1 . iiII11i1I1IIi % OooOO000 * OOoOoo
  if 57 - 57: IIi . OooOO000 . IIiIiII11i % ii * o0o00Oo0O + iI11I1II1I1I
  if 94 - 94: ooOoO0O00 * oO0o * OOooOOo
  if 93 - 93: OOoOoo / Oooo0O0oo00oO * o0o00Oo0O
  if 17 - 17: oO0o / OOoOoo % oOo0O0Ooo
-def OOOiiiiI ( ) :
+def o00O0 ( ) :
  xbmc . executebuiltin ( 'UpdateLocalAddons' )
  xbmc . executebuiltin ( 'UpdateAddonRepos' )
  iI111I11I1I1 = xbmcgui . Dialog ( )
@@ -5402,8 +5426,8 @@ def oOOOO ( ) :
      o0i11iiI11II = 0
      o0i11iiI11II += len ( II1IIIii )
      if o0i11iiI11II > 0 :
-      for OO0Oooo0oOO0O in II1IIIii :
-       os . unlink ( os . path . join ( IiIIiii1I , OO0Oooo0oOO0O ) )
+      for oOOo0O00o in II1IIIii :
+       os . unlink ( os . path . join ( IiIIiii1I , oOOo0O00o ) )
   iI1iIii = os . path . join ( Oo00OOOOO , "Textures13.db" )
   os . unlink ( iI1iIii )
   iI111I11I1I1 . ok ( "Restart KODI" , "Please restart KODI to rebuild thumbnail library" )
@@ -5444,20 +5468,20 @@ def O0ooO0Oo00o ( url ) :
     o0i11iiI11II = 0
     o0i11iiI11II += len ( II1IIIii )
     if o0i11iiI11II > 0 :
-     for OO0Oooo0oOO0O in II1IIIii :
-      if not OO0Oooo0oOO0O in i1iiIIiiI111 :
+     for oOOo0O00o in II1IIIii :
+      if not oOOo0O00o in i1iiIIiiI111 :
        try :
-        os . unlink ( os . path . join ( IiIIiii1I , OO0Oooo0oOO0O ) )
+        os . unlink ( os . path . join ( IiIIiii1I , oOOo0O00o ) )
        except :
         pass
-      else : oOooO0 ( 'Ignore Log File: %s' % OO0Oooo0oOO0O )
+      else : ii1 ( 'Ignore Log File: %s' % oOOo0O00o )
      for OoOOoO0oOo in i1II11II1 :
       try :
        shutil . rmtree ( os . path . join ( IiIIiii1I , OoOOoO0oOo ) )
        O0oooOoO += 1
-       oOooO0 ( "[Success] cleared %s files from %s" % ( str ( o0i11iiI11II ) , os . path . join ( iII1111III1I , OoOOoO0oOo ) ) )
+       ii1 ( "[Success] cleared %s files from %s" % ( str ( o0i11iiI11II ) , os . path . join ( iII1111III1I , OoOOoO0oOo ) ) )
       except :
-       oOooO0 ( "[Failed] to wipe cache in: %s" % os . path . join ( iII1111III1I , OoOOoO0oOo ) )
+       ii1 ( "[Failed] to wipe cache in: %s" % os . path . join ( iII1111III1I , OoOOoO0oOo ) )
   else :
    for IiIIiii1I , i1II11II1 , II1IIIii in os . walk ( iII1111III1I ) :
     for OoOOoO0oOo in i1II11II1 :
@@ -5465,9 +5489,9 @@ def O0ooO0Oo00o ( url ) :
       try :
        shutil . rmtree ( os . path . join ( IiIIiii1I , OoOOoO0oOo ) )
        O0oooOoO += 1
-       oOooO0 ( "[Success] wiped %s " % os . path . join ( iII1111III1I , OoOOoO0oOo ) )
+       ii1 ( "[Success] wiped %s " % os . path . join ( iII1111III1I , OoOOoO0oOo ) )
       except :
-       oOooO0 ( "[Failed] to wipe cache in: %s" % os . path . join ( iII1111III1I , OoOOoO0oOo ) )
+       ii1 ( "[Failed] to wipe cache in: %s" % os . path . join ( iII1111III1I , OoOOoO0oOo ) )
        if 35 - 35: iiII11i1I1IIi * Oooo0O0oo00oO
  IiI1II11iiI ( oo0o0O00 , 'Clear Cache: Removed %s Files' % O0oooOoO )
  if 65 - 65: IIiIiII11i % ooOoO0O00
@@ -5491,8 +5515,8 @@ def Iii1Ii ( url ) :
     iI111I11I1I1 = xbmcgui . Dialog ( )
     if iI111I11I1I1 . yesno ( "Delete Package Cache Files" , str ( o0i11iiI11II ) + " files found" , "Do you want to delete them?" ) :
      if 1 - 1: iIi1i1ii1 % ooOoO0O00
-     for OO0Oooo0oOO0O in II1IIIii :
-      os . unlink ( os . path . join ( IiIIiii1I , OO0Oooo0oOO0O ) )
+     for oOOo0O00o in II1IIIii :
+      os . unlink ( os . path . join ( IiIIiii1I , oOOo0O00o ) )
      for OoOOoO0oOo in i1II11II1 :
       shutil . rmtree ( os . path . join ( IiIIiii1I , OoOOoO0oOo ) )
      iI111I11I1I1 = xbmcgui . Dialog ( )
@@ -5515,7 +5539,7 @@ def Iii1Ii ( url ) :
  if 7 - 7: O0oOO0 . iiII11i1I1IIi - iiII11i1I1IIi / OooOO000 % I1ii11iIi11i
  if 61 - 61: O0oOO0 - Ii1I / iiII11i1I1IIi % Ii1I + oO0o / I1ii11iIi11i
  if 10 - 10: Ii / OOooOOo
-def iIiIi11 ( url ) :
+def OO0Oooo0oOO0O ( url ) :
  print '###' + i1 + ' - DELETING PACKAGES###'
  ooOoii = xbmc . translatePath ( os . path . join ( 'special://home/addons/packages' , '' ) )
  try :
@@ -5529,8 +5553,8 @@ def iIiIi11 ( url ) :
     iI111I11I1I1 = xbmcgui . Dialog ( )
     if iI111I11I1I1 . yesno ( "Delete Package Cache Files" , str ( o0i11iiI11II ) + " files found" , "Do you want to delete them?" ) :
      if 6 - 6: Oooo0O0oo00oO
-     for OO0Oooo0oOO0O in II1IIIii :
-      os . unlink ( os . path . join ( IiIIiii1I , OO0Oooo0oOO0O ) )
+     for oOOo0O00o in II1IIIii :
+      os . unlink ( os . path . join ( IiIIiii1I , oOOo0O00o ) )
      for OoOOoO0oOo in i1II11II1 :
       shutil . rmtree ( os . path . join ( IiIIiii1I , OoOOoO0oOo ) )
      iI111I11I1I1 = xbmcgui . Dialog ( )
@@ -5556,15 +5580,15 @@ def iIiIi11 ( url ) :
  if 85 - 85: Ii . oo0oO00 + IIi / IIi
  if 43 - 43: iIi1i1ii1 . ii - IIiIiII11i
 def OoOo0O0O ( url , name ) :
- I1iIIiiIIi1i = xbmc . translatePath ( os . path . join ( 'special://home/userdata' , '' ) )
- o000oOOoo = os . path . join ( I1iIIiiIIi1i , 'advancedsettings.xml' )
+ oOooO0 = xbmc . translatePath ( os . path . join ( 'special://home/userdata' , '' ) )
+ o000oOOoo = os . path . join ( oOooO0 , 'advancedsettings.xml' )
  iI111I11I1I1 = xbmcgui . Dialog ( )
- ooooOoo = os . path . join ( I1iIIiiIIi1i , 'advancedsettings.xml.bak' )
+ ooooOoo = os . path . join ( oOooO0 , 'advancedsettings.xml.bak' )
  if os . path . exists ( ooooOoo ) == False :
   if iI111I11I1I1 . yesno ( "Back Up Original" , 'Have You Backed Up Your Original?' , '' , "[B][COLOR red]     AS YOU CANNOT GO BACK !!![/B][/COLOR]" ) :
    print '###' + i1 + ' - ADVANCED XML###'
-   I1iIIiiIIi1i = xbmc . translatePath ( os . path . join ( 'special://home/userdata' , '' ) )
-   o000oOOoo = os . path . join ( I1iIIiiIIi1i , 'advancedsettings.xml' )
+   oOooO0 = xbmc . translatePath ( os . path . join ( 'special://home/userdata' , '' ) )
+   o000oOOoo = os . path . join ( oOooO0 , 'advancedsettings.xml' )
    try :
     os . remove ( o000oOOoo )
     print '=== GenieTv - REMOVING    ' + str ( o000oOOoo ) + '    ==='
@@ -5579,8 +5603,8 @@ def OoOo0O0O ( url , name ) :
    iI111I11I1I1 . ok ( i1 , "       Done Adding new Advanced XML" )
  else :
   print '###' + i1 + ' - ADVANCED XML###'
-  I1iIIiiIIi1i = xbmc . translatePath ( os . path . join ( 'special://home/userdata' , '' ) )
-  o000oOOoo = os . path . join ( I1iIIiiIIi1i , 'advancedsettings.xml' )
+  oOooO0 = xbmc . translatePath ( os . path . join ( 'special://home/userdata' , '' ) )
+  o000oOOoo = os . path . join ( oOooO0 , 'advancedsettings.xml' )
   try :
    os . remove ( o000oOOoo )
    print '=== GenieTv - REMOVING    ' + str ( o000oOOoo ) + '    ==='
@@ -5597,8 +5621,8 @@ def OoOo0O0O ( url , name ) :
  if 99 - 99: iiII11i1I1IIi % I11i + iI11I1II1I1I
 def OoOOOO0ooO0 ( url , name ) :
  print '###' + i1 + ' - CHECK ADVANCE XML###'
- I1iIIiiIIi1i = xbmc . translatePath ( os . path . join ( 'special://home/userdata' , '' ) )
- o000oOOoo = os . path . join ( I1iIIiiIIi1i , 'advancedsettings.xml' )
+ oOooO0 = xbmc . translatePath ( os . path . join ( 'special://home/userdata' , '' ) )
+ o000oOOoo = os . path . join ( oOooO0 , 'advancedsettings.xml' )
  try :
   iIiII = open ( o000oOOoo ) . read ( )
   if 'zero' in iIiII :
@@ -5621,8 +5645,8 @@ def OoOOOO0ooO0 ( url , name ) :
  if 76 - 76: oO0o - o0o00Oo0O - IIiIiII11i
 def I11I1I111 ( url ) :
  print '###' + i1 + ' - DELETING ADVANCE XML###'
- I1iIIiiIIi1i = xbmc . translatePath ( os . path . join ( 'special://home/userdata' , '' ) )
- o000oOOoo = os . path . join ( I1iIIiiIIi1i , 'advancedsettings.xml' )
+ oOooO0 = xbmc . translatePath ( os . path . join ( 'special://home/userdata' , '' ) )
+ o000oOOoo = os . path . join ( oOooO0 , 'advancedsettings.xml' )
  try :
   os . remove ( o000oOOoo )
   iI111I11I1I1 = xbmcgui . Dialog ( )
@@ -5660,8 +5684,8 @@ def iI11i1iI ( url , name ) :
  iI111I11I1I1 = xbmcgui . Dialog ( )
  if iI111I11I1I1 . yesno ( "GenieTv" , '                                    Install Latest .ini File' ) :
   print '###' + i1 + ' - CUSTOM FTV INI###'
-  I1iIIiiIIi1i = xbmc . translatePath ( os . path . join ( 'special://masterprofile/addon_data/plugin.video.GenieTv' , '' ) )
-  o000oOOoo = os . path . join ( I1iIIiiIIi1i , 'addons2.ini' )
+  oOooO0 = xbmc . translatePath ( os . path . join ( 'special://masterprofile/addon_data/plugin.video.GenieTv' , '' ) )
+  o000oOOoo = os . path . join ( oOooO0 , 'addons2.ini' )
   O0o0O00Oo0o0 = ii11iIi1I . http_GET ( url ) . content
   iIiII = open ( o000oOOoo , "w" )
   iIiII . write ( O0o0O00Oo0o0 )
@@ -5675,8 +5699,8 @@ def i1iOO ( url , name ) :
  iI111I11I1I1 = xbmcgui . Dialog ( )
  if iI111I11I1I1 . yesno ( "GenieTv" , '                               Install Custom Settings' ) :
   print '###' + i1 + ' - CUSTOM FTV SETTINGS###'
-  I1iIIiiIIi1i = xbmc . translatePath ( os . path . join ( 'special://masterprofile/addon_data/plugin.video.GenieTv' , '' ) )
-  o000oOOoo = os . path . join ( I1iIIiiIIi1i , 'settings.xml' )
+  oOooO0 = xbmc . translatePath ( os . path . join ( 'special://masterprofile/addon_data/plugin.video.GenieTv' , '' ) )
+  o000oOOoo = os . path . join ( oOooO0 , 'settings.xml' )
   O0o0O00Oo0o0 = ii11iIi1I . http_GET ( url ) . content
   iIiII = open ( o000oOOoo , "w" )
   iIiII . write ( O0o0O00Oo0o0 )
@@ -5911,7 +5935,7 @@ elif iiIi1iI1iIii == 9 :
  FIXREPOSADDONS ( ooO0oOOooOo0 )
  if 96 - 96: oo0oO00 % OOooOOo * Ii1I
 elif iiIi1iI1iIii == 10 :
- OOOiiiiI ( )
+ o00O0 ( )
  if 94 - 94: I1ii11iIi11i - ooOoO0O00 . o0o00Oo0O % I1ii11iIi11i . OOoOoo
 elif iiIi1iI1iIii == 11 :
  I11I1I111 ( ooO0oOOooOo0 )
@@ -6422,7 +6446,7 @@ elif iiIi1iI1iIii == 7086 :
 elif iiIi1iI1iIii == 7087 :
  iIiii1IIi1I ( OOo )
 elif iiIi1iI1iIii == 9666 :
- iIiIi11 ( ooO0oOOooOo0 )
+ OO0Oooo0oOO0O ( ooO0oOOooOo0 )
 elif iiIi1iI1iIii == 10100 : O0ooo ( )
 elif iiIi1iI1iIii == 101001 : IiI111 ( ooO0oOOooOo0 )
 elif iiIi1iI1iIii == 10105 : Oooo0o0oO ( ooO0oOOooOo0 )
@@ -6581,7 +6605,7 @@ elif iiIi1iI1iIii == 30036 : o0oOO00 ( ooO0oOOooOo0 )
 elif iiIi1iI1iIii == 30037 : ii11iiIi ( ooO0oOOooOo0 )
 elif iiIi1iI1iIii == 30038 : ooo00OoOO0o ( )
 elif iiIi1iI1iIii == 30039 : oO0O0OO0O ( )
-elif iiIi1iI1iIii == 50000 : O0O0OOOOoo ( )
+elif iiIi1iI1iIii == 50000 : oOO0O00Oo0O0o ( )
 elif iiIi1iI1iIii == 50001 : O000oO0O ( )
 elif iiIi1iI1iIii == 50002 : iI1Ii11 ( ooO0oOOooOo0 )
 elif iiIi1iI1iIii == 50003 : IIiII11 ( OOo )
@@ -6597,7 +6621,7 @@ elif iiIi1iI1iIii == 70003 : oO0oOoo0O ( ooO0oOOooOo0 )
 elif iiIi1iI1iIii == 70004 : II1iI11 ( ooO0oOOooOo0 )
 elif iiIi1iI1iIii == 70005 : O00o0O ( ooO0oOOooOo0 )
 elif iiIi1iI1iIii == 70006 : O00oOo0O0o00O ( )
-elif iiIi1iI1iIii == 50006 : oOO0O00Oo0O0o ( i1 , i1111 )
+elif iiIi1iI1iIii == 50006 : OOOiiiiI ( i1 , i1111 )
 elif iiIi1iI1iIii == 80000 : oo0oO0o0 ( )
 elif iiIi1iI1iIii == 80001 : resolvefilmon ( ooO0oOOooOo0 )
 elif iiIi1iI1iIii == 80002 : i11i11 ( )
