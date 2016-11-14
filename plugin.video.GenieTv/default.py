@@ -59,7 +59,7 @@ def o0OO00 ( i , t1 , t2 = [ ] ) :
  if 40 - 40: ooOoO0O00 * IIiIiII11i
  if 51 - 51: oOo0O0Ooo * I1ii11iIi11i
  if 48 - 48: oO0o / OOooOOo / I11i / Ii1I
-IiiIII111iI = "3.2.7"
+IiiIII111iI = "3.2.8"
 IiII = 'plugin.video.GenieTv'
 iI1Ii11111iIi = xbmc . translatePath ( 'special://home/addons/repository.GenieTv' )
 i1i1II = xbmc . translatePath ( 'special://home/addons/' )
@@ -1372,16 +1372,16 @@ def I1i ( ) :
  if 49 - 49: Ii1I
 def O0oOOo0o ( name ) :
  I1III11iiii11i1 = name
- I1 = O0 ( 'http://piesustv.net:8000/get.php?username=' + ooOoOoo0O + '&password=' + OooO0 + '&type=m3u_plus&output=ts' )
+ I1 = O0 ( 'http://piesustv.net:8000/get.php?username=' + ooOoOoo0O + '&password=' + OooO0 + '&type=m3u_plus&output=mpegts' )
  o00oooO0Oo = re . compile ( '#EXTINF:.+?tvg-name="([^"]*)" tvg-logo="([^"]*)" group-title="([^"]*)"",.+?\n(.+?)\n' ) . findall ( I1 )
  for name , I1111i , ooOo0OoO , ooO0oOOooOo0 in o00oooO0Oo :
   if I1III11iiii11i1 == 'Full List' :
-   ooO0oOOooOo0 = ooO0oOOooOo0
+   ooO0oOOooOo0 = ( ooO0oOOooOo0 ) . replace ( '.ts' , '.m3u8' )
    o0OIiII ( ( '' + name + '' ) . replace ( '_' , ' ' ) , ( ooO0oOOooOo0 ) . strip ( ) , 10012 , I1111i , I1111i , '' )
   else :
    I1III11iiii11i1 = ( I1III11iiii11i1 ) . replace ( 'World' , 'القنوات العربية' )
    if I1III11iiii11i1 in ooOo0OoO :
-    ooO0oOOooOo0 = ooO0oOOooOo0
+    ooO0oOOooOo0 = ( ooO0oOOooOo0 ) . replace ( '.ts' , '.m3u8' )
     print ooO0oOOooOo0 + '>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>'
     o0OIiII ( ( '' + name + '' ) . replace ( '_' , ' ' ) , ( ooO0oOOooOo0 ) . strip ( ) , 10012 , I1111i , I1111i , '' )
    else :
