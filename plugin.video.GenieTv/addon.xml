@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.GenieTv" name="[COLORsteelblue]GenieTv[/COLOR]" version="3.2.6" provider-name="GenieTv/Origin">
+<addon id="plugin.video.GenieTv" name="[COLORsteelblue]GenieTv[/COLOR]" version="3.2.7" provider-name="GenieTv/Origin">
   <requires>
   	<import addon="script.module.beautifulsoup" version="3.2.1"/>
 	<import addon="script.module.beautifulsoup4" />
@@ -11,7 +11,7 @@
 	<import addon="script.module.simplejson" version="3.3.0"/>
     <import addon="script.common.plugin.cache" version="2.5.5"/>
     <import addon="repository.GenieTv" version="0.1.3"/>
-    <import addon="plugin.program.gtv.notifications" version="1.0"/>
+    <import addon="script.module.liveresolver"  version="0.1.28"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video executable</provides>
