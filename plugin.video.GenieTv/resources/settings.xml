@@ -7,6 +7,7 @@
 		<setting id="Pass" type="text" label="[COLORsteelblue]GenieTv Pass =[/COLOR]" default="insert_password" visible="true"/>
 		<setting id="AdultPass" type="text" label="[COLORsteelblue]GenieTv AdultPass =[/COLOR]" default="insert_adultpass" visible="true"/>
 	    <setting id="zip" type="folder"    label="Set Build Backup Storage Location Here"      default=""/>
+	    <setting id="Downloads" type="folder"    label="Set Downloads Location Here"      default=""/>
     </category>	
 	<category label="Restore Build">
 		<setting label="Local Zip" type="file" id="Local" value="path_to_files"/>
