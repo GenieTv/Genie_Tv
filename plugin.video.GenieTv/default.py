@@ -59,7 +59,7 @@ def o0OO00 ( i , t1 , t2 = [ ] ) :
  if 40 - 40: ooOoO0O00 * IIiIiII11i
  if 51 - 51: oOo0O0Ooo * I1ii11iIi11i
  if 48 - 48: oO0o / OOooOOo / I11i / Ii1I
-IiiIII111iI = "3.2.9"
+IiiIII111iI = "3.3.1"
 IiII = 'plugin.video.GenieTv'
 iI1Ii11111iIi = xbmc . translatePath ( 'special://home/addons/repository.GenieTv' )
 i1i1II = xbmc . translatePath ( 'special://home/addons/' )
@@ -542,7 +542,7 @@ def iiIIi ( ) :
   if 82 - 82: oo0oO00 / iI11I1II1I1I . oOo0O0Ooo . IIi / I11i
 def ii1Ii11I ( ) :
  if not os . path . exists ( IIIII ) :
-  iiIiI1i1 ( 'Change Log 26/11/16 - v3.3.0' , 'NEW SECTIONS ADDED, BAMFtv (FREE IPTV), ROADRUNNER and Technica Streams, QUICKSILVER music section has a major revamp, REAPER section back with force, Download option added, Search series fixed, Watch series under maintenance but back up(STILL), Scooby streams back up and running' )
+  iiIiI1i1 ( 'Change Log 27/11/16 - v3.3.1' , 'NEW SECTIONS ADDED, BAMFtv (FREE IPTV), ROADRUNNER and Technica Streams, QUICKSILVER music section has a major revamp, REAPER section back with force, Download option added, Search series fixed, Watch series under maintenance but back up(STILL), Scooby streams back up and running' )
   os . makedirs ( IIIII )
   if 42 - 42: I1ii11iIi11i
   if 19 - 19: oo0oO00 % Ii1I * iI11I1II1I1I + oOo0O0Ooo
@@ -627,7 +627,7 @@ def oooooOOO000Oo ( ) :
   OooOoOO0 = [ Ooo00OoOOO , Oo0OO0000oooo , IIII1iII , '[COLOR' + II + ']DoJo STREAMS[/COLOR]' , I1iiIIIi11 , '[COLOR' + II + ']RAIZ TV[/COLOR]' , ii1III11 , '[COLOR' + II + ']ROADRUNNER STREAMS[/COLOR]' , '[COLOR' + II + ']TECHNICA STREAMS[/COLOR]' ]
   iI1i11iII111 = xbmcgui . Dialog ( ) . select ( '[COLOR' + II + ']StreamTeam[/COLOR]' , OooOoOO0 )
   if iI1i11iII111 == 0 :
-   iIIIII1I ( ( i11 ( 'aHR0cDovL2dlbmlldHYuY28udWsvc2lsZW50aHVudGVyL2xpc3RzL21haW4ucGhw' ) ) , ooI1i , iiI11ii1I1 )
+   Ii1I11ii1i ( ( i11 ( 'aHR0cDovL3NpbGVudGh1bnRlci5zcnZlLmlvL2pkaC9ob21lLnR4dA==' ) ) )
   if iI1i11iII111 == 1 :
    Ii1I11ii1i ( ( i11 ( 'aHR0cHM6Ly9sZXRvLmZlcmFsaG9zdGluZy5jb20vZ3JpbXcwMWYvdHIvbWFpbm1lbnUucGhw' ) ) )
   if iI1i11iII111 == 2 :
@@ -4743,7 +4743,7 @@ def i1O00oo00o000o ( url ) :
  ooOO0oO0oo00o ( '[COLOR' + II + ']BROUGHT TO YOU BY ANDY BAMF[/COLOR]' , '' , '' , '' )
  ooOO0oO0oo00o ( '[COLOR' + II + ']REQUIRES F4MTESTER INSTALLED	[/COLOR]' , '' , '' , '' )
  OoO000O0Oo = O000oo ( url )
- IIIII11I1IiI = re . compile ( '#EXTINF:.+?,(.+?)\n(.+?)\n#' ) . findall ( OoO000O0Oo )
+ IIIII11I1IiI = re . compile ( 'EXTINF:.+?,(.+?)\n(.+?)\n#' ) . findall ( OoO000O0Oo )
  for iiI11ii1I1 , url in IIIII11I1IiI :
   ooOO0oO0oo00o ( ( iiI11ii1I1 ) . replace ( '_' , ' ' ) , url , 10012 , Oo00OOOOO )
   if 57 - 57: iiII11i1I1IIi - iiII11i1I1IIi % IIiIiII11i % I1ii11iIi11i . I11i % I1ii11iIi11i
