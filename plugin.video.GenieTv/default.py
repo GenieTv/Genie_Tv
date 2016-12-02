@@ -59,7 +59,7 @@ def o0OO00 ( i , t1 , t2 = [ ] ) :
  if 40 - 40: ooOoO0O00 * IIiIiII11i
  if 51 - 51: oOo0O0Ooo * I1ii11iIi11i
  if 48 - 48: oO0o / OOooOOo / I11i / Ii1I
-IiiIII111iI = "3.3.3"
+IiiIII111iI = "3.3.4"
 IiII = 'plugin.video.GenieTv'
 iI1Ii11111iIi = xbmc . translatePath ( 'special://home/addons/repository.GenieTv' )
 i1i1II = xbmc . translatePath ( 'special://home/addons/' )
@@ -4283,7 +4283,7 @@ def i1II ( ) :
   for iiOOooooO0Oo , oOo0OOoO0 , iiI11ii1I1 , o00oo0000 in IIIII11I1IiI :
    if o0oOOoOOO in iiI11ii1I1 . lower ( ) :
     if 'movies' in o00oo0000 :
-     iII1iii ( '[COLOR' + II + ']' + o00oo0000 + '-' + iiI11ii1I1 + '- source MOVIE HUB[/COLOR]' , iiOOooooO0Oo , 90043 , oOo0OOoO0 )
+     iII1iii ( '[COLORred]*[COLOR' + II + ']' + o00oo0000 + '-' + iiI11ii1I1 + '- source MOVIE HUB[/COLOR]' , iiOOooooO0Oo , 90043 , oOo0OOoO0 )
   for iiOOooooO0Oo in next :
    II1II ( iiOOooooO0Oo )
    o0oOoO00o . create ( "[COLOR'+TEXTCOL+']Genie TV[/COLOR]" , "Getting Sources" , '' , 'Please Wait' )
@@ -4424,7 +4424,7 @@ def ii1iIi1iIiI1i ( ) :
  if 2 - 2: oo0oO00 . IIi
  iiOOooooO0Oo = ( i11 ( 'aHR0cDovL3d3dy53YXRjaHNlcmllc2dvLnRvL3NlYXJjaC8=' ) ) + ( o0oOOoOOO ) . replace ( ' ' , '%20' )
  ooo0O = 'http://onlinemovies.tube/?s=' + ( o0oOOoOOO ) . replace ( ' ' , '+' )
- iIIIiIi1I1i = ( i11 ( 'aHR0cDovL3R2LmRsLXBhcnMuaW4v' ) )
+ iIIIiIi1I1i = ( i11 ( 'aHR0cDovL2RsLm15LWZpbG0ub3JnL3NlcmlhbC8=' ) )
  OOO0oOoO00OoO = ( i11 ( 'aHR0cDovL3MxLmJpYTJtLmJpei9TZXJpZXMv' ) )
  II1IiI1iI = ( i11 ( 'aHR0cDovL2RpemlsYWIuY29tL2Fyc2l2P2xpbWl0PSZ0dXI9Jm9yZGVyYnk9JnVsa2U9Jm9yZGVyPSZ5aWw9JmRpemlfYWRpPQ==' ) ) + ( iiI1i11II ) . replace ( ' ' , '+' )
  IiIi1I11 = ( i11 ( 'aHR0cDovL2dlbmlldHZjdW50cy5jby51ay9zY29vYnkvc2hvd3MvdHZhbGwucGhw' ) )
@@ -4462,7 +4462,7 @@ def ii1iIi1iIiI1i ( ) :
     i1Oo0oO00o ( 'tvshows' , 'Media Info 3' )
     if 61 - 61: IIiIiII11i * iIi1i1ii1 + IIiIiII11i % OooOO000 . ooOoO0O00 . oo0oO00
  if OOoO00o000 != 'Failed' :
-  I1iiIIiI11I = re . compile ( '<NAME>(.+?)</NAME><URL>(.+?)</URL><ICON>(.+?)</ICON><FANART>(.+?)</FANART><DESC>(.+?)</DESC>' ) . findall ( OOoO00o000 )
+  I1iiIIiI11I = re . compile ( '<NAME>(.+?)</NAME><URL>(.+?)</URL><ICON>(.+?)</ICON><FANART>(.+?)</FANART><DESC>(.+?)</DESC>' , re . DOTALL ) . findall ( OOoO00o000 )
   for iiI11ii1I1 , iiOOooooO0Oo , O00Ooo , iiii11i , iII1111III1I in I1iiIIiI11I :
    if iiI1i11II in iiI11ii1I1 . lower ( ) :
     I1IIII1i ( ( '[COLOR' + II + ']' + iiI11ii1I1 + '- source Reaper[/COLOR]' ) , iiOOooooO0Oo , 90037 , O00Ooo , iiii11i , iII1111III1I )
@@ -4480,57 +4480,57 @@ def ii1iIi1iIiI1i ( ) :
     o0oOoO00o . update ( 30 , "" , "Getting CoolSeries Links" )
     if 40 - 40: Ii * IIiIiII11i
     i1Oo0oO00o ( 'tvshows' , 'Media Info 3' )
+ if iii1i1iiiiIi != 'Failed' :
+  i1I = re . compile ( '<a href="([^"]*)">.+?<img src="([^"]*)" alt="([^"]*)" />.+?<span class="([^"]*)">' , re . DOTALL ) . findall ( iii1i1iiiiIi )
+  Oo0ooooO0o00 = re . compile ( '<a href="([^"]*)" ><span class="icon-chevron-right">' , re . DOTALL ) . findall ( iii1i1iiiiIi )
+  for iiOOooooO0Oo , oOo0OOoO0 , iiI11ii1I1 , i1i1II1i11 in i1I :
+   if iiI1i11II in iiI11ii1I1 . lower ( ) :
+    if 'season' in i1i1II1i11 :
+     iII1iii ( '[COLORred]*[COLOR' + II + ']' + iiI11ii1I1 + ' - [COLORred]Source - Tv HUB[/COLOR]' , iiOOooooO0Oo , 90054 , oOo0OOoO0 , oOo0OOoO0 , '' )
+    if 'episodes' in i1i1II1i11 :
+     iII1iii ( '[COLORred]*[COLOR' + II + ']' + iiI11ii1I1 + ' - [COLORred]Source - Tv HUB[/COLOR]' , iiOOooooO0Oo , 90044 , oOo0OOoO0 , oOo0OOoO0 , '' )
+  for iiOOooooO0Oo in Oo0ooooO0o00 :
+   iII1iii ( '[COLORred]*[COLOR' + II + ']' + 'NEXT - [COLORred]Source - Tv HUB[/COLOR]' , iiOOooooO0Oo , 90053 , oOOOo00O00oOo + 'Next.png' )
+   o0oOoO00o . create ( "[COLOR'+TEXTCOL+']Genie TV[/COLOR]" , "Getting Sources" , '' , 'Please Wait' )
+   o0oOoO00o . update ( 40 , "" , "Getting Tv HUB Links" )
+   if 34 - 34: OOooOOo % I11i - oo0oO00
+   i1Oo0oO00o ( 'tvshows' , 'Media Info 3' )
  if I1 != 'Failed' :
   IIIII11I1IiI = re . compile ( '<img src="([^"]*)".+?<a href="([^"]*)" title=".+?"><b>(.+?)</b>' , re . DOTALL ) . findall ( I1 )
   for oOo0OOoO0 , iiOOooooO0Oo , iiI11ii1I1 in IIIII11I1IiI :
    if iiI1i11II in iiI11ii1I1 . lower ( ) :
     I1IIII1i ( '[COLOR' + II + ']' + iiI11ii1I1 + ' - WatchSeries[/COLOR]' , 'http://www.watchseriesgo.to' + iiOOooooO0Oo , 10044 , oOo0OOoO0 , '' , '' )
     o0oOoO00o . create ( "[COLOR'+TEXTCOL+']Genie TV[/COLOR]" , "Getting Sources" , '' , 'Please Wait' )
-    o0oOoO00o . update ( 40 , "" , "Getting Source WatchSeries Links" )
-    if 57 - 57: o0o00Oo0O * iI11I1II1I1I % o0o00Oo0O . ii
+    o0oOoO00o . update ( 50 , "" , "Getting Source WatchSeries Links" )
+    if 40 - 40: OooOO000
     i1Oo0oO00o ( 'tvshows' , 'Media Info 3' )
-    if 53 - 53: iIi1i1ii1 / oOo0O0Ooo * iIi1i1ii1 + I11i + oo0oO00 - I1ii11iIi11i
-    if 16 - 16: oO0o % O00OOo00oo0o . ooOoO0O00 / Ii1I - o0o00Oo0O
-    if 85 - 85: ooOoO0O00 . ooOoO0O00
-    if 16 - 16: oOo0O0Ooo - IIi % iIi1i1ii1 . IIi + Ii1I % Ii
-    if 59 - 59: Ii - iiII11i1I1IIi
-    if 59 - 59: ii * I11i / O00OOo00oo0o
-    if 75 - 75: I11i - ii
-    if 21 - 21: oOo0O0Ooo + iI11I1II1I1I / Ii / oo0oO00
+    if 82 - 82: O00OOo00oo0o . ooOoO0O00 / oo0oO00
+    if 56 - 56: OooOO000
+    if 23 - 23: ooOoO0O00
+    if 24 - 24: OOoOoo
+    if 51 - 51: IIi % Ii
+    if 77 - 77: IIi % Ii - Ii1I
+    if 21 - 21: iiII11i1I1IIi . I1ii11iIi11i - ii * ooOoO0O00
+    if 54 - 54: IIiIiII11i % I11i - ooOoO0O00 . oOo0O0Ooo - IIiIiII11i / iI11I1II1I1I
+    if 29 - 29: oo0oO00
     if 66 - 66: ii + OooOO000 . OOoOoo % ooOoO0O00
-    if 58 - 58: IIi % OooOO000 * o0o00Oo0O + Ii1I - OOoOoo
- if iii1i1iiiiIi != 'Failed' :
-  i1I = re . compile ( '<a href="([^"]*)">.+?<img src="([^"]*)" alt="([^"]*)" />.+?<span class="([^"]*)">' , re . DOTALL ) . findall ( iii1i1iiiiIi )
-  IiiII = re . compile ( '<a href="([^"]*)" ><span class="icon-chevron-right">' , re . DOTALL ) . findall ( iii1i1iiiiIi )
-  for iiOOooooO0Oo , oOo0OOoO0 , iiI11ii1I1 , i1i1II1i11 in i1I :
-   if iiI1i11II in iiI11ii1I1 . lower ( ) :
-    if 'season' in i1i1II1i11 :
-     iII1iii ( '[COLOR' + II + ']' + iiI11ii1I1 + ' - Source - Tv HUB[/COLOR]' , iiOOooooO0Oo , 90054 , oOo0OOoO0 , oOo0OOoO0 , '' )
-    if 'episodes' in i1i1II1i11 :
-     iII1iii ( '[COLOR' + II + ']' + iiI11ii1I1 + ' - Source - Tv HUB[/COLOR]' , iiOOooooO0Oo , 90044 , oOo0OOoO0 , oOo0OOoO0 , '' )
-    for iiOOooooO0Oo in IiiII :
-     iII1iii ( '[COLOR' + II + ']' + 'NEXT - Source - Tv HUB[/COLOR]' , iiOOooooO0Oo , 90053 , oOOOo00O00oOo + 'Next.png' )
-    o0oOoO00o . create ( "[COLOR'+TEXTCOL+']Genie TV[/COLOR]" , "Getting Sources" , '' , 'Please Wait' )
-    o0oOoO00o . update ( 50 , "" , "Getting Redemption Links" )
-    if 72 - 72: I1ii11iIi11i + O00OOo00oo0o % Ii1I + IIi % O00OOo00oo0o
-    i1Oo0oO00o ( 'tvshows' , 'Media Info 3' )
  if Iiii != 'Failed' :
   I1II1 = re . compile ( '<a .*?>(.*?)</a>' ) . findall ( Iiii )
   for iiI11ii1I1 in I1II1 :
    if iiI1i11II in iiI11ii1I1 . lower ( ) :
-    iII1iii ( ( iiI11ii1I1 + ' source 3' ) . replace ( '..&gt;' , '' ) . replace ( '/' , '' ) , ( iIIIiIi1I1i + iiI11ii1I1 ) . replace ( ' ' , '%20' ) , 1006 , '' )
+    iII1iii ( ( '[COLOR' + II + ']' + iiI11ii1I1 ) . replace ( '..&gt;' , '' ) . replace ( '/' , '' ) + ' source 3[/COLOR]' , ( iIIIiIi1I1i + iiI11ii1I1 ) . replace ( ' ' , '%20' ) , 1006 , '' )
     o0oOoO00o . create ( "[COLOR'+TEXTCOL+']Genie TV[/COLOR]" , "Getting Sources" , '' , 'Please Wait' )
     o0oOoO00o . update ( 60 , "" , "Getting Source 3 Links" )
-    if 8 - 8: Ii
+    if 58 - 58: IIi % OooOO000 * o0o00Oo0O + Ii1I - OOoOoo
     i1Oo0oO00o ( 'tvshows' , 'Media Info 3' )
  if OO0OoO0o00 != 'Failed' :
   oo00OO0000oO = re . compile ( '<a .*?>(.*?)</a>' ) . findall ( OO0OoO0o00 )
   for iiI11ii1I1 in oo00OO0000oO :
    if iiI1i11II in iiI11ii1I1 . lower ( ) :
-    iII1iii ( ( '[COLOR' + II + ']' + iiI11ii1I1 + ' source 4[/COLOR]' ) . replace ( '..&gt;' , '' ) . replace ( '/' , '' ) , ( OOO0oOoO00OoO + iiI11ii1I1 ) . replace ( ' ' , '%20' ) , 1006 , '' )
+    iII1iii ( ( '[COLOR' + II + ']' + iiI11ii1I1 ) . replace ( '..&gt;' , '' ) . replace ( '/' , '' ) + ' source 4[/COLOR]' , ( OOO0oOoO00OoO + iiI11ii1I1 ) . replace ( ' ' , '%20' ) , 1006 , '' )
     o0oOoO00o . create ( "[COLOR'+TEXTCOL+']Genie TV[/COLOR]" , "Getting Sources" , '' , 'Please Wait' )
     o0oOoO00o . update ( 70 , "" , "Getting Source 4 Links" )
-    if 4 - 4: Ii
+    if 26 - 26: ooOoO0O00 / oOo0O0Ooo / iiII11i1I1IIi + iiII11i1I1IIi
     i1Oo0oO00o ( 'tvshows' , 'Media Info 3' )
  if O0000ooO0OO0Oooo0o != 'Failed' :
   iIII1I1i1i = re . compile ( '<a href="([^"]*)" class="film-image">\n<img src="([^"]*)" alt=""/>\n</a>\n<div class="tss-detail">\n<a class="title" style="" href=".+?">\n<span class="position">.+?</span>\n(.+?)</a>' ) . findall ( O0000ooO0OO0Oooo0o )
@@ -4539,7 +4539,7 @@ def ii1iIi1iIiI1i ( ) :
     iII1iii ( '[COLOR' + II + ']' + iiI11ii1I1 + ' - Source - Dizi[/COLOR]' , iiOOooooO0Oo , 8062 , oOo0OOoO0 )
     o0oOoO00o . create ( "[COLOR'+TEXTCOL+']Genie TV[/COLOR]" , "Getting Sources" , '' , 'Please Wait' )
     o0oOoO00o . update ( 80 , "" , "Getting Dizi Links" )
-    if 28 - 28: oO0o
+    if 46 - 46: O00OOo00oo0o % Ii1I + iIi1i1ii1
     i1Oo0oO00o ( 'tvshows' , 'Media Info 3' )
  if OOo00oOo != 'Failed' :
   o0ooOo000oo = re . compile ( '<a href="([^"]*)" target="_blank"><img src="([^"]*)" style="max-width:200px;" /><description = "([^"]*)" /><background = "([^"]*)" </background></a><br><b>(.+?)</b>' ) . findall ( OOo00oOo )
@@ -4548,11 +4548,11 @@ def ii1iIi1iIiI1i ( ) :
     I1IIII1i ( ( '[COLOR' + II + ']' + iiI11ii1I1 + '- Source Scooby[/COLOR]' ) , iiOOooooO0Oo , 1016 , O00Ooo , iiii11i , iII1111III1I )
     o0oOoO00o . create ( "[COLOR'+TEXTCOL+']Genie TV[/COLOR]" , "Getting Sources" , '' , 'Please Wait' )
     o0oOoO00o . update ( 90 , "" , "Getting Scooby Links" )
-    if 73 - 73: I1ii11iIi11i . IIiIi1iI - I1ii11iIi11i % IIi / Ii / iI11I1II1I1I
+    if 67 - 67: iI11I1II1I1I . Ii . Ii . Ii / iiII11i1I1IIi + IIiIi1iI
     i1Oo0oO00o ( 'tvshows' , 'Media Info 3' )
-    if 15 - 15: IIiIi1iI * iI11I1II1I1I * oo0oO00
- O0oo0O00ooOo = [ 'a' , 'b' , 'c' , 'd' , 'e' , 'f' , 'g' , 'h' , 'i' , 'j' , 'k' , 'l' , 'm' , 'n' , 'o' , 'p' , 'q' , 'r' , 's' , 't' , 'u' , 'v' , 'w' , 'x' , 'y' , 'z' ]
- for II11 in O0oo0O00ooOo :
+    if 10 - 10: IIiIi1iI - I1ii11iIi11i % IIiIiII11i
+ ooi11iI1111ii1I = [ 'a' , 'b' , 'c' , 'd' , 'e' , 'f' , 'g' , 'h' , 'i' , 'j' , 'k' , 'l' , 'm' , 'n' , 'o' , 'p' , 'q' , 'r' , 's' , 't' , 'u' , 'v' , 'w' , 'x' , 'y' , 'z' ]
+ for II11 in ooi11iI1111ii1I :
   I1iii = OOOO0OOoO0O0 + II11 + IIiiiiiiIi1I1
   OO0Oo00 = OOoOO0oo0ooO ( I1iii )
   if OO0Oo00 != 'Failed' :
@@ -4562,7 +4562,7 @@ def ii1iIi1iIiI1i ( ) :
      I1IIII1i ( '[COLOR' + II + ']' + iiI11ii1I1 + ' - Source Pandoras[/COLOR]' , iiOOooooO0Oo , o0ii1i , oOo0OOoO0 , O0OoooO0 , iII1111III1I )
      o0oOoO00o . create ( "[COLOR'+TEXTCOL+']Genie TV[/COLOR]" , "Getting Sources" , '' , 'Please Wait' )
      o0oOoO00o . update ( 100 , "" , "Getting Pandoras Links" )
-     if 70 - 70: I1ii11iIi11i + Ii
+     if 89 - 89: Ii / o0o00Oo0O - ooOoO0O00 % I1ii11iIi11i + Ii
      i1Oo0oO00o ( 'tvshows' , 'Media Info 3' )
      if 44 - 44: Ii / IIi * IIiIi1iI
      if 88 - 88: ooOoO0O00 % IIi / ii * OooOO000 % IIiIi1iI
