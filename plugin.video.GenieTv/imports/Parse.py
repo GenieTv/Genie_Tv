@@ -652,4 +652,108 @@ def apkParseURL(url):
 
     except Exception, e:
                 print str(e)     
-				
+def ParseBOSS(url): 
+    response = urlOpener.open(url).read()
+        
+    try:
+        Titles = re.findall(r'<a .*?>(.*?)</a>',response)
+        Links = re.findall(r'<a.*?href="(.*?)">',response)
+            
+        for link in Links:
+            if '.gif' in link:
+                pass
+            if '.srt' in link:
+                pass
+            elif '..' in link:
+                pass
+            elif '.txt' in link:
+                pass
+            elif '.nfo' in link:
+                pass
+            elif '.jpg' in link:
+                pass
+            elif '1-Irani/' in link:
+                pass
+            elif 'index.php' in link:
+                pass
+            elif '.png' in link:
+                pass
+            elif '?C=M&O=D' in link:
+                pass
+            elif '?C=M&O=A' in link:
+                pass
+            elif '?C=N&O=D' in link:
+                pass
+            elif '?C=N&O=A' in link:
+                pass
+            elif '?C=S&O=A' in link:
+                pass
+            elif '?C=S&O=D' in link:
+                pass
+            elif '?C=N;O=D' in link:
+                pass
+            elif '?C=M;O=A' in link:
+                pass
+            elif '?C=S;O=A' in link:
+                pass
+            elif '?C=D;O=A' in link:
+                pass
+            elif 'Torrent' in link:
+                pass
+            elif 'exe' in link:
+                pass
+            elif 'public' in link:
+                pass
+            elif '?C=D;O=A' in link:
+                pass
+            elif 'pub' in link:
+                pass
+            elif 'install' in link:
+                pass
+            elif '?C=D;O=A' in link:
+                pass
+            elif '?C=D;O=A' in link:
+                pass
+            elif '.m3u' in link:
+                pass
+            elif '?C=D;O=A' in link:
+                pass
+            elif 'mpeg' in link:
+                pass
+            elif '.doc' in link:
+                pass
+            elif '.html' in link:
+                pass
+            elif 'boss' in link:
+                pass
+            else:
+                name = link
+                if 'txt' in name:
+                    pass
+                if '.' in name:
+                    name = name.replace ('.', ' ')
+                if '_' in name:
+                    name = name.replace ('_', ' ')
+                if '%20' in name:
+                    name = name.replace ('%20', ' ')
+                if '/' in name:
+                    name = name.replace ('/', '')
+                if 'mkv' in name:
+                    name = name.replace ('mkv', '')
+                if 'avi' in name:
+                    name = name.replace ('avi', '')
+                if 'mp4' in name:
+                    name = name.replace ('mp4', '')
+                
+
+                if '.mkv' in link or '.m4B' in link or '.m4v' in link or '.mp3' in link or '.mp4' in link or '.avi' in link or '.flv' in link or '.mpeg' in link or '.3gp' in link or '.divx' in link or '.strm' in link:
+                    AddTVSHOWDir('[COLORsteelblue]'+name+'[/COLOR]', url+link, 222, ART+'VOD.png', 'GenieTv does not host or distribute any of the content displayed by this addon. GenieTV does not have any affiliation with the content provider.', isFolder=False)
+					
+                else:
+					AddTVSHOWDir('[COLORsteelblue]'+name+'[/COLOR]', url+link, 2032, ART+'VOD.png', '', isFolder=True)
+                    
+
+                
+
+    except Exception, e:
+                print str(e) 
