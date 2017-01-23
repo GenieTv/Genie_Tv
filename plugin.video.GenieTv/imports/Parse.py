@@ -747,10 +747,10 @@ def ParseBOSS(url):
                 
 
                 if '.mkv' in link or '.m4B' in link or '.m4v' in link or '.mp3' in link or '.mp4' in link or '.avi' in link or '.flv' in link or '.mpeg' in link or '.3gp' in link or '.divx' in link or '.strm' in link:
-                    AddTVSHOWDir('[COLORsteelblue]'+name+'[/COLOR]', url+link, 222, ART+'VOD.png', 'GenieTv does not host or distribute any of the content displayed by this addon. GenieTV does not have any affiliation with the content provider.', isFolder=False)
+                    AddTVSHOWDir('[COLORsteelblue]'+name+'[/COLOR]', url+link, 222,ART+'boss.png', 'GenieTv does not host or distribute any of the content displayed by this addon. GenieTV does not have any affiliation with the content provider.', isFolder=False)
 					
                 else:
-					AddTVSHOWDir('[COLORsteelblue]'+name+'[/COLOR]', url+link, 2032, ART+'VOD.png', '', isFolder=True)
+					AddTVSHOWDir('[COLORsteelblue]'+name+'[/COLOR]', url+link, 2032, ART+'boss.png', '', isFolder=True)
                     
 
                 
