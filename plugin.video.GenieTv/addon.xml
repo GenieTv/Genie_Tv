@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.GenieTv" name="[COLORsteelblue]GenieTv[/COLOR]" version="3.5.4" provider-name="GenieTv">
+<addon id="plugin.video.GenieTv" name="[COLORsteelblue]GenieTv[/COLOR]" version="3.5.5" provider-name="GenieTv">
   <requires>
   	<import addon="script.module.beautifulsoup" version="3.2.1"/>
+	<import addon="plugin.program.GenieWiz" />
 	<import addon="script.module.beautifulsoup4" />
     <import addon="xbmc.python" version="2.19.0"/>
 	<import addon="script.module.beautifulsoup4" />
