@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
+<addon id="plugin.program.GenieWiz" name="GENIE WIZ" version="0.0.1" provider-name="GenieTv">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="startup.py" start="startup" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">GENIE WIZ</summary>
+    <description lang="en">GENIE WIZ allows you to get access to the latest GenieTv Custom Builds.</description>
+    <platform>all</platform>
+  </extension>
+</addon>
+
 <addon id="plugin.program.gtv.notifications" version="1.0" name="G-Tv Notifications" provider-name="GenieTv">
   <requires>
   	<import addon="xbmc.python" version="2.1.0"/>
@@ -23,9 +38,10 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.GenieTv" name="[COLORsteelblue]GenieTv[/COLOR]" version="3.5.4" provider-name="GenieTv">
+<addon id="plugin.video.GenieTv" name="[COLORsteelblue]GenieTv[/COLOR]" version="3.5.5" provider-name="GenieTv">
   <requires>
   	<import addon="script.module.beautifulsoup" version="3.2.1"/>
+	<import addon="plugin.program.GenieWiz" />
 	<import addon="script.module.beautifulsoup4" />
     <import addon="xbmc.python" version="2.19.0"/>
 	<import addon="script.module.beautifulsoup4" />
