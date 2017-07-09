@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addons>
-<addon id="plugin.program.GenieWiz" name="GENIE WIZ" version="0.0.1" provider-name="GenieTv">
+<addon id="plugin.program.GenieWiz" name="GENIE WIZ" version="0.0.2" provider-name="GenieTv">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
   </requires>

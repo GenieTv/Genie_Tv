@@ -102,14 +102,14 @@ REPOZIPURL     = ''
 ### NOTIFICATION WINDOW##################################
 #########################################################
 # Enable Notification screen Yes or No
-ENABLE         = 'No'
+ENABLE         = 'Yes'
 # Url to notification file
-NOTIFICATION   = ''
+NOTIFICATION   = 'http://genietvcunts.co.uk/newwiz/notify.txt'
 # Use either 'Text' or 'Image'
-HEADERTYPE     = ''
-HEADERMESSAGE  = ''
+HEADERTYPE     = 'text'
+HEADERMESSAGE  = 'Genie Wiz'
 # url to image if using Image 424x180
-HEADERIMAGE    = ''
+HEADERIMAGE    = ' '
 # Background for Notification Window
-BACKGROUND     = ''
+BACKGROUND     = 'http://genietvcunts.co.uk/newwiz/nofiyf.jpg'
 #########################################################
