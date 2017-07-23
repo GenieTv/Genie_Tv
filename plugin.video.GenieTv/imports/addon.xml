@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="plugin.video.GenieTv" name="[COLORsteelblue]GenieTv[/COLOR]" version="3.5.6" provider-name="GenieTv">
+  <requires>
+  	<import addon="script.module.beautifulsoup" version="3.2.1"/>
+	<import addon="plugin.program.GenieWiz" />
+	<import addon="script.module.beautifulsoup4" />
+    <import addon="xbmc.python" version="2.19.0"/>
+	<import addon="script.module.beautifulsoup4" />
+    <import addon="script.module.urlresolver" version="3.0.0"/>
+    <import addon="script.module.requests"/>
+	<import addon="script.module.addon.common" />
+	<import addon="script.module.simplejson" version="3.3.0"/>
+    <import addon="script.common.plugin.cache" version="2.5.5"/>
+    <import addon="repository.GenieTv" version="0.1.3"/>
+    <import addon="script.module.liveresolver"  version="0.1.28"/>
+	<import addon="script.module.simple.downloader" version="0.9.4"/>
+	<import addon="script.module.t0mm0.common" version="2.0.0"/>
+	<import addon="script.module.httplib2" />
+    <import addon="script.module.youtube.dl" optional="true"/>
+	<import addon="script.module.metahandler" version="2.5.1"/>
+    <import addon="script.module.liveresolver"  version="0.1.28"/>
+  </requires>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+    <provides>video executable</provides>
+  </extension>
+  <extension point="xbmc.service" library="service.py" start="login" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">GenieTv Kodi's largest support tool. [CR]  Brought to you by the Architects@Work</summary>
+    <description lang="en">GenieTv The Ultimate Kodi Utility, This All In One Addon Has Been Created To Service All Kodi Needs And Hopefully In The Future, To Brings Devs And Streamers Alike A Platform And Home To host Their Content.</description>
+	<disclaimer lang="en">The author neither hosts or stores any content, the author has no affiliation with content hosts</disclaimer>
+    <platform>all</platform>
+  </extension>
+   <extension point="repository.GenieTv"
+              name="Official GenieTv Repository">
+    <info compressed="true">https://github.com/GenieTv/Genie_Tv/blob/master/_repo/addons.xml</info>
+    <checksum>https://github.com/GenieTv/Genie_Tv/blob/master/_repo/addons.xml.md5</checksum>
+    <datadir zip="true">https://github.com/GenieTv/Genie_Tv/tree/master/_repo</datadir>
+  </extension>
+</addon>
