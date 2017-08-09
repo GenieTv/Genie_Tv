@@ -95,6 +95,38 @@ def SKindex():
     getData('https://ia801502.us.archive.org/23/items/tombebbington4_virginmedia_Home/home.txt','')
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
+def SKindex_Raiz():
+    addon_log("SKindex")
+    addDir('[COLOR blue]Search[/COLOR]','[COLOR blue]Search[/COLOR]',1126,'http://stepituprecovery.com/wp-content/uploads/2013/11/mac-data-recovery-5.png' ,  FANART,'','','','')
+    getData('http://raiztv.co.uk/RaysRavers/list2/RaysRaversRadioMenu.txt','')
+    xbmcplugin.endOfDirectory(int(sys.argv[1]))
+def Search_Raiz():
+    Dialog = xbmcgui.Dialog()
+    Search_name = Dialog.input('Search', type=xbmcgui.INPUT_ALPHANUM)
+    if Search_name == '':
+        pass
+    else:
+        HTML = OPEN_URL('http://raiztv.co.uk/RaysRavers/list2/searchdir.txt')
+        match = re.compile('<name>(.+?)</name>.+?<thumbnail>(.+?)</thumbnail>.+?<externallink>(.+?)</externallink>.+?<fanart>(.+?)</fanart>.+?<info>(.+?)</info>',re.DOTALL).findall(HTML)
+        for name,img,url,fanart,desc in match:
+            if Search_name.replace(' ','').lower() in name.replace(' ','').lower():
+                addDir(name.encode('utf-8'),url.encode('utf-8'),1101000,img,fanart,desc,'','',None,'source')
+def SKindex_thunderstruck():
+    addon_log("SKindex")
+    addDir('[COLOR blue]Search[/COLOR]','[COLOR blue]Search[/COLOR]',1126,'http://stepituprecovery.com/wp-content/uploads/2013/11/mac-data-recovery-5.png' ,  FANART,'','','','')
+    getData('http://www.gtandroid.anarchymediarevolution.com/files/homea.txt','')
+    xbmcplugin.endOfDirectory(int(sys.argv[1]))
+def Search_Thunder():
+    Dialog = xbmcgui.Dialog()
+    Search_name = Dialog.input('Search', type=xbmcgui.INPUT_ALPHANUM)
+    if Search_name == '':
+        pass
+    else:
+        HTML = OPEN_URL('http://darkwebrepo.gq/Datf/thunderstruck/albumsearch.txt')
+        match = re.compile('<name>(.+?)</name>.+?<thumbnail>(.+?)</thumbnail>.+?<externallink>(.+?)</externallink>.+?<fanart>(.+?)</fanart>.+?<info>(.+?)</info>',re.DOTALL).findall(HTML)
+        for name,img,url,fanart,desc in match:
+            if Search_name.replace(' ','').lower() in name.replace(' ','').lower():
+                addDir(name.encode('utf-8'),url.encode('utf-8'),1101000,img,fanart,desc,'','',None,'source')
 def SKindex_deliverance():
     addon_log("SKindex")
     addDir('Football Highlights','Football Highlights',1137000,'http://goo.gl/TyDD6w' ,  FANART,'','','','')
