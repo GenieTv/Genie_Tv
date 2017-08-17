@@ -38,7 +38,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.GenieTv" name="[COLORsteelblue]GenieTv[/COLOR]" version="3.6.1" provider-name="GenieTv">
+<addon id="plugin.video.GenieTv" name="[COLORsteelblue]GenieTv[/COLOR]" version="3.6.2" provider-name="GenieTv">
   <requires>
   	<import addon="script.module.beautifulsoup" version="3.2.1"/>
 	<import addon="plugin.program.GenieWiz" />
@@ -51,6 +51,7 @@
 	<import addon="script.module.simplejson" version="3.3.0"/>
     <import addon="script.common.plugin.cache" version="2.5.5"/>
     <import addon="repository.GenieTv" version="0.1.3"/>
+	<import addon="repository.noobsandnerds" version="2.2"/>
     <import addon="script.module.liveresolver"  version="0.1.28"/>
 	<import addon="script.module.simple.downloader" version="0.9.4"/>
 	<import addon="script.module.t0mm0.common" version="2.0.0"/>
@@ -58,6 +59,7 @@
     <import addon="script.module.youtube.dl" optional="true"/>
 	<import addon="script.module.metahandler" version="2.5.1"/>
     <import addon="script.module.liveresolver"  version="0.1.28"/>
+	<import addon="script.module.nanscrapers"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py">
     <provides>video executable</provides>
@@ -92,6 +94,44 @@
             <description>The home of GenieTv, Kodi's largest support tool. [CR]  Brought to you by the Architects@Work</description>
             <platform>all</platform>
     </extension>
+</addon>
+
+<addon id="repository.noobsandnerds" name="noobsandnerds Repository" version="2.2" provider-name="noobsandnerds">
+        <extension point="xbmc.addon.repository" name="noobsandnerds Repository">
+                <dir>
+                        <info compressed="false">https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/addons.xml</info>
+                        <checksum>https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/addons.xml.md5</checksum>
+                        <datadir zip="true">https://raw.githubusercontent.com/noobsandnerds/modules4all/master/zips/</datadir>
+                </dir>
+                <dir>
+                <info compressed="true">https://github.com/dandy0850/dandymedia/raw/master/addons.xml</info>
+                <checksum>https://github.com/dandy0850/dandymedia/raw/master/addons.xml.md5</checksum>
+                <datadir zip="true">https://github.com/dandy0850/dandymedia/raw/master/repo</datadir>
+                </dir>
+                <dir>
+                        <info compressed="false">https://github.com/OpenELEQ/repository.elysium/raw/master/elysium.xml</info>
+                        <checksum>https://github.com/OpenELEQ/repository.elysium/raw/master/elysium.xml.md5</checksum>
+                        <datadir zip="true">https://raw.github.com/OpenELEQ/repository.elysium/master/</datadir>
+                </dir>
+                <dir>
+                <info compressed="true">https://raw.githubusercontent.com/catchup4kodi/catchup4kodi/master/zips/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/catchup4kodi/catchup4kodi/master/zips/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/catchup4kodi/catchup4kodi/master/zips/</datadir>
+                </dir>
+                <dir>
+                        <info compressed="false">https://raw.githubusercontent.com/midraal/repository.midraal/master/zips/addons.xml</info>
+                        <checksum>https://raw.githubusercontent.com/midraal/repository.midraal/master/zips/addons.xml.md5</checksum>
+                        <datadir zip="true">https://raw.github.com/midraal/repository.midraal/master/zips/</datadir>
+                </dir>
+                <info compressed="false">https://raw.githubusercontent.com/noobsandnerds/noobsandnerds/master/zips/addons.xml</info>
+                <checksum>https://raw.githubusercontent.com/noobsandnerds/noobsandnerds/master/zips/addons.xml.md5</checksum>
+                <datadir zip="true">https://raw.githubusercontent.com/noobsandnerds/noobsandnerds/master/zips/</datadir>
+        </extension>
+        <extension point="xbmc.addon.metadata">
+                <summary>Home of The Community Portal</summary>
+                <description>Visit www.noobsandnerds.com and become a part of our great family, you get to choose what The Community Portal holds!</description>
+                <platform>all</platform>
+        </extension>
 </addon>
 
 <addon id="script.module.liveresolver"
