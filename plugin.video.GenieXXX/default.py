@@ -29,7 +29,7 @@ if 65 - 65: O0 / iIii1I11I1II1 % OoooooooOO - i1IIi
 if 73 - 73: II111iiii
 IiII1IiiIiI1 = 'plugin.video.GenieXXX'
 iIiiiI1IiI1I1 = 'plugin.video.GenieXXX'
-o0OoOoOO00 = "0.0.2"
+o0OoOoOO00 = "0.0.3"
 I11i = xbmc . translatePath ( 'special://home/addons/' )
 O0O = base64 . decodestring
 Oo = datetime . now ( )
@@ -83,7 +83,7 @@ def I11II1i ( ) :
  if Oo0oO0ooo == 'insert_password' :
   IIIII ( '[COLORorangered]It Seems Youre Not Logged In, Are You Over 18?[/COLOR]' , '' , 222 , oOOoo00O0O + 'search.png' , i1 , '' )
   IIIII ( '[COLORorangered]Yes I Am,,,, Honest[/COLOR]' , '' , 12 , i1 , i1 , '' )
-  IIIII ( '[COLORorangered]No, I Am Just A Pup[/COLOR]' , '' , 100113 , i1 , i1 , '' )
+  IIIII ( '[COLORorangered]No, I Am Just A Pup[/COLOR]' , '' , 1001133 , i1 , i1 , '' )
   ooooooO0oo ( '[COLORsteelblue]Please Make A Selection And Flick Me To Enter[/COLOR]' , '' , 9 , i1 , i1 , '' )
  elif Oo0oO0ooo == 'dirtyfucker' :
   IIiiiiiiIi1I1 ( )
@@ -1023,6 +1023,13 @@ elif iI11I == 19999999 : O0oo0OO0oOOOo ( )
 elif iI11I == 100110 : oo000OO00Oo ( IiII111iI1ii1 )
 elif iI11I == 100111 : i1Oo00 ( IiII111iI1ii1 )
 elif iI11I == 100112 : OoO0O00 ( IiII111iI1ii1 )
-elif iI11I == 100113 : oOoOooOo0o0 ( )
+elif iI11I == 100113 : I1I1IiI1 ( IiII111iI1ii1 )
+elif iI11I == 100114 : O0OOO0OOoO0O ( IiII111iI1ii1 )
+elif iI11I == 100115 : iiI111I1iIiI ( IiII111iI1ii1 )
+elif iI11I == 100117 : O00Oo000ooO0 ( IiII111iI1ii1 )
+elif iI11I == 100118 : oooooOoo0ooo ( IiII111iI1ii1 )
+elif iI11I == 100120 : IIIi1I1IIii1II ( IiII111iI1ii1 )
+elif iI11I == 1001200 : O0ii1ii1ii ( IiII111iI1ii1 )
+elif iI11I == 1001133 : oOoOooOo0o0 ( )
 xbmcplugin . endOfDirectory ( int ( sys . argv [ 1 ] ) )
 # dd678faae9ac167bc83abf78e5cb2f3f0688d3a3
