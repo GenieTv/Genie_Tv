@@ -29,7 +29,7 @@ if 65 - 65: O0 / iIii1I11I1II1 % OoooooooOO - i1IIi
 if 73 - 73: II111iiii
 IiII1IiiIiI1 = 'plugin.video.GenieXXX'
 iIiiiI1IiI1I1 = 'plugin.video.GenieXXX'
-o0OoOoOO00 = "0.0.3"
+o0OoOoOO00 = "0.0.4"
 I11i = xbmc . translatePath ( 'special://home/addons/' )
 O0O = base64 . decodestring
 Oo = datetime . now ( )
@@ -336,9 +336,13 @@ def IIi11i1i1iI1 ( url ) :
   if 84 - 84: iIii1I11I1II1 % o0O0 / iIii1I11I1II1 % o0o0OOO0o0
 def iIiIIIi ( url ) :
  ooOooo000oOO = Oo0oOOo ( url )
- Oo0OoO00oOO0o = re . compile ( '<div class="thumb"><script>.+?<img src="([^"]*)".+?<a href="([^"]*)" title="([^"]*)">.+?<strong>(.+?)</strong>(.+?)<' , re . DOTALL ) . findall ( ooOooo000oOO )
+ Oo0OoO00oOO0o = re . compile ( 'data-src="([^"]*)" .+? href="([^"]*)" title="([^"]*)">.+?class="mobile-hide">(.+?)<.+?class="duration">(.+?)<' , re . DOTALL ) . findall ( ooOooo000oOO )
+ OOO00O = re . compile ( 'data-src="([^"]*)" .+? href="([^"]*)" title="([^"]*)">.+?class="duration">(.+?)<' , re . DOTALL ) . findall ( ooOooo000oOO )
  for O0o0O00Oo0o0 , url , OOoOO0oo0ooO , ii , OOooooO0Oo in Oo0OoO00oOO0o :
-  ooooooO0oo ( '[COLORorangered]' + OOoOO0oo0ooO + '[COLORgreen] - Porn Quality : [COLORorange]' + OOooooO0Oo + ' - [COLORred]' + ii + '[/COLOR]' , 'http://www.xvideos.com' + url , 10108 , O0o0O00Oo0o0 , O0o0O00Oo0o0 , OOooooO0Oo + ' - ' + ii )
+  ooooooO0oo ( '[COLORorangered]' + OOoOO0oo0ooO + '[COLORgreen] - Porn Quality : [COLORorange]' + ii + ' - [COLORred]' + OOooooO0Oo + '[/COLOR]' , 'http://www.xvideos.com' + url , 10108 , O0o0O00Oo0o0 , O0o0O00Oo0o0 , ii + ' - ' + OOooooO0Oo )
+ OO = re . compile ( '<li><a href="([^"]*)" class="no-page">Next</a></li></ul></div>' ) . findall ( ooOooo000oOO )
+ for O0o0O00Oo0o0 , url , OOoOO0oo0ooO , OOooooO0Oo in OOO00O :
+  ooooooO0oo ( '[COLORorangered]' + OOoOO0oo0ooO + '[COLORgreen] - Porn Quality : [COLORorange]' + OOooooO0Oo + '[/COLOR]' , 'http://www.xvideos.com' + url , 10108 , O0o0O00Oo0o0 , O0o0O00Oo0o0 , OOooooO0Oo )
  OO = re . compile ( '<li><a href="([^"]*)" class="no-page">Next</a></li></ul></div>' ) . findall ( ooOooo000oOO )
  for url in OO :
   ooooooO0oo ( '[COLORred]NEXT[/COLOR]' , 'http://www.xvideos.com' + url , 10105 , oOOoo00O0O + 'Next.png' , '' , '' )
@@ -363,16 +367,16 @@ def oo0OOo ( ) :
  print oOI1Ii1I1 + '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'
  ooOooo000oOO = Oo0oOOo ( oOI1Ii1I1 )
  Oo0OoO00oOO0o = re . compile ( '<div class="thumb"><script>.+?<img src="([^"]*)".+?<a href="([^"]*)" title="([^"]*)">.+?<strong>(.+?)</strong>(.+?)<' , re . DOTALL ) . findall ( ooOooo000oOO )
- for O0o0O00Oo0o0 , IiII111iI1ii1 , OOoOO0oo0ooO , ii , OOooooO0Oo in Oo0OoO00oOO0o :
-  ooooooO0oo ( '[COLORorangered]' + OOoOO0oo0ooO + '[COLORgreen] - Porn Quality : [COLORorange]' + OOooooO0Oo + ' - [COLORred]' + ii + '[/COLOR]' , 'http://www.xvideos.com' + IiII111iI1ii1 , 10108 , O0o0O00Oo0o0 , O0o0O00Oo0o0 , OOooooO0Oo + ' - ' + ii )
+ for O0o0O00Oo0o0 , IiII111iI1ii1 , OOoOO0oo0ooO , OOooooO0Oo , iI11I1II in Oo0OoO00oOO0o :
+  ooooooO0oo ( '[COLORorangered]' + OOoOO0oo0ooO + '[COLORgreen] - Porn Quality : [COLORorange]' + iI11I1II + ' - [COLORred]' + OOooooO0Oo + '[/COLOR]' , 'http://www.xvideos.com' + IiII111iI1ii1 , 10108 , O0o0O00Oo0o0 , O0o0O00Oo0o0 , iI11I1II + ' - ' + OOooooO0Oo )
  OO = re . compile ( '<li><a href="([^"]*)" class="no-page">Next</a></li></ul></div>' ) . findall ( ooOooo000oOO )
  for IiII111iI1ii1 in OO :
   ooooooO0oo ( '[COLORred]NEXT[/COLOR]' , 'http://www.xvideos.com' + IiII111iI1ii1 , 10105 , oOOoo00O0O + 'Next.png' , '' , '' )
-if 37 - 37: oo0Oo00Oo0 - O0ooOooooO % iii1I1
-if 77 - 77: iii1I1 - i1IIi - o0o0OOO0o0 . o0O00oooo
-if 39 - 39: II111iiii / i1I111II1I + O0ooOooooO / o0O00oooo
-if 13 - 13: o0 + O0 + o0O0 % II / OO0o . o0
-if 86 - 86: oo0Oo00Oo0 * OO0o % i1IIi . IIII . i11iIiiIii
+if 40 - 40: iIii1I11I1II1 / o0O00oooo % oo + II111iiii
+if 27 - 27: II111iiii * o0O00oooo * iIii1I11I1II1
+if 86 - 86: iI * oOOO00o . o0O0
+if 32 - 32: OO0o . o0 * o0o0OOO0o0
+if 93 - 93: OO0o % i1IIi . IIII . i11iIiiIii
 if 56 - 56: oo % O0 - II
 if 100 - 100: IIII - O0 % oo0Oo00Oo0 * oOOO00o + II
 if 88 - 88: OoooooooOO - iI * O0 * OoooooooOO . OoooooooOO
