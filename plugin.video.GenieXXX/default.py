@@ -29,7 +29,7 @@ if 65 - 65: O0 / iIii1I11I1II1 % OoooooooOO - i1IIi
 if 73 - 73: II111iiii
 IiII1IiiIiI1 = 'plugin.video.GenieXXX'
 iIiiiI1IiI1I1 = 'plugin.video.GenieXXX'
-o0OoOoOO00 = "0.0.4"
+o0OoOoOO00 = "0.0.5"
 I11i = xbmc . translatePath ( 'special://home/addons/' )
 O0O = base64 . decodestring
 Oo = datetime . now ( )
@@ -91,7 +91,7 @@ def I11II1i ( ) :
   oOOoO0 . ok ( '[COLORorangered]Genietvmedia@gmail.com[/COLOR]' , 'HOLD THE TISSUES' , 'Password Incorrect Please Reset Defaults' , '[COLORorangered]And Contact GenieTv For The Pass[/COLOR]' )
 def I1IIIii ( ) :
  if Oo0oO0ooo == 'insert_password' :
-  oOOoO0 . ok ( '[COLORorangered]Genietvmedia@gmail[/COLOR]' , 'You need to set the password to access this filth' , 'This is only given to dirty fuckers aged 18+' , ' @ [COLORorangered]GenieTv Media[/COLOR]' )
+  oOOoO0 . ok ( '[COLORorangered]Genietvmedia@gmail.com[/COLOR]' , 'You need to set the password to access this filth' , 'This is only given to dirty fuckers aged 18+' , ' @ [COLORorangered]genietv.co.uk/xxx[/COLOR]' )
   o0OOO . openSettings ( sys . argv [ 0 ] )
  else :
   oOOoO0 . ok ( '[COLORorangered]Genietvmedia@gmail.com[/COLOR]' , 'HOLD THE TISSUES[CR]' , 'Seems You Are Up To No Good Without Permission[CR]' , '[COLORorangered]Contact GenieTv For The Pass[/COLOR]' )
