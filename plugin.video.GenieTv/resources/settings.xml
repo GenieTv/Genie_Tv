@@ -1,20 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
 	<category label="GtV Login">
-		<setting id="TEXTCOL" type="text" label="[COLORsteelblue]Text Color[/COLOR]" default="steelblue" visible="true"/>
-        <setting id="Simplify" type="bool" label="[COLORsteelblue]Simplify Menus[/COLOR]" default="true" visible="true"/>	
 		<setting id="User" type="text" label="[COLORsteelblue]GenieTv User =[/COLOR]" default="insert_username" visible="true"/>
 		<setting id="Pass" type="text" label="[COLORsteelblue]GenieTv Pass =[/COLOR]" default="insert_password" visible="true"/>
 		<setting id="AdultPass" type="text" label="[COLORsteelblue]GenieTv AdultPass =[/COLOR]" default="insert_adultpass" visible="true"/>
-	    <setting id="zip" type="folder"    label="Set Build Backup Storage Location Here"      default=""/>
+		<setting id="DNS" type="labelenum" label="DNS" values="Option 1|Option 2|Option 3" default="Option 1" />
+    </category>	
+	<category label="Downloads">
         <setting id="down" type="bool" label="[COLORsteelblue]Downloads On/Off[/COLOR]" default="false" visible="true"/>	
 	    <setting id="Downloads" type="folder"    label="Set Downloads Location Here"      default=""/>
     </category>	
-	<category label="Restore Build">
+	<category label="Backup/Restore Build">
+	    <setting id="zip" type="folder"    label="Set Build Backup Storage Location Here"      default=""/>
 		<setting label="Local Zip" type="file" id="Local" value="path_to_files"/>
 		<setting id="Build" type="text" label="Backup Url =" default="Enter Url Here" visible="true"/>
     </category>	
 	<category label="Personalise Genie">
+		<setting id="TEXTCOL" type="text" label="[COLORsteelblue]Text Color[/COLOR]" default="steelblue" visible="true"/>
+        <setting id="Simplify" type="bool" label="[COLORsteelblue]Simplify All Menus[/COLOR]" default="true" visible="true"/>	
         <setting id="Choose Menu" label="Pick Menu to personalise" type="labelenum" default="0" values="Main Menu|Streams" visible="True"/>	
         <setting id="My Build" type="bool" label="My Build" default="true" visible="eq(-1,0)"/>
     	<setting id="Streams" type="bool" label="Streams" default="true" visible="eq(-2,0)"/>
