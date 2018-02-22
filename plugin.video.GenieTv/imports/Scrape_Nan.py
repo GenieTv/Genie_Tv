@@ -17,26 +17,27 @@ def scrape_episode(title,show_year,year,season,episode,imdb):
             xbmc.Player().play(url, xbmcgui.ListItem(title))
 '''
 def scrape_episode(title,show_year,year,season,episode,imdb):
+    import resolveurl
     if season[0]=='0':
         season = season[1:]
     if episode[0]=='0':
         episode = episode[1:]
-    from nanscrapers import scrape_episode_with_dialog
+    from universalscrapers import scrape_episode_with_dialog
     progress = []
     item = []
     dp =  xbmcgui.DialogProgress()
     dp.create('Initiating Scrapers')
     links_scraper = scrape_episode_with_dialog(title, show_year, year, season, episode, imdb, None)
     if links_scraper is False:
-        xbmcgui.Dialog().ok("Movie not found", "No Links Found for " + name + " (" + year + ")")
+        xbmcgui.Dialog().ok("Movie not found", "No Links Found for " + title + " (" + year + ")")
     else:
         if links_scraper:
             url = links_scraper['url']
             try:
-                resolved_url = urlresolver.resolve(url)
-                xbmc.Player().play(resolved_url, xbmcgui.ListItem(name))
+                resolved_url = resolveurl.resolve(url)
+                xbmc.Player().play(resolved_url, xbmcgui.ListItem(title))
             except:
-                xbmc.Player().play(url, xbmcgui.ListItem(name))
+                xbmc.Player().play(url, xbmcgui.ListItem(title))
 ''' if links_scraper is False:
         xbmc.log('passed',xbmc.LOGNOTICE)
         pass
@@ -74,8 +75,8 @@ def scrape_episode(title,show_year,year,season,episode,imdb):
 
 def scrape_movie(name,year,imdb):
     import xbmc
-    import urlresolver
-    from nanscrapers import scrape_movie_with_dialog
+    import resolveurl
+    from universalscrapers import scrape_movie_with_dialog
     link = scrape_movie_with_dialog(name, year, imdb, timeout=600)
     if link is False:
         xbmcgui.Dialog().ok("Movie not found", "No Links Found for " + name + " (" + year + ")")
@@ -83,7 +84,7 @@ def scrape_movie(name,year,imdb):
         if link:
             url = link['url']
             try:
-                resolved_url = urlresolver.resolve(url)
+                resolved_url = resolveurl.resolve(url)
                 xbmc.Player().play(resolved_url, xbmcgui.ListItem(name))
             except:
                 xbmc.Player().play(url, xbmcgui.ListItem(name))
