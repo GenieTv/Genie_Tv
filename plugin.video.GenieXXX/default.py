@@ -29,7 +29,7 @@ if 65 - 65: O0 / iIii1I11I1II1 % OoooooooOO - i1IIi
 if 73 - 73: II111iiii
 IiII1IiiIiI1 = 'plugin.video.GenieXXX'
 iIiiiI1IiI1I1 = 'plugin.video.GenieXXX'
-o0OoOoOO00 = "0.0.5"
+o0OoOoOO00 = "0.0.6"
 I11i = xbmc . translatePath ( 'special://home/addons/' )
 O0O = base64 . decodestring
 Oo = datetime . now ( )
@@ -88,13 +88,13 @@ def I11II1i ( ) :
  elif Oo0oO0ooo == 'dirtyfucker' :
   IIiiiiiiIi1I1 ( )
  else :
-  oOOoO0 . ok ( '[COLORorangered]Genietvmedia@gmail.com[/COLOR]' , 'HOLD THE TISSUES' , 'Password Incorrect Please Reset Defaults' , '[COLORorangered]And Contact GenieTv For The Pass[/COLOR]' )
+  oOOoO0 . ok ( '[COLORorangered]http://genietv.co.uk/xxx[/COLOR]' , 'HOLD THE TISSUES' , 'Password Incorrect Please Reset Defaults' , '[COLORorangered]And Contact GenieTv For The Pass[/COLOR]' )
 def I1IIIii ( ) :
  if Oo0oO0ooo == 'insert_password' :
-  oOOoO0 . ok ( '[COLORorangered]Genietvmedia@gmail.com[/COLOR]' , 'You need to set the password to access this filth' , 'This is only given to dirty fuckers aged 18+' , ' @ [COLORorangered]genietv.co.uk/xxx[/COLOR]' )
+  oOOoO0 . ok ( '[COLORorangered]http://genietv.co.uk/xxx[/COLOR]' , 'You need to set the password to access this filth' , 'This is only given to dirty fuckers aged 18+' , ' @ [COLORorangered]genietv.co.uk/xxx[/COLOR]' )
   o0OOO . openSettings ( sys . argv [ 0 ] )
  else :
-  oOOoO0 . ok ( '[COLORorangered]Genietvmedia@gmail.com[/COLOR]' , 'HOLD THE TISSUES[CR]' , 'Seems You Are Up To No Good Without Permission[CR]' , '[COLORorangered]Contact GenieTv For The Pass[/COLOR]' )
+  oOOoO0 . ok ( '[COLORorangered]http://genietv.co.uk/xxx[/COLOR]' , 'HOLD THE TISSUES[CR]' , 'Seems You Are Up To No Good Without Permission[CR]' , '[COLORorangered]Contact GenieTv For The Pass[/COLOR]' )
 def oOoOooOo0o0 ( ) :
  oOOoO0 . ok ( '[COLORorangered]Genietvmedia@gmail.com[/COLOR]' , 'HOLD THE TISSUES[CR]' , 'What We Recommend[CR]' , '[COLORorangered]http://us.cbeebies.com/[/COLOR]' )
 def OOOO ( ) :
@@ -112,7 +112,7 @@ def IIiiiiiiIi1I1 ( ) :
   ooooooO0oo ( '[COLORorangered]In Your Language[/COLOR]' , 'http://www.xvideos.com/porn' , 101001 , oOOoo00O0O + 'language.png' , i1 , '' )
   ooooooO0oo ( '[COLORorangered]Adult Image Galleries[/COLOR]' , '' , 9999999 , oOOoo00O0O + 'galleries.png' , i1 , '' )
  else :
-  oOOoO0 . ok ( '[COLORorangered]Genietvmedia@gmail.com[/COLOR]' , 'HOLD THE TISSUES[CR]' , 'Seems You Are Up To No Good Without Permission' , '[COLORorangered]Contact GenieTv For A Pass[/COLOR]' )
+  oOOoO0 . ok ( '[COLORorangered]http://genietv.co.uk/xxx[/COLOR]' , 'HOLD THE TISSUES[CR]' , 'Seems You Are Up To No Good Without Permission' , '[COLORorangered]Contact GenieTv For A Pass[/COLOR]' )
   if 9 - 9: iI
   if 33 - 33: i1I111II1I . o0O0
 def O0oo0OO0oOOOo ( ) :
@@ -338,14 +338,13 @@ def iIiIIIi ( url ) :
  ooOooo000oOO = Oo0oOOo ( url )
  Oo0OoO00oOO0o = re . compile ( 'data-src="([^"]*)" .+? href="([^"]*)" title="([^"]*)">.+?class="mobile-hide">(.+?)<.+?class="duration">(.+?)<' , re . DOTALL ) . findall ( ooOooo000oOO )
  OOO00O = re . compile ( 'data-src="([^"]*)" .+? href="([^"]*)" title="([^"]*)">.+?class="duration">(.+?)<' , re . DOTALL ) . findall ( ooOooo000oOO )
- for O0o0O00Oo0o0 , url , OOoOO0oo0ooO , ii , OOooooO0Oo in Oo0OoO00oOO0o :
-  ooooooO0oo ( '[COLORorangered]' + OOoOO0oo0ooO + '[COLORgreen] - Porn Quality : [COLORorange]' + ii + ' - [COLORred]' + OOooooO0Oo + '[/COLOR]' , 'http://www.xvideos.com' + url , 10108 , O0o0O00Oo0o0 , O0o0O00Oo0o0 , ii + ' - ' + OOooooO0Oo )
- OO = re . compile ( '<li><a href="([^"]*)" class="no-page">Next</a></li></ul></div>' ) . findall ( ooOooo000oOO )
- for O0o0O00Oo0o0 , url , OOoOO0oo0ooO , OOooooO0Oo in OOO00O :
-  ooooooO0oo ( '[COLORorangered]' + OOoOO0oo0ooO + '[COLORgreen] - Porn Quality : [COLORorange]' + OOooooO0Oo + '[/COLOR]' , 'http://www.xvideos.com' + url , 10108 , O0o0O00Oo0o0 , O0o0O00Oo0o0 , OOooooO0Oo )
- OO = re . compile ( '<li><a href="([^"]*)" class="no-page">Next</a></li></ul></div>' ) . findall ( ooOooo000oOO )
- for url in OO :
-  ooooooO0oo ( '[COLORred]NEXT[/COLOR]' , 'http://www.xvideos.com' + url , 10105 , oOOoo00O0O + 'Next.png' , '' , '' )
+ ii = re . compile ( '<li><a href="([^"]*)" class="no-page next-page">Next</a></li></ul></div>' ) . findall ( ooOooo000oOO )
+ for O0o0O00Oo0o0 , url , OOoOO0oo0ooO , OOooooO0Oo , OO in Oo0OoO00oOO0o :
+  ooooooO0oo ( '[COLORorangered]' + OOoOO0oo0ooO + '[COLORgreen] - Porn Quality : [COLORorange]' + OOooooO0Oo + ' - [COLORred]' + OO + '[/COLOR]' , 'http://www.xvideos.com' + url , 10108 , O0o0O00Oo0o0 , O0o0O00Oo0o0 , OOooooO0Oo + ' - ' + OO )
+ for O0o0O00Oo0o0 , url , OOoOO0oo0ooO , OO in OOO00O :
+  ooooooO0oo ( '[COLORorangered]' + OOoOO0oo0ooO + '[COLORgreen] - Porn Quality : [COLORorange]' + OO + '[/COLOR]' , 'http://www.xvideos.com' + url , 10108 , O0o0O00Oo0o0 , O0o0O00Oo0o0 , OO )
+ for url in ii :
+  ooooooO0oo ( '[COLORorangeredred]NEXT[/COLOR]' , 'http://www.xvideos.com' + url , 10105 , oOOoo00O0O + 'Next.png' , '' , '' )
   if 25 - 25: iI
 def ooo00OOOooO ( url ) :
  ooOooo000oOO = Oo0oOOo ( url )
@@ -367,10 +366,10 @@ def oo0OOo ( ) :
  print oOI1Ii1I1 + '<<<<<<<<<<<<<<<<<<<<<<<<<<<<<'
  ooOooo000oOO = Oo0oOOo ( oOI1Ii1I1 )
  Oo0OoO00oOO0o = re . compile ( '<div class="thumb"><script>.+?<img src="([^"]*)".+?<a href="([^"]*)" title="([^"]*)">.+?<strong>(.+?)</strong>(.+?)<' , re . DOTALL ) . findall ( ooOooo000oOO )
- for O0o0O00Oo0o0 , IiII111iI1ii1 , OOoOO0oo0ooO , OOooooO0Oo , iI11I1II in Oo0OoO00oOO0o :
-  ooooooO0oo ( '[COLORorangered]' + OOoOO0oo0ooO + '[COLORgreen] - Porn Quality : [COLORorange]' + iI11I1II + ' - [COLORred]' + OOooooO0Oo + '[/COLOR]' , 'http://www.xvideos.com' + IiII111iI1ii1 , 10108 , O0o0O00Oo0o0 , O0o0O00Oo0o0 , iI11I1II + ' - ' + OOooooO0Oo )
- OO = re . compile ( '<li><a href="([^"]*)" class="no-page">Next</a></li></ul></div>' ) . findall ( ooOooo000oOO )
- for IiII111iI1ii1 in OO :
+ for O0o0O00Oo0o0 , IiII111iI1ii1 , OOoOO0oo0ooO , OO , iI11I1II in Oo0OoO00oOO0o :
+  ooooooO0oo ( '[COLORorangered]' + OOoOO0oo0ooO + '[COLORgreen] - Porn Quality : [COLORorange]' + iI11I1II + ' - [COLORred]' + OO + '[/COLOR]' , 'http://www.xvideos.com' + IiII111iI1ii1 , 10108 , O0o0O00Oo0o0 , O0o0O00Oo0o0 , iI11I1II + ' - ' + OO )
+ ii = re . compile ( '<li><a href="([^"]*)" class="no-page next-page">Next</a></li></ul></div>' ) . findall ( ooOooo000oOO )
+ for IiII111iI1ii1 in ii :
   ooooooO0oo ( '[COLORred]NEXT[/COLOR]' , 'http://www.xvideos.com' + IiII111iI1ii1 , 10105 , oOOoo00O0O + 'Next.png' , '' , '' )
 if 40 - 40: iIii1I11I1II1 / o0O00oooo % oo + II111iiii
 if 27 - 27: II111iiii * o0O00oooo * iIii1I11I1II1
