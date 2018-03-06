@@ -38,7 +38,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.GenieMusic" name="Genie Music" version="0.0.1" provider-name="The Boss">
+<addon id="plugin.video.GenieMusic" name="Genie Music" version="0.0.2" provider-name="The Boss">
   <requires>
   	<import addon="script.module.beautifulsoup" version="3.2.1"/>
 	<import addon="script.module.beautifulsoup4" />
