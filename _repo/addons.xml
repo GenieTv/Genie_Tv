@@ -62,7 +62,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.GenieTv" name="[COLORsteelblue]GenieTv[/COLOR]" version="3.6.5" provider-name="GenieTv">
+<addon id="plugin.video.GenieTv" name="[COLORsteelblue]GenieTv[/COLOR]" version="3.6.6" provider-name="GenieTv">
   <requires>
   	<import addon="script.module.beautifulsoup" version="3.2.1"/>
 	<import addon="plugin.program.GenieWiz" />
@@ -91,7 +91,7 @@
   <extension point="xbmc.service" library="service.py" start="login" />
   <extension point="xbmc.addon.metadata">
     <summary lang="en">GenieTv Kodi's largest support tool. [CR]  Brought to you by the Architects@Work</summary>
-    <description lang="en">GenieTv The Ultimate Kodi Utility, This All In One Addon Has Been Created To Service All Kodi Needs And Hopefully In The Future, To Brings Devs And Streamers Alike A Platform And Home To host Their Content.</description>
+    <description lang="en">GenieTv The Ultimate Kodi Utility, This All In One Addon Has Been Created To Service All Kodi Your Needs.</description>
 	<disclaimer lang="en">The author neither hosts or stores any content, the author has no affiliation with content hosts</disclaimer>
     <platform>all</platform>
   </extension>
