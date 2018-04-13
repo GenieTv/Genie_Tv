@@ -62,7 +62,7 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.GenieTv" name="[COLORsteelblue]GenieTv[/COLOR]" version="3.7.0" provider-name="GenieTv">
+<addon id="plugin.video.GenieTv" name="[COLORsteelblue]GenieTv[/COLOR]" version="3.7.1" provider-name="GenieTv">
   <requires>
   	<import addon="script.module.beautifulsoup" version="3.2.1"/>
 	<import addon="plugin.program.GenieWiz" />
